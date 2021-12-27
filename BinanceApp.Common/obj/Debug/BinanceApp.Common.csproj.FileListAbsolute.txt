@@ -1,0 +1,12 @@
+F:\DATA\BinanceApp\BinanceApp.Common\bin\Debug\BinanceApp.Common.dll.config
+F:\DATA\BinanceApp\BinanceApp.Common\bin\Debug\BinanceApp.Common.dll
+F:\DATA\BinanceApp\BinanceApp.Common\bin\Debug\BinanceApp.Common.pdb
+F:\DATA\BinanceApp\BinanceApp.Common\obj\Debug\BinanceApp.Common.Properties.Resources.resources
+F:\DATA\BinanceApp\BinanceApp.Common\obj\Debug\BinanceApp.Common.csproj.GenerateResource.cache
+F:\DATA\BinanceApp\BinanceApp.Common\obj\Debug\BinanceApp.Common.csproj.CoreCompileInputs.cache
+F:\DATA\BinanceApp\BinanceApp.Common\obj\Debug\BinanceApp.Common.dll
+F:\DATA\BinanceApp\BinanceApp.Common\obj\Debug\BinanceApp.Common.pdb
+F:\DATA\BinanceApp\BinanceApp.Common\obj\Debug\BinanceApp.Common.csproj.AssemblyReference.cache
+F:\DATA\BinanceApp\BinanceApp.Common\bin\Debug\Newtonsoft.Json.dll
+F:\DATA\BinanceApp\BinanceApp.Common\bin\Debug\Newtonsoft.Json.xml
+F:\DATA\BinanceApp\BinanceApp.Common\obj\Debug\BinanceApp.Common.csproj.CopyComplete

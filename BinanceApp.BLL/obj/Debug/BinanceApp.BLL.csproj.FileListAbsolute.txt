@@ -1,0 +1,9 @@
+F:\DATA\BinanceApp\BinanceApp.BLL\bin\Debug\BinanceApp.BLL.dll.config
+F:\DATA\BinanceApp\BinanceApp.BLL\bin\Debug\BinanceApp.BLL.dll
+F:\DATA\BinanceApp\BinanceApp.BLL\bin\Debug\BinanceApp.BLL.pdb
+F:\DATA\BinanceApp\BinanceApp.BLL\obj\Debug\BinanceApp.BLL.csproj.AssemblyReference.cache
+F:\DATA\BinanceApp\BinanceApp.BLL\obj\Debug\BinanceApp.BLL.Properties.Resources.resources
+F:\DATA\BinanceApp\BinanceApp.BLL\obj\Debug\BinanceApp.BLL.csproj.GenerateResource.cache
+F:\DATA\BinanceApp\BinanceApp.BLL\obj\Debug\BinanceApp.BLL.csproj.CoreCompileInputs.cache
+F:\DATA\BinanceApp\BinanceApp.BLL\obj\Debug\BinanceApp.BLL.dll
+F:\DATA\BinanceApp\BinanceApp.BLL\obj\Debug\BinanceApp.BLL.pdb
