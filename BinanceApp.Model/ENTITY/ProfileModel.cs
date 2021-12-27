@@ -22,5 +22,7 @@ namespace BinanceApp.Model.ENTITY
         public string Locale { get; set; }
         [JsonProperty("hd")]
         public string HD { get; set; }
+        public string Phone { get; set; }
+        public string Code { get; set; }
     }
 }

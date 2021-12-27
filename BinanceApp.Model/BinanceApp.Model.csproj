@@ -58,6 +58,8 @@
   <ItemGroup>
     <Compile Include="ENTITY\GenCodeModel.cs" />
     <Compile Include="ENTITY\ProfileModel.cs" />
+    <Compile Include="ENTITY\TimeModel.cs" />
+    <Compile Include="ENTITY\UserModel.cs" />
     <Compile Include="ENUM\enumOptionTime.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

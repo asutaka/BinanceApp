@@ -14,8 +14,10 @@ namespace BinanceApp.Common
         public const string scopes = "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile";
         public const string redirectURI = "urn:ietf:wg:oauth:2.0:oob";
         //Security
-        public static readonly string PasswordHash = "P@$Sw0rd";
-        public static readonly string SaltKey = "Phunv@AI";
-        public static readonly string VIKey = "Phunv@Huy456aA@1";
+        public const string PasswordHash = "P@$Sw0rd";
+        public const string SaltKey = "Phunv@AI";
+        public const string VIKey = "Phunv@Huy456aA@1";
+        //Time
+        public const string timeURL = "https://api.timezonedb.com/v2/get-time-zone?key=PJBB6AVAAMO0&format=json&by=zone&zone=Asia/Bangkok";
     }
 }

@@ -66,12 +66,6 @@
     <Compile Include="GUI\frmProfile.Designer.cs">
       <DependentUpon>frmProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmKeyCode.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmKeyCode.Designer.cs">
-      <DependentUpon>frmKeyCode.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +139,24 @@
       <Project>{1f1453c5-2158-43a7-91cc-32a3d7799438}</Project>
       <Name>BinanceApp.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

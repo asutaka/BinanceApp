@@ -21,5 +21,6 @@ namespace BinanceApp
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmMain());
         }
+        //Làm job check trạng thái
     }
 }

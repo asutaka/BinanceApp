@@ -23,3 +23,4 @@ D:\SourceCode\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.csproj.Copy
 D:\SourceCode\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.dll
 D:\SourceCode\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.pdb
 D:\SourceCode\BinanceApp\BinanceApp.Model\bin\Debug\System.ComponentModel.Annotations.dll
+F:\DATA\BinanceApp\BinanceApp.Model\bin\Debug\System.ComponentModel.Annotations.dll

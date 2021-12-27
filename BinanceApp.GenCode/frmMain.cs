@@ -65,7 +65,7 @@ namespace BinanceApp.GenCode
                 {
                     Email = txtEmail.Text.Substring(0, indexMail).Trim(),
                     OptionTime = optionTime,
-                    Expired = dtExpired.DateToInt()
+                    Expired = new DateTimeOffset(dtExpired).ToUnixTimeSeconds()
                 };
                 var jsonModel = JsonConvert.SerializeObject(model);
                 var code = Security.Encrypt(jsonModel);
