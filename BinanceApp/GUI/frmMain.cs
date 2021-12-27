@@ -15,10 +15,18 @@ namespace BinanceApp.GUI
             InitializeComponent();
             ribbon.Enabled = false;
             this.MaximizeBox = false;
+            this.userLogin1.SetMain(this);
             _bkgr = new BackgroundWorker();
             _bkgr.DoWork += bkgrCheckConnection_DoWork;
             _bkgr.RunWorkerCompleted += bkgrCheckConnection_RunWorkerCompleted;
             _bkgr.RunWorkerAsync();
+        }
+        public void ShowProfile()
+        {
+            var objProfile = new frmProfile();
+            objProfile.TopMost = true;
+            objProfile.Show();
+            userLogin1.Visible = false;
         }
         private void bkgrCheckConnection_DoWork(object sender, DoWorkEventArgs e)
         {

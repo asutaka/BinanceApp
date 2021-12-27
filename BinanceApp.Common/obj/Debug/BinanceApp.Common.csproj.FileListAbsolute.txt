@@ -35,3 +35,6 @@ D:\SourceCode\BinanceApp\BinanceApp.Common\bin\Debug\System.Buffers.xml
 D:\SourceCode\BinanceApp\BinanceApp.Common\bin\Debug\System.Memory.xml
 D:\SourceCode\BinanceApp\BinanceApp.Common\bin\Debug\System.Numerics.Vectors.xml
 D:\SourceCode\BinanceApp\BinanceApp.Common\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\SourceCode\BinanceApp\BinanceApp.Common\bin\Debug\BinanceApp.Model.dll
+D:\SourceCode\BinanceApp\BinanceApp.Common\bin\Debug\BinanceApp.Model.pdb
+D:\SourceCode\BinanceApp\BinanceApp.Common\bin\Debug\BinanceApp.Model.dll.config

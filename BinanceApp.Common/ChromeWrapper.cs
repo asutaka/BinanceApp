@@ -10,11 +10,8 @@ namespace BinanceApp.Common
         [DllImport("user32.dll")]
         private static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
         private static uint WM_KEYDOWN = 0x100, WM_KEYUP = 0x101;
-        private Process chromeProcess;
 
-        public ChromeWrapper()
-        {
-        }
+        public ChromeWrapper(){}
         public void SendKey(char key, Process process_chrome)
         {
             try
@@ -28,6 +25,7 @@ namespace BinanceApp.Common
             }
             catch (Exception e)
             {
+                NLogLogger.PublishException(e, $"ChromeWrapper:SendKey: {e.Message}");
             }
         }
     }

@@ -146,3 +146,17 @@ D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.csproj.CoreCompileInput
 D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.csproj.CopyComplete
 D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.exe
 D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.pdb
+D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\NLog.config
+D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\NLog.dll
+D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\System.Memory.dll
+D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\System.Buffers.dll
+D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\System.Numerics.Vectors.dll
+D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\NLog.xml
+D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\System.Memory.xml
+D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\System.Buffers.xml
+D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\System.Numerics.Vectors.xml
+D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.frmProfile.resources

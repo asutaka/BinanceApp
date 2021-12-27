@@ -5,7 +5,7 @@ namespace BinanceApp.Model.ENTITY
     public class ProfileModel
     {
         [JsonProperty("sub")]
-        public long Sub { get; set; }
+        public string Sub { get; set; }
         [JsonProperty("name")]
         public string Name { get; set; }
         [JsonProperty("given_name")]
