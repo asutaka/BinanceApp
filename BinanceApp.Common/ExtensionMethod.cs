@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace BinanceApp.Common
 {
-    class ExtensionMethod
+    public static class ExtensionMethod
     {
+        public static long DateToInt(this DateTime value)
+        {
+            return long.Parse(value.ToString("yyyyMMddHHssmm"));
+        }
     }
 }

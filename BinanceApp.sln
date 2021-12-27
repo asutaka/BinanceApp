@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinanceApp.Model", "Binance
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinanceApp.Common", "BinanceApp.Common\BinanceApp.Common.csproj", "{7ECDE4D7-590A-450A-B818-79024795613C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinanceApp.GenCode", "BinanceApp.GenCode\BinanceApp.GenCode.csproj", "{0DFC9C93-C490-45AA-B6AD-F0675882CBFE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{7ECDE4D7-590A-450A-B818-79024795613C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7ECDE4D7-590A-450A-B818-79024795613C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7ECDE4D7-590A-450A-B818-79024795613C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DFC9C93-C490-45AA-B6AD-F0675882CBFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DFC9C93-C490-45AA-B6AD-F0675882CBFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DFC9C93-C490-45AA-B6AD-F0675882CBFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DFC9C93-C490-45AA-B6AD-F0675882CBFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
