@@ -139,7 +139,14 @@ namespace BinanceApp.GUI
             else
             {
                 var model = JsonConvert.DeserializeObject<GenCodeModel>(jsonModel);
-                StaticValues.IsCodeActive = model.Expired > time;
+                if(!_profile.Email.Contains(model.Email) || model.Expired <= time)
+                {
+                    StaticValues.IsCodeActive = false;
+                }
+                else
+                {
+                    StaticValues.IsCodeActive = true;
+                }
             }
             Thread.Sleep(200);
             _frmWaitForm.Close();

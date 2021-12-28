@@ -1,9 +1,12 @@
 ﻿using BinanceApp.Model.ENTITY;
+using BinanceApp.Model.ENUM;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -62,6 +65,19 @@ namespace BinanceApp.Common
                 obj = val;
             }
             finally { Monitor.Exit(obj); }
+        }
+
+        public static string ScronString(List<ScronModel> lstModel)
+        {
+            var strOutput = new StringBuilder();
+            foreach (var item in lstModel)
+            {
+                if (strOutput.Length > 0)
+                    strOutput.Append(" ");
+                var val = (item.Value < 0)? "*" : item.Value.ToString();
+                strOutput.Append(item.Frequence? $"0/":"" + val);
+            }
+            return strOutput.ToString();
         }
     }
 }

@@ -1156,3 +1156,51 @@
    at System.Convert.FromBase64String(String s)
    at BinanceApp.Common.Security.Decrypt(String encryptedText) in F:\DATA\BinanceApp\BinanceApp.Common\Security.cs:line 52 Line: 0
 
+ -------------- Error (2021-12-28 17:31:33.2471) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	cronExpression cannot be null cronExpression cannot be null
+   at Quartz.CronExpression..ctor(String cronExpression) in c:\projects\quartznet\src\Quartz\CronExpression.cs:line 389
+   at Quartz.CronExpression.ValidateExpression(String cronExpression) in c:\projects\quartznet\src\Quartz\CronExpression.cs:line 522
+   at Quartz.CronScheduleTriggerBuilderExtensions.WithCronSchedule(TriggerBuilder triggerBuilder, String cronExpression) in c:\projects\quartznet\src\Quartz\CronScheduleBuilder.cs:line 310
+   at BinanceApp.Job.EmailSchedule.Settings() in D:\SourceCode\BinanceApp\BinanceApp\Job\EmailScheduleJob.cs:line 28
+   at BinanceApp.Common.Schedule.Start() in D:\SourceCode\BinanceApp\BinanceApp.Common\Schedule.cs:line 254
+   at BinanceApp.Job.ScheduleUiContainer.StartSchedule() in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 110
+   at BinanceApp.Job.ScheduleUiContainer.CheckBoxStartPause_Click(Object sender, EventArgs e) in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 141 Line: 389
+
+ -------------- Error (2021-12-28 17:31:38.3059) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	cronExpression cannot be null cronExpression cannot be null
+   at Quartz.CronExpression..ctor(String cronExpression) in c:\projects\quartznet\src\Quartz\CronExpression.cs:line 389
+   at Quartz.CronExpression.ValidateExpression(String cronExpression) in c:\projects\quartznet\src\Quartz\CronExpression.cs:line 522
+   at Quartz.CronScheduleTriggerBuilderExtensions.WithCronSchedule(TriggerBuilder triggerBuilder, String cronExpression) in c:\projects\quartznet\src\Quartz\CronScheduleBuilder.cs:line 310
+   at BinanceApp.Job.HrSchedule.Settings() in D:\SourceCode\BinanceApp\BinanceApp\Job\HrScheduleJob.cs:line 27
+   at BinanceApp.Common.Schedule.Start() in D:\SourceCode\BinanceApp\BinanceApp.Common\Schedule.cs:line 254
+   at BinanceApp.Job.ScheduleUiContainer.StartSchedule() in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 110
+   at BinanceApp.Job.ScheduleUiContainer.CheckBoxStartPause_Click(Object sender, EventArgs e) in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 141 Line: 389
+
+ -------------- Error (2021-12-28 17:31:41.2891) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	cronExpression cannot be null cronExpression cannot be null
+   at Quartz.CronExpression..ctor(String cronExpression) in c:\projects\quartznet\src\Quartz\CronExpression.cs:line 389
+   at Quartz.CronExpression.ValidateExpression(String cronExpression) in c:\projects\quartznet\src\Quartz\CronExpression.cs:line 522
+   at Quartz.CronScheduleTriggerBuilderExtensions.WithCronSchedule(TriggerBuilder triggerBuilder, String cronExpression) in c:\projects\quartznet\src\Quartz\CronScheduleBuilder.cs:line 310
+   at BinanceApp.Job.EmailSchedule.Settings() in D:\SourceCode\BinanceApp\BinanceApp\Job\EmailScheduleJob.cs:line 28
+   at BinanceApp.Common.Schedule.Start() in D:\SourceCode\BinanceApp\BinanceApp.Common\Schedule.cs:line 254
+   at BinanceApp.Job.ScheduleUiContainer.StartSchedule() in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 110
+   at BinanceApp.Job.ScheduleUiContainer.CheckBoxStartPause_Click(Object sender, EventArgs e) in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 141 Line: 389
+

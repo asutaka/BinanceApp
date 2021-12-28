@@ -10,10 +10,12 @@ F:\DATA\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.pdb
 F:\DATA\BinanceApp\BinanceApp.Model\bin\Debug\Newtonsoft.Json.dll
 F:\DATA\BinanceApp\BinanceApp.Model\bin\Debug\Newtonsoft.Json.xml
 F:\DATA\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.csproj.CopyComplete
+F:\DATA\BinanceApp\BinanceApp.Model\bin\Debug\System.ComponentModel.Annotations.dll
 D:\SourceCode\BinanceApp\BinanceApp.Model\bin\Debug\BinanceApp.Model.dll.config
 D:\SourceCode\BinanceApp\BinanceApp.Model\bin\Debug\BinanceApp.Model.dll
 D:\SourceCode\BinanceApp\BinanceApp.Model\bin\Debug\BinanceApp.Model.pdb
 D:\SourceCode\BinanceApp\BinanceApp.Model\bin\Debug\Newtonsoft.Json.dll
+D:\SourceCode\BinanceApp\BinanceApp.Model\bin\Debug\System.ComponentModel.Annotations.dll
 D:\SourceCode\BinanceApp\BinanceApp.Model\bin\Debug\Newtonsoft.Json.xml
 D:\SourceCode\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.csproj.AssemblyReference.cache
 D:\SourceCode\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.Properties.Resources.resources
@@ -22,5 +24,3 @@ D:\SourceCode\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.csproj.Core
 D:\SourceCode\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.csproj.CopyComplete
 D:\SourceCode\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.dll
 D:\SourceCode\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.pdb
-D:\SourceCode\BinanceApp\BinanceApp.Model\bin\Debug\System.ComponentModel.Annotations.dll
-F:\DATA\BinanceApp\BinanceApp.Model\bin\Debug\System.ComponentModel.Annotations.dll
