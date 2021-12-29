@@ -1,11 +1,13 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using PhoneNumbers;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace BinanceApp.Common
@@ -103,6 +105,75 @@ namespace BinanceApp.Common
             /*add text*/
             string line = String.IsNullOrEmpty(box.Text) ? text : newLineIndicator + text;
             box.AppendText(line);
+        }
+
+        public static T DownloadJsonFile<T>(string url)
+        {
+            if (WebRequest.Create(url) is HttpWebRequest webRequest)
+            {
+                webRequest.ContentType = "application/json";
+                webRequest.UserAgent = "Nothing";
+
+                using (var s = webRequest.GetResponse().GetResponseStream())
+                {
+                    using (var sr = new StreamReader(s))
+                    {
+                        var contributorsAsJson = sr.ReadToEnd();
+                        var contributors = JsonConvert.DeserializeObject<T>(contributorsAsJson);
+                        return (T)Convert.ChangeType(contributors, typeof(T));
+                    }
+                }
+            }
+            return (T)Convert.ChangeType(null, typeof(T));
+        }
+
+        public static JArray DownloadJsonArray(string url)
+        {
+            if (WebRequest.Create(url) is HttpWebRequest webRequest)
+            {
+                webRequest.ContentType = "application/json";
+                webRequest.UserAgent = "Nothing";
+                try
+                {
+                    using (var s = webRequest.GetResponse().GetResponseStream())
+                    {
+                        using (var sr = new StreamReader(s))
+                        {
+                            var contributorsAsJson = sr.ReadToEnd();
+                            var contributors = JArray.Parse(contributorsAsJson);
+                            return contributors;
+                        }
+                    }
+                }
+                catch
+                {
+                    return null;
+                }
+            }
+            return null;
+        }
+
+        public static DateTime UnixTimeStampToDateTime(this int unixTimeStamp)
+        {
+            DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+            dtDateTime = dtDateTime.AddSeconds(unixTimeStamp).ToLocalTime();
+            return dtDateTime;
+        }
+
+        public static string GetDisplayName(this Enum enumValue)
+        {
+            try
+            {
+                return enumValue.GetType()
+                            .GetMember(enumValue.ToString())
+                            .First()
+                            .GetCustomAttribute<DisplayAttribute>()
+                            .GetName();
+            }
+            catch
+            {
+                return string.Empty;
+            }
         }
     }
 }

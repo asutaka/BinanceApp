@@ -30,7 +30,6 @@ namespace BinanceApp.GUI
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.picStatus = new System.Windows.Forms.PictureBox();
             this.txtPhone = new DevExpress.XtraEditors.TextEdit();
             this.label5 = new System.Windows.Forms.Label();
             this.btnPaste = new DevExpress.XtraEditors.SimpleButton();
@@ -43,19 +42,23 @@ namespace BinanceApp.GUI
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.picSupport = new System.Windows.Forms.PictureBox();
+            this.picStatus = new System.Windows.Forms.PictureBox();
             this.picAvatar = new System.Windows.Forms.PictureBox();
+            this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSupport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.picSupport);
             this.groupBox1.Controls.Add(this.picStatus);
             this.groupBox1.Controls.Add(this.txtPhone);
             this.groupBox1.Controls.Add(this.label5);
@@ -65,31 +68,20 @@ namespace BinanceApp.GUI
             this.groupBox1.Controls.Add(this.btnOk);
             this.groupBox1.Controls.Add(this.lblLocale);
             this.groupBox1.Controls.Add(this.lblEmail);
-            this.groupBox1.Controls.Add(this.lblUserName);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.picAvatar);
+            this.groupBox1.Controls.Add(this.btnEdit);
             this.groupBox1.Controls.Add(this.btnCancel);
             this.groupBox1.Controls.Add(this.btnSave);
-            this.groupBox1.Controls.Add(this.btnEdit);
+            this.groupBox1.Controls.Add(this.lblUserName);
             this.groupBox1.Location = new System.Drawing.Point(3, -1);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(416, 241);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
-            // 
-            // picStatus
-            // 
-            this.picStatus.BackColor = System.Drawing.Color.Transparent;
-            this.picStatus.Image = global::BinanceApp.Properties.Resources.yellow;
-            this.picStatus.Location = new System.Drawing.Point(12, 195);
-            this.picStatus.Name = "picStatus";
-            this.picStatus.Size = new System.Drawing.Size(32, 32);
-            this.picStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.picStatus.TabIndex = 16;
-            this.picStatus.TabStop = false;
             // 
             // txtPhone
             // 
@@ -174,6 +166,7 @@ namespace BinanceApp.GUI
             this.lblUserName.AutoSize = true;
             this.lblUserName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserName.Location = new System.Drawing.Point(181, 24);
+            this.lblUserName.MaximumSize = new System.Drawing.Size(150, 19);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(94, 19);
             this.lblUserName.TabIndex = 4;
@@ -206,6 +199,30 @@ namespace BinanceApp.GUI
             this.label1.TabIndex = 1;
             this.label1.Text = "Họ tên:";
             // 
+            // picSupport
+            // 
+            this.picSupport.BackColor = System.Drawing.Color.White;
+            this.picSupport.Image = global::BinanceApp.Properties.Resources.telegram_64x64;
+            this.picSupport.Location = new System.Drawing.Point(9, 186);
+            this.picSupport.Name = "picSupport";
+            this.picSupport.Size = new System.Drawing.Size(40, 41);
+            this.picSupport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSupport.TabIndex = 17;
+            this.picSupport.TabStop = false;
+            this.picSupport.MouseHover += new System.EventHandler(this.picSupport_MouseHover);
+            // 
+            // picStatus
+            // 
+            this.picStatus.BackColor = System.Drawing.Color.Transparent;
+            this.picStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picStatus.Image = global::BinanceApp.Properties.Resources.yellow;
+            this.picStatus.Location = new System.Drawing.Point(382, 9);
+            this.picStatus.Name = "picStatus";
+            this.picStatus.Size = new System.Drawing.Size(34, 34);
+            this.picStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picStatus.TabIndex = 16;
+            this.picStatus.TabStop = false;
+            // 
             // picAvatar
             // 
             this.picAvatar.BackColor = System.Drawing.Color.White;
@@ -214,6 +231,15 @@ namespace BinanceApp.GUI
             this.picAvatar.Size = new System.Drawing.Size(100, 100);
             this.picAvatar.TabIndex = 0;
             this.picAvatar.TabStop = false;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.ImageOptions.Image = global::BinanceApp.Properties.Resources.edit;
+            this.btnEdit.Location = new System.Drawing.Point(311, 98);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(26, 20);
+            this.btnEdit.TabIndex = 13;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnCancel
             // 
@@ -235,15 +261,6 @@ namespace BinanceApp.GUI
             this.btnSave.Visible = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnEdit
-            // 
-            this.btnEdit.ImageOptions.Image = global::BinanceApp.Properties.Resources.edit;
-            this.btnEdit.Location = new System.Drawing.Point(311, 98);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(26, 20);
-            this.btnEdit.TabIndex = 13;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
             // frmProfile
             // 
             this.Appearance.BackColor = System.Drawing.Color.AliceBlue;
@@ -259,9 +276,10 @@ namespace BinanceApp.GUI
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmProfile_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSupport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.ResumeLayout(false);
 
@@ -287,5 +305,6 @@ namespace BinanceApp.GUI
         private DevExpress.XtraEditors.TextEdit txtPhone;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox picStatus;
+        private System.Windows.Forms.PictureBox picSupport;
     }
 }

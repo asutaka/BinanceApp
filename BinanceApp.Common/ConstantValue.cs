@@ -19,5 +19,9 @@ namespace BinanceApp.Common
         public const string VIKey = "Phunv@Huy456aA@1";
         //Time
         public const string timeURL = "https://api.timezonedb.com/v2/get-time-zone?key=PJBB6AVAAMO0&format=json&by=zone&zone=Asia/Bangkok";
+        //Coin
+        public const string COIN_LIST = "https://www.binance.com/bapi/asset/v2/public/asset-service/product/get-products?includeEtf=true";
+        public const string COIN_DETAIL = "https://www.binance.com/api/v1/klines?";
+        public const string COIN_SINGLE = "https://www.binance.com/vi/trade/";
     }
 }

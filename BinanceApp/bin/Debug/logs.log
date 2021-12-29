@@ -1339,3 +1339,14 @@
    at BinanceApp.Job.ScheduleUiContainer.StartSchedule() in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 112
    at BinanceApp.Job.ScheduleUiContainer.CheckBoxStartPause_Click(Object sender, EventArgs e) in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 139 Line: 648
 
+ -------------- Error (2021-12-30 01:38:21.4651) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	AuthResponse:Exchange: The remote server returned an error: (400) Bad Request. The remote server returned an error: (400) Bad Request.
+   at System.Net.HttpWebRequest.GetResponse()
+   at BinanceApp.Common.AuthResponse.Exchange(String authCode, String clientid, String secret, String redirectURI) in F:\DATA\BinanceApp\BinanceApp.Common\AuthResponse.cs:line 88 Line: 0
+

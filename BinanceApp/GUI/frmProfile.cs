@@ -85,6 +85,10 @@ namespace BinanceApp.GUI
                 Application.Exit();
                 Environment.Exit(0);
             }
+            else
+            {
+                this.Close();
+            }
         }
 
         private void btnOk_Click(object sender, System.EventArgs e)
@@ -191,6 +195,12 @@ namespace BinanceApp.GUI
         private void frmProfile_FormClosing(object sender, FormClosingEventArgs e)
         {
             CloseAppCheck();
+        }
+
+        private void picSupport_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.picSupport, "Liên hệ lấy code");
         }
     }
 }
