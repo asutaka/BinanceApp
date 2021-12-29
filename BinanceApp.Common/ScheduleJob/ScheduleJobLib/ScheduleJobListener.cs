@@ -1,6 +1,6 @@
 ﻿using Quartz;
 
-namespace BinanceApp.Common
+namespace BinanceApp.Common.ScheduleJob.ScheduleJobLib
 {
     public class ScheduleJobListener : IJobListener
     {

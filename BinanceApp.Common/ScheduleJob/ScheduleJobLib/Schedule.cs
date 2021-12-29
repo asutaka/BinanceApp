@@ -3,7 +3,7 @@ using Quartz.Impl.Matchers;
 using System;
 using System.Linq;
 
-namespace BinanceApp.Common
+namespace BinanceApp.Common.ScheduleJob.ScheduleJobLib
 {
     public delegate void TaskExecution();
     public delegate void TaskExecutionComplete(Exception exception);

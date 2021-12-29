@@ -104,11 +104,11 @@
     <Compile Include="ExtensionMethod.cs" />
     <Compile Include="NLogLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Schedule.cs" />
-    <Compile Include="ScheduleContext.cs" />
-    <Compile Include="ScheduleJobListener.cs" />
+    <Compile Include="ScheduleJob\ScheduleJobLib\Schedule.cs" />
+    <Compile Include="ScheduleJob\ScheduleJobLib\ScheduleContext.cs" />
+    <Compile Include="ScheduleJob\ScheduleJobLib\ScheduleJobListener.cs" />
+    <Compile Include="ScheduleJob\ScheduleMng.cs" />
     <Compile Include="Security.cs" />
-    <Compile Include="StaticValues.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

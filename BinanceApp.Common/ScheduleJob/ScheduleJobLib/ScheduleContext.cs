@@ -2,7 +2,7 @@
 using Quartz.Impl;
 using System.Collections.Specialized;
 
-namespace BinanceApp.Common
+namespace BinanceApp.Common.ScheduleJob.ScheduleJobLib
 {
     public abstract class ScheduleContext
     {

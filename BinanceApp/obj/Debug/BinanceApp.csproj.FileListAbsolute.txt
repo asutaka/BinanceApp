@@ -90,7 +90,6 @@ F:\DATA\BinanceApp\BinanceApp\bin\Debug\PhoneNumbers.dll
 F:\DATA\BinanceApp\BinanceApp\bin\Debug\System.Collections.Immutable.dll
 F:\DATA\BinanceApp\BinanceApp\bin\Debug\PhoneNumbers.xml
 F:\DATA\BinanceApp\BinanceApp\bin\Debug\System.Collections.Immutable.xml
-D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\DevExpress.BonusSkins.v20.1.dll
 D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\NLog.config
 D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\BinanceApp.exe.config
 D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\BinanceApp.exe
@@ -99,6 +98,7 @@ D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\BinanceApp.Common.dll
 D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\BinanceApp.Model.dll
 D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\Common.Logging.Core.dll
 D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\Common.Logging.dll
+D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\DevExpress.BonusSkins.v20.1.dll
 D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\DevExpress.Data.Desktop.v20.1.dll
 D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\DevExpress.Data.v20.1.dll
 D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\DevExpress.Printing.v20.1.Core.dll

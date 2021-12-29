@@ -17,6 +17,7 @@ namespace BinanceApp
         [STAThread]
         static void Main()
         {
+            Startup.Instance();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Dashboard());

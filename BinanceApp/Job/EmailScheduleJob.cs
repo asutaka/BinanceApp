@@ -15,19 +15,4 @@ namespace BinanceApp.Job
             //Thread.Sleep(jobDuration);
         }
     }
-
-    public class EmailSchedule : Schedule
-    {
-        public EmailSchedule(IScheduler scheduler) : base(scheduler, nameof(EmailScheduleJob))
-        {
-        }
-
-        protected override Tuple<JobBuilder, TriggerBuilder> Settings()
-        {
-            string cronJobExpression = ConfigurationManager.AppSettings["CronJobExpression"];
-            TriggerBuilder triggerBuilder = TriggerBuilder.Create().WithCronSchedule(cronJobExpression);
-            JobBuilder jobBuilder = JobBuilder.Create<EmailScheduleJob>();
-            return new Tuple<JobBuilder, TriggerBuilder>(jobBuilder, triggerBuilder);
-        }
-    }
 }

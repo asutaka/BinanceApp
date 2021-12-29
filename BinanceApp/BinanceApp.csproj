@@ -98,9 +98,10 @@
     <Compile Include="Job\EmailScheduleJob.cs" />
     <Compile Include="Job\HrScheduleJob.cs" />
     <Compile Include="Job\ScheduleUiContainer.cs" />
-    <Compile Include="Job\TestScheduler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="StaticValues.cs" />
     <Compile Include="UserControl\userLogin.cs">
       <SubType>UserControl</SubType>
     </Compile>

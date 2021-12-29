@@ -1,7 +1,9 @@
 ﻿using BinanceApp.Common;
 using BinanceApp.Job;
+using BinanceApp.Job.ScheduleJob;
 using System;
 using System.ComponentModel;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace BinanceApp.GUI
@@ -9,7 +11,7 @@ namespace BinanceApp.GUI
     public partial class Dashboard : Form
     {
         private readonly BackgroundWorker Bw;
-        private TestScheduler _scheduleContext;
+        private ScheduleMng _scheduleContext;
 
         public Dashboard()
         {
@@ -32,9 +34,9 @@ namespace BinanceApp.GUI
             }
 
             /*schedule*/
-            _scheduleContext = TestScheduler.Instance();
-            new ScheduleUiContainer(this, richTextEmailSched, checkBoxEmailSched, _scheduleContext.EmailSchedule).Initialize();
-            new ScheduleUiContainer(this, richTextHrSched, checkBoxHrSched, _scheduleContext.HrSchedule).Initialize();
+            _scheduleContext = ScheduleMng.Instance();
+            new ScheduleUiContainer(this, richTextEmailSched, checkBoxEmailSched, _scheduleContext.GetSchedules().ElementAt(0)).Initialize();
+            new ScheduleUiContainer(this, richTextHrSched, checkBoxHrSched, _scheduleContext.GetSchedules().ElementAt(1)).Initialize();
         }
 
         private void BgWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
