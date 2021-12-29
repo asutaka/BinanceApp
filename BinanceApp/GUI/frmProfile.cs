@@ -151,6 +151,7 @@ namespace BinanceApp.GUI
             Thread.Sleep(200);
             _frmWaitForm.Close();
         }
+
         private void bkgrCheckStatus_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             picStatus.Image = StaticValues.IsCodeActive ? Properties.Resources.green : Properties.Resources.red;

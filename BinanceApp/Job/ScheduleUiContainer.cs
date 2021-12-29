@@ -1,5 +1,6 @@
 ﻿using BinanceApp.Common;
 using BinanceApp.Common.ScheduleJob.ScheduleJobLib;
+using BinanceApp.UserControl;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -10,21 +11,17 @@ namespace BinanceApp.Job
     {
         private const uint MaxLine = 720;
         private const string DateTimeDisplayFormat = "dd-MMM-yyyy hh:mm:ss tt";
-        private DateTime _lastEstimatedStartTime;
-
-        private readonly string ErrorFileName;
         private readonly Form Form;
         private readonly RichTextBox RichTextBox;
         private readonly CheckBox CheckBoxStartPause;
         private readonly ISchedule Schedule;
 
-        public ScheduleUiContainer(Form form, RichTextBox richTextBox, CheckBox checkBoxStartPause, ISchedule schedule, string errorFileName = null)
+        public ScheduleUiContainer(Form form, userMonitorSchedule user, ISchedule schedule)
         {
             Form = form;
-            RichTextBox = richTextBox;
-            CheckBoxStartPause = checkBoxStartPause;
+            RichTextBox = user.GetRichTextBox();
+            CheckBoxStartPause = user.GetCheckBox();
             Schedule = schedule;
-            ErrorFileName = string.IsNullOrEmpty(errorFileName) ? schedule.Name : errorFileName;
         }
 
         internal void Initialize()

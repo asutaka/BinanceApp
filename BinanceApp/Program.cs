@@ -20,7 +20,7 @@ namespace BinanceApp
             Startup.Instance();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Dashboard());
+            Application.Run(new frmMonitor());
         }
         //Làm job check trạng thái
     }

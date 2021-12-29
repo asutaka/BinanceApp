@@ -1204,3 +1204,138 @@
    at BinanceApp.Job.ScheduleUiContainer.StartSchedule() in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 110
    at BinanceApp.Job.ScheduleUiContainer.CheckBoxStartPause_Click(Object sender, EventArgs e) in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 141 Line: 389
 
+ -------------- Error (2021-12-29 17:07:24.6560) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	The Scheduler has been Shutdown. The Scheduler has been Shutdown.
+   at Quartz.Core.QuartzScheduler.ValidateState() in c:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 648
+   at Quartz.Core.QuartzScheduler.PauseJob(JobKey jobKey) in c:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 1135
+   at Quartz.Impl.StdScheduler.PauseJob(JobKey jobKey) in c:\projects\quartznet\src\Quartz\Impl\StdScheduler.cs:line 386
+   at BinanceApp.Common.ScheduleJob.ScheduleJobLib.Schedule.Pause() in D:\SourceCode\BinanceApp\BinanceApp.Common\ScheduleJob\ScheduleJobLib\Schedule.cs:line 269
+   at BinanceApp.Job.ScheduleUiContainer.PauseSchedule() in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 119
+   at BinanceApp.Job.ScheduleUiContainer.CheckBoxStartPause_Click(Object sender, EventArgs e) in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 144 Line: 648
+
+ -------------- Error (2021-12-29 17:07:26.2269) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	The Scheduler has been Shutdown. The Scheduler has been Shutdown.
+   at Quartz.Core.QuartzScheduler.ValidateState() in c:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 648
+   at Quartz.Core.QuartzScheduler.ResumeJob(JobKey jobKey) in c:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 1225
+   at Quartz.Impl.StdScheduler.ResumeJob(JobKey jobKey) in c:\projects\quartznet\src\Quartz\Impl\StdScheduler.cs:line 418
+   at BinanceApp.Common.ScheduleJob.ScheduleJobLib.Schedule.Resume() in D:\SourceCode\BinanceApp\BinanceApp.Common\ScheduleJob\ScheduleJobLib\Schedule.cs:line 279
+   at BinanceApp.Job.ScheduleUiContainer.StartSchedule() in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 112
+   at BinanceApp.Job.ScheduleUiContainer.CheckBoxStartPause_Click(Object sender, EventArgs e) in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 139 Line: 648
+
+ -------------- Error (2021-12-29 17:07:26.9219) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	The Scheduler has been Shutdown. The Scheduler has been Shutdown.
+   at Quartz.Core.QuartzScheduler.ValidateState() in c:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 648
+   at Quartz.Core.QuartzScheduler.PauseJob(JobKey jobKey) in c:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 1135
+   at Quartz.Impl.StdScheduler.PauseJob(JobKey jobKey) in c:\projects\quartznet\src\Quartz\Impl\StdScheduler.cs:line 386
+   at BinanceApp.Common.ScheduleJob.ScheduleJobLib.Schedule.Pause() in D:\SourceCode\BinanceApp\BinanceApp.Common\ScheduleJob\ScheduleJobLib\Schedule.cs:line 269
+   at BinanceApp.Job.ScheduleUiContainer.PauseSchedule() in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 119
+   at BinanceApp.Job.ScheduleUiContainer.CheckBoxStartPause_Click(Object sender, EventArgs e) in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 144 Line: 648
+
+ -------------- Error (2021-12-29 17:07:27.9392) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	The Scheduler has been Shutdown. The Scheduler has been Shutdown.
+   at Quartz.Core.QuartzScheduler.ValidateState() in c:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 648
+   at Quartz.Core.QuartzScheduler.PauseJob(JobKey jobKey) in c:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 1135
+   at Quartz.Impl.StdScheduler.PauseJob(JobKey jobKey) in c:\projects\quartznet\src\Quartz\Impl\StdScheduler.cs:line 386
+   at BinanceApp.Common.ScheduleJob.ScheduleJobLib.Schedule.Pause() in D:\SourceCode\BinanceApp\BinanceApp.Common\ScheduleJob\ScheduleJobLib\Schedule.cs:line 269
+   at BinanceApp.Job.ScheduleUiContainer.PauseSchedule() in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 119
+   at BinanceApp.Job.ScheduleUiContainer.CheckBoxStartPause_Click(Object sender, EventArgs e) in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 144 Line: 648
+
+ -------------- Error (2021-12-29 17:07:28.3135) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	The Scheduler has been Shutdown. The Scheduler has been Shutdown.
+   at Quartz.Core.QuartzScheduler.ValidateState() in c:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 648
+   at Quartz.Core.QuartzScheduler.ResumeJob(JobKey jobKey) in c:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 1225
+   at Quartz.Impl.StdScheduler.ResumeJob(JobKey jobKey) in c:\projects\quartznet\src\Quartz\Impl\StdScheduler.cs:line 418
+   at BinanceApp.Common.ScheduleJob.ScheduleJobLib.Schedule.Resume() in D:\SourceCode\BinanceApp\BinanceApp.Common\ScheduleJob\ScheduleJobLib\Schedule.cs:line 279
+   at BinanceApp.Job.ScheduleUiContainer.StartSchedule() in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 112
+   at BinanceApp.Job.ScheduleUiContainer.CheckBoxStartPause_Click(Object sender, EventArgs e) in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 139 Line: 648
+
+ -------------- Error (2021-12-29 17:07:28.5221) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	The Scheduler has been Shutdown. The Scheduler has been Shutdown.
+   at Quartz.Core.QuartzScheduler.ValidateState() in c:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 648
+   at Quartz.Core.QuartzScheduler.PauseJob(JobKey jobKey) in c:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 1135
+   at Quartz.Impl.StdScheduler.PauseJob(JobKey jobKey) in c:\projects\quartznet\src\Quartz\Impl\StdScheduler.cs:line 386
+   at BinanceApp.Common.ScheduleJob.ScheduleJobLib.Schedule.Pause() in D:\SourceCode\BinanceApp\BinanceApp.Common\ScheduleJob\ScheduleJobLib\Schedule.cs:line 269
+   at BinanceApp.Job.ScheduleUiContainer.PauseSchedule() in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 119
+   at BinanceApp.Job.ScheduleUiContainer.CheckBoxStartPause_Click(Object sender, EventArgs e) in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 144 Line: 648
+
+ -------------- Error (2021-12-29 17:07:30.3073) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	The Scheduler has been Shutdown. The Scheduler has been Shutdown.
+   at Quartz.Core.QuartzScheduler.ValidateState() in c:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 648
+   at Quartz.Core.QuartzScheduler.ResumeJob(JobKey jobKey) in c:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 1225
+   at Quartz.Impl.StdScheduler.ResumeJob(JobKey jobKey) in c:\projects\quartznet\src\Quartz\Impl\StdScheduler.cs:line 418
+   at BinanceApp.Common.ScheduleJob.ScheduleJobLib.Schedule.Resume() in D:\SourceCode\BinanceApp\BinanceApp.Common\ScheduleJob\ScheduleJobLib\Schedule.cs:line 279
+   at BinanceApp.Job.ScheduleUiContainer.StartSchedule() in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 112
+   at BinanceApp.Job.ScheduleUiContainer.CheckBoxStartPause_Click(Object sender, EventArgs e) in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 139 Line: 648
+
+ -------------- Error (2021-12-29 17:07:30.5546) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	The Scheduler has been Shutdown. The Scheduler has been Shutdown.
+   at Quartz.Core.QuartzScheduler.ValidateState() in c:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 648
+   at Quartz.Core.QuartzScheduler.PauseJob(JobKey jobKey) in c:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 1135
+   at Quartz.Impl.StdScheduler.PauseJob(JobKey jobKey) in c:\projects\quartznet\src\Quartz\Impl\StdScheduler.cs:line 386
+   at BinanceApp.Common.ScheduleJob.ScheduleJobLib.Schedule.Pause() in D:\SourceCode\BinanceApp\BinanceApp.Common\ScheduleJob\ScheduleJobLib\Schedule.cs:line 269
+   at BinanceApp.Job.ScheduleUiContainer.PauseSchedule() in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 119
+   at BinanceApp.Job.ScheduleUiContainer.CheckBoxStartPause_Click(Object sender, EventArgs e) in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 144 Line: 648
+
+ -------------- Error (2021-12-29 17:07:30.7222) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	The Scheduler has been Shutdown. The Scheduler has been Shutdown.
+   at Quartz.Core.QuartzScheduler.ValidateState() in c:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 648
+   at Quartz.Core.QuartzScheduler.ResumeJob(JobKey jobKey) in c:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 1225
+   at Quartz.Impl.StdScheduler.ResumeJob(JobKey jobKey) in c:\projects\quartznet\src\Quartz\Impl\StdScheduler.cs:line 418
+   at BinanceApp.Common.ScheduleJob.ScheduleJobLib.Schedule.Resume() in D:\SourceCode\BinanceApp\BinanceApp.Common\ScheduleJob\ScheduleJobLib\Schedule.cs:line 279
+   at BinanceApp.Job.ScheduleUiContainer.StartSchedule() in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 112
+   at BinanceApp.Job.ScheduleUiContainer.CheckBoxStartPause_Click(Object sender, EventArgs e) in D:\SourceCode\BinanceApp\BinanceApp\Job\ScheduleUiContainer.cs:line 139 Line: 648
+

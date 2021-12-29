@@ -186,3 +186,11 @@ D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.csproj.CoreCompileInput
 D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.csproj.CopyComplete
 D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.exe
 D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.pdb
+D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\DevExpress.Xpo.v20.1.dll
+D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\DevExpress.Xpo.v20.1.xml
+D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\de\DevExpress.Xpo.v20.1.resources.dll
+D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\es\DevExpress.Xpo.v20.1.resources.dll
+D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\ja\DevExpress.Xpo.v20.1.resources.dll
+D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\ru\DevExpress.Xpo.v20.1.resources.dll
+D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.frmMonitor.resources
+D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.UserControl.userMonitorSchedule.resources

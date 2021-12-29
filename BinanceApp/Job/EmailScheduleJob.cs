@@ -10,7 +10,6 @@ namespace BinanceApp.Job
     {
         public void Execute(IJobExecutionContext context)
         {
-            Console.WriteLine("deo hieu kieu gi");
             //int jobDuration = Convert.ToInt32(ConfigurationManager.AppSettings["JobDurationMilliseconds"]);
             //Thread.Sleep(jobDuration);
         }

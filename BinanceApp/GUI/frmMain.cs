@@ -20,6 +20,7 @@ namespace BinanceApp.GUI
             _bkgr.DoWork += bkgrCheckConnection_DoWork;
             _bkgr.RunWorkerCompleted += bkgrCheckConnection_RunWorkerCompleted;
             _bkgr.RunWorkerAsync();
+            StaticValues.frmMonitorObj = frmMonitor.Instance();
         }
         public void ShowProfile()
         {

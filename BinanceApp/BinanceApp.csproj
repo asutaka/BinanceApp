@@ -45,6 +45,7 @@
     <Reference Include="DevExpress.Data.v20.1" />
     <Reference Include="DevExpress.Utils.v20.1" />
     <Reference Include="DevExpress.Sparkline.v20.1.Core" />
+    <Reference Include="DevExpress.Xpo.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v20.1" />
     <Reference Include="DevExpress.Printing.v20.1.Core" />
@@ -76,6 +77,18 @@
     <Compile Include="GUI\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmMonitor.Designer.cs">
+      <DependentUpon>frmMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +108,7 @@
       <DependentUpon>frmWaitForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\WaitFunc.cs" />
+    <Compile Include="Job\CheckStatusJob.cs" />
     <Compile Include="Job\EmailScheduleJob.cs" />
     <Compile Include="Job\HrScheduleJob.cs" />
     <Compile Include="Job\ScheduleUiContainer.cs" />
@@ -102,6 +116,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="StaticValues.cs" />
+    <Compile Include="UserControl\userMonitorSchedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\userMonitorSchedule.Designer.cs">
+      <DependentUpon>userMonitorSchedule.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\userLogin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -113,6 +133,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmMonitor.resx">
+      <DependentUpon>frmMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmProfile.resx">
       <DependentUpon>frmProfile.cs</DependentUpon>
@@ -128,13 +154,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControl\userMonitorSchedule.resx">
+      <DependentUpon>userMonitorSchedule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControl\userLogin.resx">
       <DependentUpon>userLogin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
-    <None Include="job_scheduling_data_2_0.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
