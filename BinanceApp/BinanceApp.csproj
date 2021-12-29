@@ -122,12 +122,6 @@
     <Compile Include="UserControl\userMonitorSchedule.Designer.cs">
       <DependentUpon>userMonitorSchedule.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\userLogin.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl\userLogin.Designer.cs">
-      <DependentUpon>userLogin.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="GUI\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,9 +150,6 @@
     </Compile>
     <EmbeddedResource Include="UserControl\userMonitorSchedule.resx">
       <DependentUpon>userMonitorSchedule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\userLogin.resx">
-      <DependentUpon>userLogin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />

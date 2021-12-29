@@ -29,16 +29,22 @@ namespace BinanceApp.GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.userLogin1 = new BinanceApp.UserControl.userLogin();
+            this.picGoogleSignIn = new DevExpress.XtraEditors.PictureEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGoogleSignIn.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // userLogin1
+            // picGoogleSignIn
             // 
-            this.userLogin1.Location = new System.Drawing.Point(2, 4);
-            this.userLogin1.Name = "userLogin1";
-            this.userLogin1.Size = new System.Drawing.Size(592, 150);
-            this.userLogin1.TabIndex = 3;
-            this.userLogin1.Visible = false;
+            this.picGoogleSignIn.EditValue = global::BinanceApp.Properties.Resources.GoogleSignIn;
+            this.picGoogleSignIn.Location = new System.Drawing.Point(121, 40);
+            this.picGoogleSignIn.Name = "picGoogleSignIn";
+            this.picGoogleSignIn.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.picGoogleSignIn.Properties.Appearance.Options.UseBackColor = true;
+            this.picGoogleSignIn.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picGoogleSignIn.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.picGoogleSignIn.Size = new System.Drawing.Size(354, 78);
+            this.picGoogleSignIn.TabIndex = 3;
+            this.picGoogleSignIn.Click += new System.EventHandler(this.picGoogleSignIn_Click);
             // 
             // frmLogin
             // 
@@ -47,17 +53,19 @@ namespace BinanceApp.GUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(597, 159);
-            this.Controls.Add(this.userLogin1);
+            this.Controls.Add(this.picGoogleSignIn);
             this.MaximizeBox = false;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.picGoogleSignIn.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private UserControl.userLogin userLogin1;
+        private DevExpress.XtraEditors.PictureEdit picGoogleSignIn;
     }
 }

@@ -26,7 +26,7 @@ namespace BinanceApp.Job
 
         internal void Initialize()
         {
-            Form.Invoke((MethodInvoker)delegate
+            Form.BeginInvoke((MethodInvoker)delegate
             {
                 CheckBoxStartPause.Appearance = Appearance.Button;
                 CheckBoxStartPause.TextAlign = ContentAlignment.MiddleCenter;

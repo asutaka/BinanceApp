@@ -4,10 +4,7 @@ using BinanceApp.Model.ENTITY;
 using Newtonsoft.Json;
 using Quartz;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BinanceApp.Job
 {
@@ -42,13 +39,28 @@ namespace BinanceApp.Job
 
             if (!StaticValues.IsCodeActive)
             {
-                //về màn hình đăng nhập
-                if(StaticValues.frmMonitorObj != null)
+                StaticValues.IsAccessMain = false;
+                try
                 {
-                    StaticValues.frmMonitorObj.KillAllSchedule();
+                    if (StaticValues.ScheduleMngObj != null)
+                    {
+                        foreach (var item in StaticValues.ScheduleMngObj.GetSchedules())
+                        {
+                            item.Pause();
+                        }
+                    }
                 }
-                var objLogin = new frmLogin();
-                objLogin.Show();
+                catch (Exception ex)
+                {
+                    NLogLogger.PublishException(ex, $"CheckStatusJob: {ex.Message}");
+                }
+
+                //về màn hình đăng nhập
+                StaticValues.frmMainObj.BeginInvoke((MethodInvoker)delegate
+                {
+                    StaticValues.frmMainObj.Hide();
+                    new frmLogin().Show();
+                });
             }
             StaticValues.IsExecCheckCodeActive = false;
         }

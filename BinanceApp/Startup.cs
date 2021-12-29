@@ -18,8 +18,9 @@ namespace BinanceApp
         }
         private void Init()
         {
-            StaticValues.ScheduleMngObj.AddSchedule(new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<EmailScheduleJob>(), "0/5 0-59 0-23 * * ?", nameof(EmailScheduleJob)));
-            StaticValues.ScheduleMngObj.AddSchedule(new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<HrScheduleJob>(), "0/5 0-59 0-23 * * ?", nameof(HrScheduleJob)));
+            StaticValues.ScheduleMngObj.AddSchedule(new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<CheckStatusJob>(), StaticValues.Scron_CheckStatus, nameof(CheckStatusJob)));
+            //StaticValues.ScheduleMngObj.AddSchedule(new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<EmailScheduleJob>(), "0/5 0-59 0-23 * * ?", nameof(EmailScheduleJob)));
+            //StaticValues.ScheduleMngObj.AddSchedule(new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<HrScheduleJob>(), "0/5 0-59 0-23 * * ?", nameof(HrScheduleJob)));
         }
     }
 }

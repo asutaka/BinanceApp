@@ -66,6 +66,7 @@ namespace BinanceApp.GUI
             this.Name = "frmMonitor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý tiến trình";
+            this.Load += new System.EventHandler(this.frmMonitor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tabControl)).EndInit();
             this.ResumeLayout(false);
 

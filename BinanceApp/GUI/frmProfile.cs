@@ -2,7 +2,9 @@
 using BinanceApp.Model.ENTITY;
 using DevExpress.XtraEditors;
 using Newtonsoft.Json;
+using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -72,9 +74,22 @@ namespace BinanceApp.GUI
             return isUpdate;
         }
 
+        private void CloseAppCheck()
+        {
+            if (!StaticValues.IsAccessMain)
+            {
+                /*kill all running process
+                * https://stackoverflow.com/questions/8507978/exiting-a-c-sharp-winforms-application
+                */
+                Process.GetCurrentProcess().Kill();
+                Application.Exit();
+                Environment.Exit(0);
+            }
+        }
+
         private void btnOk_Click(object sender, System.EventArgs e)
         {
-            this.Close();
+            CloseAppCheck();
         }
 
         private void btnPaste_Click(object sender, System.EventArgs e)
@@ -163,8 +178,19 @@ namespace BinanceApp.GUI
             else
             {
                 UpdateUserModel();
+                if (!StaticValues.IsAccessMain)
+                {
+                    Hide();
+                    StaticValues.frmMainObj = new frmMain();
+                    StaticValues.frmMainObj.Show();
+                }
             }
             StaticValues.IsExecCheckCodeActive = false;
+        }
+
+        private void frmProfile_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            CloseAppCheck();
         }
     }
 }
