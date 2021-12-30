@@ -70,7 +70,7 @@ namespace BinanceApp.GenTelegram
             this.btnVerifyCode.TabIndex = 4;
             this.btnVerifyCode.Text = "Verify Code";
             this.btnVerifyCode.UseVisualStyleBackColor = true;
-            this.btnVerifyCode.Click += new System.EventHandler(this.btnGenerateCode_Click);
+            this.btnVerifyCode.Click += new System.EventHandler(this.btnVerifyCode_Click);
             // 
             // txtCode
             // 

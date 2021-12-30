@@ -1,82 +1,86 @@
 ﻿using BinanceApp.Common;
 using System;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using WTelegram;
 
 namespace BinanceApp.GenTelegram
 {
     public partial class frmMain : Form
     {
-        private string _phone = string.Empty;
+        private static string _phone_number = string.Empty, _session_pathname = string.Empty, _verification_code = string.Empty;
+        private static string Config(string what)
+        {
+            switch (what)
+            {
+                case "api_id": return ConstantValue.apiIdBot1;
+                case "api_hash": return ConstantValue.apiHashBot1;
+                case "phone_number": return $"+{_phone_number}";
+                case "session_pathname": return _session_pathname;
+                case "verification_code": return _verification_code;
+                default: return null;
+            }
+        }
+
         public frmMain()
         {
             InitializeComponent();
         }
+
         private bool CheckValid()
         {
             if (string.IsNullOrWhiteSpace(txtPhone.Text))
             {
-                MessageBox.Show("Chưa nhập SĐT");
+                MessageBox.Show("Chưa nhập SĐT!");
                 return false;
             }
             try
             {
-                _phone = txtPhone.Text.PhoneFormat();
+                _phone_number = txtPhone.Text.PhoneFormat(false);
+                if (string.IsNullOrWhiteSpace(_phone_number))
+                {
+                    MessageBox.Show("SĐT không hợp lệ!");
+                    return false;
+                }
+                _session_pathname = $"{_phone_number}.session";
             }
             catch(Exception ex)
             {
                 NLogLogger.PublishException(ex, $"GenTelegram|CheckValid: {ex.Message}");
+                MessageBox.Show("SĐT không hợp lệ!");
                 return false;
             }
             return true;
         }
-        private void btnGenerateCode_Click(object sender, EventArgs e)
+
+        private void btnVerifyCode_Click(object sender, EventArgs e)
         {
-            var outputModel = new VerifyCodeModel();
+            VerifyCode().GetAwaiter().GetResult();
+        }
+
+        private async Task VerifyCode()
+        {
             try
             {
-                _logger.LogInformation($"verifyCode| {JsonConvert.SerializeObject(param)}");
-                if (string.IsNullOrWhiteSpace(param.Phone))
-                {
-                    outputModel.Code = (int)enumNotifyResponseStatus.InvalidPhoneNumber;
-                    outputModel.Status = enumNotifyResponseStatus.InvalidPhoneNumber.ToDisplayStatus();
-                    return outputModel;
-                }
-                var phone = param.Phone.PhoneFormat(false);
-                var entity = _context.Bots.FirstOrDefault(x => x.Phone == phone);
-                if (entity != null)
-                {
-                    _api_id0 = entity.ApiId.ToString();
-                    _api_hash0 = entity.ApiHash;
-                    _phone_number0 = entity.Phone;
-                    _session_pathname0 = $"{entity.Phone}.session";
-                    _verification_code0 = param.Code.ToString();
-                    var client = new Client(ConfigInternal);
-                    await client.ConnectAsync();
-                    var user = await client.LoginUserIfNeeded();
-                    _logger.LogInformation($"You are logged-in as {user.username ?? user.first_name + " " + user.last_name} (id {user.id})");
-                    outputModel.Code = (int)enumNotifyResponseStatus.Success;
-                    outputModel.Status = enumNotifyResponseStatus.Success.ToDisplayStatus();
-                }
-                else
-                {
-                    outputModel.Code = (int)enumNotifyResponseStatus.InvalidPhoneNumber;
-                    outputModel.Status = enumNotifyResponseStatus.InvalidPhoneNumber.ToDisplayStatus();
-                }
+                _verification_code = txtCode.Text.Trim();
+                var client = new Client(Config);
+                await client.ConnectAsync();
+                var user = await client.LoginUserIfNeeded();
+                NLogLogger.LogInfo($"You are logged-in as {user.username ?? user.first_name + " " + user.last_name} (id {user.id})");
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, ex.Message);
-                outputModel.Code = (int)enumNotifyResponseStatus.ErrorAnUnknownError;
-                outputModel.Status = enumNotifyResponseStatus.ErrorAnUnknownError.ToDisplayStatus();
+                NLogLogger.PublishException(ex, ex.Message);
             }
-            return outputModel;
         }
 
-        private void btnRequestCode_Click(object sender, EventArgs e)
+        private async Task RequestCode()
         {
+            if (!CheckValid())
+                return;
             var root = Directory.GetCurrentDirectory();
-            var path = $"{root}/{_phone}.session";
+            var path = $"{root}/{_session_pathname}";
             try
             {
                 if (File.Exists(path))
@@ -84,28 +88,20 @@ namespace BinanceApp.GenTelegram
                     File.Delete(path);
                 }
                 //Send code
-                var entity = _context.Bots.FirstOrDefault(x => x.Phone == phone);
-                if (entity != null)
-                {
-                    _api_id0 = entity.ApiId.ToString();
-                    _api_hash0 = entity.ApiHash;
-                    _phone_number0 = entity.Phone;
-                    _session_pathname0 = $"{entity.Phone}.session";
-                    var client = new Client(ConfigInternal);
-                    await client.ConnectAsync();
-                    await client.LoginUserIfNeeded();
-                }
-                return new ResponseResultModel
-                {
-                    Code = 0,
-                    Message = "success"
-                };
+                var client = new Client(Config);
+                //await client.ConnectAsync();
+                await client.LoginUserIfNeeded();
             }
             catch (Exception ex)
             {
                 NLogLogger.PublishException(ex, $"GenTelegram|btnGenerateCode_Click: {ex.Message}");
                 MessageBox.Show("Lỗi khi Request Code");
             }
+        }
+
+        private void btnRequestCode_Click(object sender, EventArgs e)
+        {
+            RequestCode().GetAwaiter().GetResult();
         }
     }
 }

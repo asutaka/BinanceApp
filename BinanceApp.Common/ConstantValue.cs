@@ -28,7 +28,7 @@
                                          "\nchuyển tiền với nội dung: DK Mã_gói Email_sử_dụng SĐT_Telegram" +
                                          "\ntới STK:xxx - tại ngân hàng VCB, người nhận: Nguyễn Văn A";
         public const string strSupport = "<Tin nhắn tự động>Bạn cần hỗ trợ gì?";
-        public const int apiIdBot1 = 5128731;
+        public const string apiIdBot1 = "5128731";
         public const string apiHashBot1 = "a894a079cfeadf0bd0646f53bf2587c6";
         //Google Drive
         public const string strVersion = "https://drive.google.com/file/d/1o-ahy7uHCK_sVkdJ_G7iaVWyDGUU7Nli/view?usp=sharing";

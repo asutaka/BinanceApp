@@ -1350,3 +1350,14 @@
    at System.Net.HttpWebRequest.GetResponse()
    at BinanceApp.Common.AuthResponse.Exchange(String authCode, String clientid, String secret, String redirectURI) in F:\DATA\BinanceApp\BinanceApp.Common\AuthResponse.cs:line 88 Line: 0
 
+ -------------- Error (2021-12-31 00:08:26.3310) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	AuthResponse:Exchange: The remote server returned an error: (400) Bad Request. The remote server returned an error: (400) Bad Request.
+   at System.Net.HttpWebRequest.GetResponse()
+   at BinanceApp.Common.AuthResponse.Exchange(String authCode, String clientid, String secret, String redirectURI) in F:\DATA\BinanceApp\BinanceApp.Common\AuthResponse.cs:line 88 Line: 0
+

@@ -1,7 +1,10 @@
 ﻿using BinanceApp.Analyze;
 using BinanceApp.Common;
 using BinanceApp.Data;
+using BinanceApp.GUI.Child;
 using BinanceApp.Model.ENUM;
+using DevExpress.XtraEditors;
+using DevExpress.XtraTab;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,7 +31,25 @@ namespace BinanceApp.GUI
             _bkgr.RunWorkerCompleted += bkgrCheckConnection_RunWorkerCompleted;
             _bkgr.RunWorkerAsync();
         }
-      
+
+        private void AddTab(XtraForm form)
+        {
+            this.Invoke((MethodInvoker)delegate
+            {
+                form.TopLevel = false;
+                form.FormBorderStyle = FormBorderStyle.None;
+                form.Visible = true;
+
+                var TAbAdd = new XtraTabPage();
+                TAbAdd.Text = form.Text;
+                TAbAdd.Name = form.Name;
+                TAbAdd.Controls.Add(form);
+                form.Dock = DockStyle.Fill;
+
+                tabControl.TabPages.Add(TAbAdd);
+            });
+        }
+
         private void bkgrCheckConnection_DoWork(object sender, DoWorkEventArgs e)
         {
             Thread.Sleep(1000);
@@ -134,6 +155,14 @@ namespace BinanceApp.GUI
         private void barBtnInfo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             new frmProfile().Show();
+        }
+
+        private void barBtnTop30_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frm = Child.frmTop30.Instance();
+            if (tabControl.TabPages.Any(x => x.Name == frm.Name))
+                return;
+            AddTab(frm);
         }
     }
 }

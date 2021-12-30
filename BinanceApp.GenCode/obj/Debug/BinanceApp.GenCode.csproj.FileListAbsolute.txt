@@ -175,3 +175,12 @@ D:\SourceCode\BinanceApp\BinanceApp.GenCode\obj\Debug\BinanceApp.GenCode.csproj.
 D:\SourceCode\BinanceApp\BinanceApp.GenCode\obj\Debug\BinanceApp.GenCode.csproj.CopyComplete
 D:\SourceCode\BinanceApp\BinanceApp.GenCode\obj\Debug\BinanceApp.exe
 D:\SourceCode\BinanceApp\BinanceApp.GenCode\obj\Debug\BinanceApp.pdb
+F:\DATA\BinanceApp\BinanceApp.GenCode\bin\Debug\Quartz.dll
+F:\DATA\BinanceApp\BinanceApp.GenCode\bin\Debug\Common.Logging.Core.dll
+F:\DATA\BinanceApp\BinanceApp.GenCode\bin\Debug\Common.Logging.dll
+F:\DATA\BinanceApp\BinanceApp.GenCode\bin\Debug\Quartz.pdb
+F:\DATA\BinanceApp\BinanceApp.GenCode\bin\Debug\Quartz.xml
+F:\DATA\BinanceApp\BinanceApp.GenCode\bin\Debug\Common.Logging.Core.pdb
+F:\DATA\BinanceApp\BinanceApp.GenCode\bin\Debug\Common.Logging.Core.xml
+F:\DATA\BinanceApp\BinanceApp.GenCode\bin\Debug\Common.Logging.pdb
+F:\DATA\BinanceApp\BinanceApp.GenCode\bin\Debug\Common.Logging.xml
