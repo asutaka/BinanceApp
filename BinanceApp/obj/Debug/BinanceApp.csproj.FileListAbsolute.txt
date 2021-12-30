@@ -87,7 +87,6 @@ D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.Dashboard.resources
 D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.frmMain.resources
 D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.frmProfile.resources
 D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.Properties.Resources.resources
-D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.UserControl.userLogin.resources
 D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.csproj.GenerateResource.cache
 D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.exe.licenses
 D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.csproj.CoreCompileInputs.cache
@@ -206,3 +205,4 @@ F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.csproj.CoreCompileInputs.cach
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.csproj.CopyComplete
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.exe
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.pdb
+D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.frmLogin.resources
