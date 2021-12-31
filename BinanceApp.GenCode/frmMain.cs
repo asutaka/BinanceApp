@@ -60,11 +60,13 @@ namespace BinanceApp.GenCode
                     optionTime = (int)enumOptionTime.AYear;
                     dtExpired = dtExpired.AddYears(1);
                 }
+                var level = rbtLv1.Checked ? 1 : rbtLv2.Checked ? 2 : rbtLv3.Checked ? 3 : rbtLv4.Checked ? 4 : 5; 
                 var indexMail = txtEmail.Text.IndexOf("@gmail.com");
                 var model = new GenCodeModel
                 {
                     Email = txtEmail.Text.Substring(0, indexMail).Trim(),
                     OptionTime = optionTime,
+                    Level = level,
                     Expired = new DateTimeOffset(dtExpired).ToUnixTimeSeconds()
                 };
                 var jsonModel = JsonConvert.SerializeObject(model);

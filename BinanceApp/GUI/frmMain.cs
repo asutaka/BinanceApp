@@ -34,6 +34,8 @@ namespace BinanceApp.GUI
 
         private void AddTab(XtraForm form)
         {
+            if (tabControl.TabPages.Any(x => x.Name == form.Name))
+                return;
             this.Invoke((MethodInvoker)delegate
             {
                 form.TopLevel = false;
@@ -159,10 +161,18 @@ namespace BinanceApp.GUI
 
         private void barBtnTop30_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var frm = Child.frmTop30.Instance();
-            if (tabControl.TabPages.Any(x => x.Name == frm.Name))
-                return;
-            AddTab(frm);
+            this.Invoke((MethodInvoker)delegate
+            {
+                tabControl.AddTab(frmTop30.Instance());
+            });
+        }
+
+        private void barBtnConfigFx_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Invoke((MethodInvoker)delegate
+            {
+                tabControl.AddTab(frmConfigFx.Instance());
+            });
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using BinanceApp.Common;
 using BinanceApp.Common.ScheduleJob.ScheduleJobLib;
-using BinanceApp.UserControl;
+using BinanceApp.Usr;
 using System;
 using System.Drawing;
 using System.Windows.Forms;

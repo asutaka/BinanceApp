@@ -56,10 +56,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ENTITY\AdvanceSettingModel.cs" />
+    <Compile Include="ENTITY\BasicSettingModel.cs" />
     <Compile Include="ENTITY\CandleStickDataModel.cs" />
     <Compile Include="ENTITY\CryptonDataModel.cs" />
     <Compile Include="ENTITY\CryptonRankModel.cs" />
+    <Compile Include="ENTITY\ElementModel.cs" />
     <Compile Include="ENTITY\GenCodeModel.cs" />
+    <Compile Include="ENTITY\GeneralModel.cs" />
+    <Compile Include="ENTITY\IndicatorModel.cs" />
     <Compile Include="ENTITY\ProfileModel.cs" />
     <Compile Include="ENTITY\ScronModel.cs" />
     <Compile Include="ENTITY\TimeModel.cs" />

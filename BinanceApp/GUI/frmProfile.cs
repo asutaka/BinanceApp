@@ -165,6 +165,7 @@ namespace BinanceApp.GUI
                 else
                 {
                     StaticValues.IsCodeActive = true;
+                    StaticValues.Level = model.Level;
                 }
             }
             Thread.Sleep(200);

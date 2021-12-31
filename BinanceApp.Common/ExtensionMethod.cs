@@ -1,4 +1,9 @@
-﻿using Newtonsoft.Json;
+﻿using AutoMapper;
+using BinanceApp.Model.ENTITY;
+using BinanceApp.Model.ENUM;
+using DevExpress.XtraEditors;
+using DevExpress.XtraTab;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using PhoneNumbers;
 using System;
@@ -14,6 +19,8 @@ namespace BinanceApp.Common
 {
     public static class ExtensionMethod
     {
+        public static Mapper MapperConfig = new Mapper(new MapperConfiguration(config => { config.AddProfile(new MapProfile()); }));
+
         //public static long DateToInt(this DateTime value)
         //{
         //    return long.Parse(value.ToString("yyyyMMddHHssmm"));
@@ -174,6 +181,67 @@ namespace BinanceApp.Common
             {
                 return string.Empty;
             }
+        }
+
+        public static T To<T>(this ElementModel model)
+        {
+            if (model == null)
+                return default(T);
+            return MapperConfig.Map<T>(model);
+        }
+
+        public static T To<T>(this List<ElementModel> model)
+        {
+            if (model == null)
+                return default(T);
+            return MapperConfig.Map<T>(model);
+        }
+        public static string To2Digit(this int val)
+        {
+            if (val > 9)
+                return val.ToString();
+            return $"0{val}";
+        }
+
+        public static void AddTab(this XtraTabControl tabControl, XtraForm form)
+        {
+            if (tabControl.TabPages.Any(x => x.Name == form.Name))
+                return;
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Visible = true;
+
+            var TAbAdd = new XtraTabPage();
+            TAbAdd.Text = form.Text;
+            TAbAdd.Name = form.Name;
+            TAbAdd.Controls.Add(form);
+            form.Dock = DockStyle.Fill;
+
+            tabControl.TabPages.Add(TAbAdd);
+        }
+
+        public static void AddControl(this Panel pnl, XtraForm form)
+        {
+            pnl.Controls.Clear();
+            
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Visible = true;
+
+            pnl.Controls.Add(form);
+            form.Dock = DockStyle.Fill;
+        }
+    }
+    public class MapProfile : Profile
+    {
+        public MapProfile()
+        {
+            CreateMap<ElementModel, GeneralModel>()
+                .ForMember(dest => dest.Indicator, opt => opt.MapFrom(src => src.Id))
+                .ForMember(dest => dest.High, opt => opt.MapFrom(src => src.Id == (int)enumChooseData.MACD ? src.Value / 10000 : 0))
+                .ForMember(dest => dest.Low, opt => opt.MapFrom(src => src.Id == (int)enumChooseData.MACD ? int.Parse(src.Value.ToString().Substring(2, 2)) : 0))
+                .ForMember(dest => dest.Signal, opt => opt.MapFrom(src => src.Id == (int)enumChooseData.MACD ? src.Value % 10000 : 0))
+                .ForMember(dest => dest.Period, opt => opt.MapFrom(src => src.Id == (int)enumChooseData.MACD ? 0 : src.Value));
         }
     }
 }

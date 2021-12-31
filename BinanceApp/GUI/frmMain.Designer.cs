@@ -33,19 +33,19 @@ namespace BinanceApp.GUI
             this.barBtnListFollow = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnInfo = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnDashboard = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnConfigFx = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnConfigNotify = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnListNotify = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnTop30 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.barBtnDashboard = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barBtnConfigFx = new DevExpress.XtraBars.BarButtonItem();
-            this.barBtnConfigNotify = new DevExpress.XtraBars.BarButtonItem();
-            this.barBtnListNotify = new DevExpress.XtraBars.BarButtonItem();
-            this.barBtnTop30 = new DevExpress.XtraBars.BarButtonItem();
             this.tabControl = new DevExpress.XtraTab.XtraTabControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl)).BeginInit();
@@ -94,6 +94,38 @@ namespace BinanceApp.GUI
             this.barBtnInfo.Name = "barBtnInfo";
             this.barBtnInfo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnInfo_ItemClick);
             // 
+            // barBtnDashboard
+            // 
+            this.barBtnDashboard.Caption = "Dashboard";
+            this.barBtnDashboard.Id = 4;
+            this.barBtnDashboard.Name = "barBtnDashboard";
+            // 
+            // barBtnConfigFx
+            // 
+            this.barBtnConfigFx.Caption = "Cấu hình chỉ báo";
+            this.barBtnConfigFx.Id = 5;
+            this.barBtnConfigFx.Name = "barBtnConfigFx";
+            this.barBtnConfigFx.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnConfigFx_ItemClick);
+            // 
+            // barBtnConfigNotify
+            // 
+            this.barBtnConfigNotify.Caption = "Cấu hình thông báo";
+            this.barBtnConfigNotify.Id = 6;
+            this.barBtnConfigNotify.Name = "barBtnConfigNotify";
+            // 
+            // barBtnListNotify
+            // 
+            this.barBtnListNotify.Caption = "Danh sách thông báo";
+            this.barBtnListNotify.Id = 7;
+            this.barBtnListNotify.Name = "barBtnListNotify";
+            // 
+            // barBtnTop30
+            // 
+            this.barBtnTop30.Caption = "Top30";
+            this.barBtnTop30.Id = 8;
+            this.barBtnTop30.Name = "barBtnTop30";
+            this.barBtnTop30.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnTop30_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -132,6 +164,13 @@ namespace BinanceApp.GUI
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Sở hữu";
             // 
+            // ribbonPageGroup5
+            // 
+            this.ribbonPageGroup5.ItemLinks.Add(this.barBtnConfigFx);
+            this.ribbonPageGroup5.ItemLinks.Add(this.barBtnConfigNotify);
+            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            this.ribbonPageGroup5.Text = "Cài đặt";
+            // 
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 743);
@@ -143,44 +182,6 @@ namespace BinanceApp.GUI
             // 
             this.ribbonPage4.Name = "ribbonPage4";
             this.ribbonPage4.Text = "ribbonPage4";
-            // 
-            // barBtnDashboard
-            // 
-            this.barBtnDashboard.Caption = "Dashboard";
-            this.barBtnDashboard.Id = 4;
-            this.barBtnDashboard.Name = "barBtnDashboard";
-            // 
-            // ribbonPageGroup5
-            // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.barBtnConfigFx);
-            this.ribbonPageGroup5.ItemLinks.Add(this.barBtnConfigNotify);
-            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            this.ribbonPageGroup5.Text = "Cài đặt";
-            // 
-            // barBtnConfigFx
-            // 
-            this.barBtnConfigFx.Caption = "Cấu hình chỉ báo";
-            this.barBtnConfigFx.Id = 5;
-            this.barBtnConfigFx.Name = "barBtnConfigFx";
-            // 
-            // barBtnConfigNotify
-            // 
-            this.barBtnConfigNotify.Caption = "Cấu hình thông báo";
-            this.barBtnConfigNotify.Id = 6;
-            this.barBtnConfigNotify.Name = "barBtnConfigNotify";
-            // 
-            // barBtnListNotify
-            // 
-            this.barBtnListNotify.Caption = "Danh sách thông báo";
-            this.barBtnListNotify.Id = 7;
-            this.barBtnListNotify.Name = "barBtnListNotify";
-            // 
-            // barBtnTop30
-            // 
-            this.barBtnTop30.Caption = "Top30";
-            this.barBtnTop30.Id = 8;
-            this.barBtnTop30.Name = "barBtnTop30";
-            this.barBtnTop30.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnTop30_ItemClick);
             // 
             // tabControl
             // 

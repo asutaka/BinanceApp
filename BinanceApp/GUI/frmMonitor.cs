@@ -1,6 +1,6 @@
 ﻿using BinanceApp.Common;
 using BinanceApp.Job;
-using BinanceApp.UserControl;
+using BinanceApp.Usr;
 using DevExpress.XtraEditors;
 using DevExpress.XtraTab;
 using System;

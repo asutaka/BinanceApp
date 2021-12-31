@@ -76,6 +76,24 @@
   <ItemGroup>
     <Compile Include="Analyze\CalculateMng.cs" />
     <Compile Include="Data\SeedData.cs" />
+    <Compile Include="GUI\Child\frmAdvanceSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Child\frmAdvanceSetting.designer.cs">
+      <DependentUpon>frmAdvanceSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Child\frmBasicSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Child\frmBasicSetting.designer.cs">
+      <DependentUpon>frmBasicSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Child\frmSpecialSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Child\frmSpecialSetting.Designer.cs">
+      <DependentUpon>frmSpecialSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Child\frmConfigFx.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,12 +169,30 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="StaticValues.cs" />
-    <Compile Include="UserControl\userMonitorSchedule.cs">
+    <Compile Include="Usr\userMonitorSchedule.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl\userMonitorSchedule.Designer.cs">
+    <Compile Include="Usr\userMonitorSchedule.Designer.cs">
       <DependentUpon>userMonitorSchedule.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usr\userSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usr\userSetting.designer.cs">
+      <DependentUpon>userSetting.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GUI\Child\frmAdvanceSetting.resx">
+      <DependentUpon>frmAdvanceSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Child\frmBasicSetting.resx">
+      <DependentUpon>frmBasicSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Child\frmConfigFx.resx">
+      <DependentUpon>frmConfigFx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Child\frmSpecialSetting.resx">
+      <DependentUpon>frmSpecialSetting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Child\frmTop30.resx">
       <DependentUpon>frmTop30.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,8 +219,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserControl\userMonitorSchedule.resx">
+    <EmbeddedResource Include="Usr\userMonitorSchedule.resx">
       <DependentUpon>userMonitorSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usr\userSetting.resx">
+      <DependentUpon>userSetting.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
