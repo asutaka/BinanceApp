@@ -3,6 +3,7 @@ using BinanceApp.Common;
 using BinanceApp.Data;
 using BinanceApp.GUI.Child;
 using BinanceApp.Model.ENUM;
+using DevExpress.LookAndFeel;
 using DevExpress.XtraEditors;
 using DevExpress.XtraTab;
 using System;
@@ -21,8 +22,9 @@ namespace BinanceApp.GUI
         private WaitFunc _frmWaitForm = new WaitFunc();
         private BackgroundWorker _bkgr;
         private bool _checkConnection;
-        public frmMain()
+        private frmMain()
         {
+            UserLookAndFeel.Default.SetSkinStyle("McSkin");
             InitializeComponent();
             ribbon.Enabled = false;
             StaticValues.IsAccessMain = true;
@@ -30,6 +32,13 @@ namespace BinanceApp.GUI
             _bkgr.DoWork += bkgrCheckConnection_DoWork;
             _bkgr.RunWorkerCompleted += bkgrCheckConnection_RunWorkerCompleted;
             _bkgr.RunWorkerAsync();
+        }
+
+        private static frmMain _instance = null;
+        public static frmMain Instance()
+        {
+            _instance = _instance ?? new frmMain();
+            return _instance;
         }
 
         private void AddTab(XtraForm form)
@@ -75,9 +84,13 @@ namespace BinanceApp.GUI
             {
                 _bkgr.DoWork -= bkgrCheckConnection_DoWork;
                 _bkgr.RunWorkerCompleted -= bkgrCheckConnection_RunWorkerCompleted;
+#if Flag_Test
+#else
                 _bkgr.DoWork += bkgrConfig_DoWork;
                 _bkgr.RunWorkerCompleted += bkgrConfig_RunWorkerCompleted;
                 _bkgr.RunWorkerAsync();
+#endif
+
                 ribbon.Enabled = true;
             }
         }
@@ -87,11 +100,6 @@ namespace BinanceApp.GUI
             //dtStartConfig = DateTime.Now;
             Thread.Sleep(1000);
             _frmWaitForm.Show("Thiết lập ban đầu");
-            //StaticValues.basicModel = 0.LoadBasicJson();
-            //StaticValues.advanceModel = 0.LoadAdvanceJson();
-            StaticValues.lstCoin = SeedData.GetCryptonList();
-            //StaticValues.lstCoinTrace = 0.LoadCoinTraceJson();
-            //StaticValues.lstUserTrace = 0.LoadUserTraceJson();
             var lstTask = new List<Task>();
             foreach (var item in StaticValues.lstCoin)
             {
@@ -156,7 +164,7 @@ namespace BinanceApp.GUI
 
         private void barBtnInfo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            new frmProfile().Show();
+            frmProfile.Instance().Show();
         }
 
         private void barBtnTop30_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -172,6 +180,36 @@ namespace BinanceApp.GUI
             this.Invoke((MethodInvoker)delegate
             {
                 tabControl.AddTab(frmConfigFx.Instance());
+            });
+        }
+
+        private void tabControl_CloseButtonClick(object sender, EventArgs e)
+        {
+            var EArg = (DevExpress.XtraTab.ViewInfo.ClosePageButtonEventArgs)e;
+            string name = EArg.Page.Text;//Get the text of the closed tab
+            foreach (XtraTabPage page in tabControl.TabPages)//Traverse to get the same text as the closed tab
+            {
+                if (page.Text == name)
+                {
+                    tabControl.TabPages.Remove(page);
+                    return;
+                }
+            }
+        }
+
+        private void barBtnBlackList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Invoke((MethodInvoker)delegate
+            {
+                tabControl.AddTab(frmBlackList.Instance());
+            });
+        }
+
+        private void barBtnListTrade_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Invoke((MethodInvoker)delegate
+            {
+                tabControl.AddTab(frmTradeList.Instance());
             });
         }
     }

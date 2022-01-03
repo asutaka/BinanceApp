@@ -29,9 +29,19 @@ namespace BinanceApp.GUI.Child
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // frmListFollow
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(298, 273);
+            this.LookAndFeel.SkinName = "McSkin";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.Name = "frmListFollow";
             this.Text = "frmListFollow";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

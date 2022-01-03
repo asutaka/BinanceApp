@@ -47,7 +47,7 @@ namespace BinanceApp.GUI.Child
             this.grid.Location = new System.Drawing.Point(0, 0);
             this.grid.MainView = this.gridView1;
             this.grid.Name = "grid";
-            this.grid.Size = new System.Drawing.Size(795, 490);
+            this.grid.Size = new System.Drawing.Size(795, 495);
             this.grid.TabIndex = 0;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -177,8 +177,10 @@ namespace BinanceApp.GUI.Child
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(795, 490);
+            this.ClientSize = new System.Drawing.Size(795, 495);
             this.Controls.Add(this.grid);
+            this.LookAndFeel.SkinName = "McSkin";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "frmTop30";
             this.Text = "Top30";
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();

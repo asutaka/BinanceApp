@@ -59,7 +59,7 @@ namespace BinanceApp.Job
                 StaticValues.frmMainObj.BeginInvoke((MethodInvoker)delegate
                 {
                     StaticValues.frmMainObj.Hide();
-                    new frmLogin().Show();
+                    frmLogin.Instance().Show();
                 });
             }
             StaticValues.IsExecCheckCodeActive = false;

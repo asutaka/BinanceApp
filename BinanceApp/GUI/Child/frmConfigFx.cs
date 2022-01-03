@@ -1,4 +1,6 @@
 ﻿using BinanceApp.Common;
+using BinanceApp.Model.ENUM;
+using DevExpress.LookAndFeel;
 using System;
 using System.Windows.Forms;
 
@@ -9,6 +11,7 @@ namespace BinanceApp.GUI.Child
         private frmConfigFx()
         {
             InitializeComponent();
+            pnlMain.AddControl(new frmBasicSetting());
         }
 
         private static frmConfigFx _instance = null;
@@ -38,7 +41,7 @@ namespace BinanceApp.GUI.Child
         {
             this.Invoke((MethodInvoker)delegate
             {
-                pnlMain.AddControl(new frmAdvanceSetting(2));
+                pnlMain.AddControl(new frmAdvanceSetting(1));
             });
         }
 
@@ -46,7 +49,7 @@ namespace BinanceApp.GUI.Child
         {
             this.Invoke((MethodInvoker)delegate
             {
-                pnlMain.AddControl(new frmAdvanceSetting(3));
+                pnlMain.AddControl(new frmAdvanceSetting(2));
             });
         }
 
@@ -54,7 +57,7 @@ namespace BinanceApp.GUI.Child
         {
             this.Invoke((MethodInvoker)delegate
             {
-                pnlMain.AddControl(new frmAdvanceSetting(4));
+                pnlMain.AddControl(new frmAdvanceSetting(3));
             });
         }
 
@@ -62,7 +65,7 @@ namespace BinanceApp.GUI.Child
         {
             this.Invoke((MethodInvoker)delegate
             {
-                pnlMain.AddControl(new frmAdvanceSetting(5));
+                pnlMain.AddControl(new frmAdvanceSetting(4));
             });
         }
     }

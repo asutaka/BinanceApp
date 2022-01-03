@@ -67,7 +67,9 @@
     <Compile Include="ENTITY\IndicatorModel.cs" />
     <Compile Include="ENTITY\ProfileModel.cs" />
     <Compile Include="ENTITY\ScronModel.cs" />
+    <Compile Include="ENTITY\SpecialSettingModel.cs" />
     <Compile Include="ENTITY\TimeModel.cs" />
+    <Compile Include="ENTITY\TradeModel.cs" />
     <Compile Include="ENTITY\UserModel.cs" />
     <Compile Include="ENUM\enumMng.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

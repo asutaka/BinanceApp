@@ -109,4 +109,48 @@ namespace BinanceApp.Model.ENUM
         DayOfWeek = 6,
         Year = 7,
     }
+
+    public enum enumPriority
+    {
+        [Display(Name = "Ưu tiên thấp")]
+        Low = 0,
+        [Display(Name = "Ưu tiên")]
+        Normal = 1,
+        [Display(Name = "Ưu tiên cao")]
+        High = 2,
+        [Display(Name = "Quan trọng")]
+        Important = 3,
+        [Display(Name = "Rất quan trọng")]
+        VeryImportant = 4
+    }
+
+    public enum enumIntervalNotify
+    {
+        [Display(Name = "Một lần")]
+        Only = 0,
+        [Display(Name = "Một phút/ lần")]
+        OneMinute = 1,
+        [Display(Name = "Hai phút/ lần")]
+        TwoMinute = 2,
+        [Display(Name = "Năm phút/ lần")]
+        FiveMinute = 3,
+        [Display(Name = "Mười phút/ lần")]
+        TenMinute = 4,
+        [Display(Name = "Mười năm phút/ lần")]
+        FifteenMinute = 5,
+        [Display(Name = "Ba mươi phút/ lần")]
+        ThirtyMintue = 6,
+        [Display(Name = "Một giờ/ lần")]
+        OneHour = 7,
+        [Display(Name = "Hai giờ/ lần")]
+        TwoHour = 8,
+        [Display(Name = "Bốn giờ/ lần")]
+        FourHour = 9,
+        [Display(Name = "Năm giờ/ lần")]
+        FiveHour = 10,
+        [Display(Name = "Mười hai giờ/ lần")]
+        TwelveHour = 11,
+        [Display(Name = "Một ngày/ lần")]
+        OneDay = 12
+    }
 }

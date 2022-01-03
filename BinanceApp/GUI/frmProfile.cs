@@ -16,10 +16,17 @@ namespace BinanceApp.GUI
         private const string _fileName = "user.json";
         private BackgroundWorker _bkgr = new BackgroundWorker();
         private WaitFunc _frmWaitForm = new WaitFunc();
-        public frmProfile()
+        private frmProfile()
         {
             InitializeComponent();
             Init();
+        }
+
+        private static frmProfile _instance = null;
+        public static frmProfile Instance()
+        {
+            _instance = _instance ?? new frmProfile();
+            return _instance;
         }
 
         private void Init()
@@ -87,7 +94,11 @@ namespace BinanceApp.GUI
             }
             else
             {
-                this.Close();
+                this.Invoke((MethodInvoker)delegate
+                {
+                    _instance = null;
+                    this.Close();
+                });
             }
         }
 
@@ -186,7 +197,7 @@ namespace BinanceApp.GUI
                 if (!StaticValues.IsAccessMain)
                 {
                     Hide();
-                    StaticValues.frmMainObj = new frmMain();
+                    StaticValues.frmMainObj = frmMain.Instance();
                     StaticValues.frmMainObj.Show();
                 }
             }

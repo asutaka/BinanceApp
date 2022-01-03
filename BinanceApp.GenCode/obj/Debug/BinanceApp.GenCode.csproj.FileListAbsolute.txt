@@ -184,3 +184,5 @@ F:\DATA\BinanceApp\BinanceApp.GenCode\bin\Debug\Common.Logging.Core.pdb
 F:\DATA\BinanceApp\BinanceApp.GenCode\bin\Debug\Common.Logging.Core.xml
 F:\DATA\BinanceApp\BinanceApp.GenCode\bin\Debug\Common.Logging.pdb
 F:\DATA\BinanceApp\BinanceApp.GenCode\bin\Debug\Common.Logging.xml
+F:\DATA\BinanceApp\BinanceApp.GenCode\bin\Debug\AutoMapper.dll
+F:\DATA\BinanceApp\BinanceApp.GenCode\bin\Debug\AutoMapper.xml

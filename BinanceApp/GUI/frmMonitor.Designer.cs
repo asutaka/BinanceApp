@@ -41,7 +41,7 @@ namespace BinanceApp.GUI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl.Location = new System.Drawing.Point(0, 30);
             this.tabControl.Name = "tabControl";
-            this.tabControl.Size = new System.Drawing.Size(720, 516);
+            this.tabControl.Size = new System.Drawing.Size(720, 521);
             this.tabControl.TabIndex = 0;
             // 
             // btnKillAll
@@ -59,9 +59,11 @@ namespace BinanceApp.GUI
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 546);
+            this.ClientSize = new System.Drawing.Size(720, 551);
             this.Controls.Add(this.btnKillAll);
             this.Controls.Add(this.tabControl);
+            this.LookAndFeel.SkinName = "McSkin";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.Name = "frmMonitor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

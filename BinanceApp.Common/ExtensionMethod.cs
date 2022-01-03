@@ -26,11 +26,12 @@ namespace BinanceApp.Common
         //    return long.Parse(value.ToString("yyyyMMddHHssmm"));
         //}
 
+
         public static T LoadJsonFile<T>(this T val, string fileName)
         {
             try
             {
-                string path = $"{Directory.GetCurrentDirectory()}\\{fileName}";
+                string path = $"{Directory.GetCurrentDirectory()}\\settings\\{fileName}";
                 using (StreamReader r = new StreamReader(path))
                 {
                     string json = r.ReadToEnd();
@@ -49,7 +50,7 @@ namespace BinanceApp.Common
         {
             try
             {
-                string path = $"{Directory.GetCurrentDirectory()}\\{fileName}";
+                string path = $"{Directory.GetCurrentDirectory()}\\settings\\{fileName}";
                 string json = JsonConvert.SerializeObject(_model);
                 //write string to file
                 File.WriteAllText(path, json);
@@ -112,52 +113,6 @@ namespace BinanceApp.Common
             /*add text*/
             string line = String.IsNullOrEmpty(box.Text) ? text : newLineIndicator + text;
             box.AppendText(line);
-        }
-
-        public static T DownloadJsonFile<T>(string url)
-        {
-            if (WebRequest.Create(url) is HttpWebRequest webRequest)
-            {
-                webRequest.ContentType = "application/json";
-                webRequest.UserAgent = "Nothing";
-
-                using (var s = webRequest.GetResponse().GetResponseStream())
-                {
-                    using (var sr = new StreamReader(s))
-                    {
-                        var contributorsAsJson = sr.ReadToEnd();
-                        var contributors = JsonConvert.DeserializeObject<T>(contributorsAsJson);
-                        return (T)Convert.ChangeType(contributors, typeof(T));
-                    }
-                }
-            }
-            return (T)Convert.ChangeType(null, typeof(T));
-        }
-
-        public static JArray DownloadJsonArray(string url)
-        {
-            if (WebRequest.Create(url) is HttpWebRequest webRequest)
-            {
-                webRequest.ContentType = "application/json";
-                webRequest.UserAgent = "Nothing";
-                try
-                {
-                    using (var s = webRequest.GetResponse().GetResponseStream())
-                    {
-                        using (var sr = new StreamReader(s))
-                        {
-                            var contributorsAsJson = sr.ReadToEnd();
-                            var contributors = JArray.Parse(contributorsAsJson);
-                            return contributors;
-                        }
-                    }
-                }
-                catch
-                {
-                    return null;
-                }
-            }
-            return null;
         }
 
         public static DateTime UnixTimeStampToDateTime(this int unixTimeStamp)
@@ -230,6 +185,19 @@ namespace BinanceApp.Common
 
             pnl.Controls.Add(form);
             form.Dock = DockStyle.Fill;
+        }
+
+        /// <summary>
+        ///     A generic extension method that aids in reflecting 
+        ///     and retrieving any attribute that is applied to an `Enum`.
+        /// </summary>
+        public static TAttribute GetAttribute<TAttribute>(this Enum enumValue)
+                where TAttribute : Attribute
+        {
+            return enumValue.GetType()
+                            .GetMember(enumValue.ToString())
+                            .First()
+                            .GetCustomAttribute<TAttribute>();
         }
     }
     public class MapProfile : Profile

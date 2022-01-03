@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 using BinanceApp.Common;
+using BinanceApp.Data;
 using BinanceApp.Model.ENTITY;
 using BinanceApp.Model.ENUM;
 using BinanceApp.Usr;
@@ -12,30 +14,51 @@ namespace BinanceApp.GUI.Child
 {
     public partial class frmAdvanceSetting : XtraForm
     {
-        private readonly string _fileName = "advance_setting.json";
+        private readonly string _fileName;
         public frmAdvanceSetting(int numConfig)
         {
             InitializeComponent();
             _fileName = $"advance_setting{ numConfig }.json";
             this.Text = $"Thiết lập nâng cao {numConfig}";
-            InitData();
+            InitData(numConfig);
         }
        
-        private void InitData()
+        private void InitData(int numConfig)
         {
-            StaticValues.advanceModel = new AdvanceSettingModel().LoadJsonFile(_fileName);
-            if (StaticValues.advanceModel.LstInterval == null 
-                || StaticValues.advanceModel.LstInterval.Count == 0)
+            LoadPriority();
+            SetupData();
+        }
+
+        private void SetupData()
+        {
+            var model = new AdvanceSettingModel().LoadJsonFile(_fileName);
+            if (model.LstInterval == null
+                || model.LstInterval.Count == 0)
                 return;
-            LoadGuiData(pnl1, StaticValues.advanceModel.LstIndicator15M);
-            LoadGuiData(pnl2, StaticValues.advanceModel.LstIndicator1H);
-            LoadGuiData(pnl3, StaticValues.advanceModel.LstIndicator4H);
-            LoadGuiData(pnl4, StaticValues.advanceModel.LstIndicator1D);
-            LoadGuiData(pnl5, StaticValues.advanceModel.LstIndicator1W);
-            LoadGuiData(pnl6, StaticValues.advanceModel.LstIndicator1M);
+            chkState.IsOn = model.IsActive;
+            cmbPriority.SelectedIndex = model.Priority;
+            txtPoint.Value = model.Point;
+            LoadGuiData(pnl1, model.LstIndicator15M);
+            LoadGuiData(pnl2, model.LstIndicator1H);
+            LoadGuiData(pnl3, model.LstIndicator4H);
+            LoadGuiData(pnl4, model.LstIndicator1D);
+            LoadGuiData(pnl5, model.LstIndicator1W);
+            LoadGuiData(pnl6, model.LstIndicator1M);
+        }
+
+        private void LoadPriority()
+        {
+            cmbPriority.Properties.BeginUpdate();
+            foreach (DataRow row in SeedData.GetDataPriority().Rows)
+            {
+                cmbPriority.Properties.Items.Add(row["Name"]);
+            }
+            cmbPriority.SelectedIndex = 1;
+            cmbPriority.Properties.EndUpdate();
         }
         private void LoadGuiData(FlowLayoutPanel flow, List<IndicatorModel> lstModel)
         {
+            flow.Controls.Clear();
             if (lstModel == null || !lstModel.Any())
                 return;
 
@@ -125,7 +148,7 @@ namespace BinanceApp.GUI.Child
         }
         private AdvanceSettingModel BuildModel()
         {
-            var model = new AdvanceSettingModel { LstInterval = new List<int>() };
+            var model = new AdvanceSettingModel { IsActive = chkState.IsOn, Priority = cmbPriority.SelectedIndex, Point = txtPoint.Value, LstInterval = new List<int>() };
             if(pnl1.Controls.Count > 0)
             {
                 model.LstIndicator15M = BuildIndicatorData(pnl1);
@@ -204,7 +227,7 @@ namespace BinanceApp.GUI.Child
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            SetupData();
         }
     }
 }

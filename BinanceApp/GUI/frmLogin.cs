@@ -16,9 +16,16 @@ namespace BinanceApp.GUI
     public partial class frmLogin : XtraForm
     {
         private AuthResponse access;
-        public frmLogin()
+        private frmLogin()
         {
             InitializeComponent();
+        }
+
+        private static frmLogin _instance = null;
+        public static frmLogin Instance()
+        {
+            _instance = _instance ?? new frmLogin();
+            return _instance;
         }
 
         private void picGoogleSignIn_Click(object sender, EventArgs e)
@@ -83,8 +90,7 @@ namespace BinanceApp.GUI
                                         {
                                             this.Hide();
                                             StaticValues.profile = profile;
-                                            var objProfile = new frmProfile();
-                                            objProfile.Show();
+                                            frmProfile.Instance().Show();
                                         }
                                     }));
                                 }
@@ -149,6 +155,8 @@ namespace BinanceApp.GUI
             try
             {
                 access = AuthResponse.Exchange(approveCode, ConstantValue.clientId, ConstantValue.clientSecret, ConstantValue.redirectURI);
+                if (access == null)
+                    return null;
                 var url = $"https://www.googleapis.com/oauth2/v3/userinfo?access_token={access.Access_token}";
                 var wc = new WebClient();
                 wc.Headers.Add(HttpRequestHeader.AcceptCharset, "utf-8");

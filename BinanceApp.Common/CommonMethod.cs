@@ -1,6 +1,7 @@
 ﻿using BinanceApp.Model.ENTITY;
 using BinanceApp.Model.ENUM;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -33,7 +34,7 @@ namespace BinanceApp.Common
 
         public static bool CheckFileExist(string fileName)
         {
-            string path = $"{Directory.GetCurrentDirectory()}\\{fileName}";
+            string path = $"{Directory.GetCurrentDirectory()}\\settings\\{fileName}";
             return File.Exists(path);
         }
 
@@ -78,6 +79,62 @@ namespace BinanceApp.Common
                 strOutput.Append(item.Frequence? $"0/":"" + val);
             }
             return strOutput.ToString();
+        }
+
+        public static T DownloadJsonFile<T>(string url)
+        {
+            if (WebRequest.Create(url) is HttpWebRequest webRequest)
+            {
+                webRequest.ContentType = "application/json";
+                webRequest.UserAgent = "Nothing";
+
+                using (var s = webRequest.GetResponse().GetResponseStream())
+                {
+                    using (var sr = new StreamReader(s))
+                    {
+                        var contributorsAsJson = sr.ReadToEnd();
+                        var contributors = JsonConvert.DeserializeObject<T>(contributorsAsJson);
+                        return (T)Convert.ChangeType(contributors, typeof(T));
+                    }
+                }
+            }
+            return (T)Convert.ChangeType(null, typeof(T));
+        }
+
+        public static JArray DownloadJsonArray(string url)
+        {
+            if (WebRequest.Create(url) is HttpWebRequest webRequest)
+            {
+                webRequest.ContentType = "application/json";
+                webRequest.UserAgent = "Nothing";
+                try
+                {
+                    using (var s = webRequest.GetResponse().GetResponseStream())
+                    {
+                        using (var sr = new StreamReader(s))
+                        {
+                            var contributorsAsJson = sr.ReadToEnd();
+                            var contributors = JArray.Parse(contributorsAsJson);
+                            return contributors;
+                        }
+                    }
+                }
+                catch
+                {
+                    return null;
+                }
+            }
+            return null;
+        }
+
+        public static double GetCurrentValue(string code)
+        {
+            var url = $"{ConstantValue.COIN_DETAIL}symbol={code}&interval=15m&limit=1";
+            var arrData = DownloadJsonArray(url);
+            if (arrData == null)
+                return 0;
+            var currentVal = double.Parse(arrData[0][4].ToString());
+            return currentVal;
         }
     }
 }

@@ -4,6 +4,9 @@ namespace BinanceApp.Model.ENTITY
 {
     public class AdvanceSettingModel
     {
+        public bool IsActive{ get; set; }
+        public int Priority { get; set; }
+        public decimal Point { get; set; }
         public List<int> LstInterval { get; set; }
         public List<ElementModel> LstElement15M { get; set; }
         public List<ElementModel> LstElement1H { get; set; }

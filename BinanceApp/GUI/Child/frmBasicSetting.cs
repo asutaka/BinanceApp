@@ -20,19 +20,9 @@ namespace BinanceApp.GUI.Child
         }
         private void InitData()
         {
-            StaticValues.basicModel = new BasicSettingModel().LoadJsonFile(_fileName);
             LoadDataTimeZone();
             LoadDataCandleStick();
-            cmbTimeZone.SelectedIndex = StaticValues.basicModel.TimeZone;
-            cmbCandleStick.SelectedIndex = StaticValues.basicModel.ListModel.First(x => x.Indicator == (int)enumChooseData.CandleStick_1).Period;
-            nmWeight.Value = StaticValues.basicModel.ListModel.First(x => x.Indicator == (int)enumChooseData.Volumne).Period;
-            nmMA.Value = StaticValues.basicModel.ListModel.First(x => x.Indicator == (int)enumChooseData.MA).Period;
-            nmEMA.Value = StaticValues.basicModel.ListModel.First(x => x.Indicator == (int)enumChooseData.EMA).Period;
-            nmHighMACD.Value = StaticValues.basicModel.ListModel.First(x => x.Indicator == (int)enumChooseData.MACD).High;
-            nmLowMACD.Value = StaticValues.basicModel.ListModel.First(x => x.Indicator == (int)enumChooseData.MACD).Low;
-            nmSignal.Value = StaticValues.basicModel.ListModel.First(x => x.Indicator == (int)enumChooseData.MACD).Signal;
-            nmRSI.Value = StaticValues.basicModel.ListModel.First(x => x.Indicator == (int)enumChooseData.RSI).Period;
-            nmADX.Value = StaticValues.basicModel.ListModel.First(x => x.Indicator == (int)enumChooseData.ADX).Period;
+            SetupData();
         }
         private void LoadDataTimeZone()
         {
@@ -45,6 +35,20 @@ namespace BinanceApp.GUI.Child
             cmbCandleStick.ValueMember = "Id";
             cmbCandleStick.DisplayMember = "Name";
             cmbCandleStick.DataSource = SeedData.GetDataCandleStick();
+        }
+        private void SetupData()
+        {
+            var model = new BasicSettingModel().LoadJsonFile(_fileName);
+            cmbTimeZone.SelectedIndex = model.TimeZone;
+            cmbCandleStick.SelectedIndex = model.ListModel.First(x => x.Indicator == (int)enumChooseData.CandleStick_1).Period;
+            nmWeight.Value = model.ListModel.First(x => x.Indicator == (int)enumChooseData.Volumne).Period;
+            nmMA.Value = model.ListModel.First(x => x.Indicator == (int)enumChooseData.MA).Period;
+            nmEMA.Value = model.ListModel.First(x => x.Indicator == (int)enumChooseData.EMA).Period;
+            nmHighMACD.Value = model.ListModel.First(x => x.Indicator == (int)enumChooseData.MACD).High;
+            nmLowMACD.Value = model.ListModel.First(x => x.Indicator == (int)enumChooseData.MACD).Low;
+            nmSignal.Value = model.ListModel.First(x => x.Indicator == (int)enumChooseData.MACD).Signal;
+            nmRSI.Value = model.ListModel.First(x => x.Indicator == (int)enumChooseData.RSI).Period;
+            nmADX.Value = model.ListModel.First(x => x.Indicator == (int)enumChooseData.ADX).Period;
         }
         private bool IsValid()
         {
@@ -82,7 +86,7 @@ namespace BinanceApp.GUI.Child
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            SetupData();
         }
     }
 }

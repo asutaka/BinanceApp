@@ -36,8 +36,10 @@ namespace BinanceApp.GUI
             this.barBtnDashboard = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnConfigFx = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnConfigNotify = new DevExpress.XtraBars.BarButtonItem();
-            this.barBtnListNotify = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnBlackList = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnTop30 = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnListTrade = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnRealTime = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -63,10 +65,12 @@ namespace BinanceApp.GUI
             this.barBtnDashboard,
             this.barBtnConfigFx,
             this.barBtnConfigNotify,
-            this.barBtnListNotify,
-            this.barBtnTop30});
+            this.barBtnBlackList,
+            this.barBtnTop30,
+            this.barBtnListTrade,
+            this.barBtnRealTime});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 9;
+            this.ribbon.MaxItemId = 11;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -113,11 +117,12 @@ namespace BinanceApp.GUI
             this.barBtnConfigNotify.Id = 6;
             this.barBtnConfigNotify.Name = "barBtnConfigNotify";
             // 
-            // barBtnListNotify
+            // barBtnBlackList
             // 
-            this.barBtnListNotify.Caption = "Danh sách thông báo";
-            this.barBtnListNotify.Id = 7;
-            this.barBtnListNotify.Name = "barBtnListNotify";
+            this.barBtnBlackList.Caption = "Danh sách đen";
+            this.barBtnBlackList.Id = 7;
+            this.barBtnBlackList.Name = "barBtnBlackList";
+            this.barBtnBlackList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnBlackList_ItemClick);
             // 
             // barBtnTop30
             // 
@@ -125,6 +130,19 @@ namespace BinanceApp.GUI
             this.barBtnTop30.Id = 8;
             this.barBtnTop30.Name = "barBtnTop30";
             this.barBtnTop30.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnTop30_ItemClick);
+            // 
+            // barBtnListTrade
+            // 
+            this.barBtnListTrade.Caption = "Danh sách Trade";
+            this.barBtnListTrade.Id = 9;
+            this.barBtnListTrade.Name = "barBtnListTrade";
+            this.barBtnListTrade.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnListTrade_ItemClick);
+            // 
+            // barBtnRealTime
+            // 
+            this.barBtnRealTime.Caption = "Thời gian thực";
+            this.barBtnRealTime.Id = 10;
+            this.barBtnRealTime.Name = "barBtnRealTime";
             // 
             // ribbonPage1
             // 
@@ -147,6 +165,7 @@ namespace BinanceApp.GUI
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.barBtnDashboard);
             this.ribbonPageGroup2.ItemLinks.Add(this.barBtnTop30);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barBtnRealTime);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Thống kê";
             // 
@@ -159,8 +178,9 @@ namespace BinanceApp.GUI
             // 
             // ribbonPageGroup4
             // 
+            this.ribbonPageGroup4.ItemLinks.Add(this.barBtnListTrade);
             this.ribbonPageGroup4.ItemLinks.Add(this.barBtnListFollow);
-            this.ribbonPageGroup4.ItemLinks.Add(this.barBtnListNotify);
+            this.ribbonPageGroup4.ItemLinks.Add(this.barBtnBlackList);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Sở hữu";
             // 
@@ -185,11 +205,13 @@ namespace BinanceApp.GUI
             // 
             // tabControl
             // 
+            this.tabControl.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InTabControlHeader;
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Location = new System.Drawing.Point(0, 158);
             this.tabControl.Name = "tabControl";
             this.tabControl.Size = new System.Drawing.Size(1022, 585);
             this.tabControl.TabIndex = 2;
+            this.tabControl.CloseButtonClick += new System.EventHandler(this.tabControl_CloseButtonClick);
             // 
             // frmMain
             // 
@@ -228,9 +250,11 @@ namespace BinanceApp.GUI
         private DevExpress.XtraBars.BarButtonItem barBtnDashboard;
         private DevExpress.XtraBars.BarButtonItem barBtnConfigFx;
         private DevExpress.XtraBars.BarButtonItem barBtnConfigNotify;
-        private DevExpress.XtraBars.BarButtonItem barBtnListNotify;
+        private DevExpress.XtraBars.BarButtonItem barBtnBlackList;
         private DevExpress.XtraBars.BarButtonItem barBtnTop30;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraTab.XtraTabControl tabControl;
+        private DevExpress.XtraBars.BarButtonItem barBtnListTrade;
+        private DevExpress.XtraBars.BarButtonItem barBtnRealTime;
     }
 }

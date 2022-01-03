@@ -70,3 +70,19 @@
  Stack Trace: 
  Additional Info: Date: 12/30/2021 11:12:15 PM | Copy Code: s+4uaWSqbmkV+HlQ0Iu9lI8ktuA5MNSLwO4iyIeN5a1iv2yiYo5wxYtxPKtMRe7MWajxvzAaLNfRQVTgWboylg==
 
+ -------------- Info (2022-01-02 17:14:10.7016) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.Info
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Date: 1/2/2022 5:14:10 PM | Model Info: {"Email":"nguyenphu1312","OptionTime":1,"Level":1,"Expired":1641381250} | Code: s+4uaWSqbmkV+HlQ0Iu9lI8ktuA5MNSLwO4iyIeN5a2BQn1ONnAAGTrHqQlY6nZUfRyIAUHDPvHWAyn/cNJsCgsqbohE9rE06ZPcnyFxeYs=
+
+ -------------- Info (2022-01-02 17:14:11.7915) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.Info
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Date: 1/2/2022 5:14:11 PM | Copy Code: s+4uaWSqbmkV+HlQ0Iu9lI8ktuA5MNSLwO4iyIeN5a2BQn1ONnAAGTrHqQlY6nZUfRyIAUHDPvHWAyn/cNJsCgsqbohE9rE06ZPcnyFxeYs=
+

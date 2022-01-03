@@ -11,9 +11,19 @@ namespace BinanceApp.Data
     {
         public static List<CryptonDetailDataModel> GetCryptonList()
         {
-            List<string> BLACK_LIST = new List<string> { };
-            var cryptonModel = ExtensionMethod.DownloadJsonFile<CryptonDataModel>(ConstantValue.COIN_LIST);
-            var output = cryptonModel.Data.Where(x => !BLACK_LIST.Contains(x.S)
+            var cryptonModel = CommonMethod.DownloadJsonFile<CryptonDataModel>(ConstantValue.COIN_LIST);
+            var output = cryptonModel.Data.Where(x => x.S.Substring(x.S.Length - 4) == "USDT"
+                                            && !x.S.Substring(0, x.S.Length - 4).Contains("USD")
+                                            && !x.AN.Contains("Fan Token")
+                                            && !x.S.Contains("UP")
+                                            && !x.S.Contains("DOWN"))
+                                    .OrderBy(x => x.S).ToList();
+            return output;
+        }
+        public static List<CryptonDetailDataModel> GetCryptonListWithFilter()
+        {
+            var cryptonModel = CommonMethod.DownloadJsonFile<CryptonDataModel>(ConstantValue.COIN_LIST);
+            var output = cryptonModel.Data.Where(x => !StaticValues.lstBlackList.Any(y => y.S == x.S)
                                             && x.S.Substring(x.S.Length - 4) == "USDT"
                                             && !x.S.Substring(0, x.S.Length - 4).Contains("USD")
                                             && !x.AN.Contains("Fan Token")
@@ -28,7 +38,7 @@ namespace BinanceApp.Data
             try
             {
                 var url = $"{ConstantValue.COIN_DETAIL}symbol={code}&interval={interval}";
-                var arrData = ExtensionMethod.DownloadJsonArray(url);
+                var arrData = CommonMethod.DownloadJsonArray(url);
 
                 lstModel = arrData.Select(x => new CandleStickDataModel
                 {
@@ -46,6 +56,7 @@ namespace BinanceApp.Data
                 return lstModel;
             }
         }
+
         public static DataTable GetDataChooseData()
         {
             var dt = new DataTable();
@@ -218,6 +229,114 @@ namespace BinanceApp.Data
             dt.Rows.Add(dr4);
             dt.Rows.Add(dr5);
             dt.Rows.Add(dr6);
+            return dt;
+        }
+
+        public static DataTable GetDataPriority()
+        {
+            var dt = new DataTable();
+            dt.Columns.Add("Id", typeof(int));
+            dt.Columns.Add("Name", typeof(string));
+
+            var dr1 = dt.NewRow();
+            dr1["Id"] = (int)enumPriority.Low;
+            dr1["Name"] = enumPriority.Low.GetDisplayName();
+
+            var dr2 = dt.NewRow();
+            dr2["Id"] = (int)enumPriority.Normal;
+            dr2["Name"] = enumPriority.Normal.GetDisplayName();
+
+            var dr3 = dt.NewRow();
+            dr3["Id"] = (int)enumPriority.High;
+            dr3["Name"] = enumPriority.High.GetDisplayName();
+
+            var dr4 = dt.NewRow();
+            dr4["Id"] = (int)enumPriority.Important;
+            dr4["Name"] = enumPriority.Important.GetDisplayName();
+
+            var dr5 = dt.NewRow();
+            dr5["Id"] = (int)enumPriority.VeryImportant;
+            dr5["Name"] = enumPriority.VeryImportant.GetDisplayName();
+
+            dt.Rows.Add(dr1);
+            dt.Rows.Add(dr2);
+            dt.Rows.Add(dr3);
+            dt.Rows.Add(dr4);
+            dt.Rows.Add(dr5);
+            return dt;
+        }
+
+        public static DataTable GetDataInternalNotify()
+        {
+            var dt = new DataTable();
+            dt.Columns.Add("Id", typeof(int));
+            dt.Columns.Add("Name", typeof(string));
+
+            var dr1 = dt.NewRow();
+            dr1["Id"] = (int)enumIntervalNotify.Only;
+            dr1["Name"] = enumIntervalNotify.Only.GetDisplayName();
+
+            var dr2 = dt.NewRow();
+            dr2["Id"] = (int)enumIntervalNotify.OneMinute;
+            dr2["Name"] = enumIntervalNotify.OneMinute.GetDisplayName();
+
+            var dr3 = dt.NewRow();
+            dr3["Id"] = (int)enumIntervalNotify.TwoMinute;
+            dr3["Name"] = enumIntervalNotify.TwoMinute.GetDisplayName();
+
+            var dr4 = dt.NewRow();
+            dr4["Id"] = (int)enumIntervalNotify.FiveMinute;
+            dr4["Name"] = enumIntervalNotify.FiveMinute.GetDisplayName();
+
+            var dr5 = dt.NewRow();
+            dr5["Id"] = (int)enumIntervalNotify.TenMinute;
+            dr5["Name"] = enumIntervalNotify.TenMinute.GetDisplayName();
+
+            var dr6 = dt.NewRow();
+            dr6["Id"] = (int)enumIntervalNotify.FifteenMinute;
+            dr6["Name"] = enumIntervalNotify.FifteenMinute.GetDisplayName();
+
+            var dr7 = dt.NewRow();
+            dr7["Id"] = (int)enumIntervalNotify.ThirtyMintue;
+            dr7["Name"] = enumIntervalNotify.ThirtyMintue.GetDisplayName();
+
+            var dr8 = dt.NewRow();
+            dr8["Id"] = (int)enumIntervalNotify.OneHour;
+            dr8["Name"] = enumIntervalNotify.OneHour.GetDisplayName();
+
+            var dr9 = dt.NewRow();
+            dr9["Id"] = (int)enumIntervalNotify.TwoHour;
+            dr9["Name"] = enumIntervalNotify.TwoHour.GetDisplayName();
+
+            var dr10 = dt.NewRow();
+            dr10["Id"] = (int)enumIntervalNotify.FourHour;
+            dr10["Name"] = enumIntervalNotify.FourHour.GetDisplayName();
+
+            var dr11 = dt.NewRow();
+            dr11["Id"] = (int)enumIntervalNotify.FiveHour;
+            dr11["Name"] = enumIntervalNotify.FiveHour.GetDisplayName();
+
+            var dr12 = dt.NewRow();
+            dr12["Id"] = (int)enumIntervalNotify.TwelveHour;
+            dr12["Name"] = enumIntervalNotify.TwelveHour.GetDisplayName();
+
+            var dr13 = dt.NewRow();
+            dr13["Id"] = (int)enumIntervalNotify.OneDay;
+            dr13["Name"] = enumIntervalNotify.OneDay.GetDisplayName();
+
+            dt.Rows.Add(dr1);
+            dt.Rows.Add(dr2);
+            dt.Rows.Add(dr3);
+            dt.Rows.Add(dr4);
+            dt.Rows.Add(dr5);
+            dt.Rows.Add(dr6);
+            dt.Rows.Add(dr7);
+            dt.Rows.Add(dr8);
+            dt.Rows.Add(dr9);
+            dt.Rows.Add(dr10);
+            dt.Rows.Add(dr11);
+            dt.Rows.Add(dr12);
+            dt.Rows.Add(dr13);
             return dt;
         }
     }

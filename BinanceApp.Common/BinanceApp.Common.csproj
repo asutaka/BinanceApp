@@ -107,6 +107,7 @@
     <Compile Include="ChromeWrapper.cs" />
     <Compile Include="CommonMethod.cs" />
     <Compile Include="ConstantValue.cs" />
+    <Compile Include="EnumHelper.cs" />
     <Compile Include="ExtensionMethod.cs" />
     <Compile Include="NLogLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1376,3 +1376,242 @@
    at System.IO.StreamReader..ctor(String path)
    at BinanceApp.Common.ExtensionMethod.LoadJsonFile[T](T val, String fileName) in D:\SourceCode\BinanceApp\BinanceApp.Common\ExtensionMethod.cs:line 34 Line: 0
 
+ -------------- Error (2022-01-01 22:34:24.4409) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	ExtensionMethod:LoadJsonFile: Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\basic_setting.json'. Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\basic_setting.json'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path)
+   at BinanceApp.Common.ExtensionMethod.LoadJsonFile[T](T val, String fileName) in F:\DATA\BinanceApp\BinanceApp.Common\ExtensionMethod.cs:line 34 Line: 0
+
+ -------------- Error (2022-01-02 11:19:57.6245) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	AuthResponse:Exchange: The remote server returned an error: (400) Bad Request. The remote server returned an error: (400) Bad Request.
+   at System.Net.HttpWebRequest.GetResponse()
+   at BinanceApp.Common.AuthResponse.Exchange(String authCode, String clientid, String secret, String redirectURI) in F:\DATA\BinanceApp\BinanceApp.Common\AuthResponse.cs:line 88 Line: 0
+
+ -------------- Error (2022-01-02 11:33:55.3847) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	ExtensionMethod:LoadJsonFile: Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\basic_setting.json'. Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\basic_setting.json'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path)
+   at BinanceApp.Common.ExtensionMethod.LoadJsonFile[T](T val, String fileName) in F:\DATA\BinanceApp\BinanceApp.Common\ExtensionMethod.cs:line 34 Line: 0
+
+ -------------- Error (2022-01-02 17:08:57.3294) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	ExtensionMethod:LoadJsonFile: Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\settings\advance_setting5.json'. Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\settings\advance_setting5.json'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path)
+   at BinanceApp.Common.ExtensionMethod.LoadJsonFile[T](T val, String fileName) in F:\DATA\BinanceApp\BinanceApp.Common\ExtensionMethod.cs:line 34 Line: 0
+
+ -------------- Error (2022-01-02 18:51:58.1997) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	AuthResponse:Exchange: The remote server returned an error: (400) Bad Request. The remote server returned an error: (400) Bad Request.
+   at System.Net.HttpWebRequest.GetResponse()
+   at BinanceApp.Common.AuthResponse.Exchange(String authCode, String clientid, String secret, String redirectURI) in F:\DATA\BinanceApp\BinanceApp.Common\AuthResponse.cs:line 88 Line: 0
+
+ -------------- Error (2022-01-03 16:48:47.5600) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	AuthResponse:Exchange: The remote server returned an error: (400) Bad Request. The remote server returned an error: (400) Bad Request.
+   at System.Net.HttpWebRequest.GetResponse()
+   at BinanceApp.Common.AuthResponse.Exchange(String authCode, String clientid, String secret, String redirectURI) in F:\DATA\BinanceApp\BinanceApp.Common\AuthResponse.cs:line 88 Line: 0
+
+ -------------- Error (2022-01-03 16:50:34.6702) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	AuthResponse:Exchange: The remote server returned an error: (400) Bad Request. The remote server returned an error: (400) Bad Request.
+   at System.Net.HttpWebRequest.GetResponse()
+   at BinanceApp.Common.AuthResponse.Exchange(String authCode, String clientid, String secret, String redirectURI) in F:\DATA\BinanceApp\BinanceApp.Common\AuthResponse.cs:line 88 Line: 0
+
+ -------------- Error (2022-01-04 00:36:12.4240) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	ExtensionMethod:LoadJsonFile: Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\settings\tradelist.json'. Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\settings\tradelist.json'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path)
+   at BinanceApp.Common.ExtensionMethod.LoadJsonFile[T](T val, String fileName) in F:\DATA\BinanceApp\BinanceApp.Common\ExtensionMethod.cs:line 35 Line: 0
+
+ -------------- Error (2022-01-04 00:37:44.0687) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	ExtensionMethod:LoadJsonFile: Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\settings\tradelist.json'. Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\settings\tradelist.json'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path)
+   at BinanceApp.Common.ExtensionMethod.LoadJsonFile[T](T val, String fileName) in F:\DATA\BinanceApp\BinanceApp.Common\ExtensionMethod.cs:line 35 Line: 0
+
+ -------------- Error (2022-01-04 00:40:44.3348) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	ExtensionMethod:LoadJsonFile: Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\settings\tradelist.json'. Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\settings\tradelist.json'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path)
+   at BinanceApp.Common.ExtensionMethod.LoadJsonFile[T](T val, String fileName) in F:\DATA\BinanceApp\BinanceApp.Common\ExtensionMethod.cs:line 35 Line: 0
+
+ -------------- Error (2022-01-04 00:47:33.6324) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	ExtensionMethod:LoadJsonFile: Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\settings\tradelist.json'. Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\settings\tradelist.json'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path)
+   at BinanceApp.Common.ExtensionMethod.LoadJsonFile[T](T val, String fileName) in F:\DATA\BinanceApp\BinanceApp.Common\ExtensionMethod.cs:line 35 Line: 0
+
+ -------------- Error (2022-01-04 00:53:10.2588) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	ExtensionMethod:LoadJsonFile: Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\settings\tradelist.json'. Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\settings\tradelist.json'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path)
+   at BinanceApp.Common.ExtensionMethod.LoadJsonFile[T](T val, String fileName) in F:\DATA\BinanceApp\BinanceApp.Common\ExtensionMethod.cs:line 35 Line: 0
+
+ -------------- Error (2022-01-04 01:13:46.5870) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	ExtensionMethod:LoadJsonFile: Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\settings\tradelist.json'. Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\settings\tradelist.json'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path)
+   at BinanceApp.Common.ExtensionMethod.LoadJsonFile[T](T val, String fileName) in F:\DATA\BinanceApp\BinanceApp.Common\ExtensionMethod.cs:line 35 Line: 0
+
+ -------------- Error (2022-01-04 01:16:16.0152) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	ExtensionMethod:LoadJsonFile: Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\settings\tradelist.json'. Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\settings\tradelist.json'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path)
+   at BinanceApp.Common.ExtensionMethod.LoadJsonFile[T](T val, String fileName) in F:\DATA\BinanceApp\BinanceApp.Common\ExtensionMethod.cs:line 35 Line: 0
+
+ -------------- Error (2022-01-04 01:17:51.5813) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	ExtensionMethod:LoadJsonFile: Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\settings\tradelist.json'. Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\settings\tradelist.json'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path)
+   at BinanceApp.Common.ExtensionMethod.LoadJsonFile[T](T val, String fileName) in F:\DATA\BinanceApp\BinanceApp.Common\ExtensionMethod.cs:line 35 Line: 0
+
+ -------------- Error (2022-01-04 01:34:00.7647) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	ExtensionMethod:LoadJsonFile: Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\settings\tradelist.json'. Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\settings\tradelist.json'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path)
+   at BinanceApp.Common.ExtensionMethod.LoadJsonFile[T](T val, String fileName) in F:\DATA\BinanceApp\BinanceApp.Common\ExtensionMethod.cs:line 35 Line: 0
+
+ -------------- Error (2022-01-04 01:39:07.3465) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	ExtensionMethod:LoadJsonFile: Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\settings\tradelist.json'. Could not find file 'F:\DATA\BinanceApp\BinanceApp\bin\Debug\settings\tradelist.json'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path)
+   at BinanceApp.Common.ExtensionMethod.LoadJsonFile[T](T val, String fileName) in F:\DATA\BinanceApp\BinanceApp.Common\ExtensionMethod.cs:line 35 Line: 0
+
