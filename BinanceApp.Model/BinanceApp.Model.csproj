@@ -62,6 +62,7 @@
     <Compile Include="ENTITY\CryptonDataModel.cs" />
     <Compile Include="ENTITY\CryptonRankModel.cs" />
     <Compile Include="ENTITY\ElementModel.cs" />
+    <Compile Include="ENTITY\FollowModel.cs" />
     <Compile Include="ENTITY\GenCodeModel.cs" />
     <Compile Include="ENTITY\GeneralModel.cs" />
     <Compile Include="ENTITY\IndicatorModel.cs" />

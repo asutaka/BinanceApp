@@ -32,6 +32,7 @@ namespace BinanceApp
             StaticValues.specialModel = new SpecialSettingModel().LoadJsonFile("special_setting.json");
             StaticValues.lstBlackList = new List<CryptonDetailDataModel>().LoadJsonFile("blacklist.json");
             StaticValues.lstTradeList = new List<TradeModel>().LoadJsonFile("tradelist.json");
+            StaticValues.followList = new FollowModel().LoadJsonFile("followlist.json");
             
             //Load ListCoin
             StaticValues.lstCoin = SeedData.GetCryptonList();

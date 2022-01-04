@@ -5,10 +5,22 @@ namespace BinanceApp.Usr
 {
     public partial class userCoinValue : UserControl
     {
-        public userCoinValue()
+        private readonly double _currentValue;
+        public userCoinValue(double currentValue)
         {
             InitializeComponent();
-            cmbOption.SelectedIndex = 0; 
+            cmbOption.SelectedIndex = 0;
+            _currentValue = currentValue;
+
+            nmValue.Value = (decimal)_currentValue;
+        }
+
+        public userCoinValue(TradeDetailModel model)
+        {
+            InitializeComponent();
+            cmbOption.SelectedIndex = model.IsAbove ? 0 : 1;
+            nmValue.Value = model.Value;
+            picOption.Image = model.IsAbove ? Properties.Resources.up_24x24 : Properties.Resources.down_24x24;
         }
 
         public bool IsAbove()
@@ -19,14 +31,6 @@ namespace BinanceApp.Usr
         public decimal GetValue()
         {
             return nmValue.Value;
-        }
-
-        public userCoinValue(TradeDetailModel model)
-        {
-            InitializeComponent();
-            cmbOption.SelectedIndex = model.IsAbove ? 0 : 1;
-            nmValue.Value = model.Value;
-            picOption.Image = model.IsAbove ? Properties.Resources.up_24x24 : Properties.Resources.down_24x24;
         }
 
         private void cmbOption_SelectedIndexChanged(object sender, System.EventArgs e)

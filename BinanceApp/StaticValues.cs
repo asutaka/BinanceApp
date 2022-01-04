@@ -31,5 +31,6 @@ namespace BinanceApp
         public static AdvanceSettingModel advanceModel4;
         public static List<CryptonDetailDataModel> lstBlackList;
         public static List<TradeModel> lstTradeList;
+        public static FollowModel followList;
     }
 }

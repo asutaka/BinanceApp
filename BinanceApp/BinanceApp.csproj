@@ -88,6 +88,18 @@
     <Compile Include="GUI\Child\frmBasicSetting.designer.cs">
       <DependentUpon>frmBasicSetting.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Child\frmFollowList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Child\frmFollowList.Designer.cs">
+      <DependentUpon>frmFollowList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usr\frmCoinFollowInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usr\frmCoinFollowInfo.Designer.cs">
+      <DependentUpon>frmCoinFollowInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usr\frmCoinInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,12 +141,6 @@
     </Compile>
     <Compile Include="GUI\Child\frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Child\frmListFollow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Child\frmListFollow.Designer.cs">
-      <DependentUpon>frmListFollow.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Child\frmTop30.cs">
       <SubType>Form</SubType>
@@ -181,6 +187,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="StaticValues.cs" />
+    <Compile Include="Usr\userCoinFollow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usr\userCoinFollow.Designer.cs">
+      <DependentUpon>userCoinFollow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usr\userCoinTrace.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -217,6 +229,12 @@
     <EmbeddedResource Include="GUI\Child\frmBasicSetting.resx">
       <DependentUpon>frmBasicSetting.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Child\frmFollowList.resx">
+      <DependentUpon>frmFollowList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usr\frmCoinFollowInfo.resx">
+      <DependentUpon>frmCoinFollowInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usr\frmCoinInfo.resx">
       <DependentUpon>frmCoinInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,9 +252,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Child\frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Child\frmListFollow.resx">
-      <DependentUpon>frmListFollow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Child\frmSpecialSetting.resx">
       <DependentUpon>frmSpecialSetting.cs</DependentUpon>
@@ -267,6 +282,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Usr\userCoinFollow.resx">
+      <DependentUpon>userCoinFollow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usr\userCoinTrace.resx">
       <DependentUpon>userCoinTrace.cs</DependentUpon>
     </EmbeddedResource>

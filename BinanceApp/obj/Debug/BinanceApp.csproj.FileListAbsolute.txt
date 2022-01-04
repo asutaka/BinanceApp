@@ -281,7 +281,6 @@ F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.Child.frmBlackList.resour
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.Child.frmConfigFx.resources
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.Child.frmConfigNotify.resources
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.Child.frmDashboard.resources
-F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.Child.frmListFollow.resources
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.Child.frmSpecialSetting.resources
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.Child.frmTop30.resources
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.frmMain.resources
@@ -301,3 +300,6 @@ F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.csproj.CopyComplete
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.exe
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.pdb
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.Usr.frmCoinInfo.resources
+F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.Child.frmFollowList.resources
+F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.Usr.frmCoinFollowInfo.resources
+F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.Usr.userCoinFollow.resources

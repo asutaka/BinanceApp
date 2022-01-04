@@ -339,5 +339,69 @@ namespace BinanceApp.Data
             dt.Rows.Add(dr13);
             return dt;
         }
+
+        public static DataTable GetDataInternalNotifyFollow()
+        {
+            var dt = new DataTable();
+            dt.Columns.Add("Id", typeof(int));
+            dt.Columns.Add("Name", typeof(string));
+
+            var dr1 = dt.NewRow();
+            dr1["Id"] = (int)enumIntervalNotify.Only;
+            dr1["Name"] = enumIntervalNotify.Only.GetDisplayName();
+
+            var dr4 = dt.NewRow();
+            dr4["Id"] = (int)enumIntervalNotify.FiveMinute;
+            dr4["Name"] = enumIntervalNotify.FiveMinute.GetDisplayName();
+
+            var dr5 = dt.NewRow();
+            dr5["Id"] = (int)enumIntervalNotify.TenMinute;
+            dr5["Name"] = enumIntervalNotify.TenMinute.GetDisplayName();
+
+            var dr6 = dt.NewRow();
+            dr6["Id"] = (int)enumIntervalNotify.FifteenMinute;
+            dr6["Name"] = enumIntervalNotify.FifteenMinute.GetDisplayName();
+
+            var dr7 = dt.NewRow();
+            dr7["Id"] = (int)enumIntervalNotify.ThirtyMintue;
+            dr7["Name"] = enumIntervalNotify.ThirtyMintue.GetDisplayName();
+
+            var dr8 = dt.NewRow();
+            dr8["Id"] = (int)enumIntervalNotify.OneHour;
+            dr8["Name"] = enumIntervalNotify.OneHour.GetDisplayName();
+
+            var dr9 = dt.NewRow();
+            dr9["Id"] = (int)enumIntervalNotify.TwoHour;
+            dr9["Name"] = enumIntervalNotify.TwoHour.GetDisplayName();
+
+            var dr10 = dt.NewRow();
+            dr10["Id"] = (int)enumIntervalNotify.FourHour;
+            dr10["Name"] = enumIntervalNotify.FourHour.GetDisplayName();
+
+            var dr11 = dt.NewRow();
+            dr11["Id"] = (int)enumIntervalNotify.FiveHour;
+            dr11["Name"] = enumIntervalNotify.FiveHour.GetDisplayName();
+
+            var dr12 = dt.NewRow();
+            dr12["Id"] = (int)enumIntervalNotify.TwelveHour;
+            dr12["Name"] = enumIntervalNotify.TwelveHour.GetDisplayName();
+
+            var dr13 = dt.NewRow();
+            dr13["Id"] = (int)enumIntervalNotify.OneDay;
+            dr13["Name"] = enumIntervalNotify.OneDay.GetDisplayName();
+
+            dt.Rows.Add(dr1);
+            dt.Rows.Add(dr4);
+            dt.Rows.Add(dr5);
+            dt.Rows.Add(dr6);
+            dt.Rows.Add(dr7);
+            dt.Rows.Add(dr8);
+            dt.Rows.Add(dr9);
+            dt.Rows.Add(dr10);
+            dt.Rows.Add(dr11);
+            dt.Rows.Add(dr12);
+            dt.Rows.Add(dr13);
+            return dt;
+        }
     }
 }

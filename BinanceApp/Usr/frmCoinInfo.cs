@@ -12,6 +12,7 @@ namespace BinanceApp.Usr
     public partial class frmCoinInfo : XtraForm
     {
         private userCoinTrade _frm;
+        private double _currentValue;
         public frmCoinInfo()
         {
             InitializeComponent();
@@ -48,9 +49,11 @@ namespace BinanceApp.Usr
             var entity = StaticValues.lstCoinFilter.FirstOrDefault(x => x.S == _frm.tradeModel.Coin);
             if (entity != null)
             {
+                _currentValue = CommonMethod.GetCurrentValue(entity.S);
+
                 txtCoin.Text = entity.S;
                 txtDescription.Text = entity.AN;
-                txtValue.Text = CommonMethod.GetCurrentValue(entity.S).ToString("#,##0.#########");
+                txtValue.Text = _currentValue.ToString("#,##0.#########");
                 cmbFrequency.SelectedIndex = _frm.tradeModel.Interval;
                 chkState.IsOn = _frm.tradeModel.IsNotify;
                 foreach (var item in _frm.tradeModel.Config)
@@ -62,7 +65,7 @@ namespace BinanceApp.Usr
 
         private void btnAddSignal_Click(object sender, EventArgs e)
         {
-            pnlMain.Controls.Add(new userCoinValue());
+            pnlMain.Controls.Add(new userCoinValue(_currentValue));
         }
 
         private void btnOkAndSave_Click(object sender, EventArgs e)

@@ -82,7 +82,7 @@ namespace BinanceApp.GUI
             this.barBtnListFollow.Caption = "Danh sách theo dõi";
             this.barBtnListFollow.Id = 1;
             this.barBtnListFollow.Name = "barBtnListFollow";
-            this.barBtnListFollow.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            this.barBtnListFollow.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnListFollow_ItemClick);
             // 
             // barButtonItem2
             // 

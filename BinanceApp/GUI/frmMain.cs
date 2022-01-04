@@ -138,18 +138,22 @@ namespace BinanceApp.GUI
             //MessageBox.Show($"Started Config: {dtStartConfig} - Ended: {dtEndConfig}\n Started Analyze: {dtStartCalculate} - Ended: {dtEndCalculate}; Count: {StaticValues.lstCryptonRank.Count}");
         }
 
-        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void barBtnListFollow_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var tmp = StaticValues.ScheduleMngObj.GetSchedules().ElementAt(0);
-            if (tmp.IsStarted())
+            //var tmp = StaticValues.ScheduleMngObj.GetSchedules().ElementAt(0);
+            //if (tmp.IsStarted())
+            //{
+            //    tmp.Pause();
+            //    tmp.Resume();
+            //}
+            //else
+            //{
+            //    tmp.Start();
+            //}
+            this.Invoke((MethodInvoker)delegate
             {
-                tmp.Pause();
-                tmp.Resume();
-            }
-            else
-            {
-                tmp.Start();
-            }
+                tabControl.AddTab(frmFollowList.Instance());
+            });
         }
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)

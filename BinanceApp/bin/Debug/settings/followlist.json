@@ -1,0 +1,1 @@
+{"IsNotify":true,"Interval":1,"Coins":["ADXUSDT","ALCXUSDT"],"Follows":[{"IsTop30":true,"IsMCDX":true,"IsSpecial":false,"IsConfig2":true,"IsConfig3":true,"IsConfig4":true,"IsConfig5":true},{"IsTop30":false,"IsMCDX":true,"IsSpecial":false,"IsConfig2":false,"IsConfig3":true,"IsConfig4":false,"IsConfig5":false}]}
