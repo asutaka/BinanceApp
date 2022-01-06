@@ -1660,3 +1660,14 @@
    at System.IO.StreamReader..ctor(String path)
    at BinanceApp.Common.ExtensionMethod.LoadJsonFile[T](T val, String fileName) in F:\DATA\BinanceApp\BinanceApp.Common\ExtensionMethod.cs:line 35 Line: 0
 
+ -------------- Error (2022-01-07 00:15:59.8711) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	AuthResponse:Exchange: The remote server returned an error: (400) Bad Request. The remote server returned an error: (400) Bad Request.
+   at System.Net.HttpWebRequest.GetResponse()
+   at BinanceApp.Common.AuthResponse.Exchange(String authCode, String clientid, String secret, String redirectURI) in F:\DATA\BinanceApp\BinanceApp.Common\AuthResponse.cs:line 88 Line: 0
+

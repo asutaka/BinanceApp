@@ -17,11 +17,9 @@ namespace BinanceApp
         [STAThread]
         static void Main()
         {
-            Startup.Instance();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(frmLogin.Instance());
         }
-        //Làm job check trạng thái
     }
 }

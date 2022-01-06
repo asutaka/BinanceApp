@@ -19,6 +19,12 @@ namespace BinanceApp.GUI
         private frmLogin()
         {
             InitializeComponent();
+            var bkgr = new BackgroundWorker();
+            bkgr.DoWork += (object sender, DoWorkEventArgs e) =>
+            {
+                Startup.Instance();
+            };
+            bkgr.RunWorkerAsync();
         }
 
         private static frmLogin _instance = null;

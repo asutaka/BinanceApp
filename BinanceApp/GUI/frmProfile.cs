@@ -151,7 +151,6 @@ namespace BinanceApp.GUI
             if (StaticValues.IsExecCheckCodeActive)
                 return;
             StaticValues.IsExecCheckCodeActive = true;
-
             picStatus.Image = Properties.Resources.yellow;
             _bkgr.RunWorkerAsync();
         }
@@ -160,6 +159,7 @@ namespace BinanceApp.GUI
         {
             _frmWaitForm.Show("Kiểm tra trạng thái");
             btnPaste.Enabled = false;
+
             var time = CommonMethod.GetTimeAsync().GetAwaiter().GetResult();
             var jsonModel = Security.Decrypt(txtCode.Text.Trim());
             if (string.IsNullOrWhiteSpace(jsonModel))
@@ -187,6 +187,7 @@ namespace BinanceApp.GUI
         {
             picStatus.Image = StaticValues.IsCodeActive ? Properties.Resources.green : Properties.Resources.red;
             btnPaste.Enabled = true;
+
             if (!StaticValues.IsCodeActive)
             {
                 txtCode.Text = string.Empty;

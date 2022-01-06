@@ -1,4 +1,6 @@
 ﻿
+using DevExpress.LookAndFeel;
+
 namespace BinanceApp.GUI
 {
     partial class frmMain
@@ -29,6 +31,7 @@ namespace BinanceApp.GUI
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "McSkin";
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barBtnListFollow = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
@@ -41,11 +44,11 @@ namespace BinanceApp.GUI
             this.barBtnListTrade = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnRealTime = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonGroupSupport = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.tabControl = new DevExpress.XtraTab.XtraTabControl();
@@ -147,49 +150,49 @@ namespace BinanceApp.GUI
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1,
-            this.ribbonPageGroup2,
-            this.ribbonPageGroup3,
-            this.ribbonPageGroup4,
-            this.ribbonPageGroup5});
+            this.ribbonGroup1,
+            this.ribbonGroup2,
+            this.ribbonGroupSupport,
+            this.ribbonGroup3,
+            this.ribbonGroup4});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Main";
             // 
-            // ribbonPageGroup1
+            // ribbonGroup1
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barBtnInfo);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "Thông tin";
+            this.ribbonGroup1.ItemLinks.Add(this.barBtnInfo);
+            this.ribbonGroup1.Name = "ribbonGroup1";
+            this.ribbonGroup1.Text = "Thông tin";
             // 
-            // ribbonPageGroup2
+            // ribbonGroup2
             // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.barBtnDashboard);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barBtnTop30);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barBtnRealTime);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "Thống kê";
+            this.ribbonGroup2.ItemLinks.Add(this.barBtnDashboard);
+            this.ribbonGroup2.ItemLinks.Add(this.barBtnTop30);
+            this.ribbonGroup2.ItemLinks.Add(this.barBtnRealTime);
+            this.ribbonGroup2.Name = "ribbonGroup2";
+            this.ribbonGroup2.Text = "Thống kê";
             // 
-            // ribbonPageGroup3
+            // ribbonGroupSupport
             // 
-            this.ribbonPageGroup3.Alignment = DevExpress.XtraBars.Ribbon.RibbonPageGroupAlignment.Far;
-            this.ribbonPageGroup3.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.True;
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem2);
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonGroupSupport.Alignment = DevExpress.XtraBars.Ribbon.RibbonPageGroupAlignment.Far;
+            this.ribbonGroupSupport.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.True;
+            this.ribbonGroupSupport.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonGroupSupport.Name = "ribbonGroupSupport";
             // 
-            // ribbonPageGroup4
+            // ribbonGroup3
             // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.barBtnListTrade);
-            this.ribbonPageGroup4.ItemLinks.Add(this.barBtnListFollow);
-            this.ribbonPageGroup4.ItemLinks.Add(this.barBtnBlackList);
-            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.Text = "Sở hữu";
+            this.ribbonGroup3.ItemLinks.Add(this.barBtnListTrade);
+            this.ribbonGroup3.ItemLinks.Add(this.barBtnListFollow);
+            this.ribbonGroup3.ItemLinks.Add(this.barBtnBlackList);
+            this.ribbonGroup3.Name = "ribbonGroup3";
+            this.ribbonGroup3.Text = "Sở hữu";
             // 
-            // ribbonPageGroup5
+            // ribbonGroup4
             // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.barBtnConfigFx);
-            this.ribbonPageGroup5.ItemLinks.Add(this.barBtnConfigNotify);
-            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            this.ribbonPageGroup5.Text = "Cài đặt";
+            this.ribbonGroup4.ItemLinks.Add(this.barBtnConfigFx);
+            this.ribbonGroup4.ItemLinks.Add(this.barBtnConfigNotify);
+            this.ribbonGroup4.Name = "ribbonGroup4";
+            this.ribbonGroup4.Text = "Cài đặt";
             // 
             // ribbonStatusBar
             // 
@@ -208,6 +211,8 @@ namespace BinanceApp.GUI
             this.tabControl.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InTabControlHeader;
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Location = new System.Drawing.Point(0, 158);
+            this.tabControl.LookAndFeel.SkinName = "McSkin";
+            this.tabControl.LookAndFeel.UseDefaultLookAndFeel = false;
             this.tabControl.Name = "tabControl";
             this.tabControl.Size = new System.Drawing.Size(1022, 585);
             this.tabControl.TabIndex = 2;
@@ -238,11 +243,11 @@ namespace BinanceApp.GUI
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonGroup2;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonGroupSupport;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonGroup3;
         private DevExpress.XtraBars.BarButtonItem barBtnListFollow;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem barBtnInfo;
@@ -252,7 +257,7 @@ namespace BinanceApp.GUI
         private DevExpress.XtraBars.BarButtonItem barBtnConfigNotify;
         private DevExpress.XtraBars.BarButtonItem barBtnBlackList;
         private DevExpress.XtraBars.BarButtonItem barBtnTop30;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonGroup4;
         private DevExpress.XtraTab.XtraTabControl tabControl;
         private DevExpress.XtraBars.BarButtonItem barBtnListTrade;
         private DevExpress.XtraBars.BarButtonItem barBtnRealTime;

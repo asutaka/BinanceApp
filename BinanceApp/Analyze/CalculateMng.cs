@@ -105,7 +105,7 @@ namespace BinanceApp.Analyze
                     }
                 }
 
-                return new CryptonRankModel { Coin = code, Count = count, Rate = Math.Round(sum / count, 2) };
+                return new CryptonRankModel { Coin = code, Count = count, Rate = Math.Round(sum / count, 2), OriginValue = CommonMethod.GetCurrentValue(code) };
             }
             catch(Exception ex)
             {

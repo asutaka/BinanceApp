@@ -37,6 +37,7 @@ namespace BinanceApp.GUI.Child
             this.Value = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Count = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Rate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.RateValue = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +60,7 @@ namespace BinanceApp.GUI.Child
             this.Coin,
             this.CoinName,
             this.Value,
+            this.RateValue,
             this.Count,
             this.Rate});
             this.gridView1.GridControl = this.grid;
@@ -152,7 +154,7 @@ namespace BinanceApp.GUI.Child
             this.Count.OptionsColumn.AllowEdit = false;
             this.Count.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.Count.Visible = true;
-            this.Count.VisibleIndex = 4;
+            this.Count.VisibleIndex = 5;
             // 
             // Rate
             // 
@@ -171,7 +173,25 @@ namespace BinanceApp.GUI.Child
             this.Rate.OptionsColumn.AllowEdit = false;
             this.Rate.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.Rate.Visible = true;
-            this.Rate.VisibleIndex = 5;
+            this.Rate.VisibleIndex = 6;
+            // 
+            // RateValue
+            // 
+            this.RateValue.AppearanceCell.Options.UseTextOptions = true;
+            this.RateValue.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.RateValue.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.RateValue.AppearanceHeader.Options.UseTextOptions = true;
+            this.RateValue.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.RateValue.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.RateValue.Caption = "Phần trăm(%)";
+            this.RateValue.FieldName = "RateValue";
+            this.RateValue.MaxWidth = 85;
+            this.RateValue.MinWidth = 85;
+            this.RateValue.Name = "RateValue";
+            this.RateValue.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
+            this.RateValue.Visible = true;
+            this.RateValue.VisibleIndex = 4;
+            this.RateValue.Width = 85;
             // 
             // frmTop30
             // 
@@ -183,6 +203,7 @@ namespace BinanceApp.GUI.Child
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "frmTop30";
             this.Text = "Top30";
+            this.VisibleChanged += new System.EventHandler(this.frmTop30_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
@@ -199,5 +220,6 @@ namespace BinanceApp.GUI.Child
         private DevExpress.XtraGrid.Columns.GridColumn Value;
         private DevExpress.XtraGrid.Columns.GridColumn Count;
         private DevExpress.XtraGrid.Columns.GridColumn Rate;
+        private DevExpress.XtraGrid.Columns.GridColumn RateValue;
     }
 }

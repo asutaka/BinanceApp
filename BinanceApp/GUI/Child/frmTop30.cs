@@ -1,19 +1,20 @@
-﻿using DevExpress.LookAndFeel;
+﻿using BinanceApp.Common;
+using BinanceApp.Job;
+using BinanceApp.Job.ScheduleJob;
+using DevExpress.LookAndFeel;
 using DevExpress.XtraEditors;
+using Quartz;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BinanceApp.GUI.Child
 {
     public partial class frmTop30 : XtraForm
     {
+        ScheduleMember jobCurrentValue = new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<Top30CurrentValueScheduleJob>(), StaticValues.Scron_Top30CurrentValue, nameof(Top30CurrentValueScheduleJob));
         private frmTop30()
         {
             InitializeComponent();
@@ -27,16 +28,44 @@ namespace BinanceApp.GUI.Child
             return _instance;
         }
 
-        private void InitData()
+        public void InitData()
         {
-            int count = 1;
-            var datasource = from entityRank in StaticValues.lstCryptonRank
-                      join entityCoin in StaticValues.lstCoin
-                      on entityRank.Coin equals entityCoin.S
-                      select new { STT = count++, Coin = entityRank.Coin, CoinName = entityCoin.AN, Count = entityRank.Count, Rate = entityRank.Rate };
-            grid.BeginUpdate();
-            grid.DataSource = datasource;
-            grid.EndUpdate();
+            if (!this.Visible)
+            {
+                jobCurrentValue.Pause();
+            }
+            if (!this.IsHandleCreated)
+                return;
+            this.Invoke((MethodInvoker)delegate
+            {
+                int count = 1;
+                var datasource = from entityRank in StaticValues.lstCryptonRank
+                                 join entityCoin in StaticValues.lstCoin
+                                 on entityRank.Coin equals entityCoin.S
+                                 select new { STT = count++, Coin = entityRank.Coin, CoinName = entityCoin.AN, Count = entityRank.Count, Rate = entityRank.Rate, Value = entityRank.CurrentValue, RateValue = Math.Round((-1 + (entityRank.CurrentValue/entityRank.OriginValue)) * 100, 2) };
+                grid.BeginUpdate();
+                grid.DataSource = datasource;
+                grid.EndUpdate();
+            });
+        }
+
+        private void frmTop30_VisibleChanged(object sender, EventArgs e)
+        {
+            if (!this.Visible)
+            {
+                jobCurrentValue.Pause();
+            }
+            else
+            {
+                if (!jobCurrentValue.IsStarted())
+                {
+                    jobCurrentValue.Start();
+                }
+                else
+                {
+                    jobCurrentValue.Resume();
+                }
+            }
         }
     }
 }
