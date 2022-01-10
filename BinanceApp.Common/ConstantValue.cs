@@ -17,8 +17,8 @@
         public const string COIN_LIST = "https://www.binance.com/bapi/asset/v2/public/asset-service/product/get-products?includeEtf=true";
         public const string COIN_DETAIL = "https://www.binance.com/api/v1/klines?";
         public const string COIN_SINGLE = "https://www.binance.com/vi/trade/";
-        //Telegram
-        public const string strBuyCode = "Danh sách gói code:" +
+        //Telegram Buy Code
+        public const string strService = "Danh sách gói code:" +
                                          "\nGói dùng thử 3 ngày: miễn phí(duy nhất 1 lần) - Mã: FREE" +
                                          "\nGói 1 tháng: xK/tháng - Mã: 1M" +
                                          "\nGói 3 tháng: yK/tháng - Mã: 3M" +
@@ -27,9 +27,14 @@
                                          "\n\nVui lòng chat tại đây để nhận tư vấn hoặc" +
                                          "\nchuyển tiền với nội dung: DK Mã_gói Email_sử_dụng SĐT_Telegram" +
                                          "\ntới STK:xxx - tại ngân hàng VCB, người nhận: Nguyễn Văn A";
+        public const string phoneService = "+84582208920";
+        public const string apiIdService = "5128731";
+        public const string apiHashService = "a894a079cfeadf0bd0646f53bf2587c6";
+        //Telegram Support
         public const string strSupport = "<Tin nhắn tự động>Bạn cần hỗ trợ gì?";
-        public const string apiIdBot1 = "5128731";
-        public const string apiHashBot1 = "a894a079cfeadf0bd0646f53bf2587c6";
+        public const string phoneSupport = "+84978894272";
+        public const string apiIdSupport = "10685601";
+        public const string apiHashSupport = "ea3a6821783d84a2c919c049a060d67f";
         //Google Drive
         public const string strVersion = "https://drive.google.com/file/d/1o-ahy7uHCK_sVkdJ_G7iaVWyDGUU7Nli/view?usp=sharing";
         public const string strBotBuyCode = "https://drive.google.com/file/d/1hakAvnesXwXbr4WsHx4ilZhfJPa4PjFi/view?usp=sharing";

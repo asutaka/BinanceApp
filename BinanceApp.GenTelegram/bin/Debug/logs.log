@@ -1,0 +1,168 @@
+ -------------- Error (2022-01-10 11:27:01.6806) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: Couldn't match any server_public_key_fingerprints Couldn't match any server_public_key_fingerprints
+   at WTelegram.Encryption.<CreateAuthorizationKey>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at WTelegram.Client.<DoConnectAsync>d__45.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WTelegram.Client.<ConnectAsync>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at BinanceApp.Common.Telegram.TeleClient.<GenerateSession>d__8.MoveNext() in D:\SourceCode\BinanceApp\BinanceApp.Common\Telegram\TeleClient.cs:line 40 Line: 0
+
+ -------------- Error (2022-01-10 11:28:26.2341) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: Couldn't match any server_public_key_fingerprints Couldn't match any server_public_key_fingerprints
+   at WTelegram.Encryption.<CreateAuthorizationKey>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at WTelegram.Client.<DoConnectAsync>d__45.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WTelegram.Client.<ConnectAsync>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at BinanceApp.Common.Telegram.TeleClient.<GenerateSession>d__8.MoveNext() in D:\SourceCode\BinanceApp\BinanceApp.Common\Telegram\TeleClient.cs:line 46 Line: 0
+
+ -------------- Error (2022-01-10 11:37:54.8752) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: Couldn't match any server_public_key_fingerprints Couldn't match any server_public_key_fingerprints
+   at WTelegram.Encryption.<CreateAuthorizationKey>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at WTelegram.Client.<DoConnectAsync>d__45.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WTelegram.Client.<ConnectAsync>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at BinanceApp.Common.Telegram.TeleClient.<GenerateSession>d__8.MoveNext() in D:\SourceCode\BinanceApp\BinanceApp.Common\Telegram\TeleClient.cs:line 46 Line: 0
+
+ -------------- Error (2022-01-10 11:38:07.5954) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: Couldn't match any server_public_key_fingerprints Couldn't match any server_public_key_fingerprints
+   at WTelegram.Encryption.<CreateAuthorizationKey>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at WTelegram.Client.<DoConnectAsync>d__45.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WTelegram.Client.<ConnectAsync>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at BinanceApp.Common.Telegram.TeleClient.<GenerateSession>d__8.MoveNext() in D:\SourceCode\BinanceApp\BinanceApp.Common\Telegram\TeleClient.cs:line 46 Line: 0
+
+ -------------- Error (2022-01-10 13:34:21.5182) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: Couldn't match any server_public_key_fingerprints Couldn't match any server_public_key_fingerprints
+   at WTelegram.Encryption.<CreateAuthorizationKey>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at WTelegram.Client.<DoConnectAsync>d__45.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WTelegram.Client.<ConnectAsync>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at BinanceApp.Common.Telegram.TeleClient.<GenerateSession>d__8.MoveNext() in D:\SourceCode\BinanceApp\BinanceApp.Common\Telegram\TeleClient.cs:line 59 Line: 0
+
+ -------------- Error (2022-01-10 14:25:33.3653) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: Couldn't match any server_public_key_fingerprints Couldn't match any server_public_key_fingerprints
+   at WTelegram.Encryption.<CreateAuthorizationKey>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at WTelegram.Client.<DoConnectAsync>d__45.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WTelegram.Client.<ConnectAsync>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at BinanceApp.Common.Telegram.TeleClient.<GenerateSession>d__8.MoveNext() in D:\SourceCode\BinanceApp\BinanceApp.Common\Telegram\TeleClient.cs:line 59 Line: 0
+
+ -------------- Info (2022-01-10 16:35:47.0618) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.Info
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: You are logged-in as FTech AI Bot 2 (id 1828525662)
+
+ -------------- Info (2022-01-10 16:38:15.2221) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.Info
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: You are logged-in as FTech AI Bot 2 (id 1828525662)
+
+ -------------- Info (2022-01-10 16:45:45.0128) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.Info
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: You are logged-in as FTech AI Bot 2 (id 1828525662)
+
