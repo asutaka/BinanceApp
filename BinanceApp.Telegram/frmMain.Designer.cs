@@ -1,5 +1,5 @@
 ﻿
-namespace BinanceApp.GenTelegram
+namespace BinanceApp.Telegram
 {
     partial class frmMain
     {
@@ -72,7 +72,6 @@ namespace BinanceApp.GenTelegram
             // txtCode
             // 
             this.txtCode.BackColor = System.Drawing.Color.White;
-            this.txtCode.Enabled = false;
             this.txtCode.Location = new System.Drawing.Point(116, 28);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(272, 20);

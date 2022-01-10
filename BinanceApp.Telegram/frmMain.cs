@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Drawing;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BinanceApp.GenTelegram
+namespace BinanceApp.Telegram
 {
     public partial class frmMain : Form
     {
@@ -47,12 +48,14 @@ namespace BinanceApp.GenTelegram
             return true;
         }
 
-        private void btnVerifyCode_Click(object sender, EventArgs e)
+        private async void btnVerifyCode_Click(object sender, EventArgs e)
         {
             if (!CheckValid())
                 return;
             var result = TeleClient.GenerateSession(_phoneNumber, txtApiId.Text.Trim(), txtApiHash.Text.Trim(), txtCode.Text.Trim(), chkService.Checked);
-            if (result.GetAwaiter().GetResult())
+            var resultAwait = await result;
+
+            if (resultAwait)
             {
                 lblStatusCode.Text = "Thành công";
                 lblStatusCode.ForeColor = Color.Green;
@@ -64,12 +67,13 @@ namespace BinanceApp.GenTelegram
             }
         }
 
-        private void btnRequestCode_Click(object sender, EventArgs e)
+        private async void btnRequestCode_Click(object sender, EventArgs e)
         {
             if (!CheckValid())
                 return;
             var result = TeleClient.GenerateSession(_phoneNumber, txtApiId.Text.Trim(), txtApiHash.Text.Trim(), txtCode.Text.Trim(), chkService.Checked);
-            if (result.GetAwaiter().GetResult())
+            var resultAwait = await result;
+            if (resultAwait)
             {
                 lblStatusInfo.Text = "Thành công";
                 lblStatusInfo.ForeColor = Color.Green;

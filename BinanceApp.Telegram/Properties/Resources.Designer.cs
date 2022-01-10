@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace BinanceApp.GenTelegram.Properties
+namespace BinanceApp.Telegram.Properties
 {
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
@@ -43,7 +43,7 @@ namespace BinanceApp.GenTelegram.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BinanceApp.GenTelegram.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BinanceApp.Telegram.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

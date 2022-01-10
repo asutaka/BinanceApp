@@ -29,6 +29,9 @@
         <member name="P:WTelegram.Client.Disconnected">
             <summary>Has this Client established connection been disconnected?</summary>
         </member>
+        <member name="P:WTelegram.Client.MTProxyUrl">
+            <summary>Url for using a MTProxy. http://t.me/proxy?server=... </summary>
+        </member>
         <member name="T:WTelegram.Client.ProgressCallback">
             <summary>Used to indicate progression of file download/upload</summary>
             <param name="totalSize">total size of file in bytes, or 0 if unknown</param>
@@ -43,6 +46,11 @@
         <member name="M:WTelegram.Client.LoadPublicKey(System.String)">
             <summary>Load a specific Telegram server public key</summary>
             <param name="pem">A string starting with <c>-----BEGIN RSA PUBLIC KEY-----</c></param>
+        </member>
+        <member name="M:WTelegram.Client.InputCheckPassword(TL.Account_Password,System.String)">
+            <summary>Builds a structure that is used to validate a 2FA password</summary>
+            <param name="accountPassword">Password validation configuration. You can obtain this though an Update event as part of the login process</param>
+            <param name="password">The password to validate</param>
         </member>
         <member name="M:WTelegram.Client.Reset(System.Boolean,System.Boolean)">
             <summary>Disconnect from Telegram <i>(shouldn't be needed in normal usage)</i></summary>
@@ -61,10 +69,10 @@
             <param name="connect">Connect immediately</param>
             <returns></returns>
         </member>
-        <member name="M:WTelegram.Client.CallAsync``1(TL.IMethod{``0})">
-            <summary>Call the given TL method <i>(You shouldn't need to call this, usually)</i></summary>
+        <member name="M:WTelegram.Client.Invoke``1(TL.IMethod{``0})">
+            <summary>Call the given TL method <i>(You shouldn't need to use this method directly)</i></summary>
             <typeparam name="X">Expected type of the returned object</typeparam>
-            <param name="request">TL method object</param>
+            <param name="query">TL method structure</param>
             <returns>Wait for the reply and return the resulting object, or throws an RpcException if an error was replied</returns>
         </member>
         <member name="M:WTelegram.Client.LoginBotIfNeeded">
@@ -88,6 +96,15 @@
             <remarks>This approach is not recommended because you likely didn't properly handle all aspects of the login process
             <br/>(transient failures, unnecessary login, 2FA, sign-up required, slowness to respond, verification code resending, encryption key safety, etc..)
             <br/>Methods <c>LoginUserIfNeeded</c> and <c>LoginBotIfNeeded</c> handle these automatically for you</remarks>
+        </member>
+        <member name="P:WTelegram.Client.CollectAccessHash">
+            <summary>Enable the collection of id/access_hash pairs (experimental)</summary>
+        </member>
+        <member name="M:WTelegram.Client.GetAccessHashFor``1(System.Int64)">
+            <summary>Retrieve the access_hash associated with this id (for a TL class) if it was collected</summary>
+            <remarks>This requires <see cref="P:WTelegram.Client.CollectAccessHash"/> to be set to <see langword="true"/> first.
+            <br/>See <see href="https://github.com/wiz0u/WTelegramClient/tree/master/Examples/Program_CollectAccessHash.cs">Examples/Program_CollectAccessHash.cs</see> for how to use this</remarks>
+            <typeparam name="T">a TL object class. For example User, Channel or Photo</typeparam>
         </member>
         <member name="M:WTelegram.Client.UploadFileAsync(System.String,WTelegram.Client.ProgressCallback)">
             <summary>Helper function to upload a file to Telegram</summary>
@@ -144,10 +161,18 @@
             <summary>Download a file from Telegram into the outputStream</summary>
             <param name="fileLocation">Telegram file identifier, typically obtained with a .ToFileLocation() call</param>
             <param name="outputStream">Stream to write file content to. This method does not close/dispose the stream</param>
-            <param name="fileDC">(optional) DC on which the file is stored</param>
+            <param name="dc_id">(optional) DC on which the file is stored</param>
             <param name="fileSize">(optional) Expected file size</param>
             <param name="progress">(optional) Callback for tracking the progression of the transfer</param>
             <returns>The file type</returns>
+        </member>
+        <member name="M:WTelegram.Client.DownloadProfilePhotoAsync(TL.IPeerInfo,System.IO.Stream,System.Boolean,System.Boolean)">
+            <summary>Download the profile photo for a given peer into the outputStream</summary>
+            <param name="peer">User, Chat or Channel</param>
+            <param name="outputStream">Stream to write the file content to. This method does not close/dispose the stream</param>
+            <param name="big">Whether to download the high-quality version of the picture</param>
+            <param name="miniThumb">Whether to extract the embedded very low-res thumbnail (synchronous, no actual download needed)</param>
+            <returns>The file type of the photo, or 0 if no photo available</returns>
         </member>
         <member name="M:WTelegram.Client.Channels_GetAllParticipants(TL.InputChannelBase,System.Boolean)">
             <summary>Helper method that tries to fetch all participants from a Channel (beyond Telegram server-side limitations)</summary>
@@ -155,15 +180,6 @@
             <param name="includeKickBan">Also fetch the kicked/banned members?</param>
             <returns>Field count indicates the total count of members. Field participants contains those that were successfully fetched</returns>
             <remarks>This method can take a few minutes to complete on big channels. It likely won't be able to obtain the full total count of members</remarks>
-        </member>
-        <member name="P:WTelegram.Client.CollectAccessHash">
-            <summary>Enable the collection of id/access_hash pairs (experimental)</summary>
-        </member>
-        <member name="M:WTelegram.Client.GetAccessHashFor``1(System.Int64)">
-            <summary>Retrieve the access_hash associated with this id (for a TL class) if it was collected</summary>
-            <remarks>This requires <see cref="P:WTelegram.Client.CollectAccessHash"/> to be set to <see langword="true"/> first.
-            <br/>See <see href="https://github.com/wiz0u/WTelegramClient/tree/master/Examples/Program_CollectAccessHash.cs">Examples/Program_CollectAccessHash.cs</see> for how to use this</remarks>
-            <typeparam name="T">a TL object class. For example User, Channel or Photo</typeparam>
         </member>
         <member name="P:WTelegram.Helpers.Log">
             <summary>Callback for logging a line (string) with its associated <see href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.logging.loglevel">severity level</see> (int)</summary>
@@ -182,14 +198,14 @@
             <summary>Peer		<para>Derived classes: <see cref="T:TL.InputPeerSelf"/>, <see cref="T:TL.InputPeerChat"/>, <see cref="T:TL.InputPeerUser"/>, <see cref="T:TL.InputPeerChannel"/>, <see cref="T:TL.InputPeerUserFromMessage"/>, <see cref="T:TL.InputPeerChannelFromMessage"/></para>		<para>See <a href="https://corefork.telegram.org/type/InputPeer"/></para></summary>
             <remarks>a <c>null</c> value means <a href="https://corefork.telegram.org/constructor/inputPeerEmpty">inputPeerEmpty</a></remarks>
         </member>
-        <member name="T:TL.InputPeerUser">
-            <summary>Defines a user for further interaction.		<para>See <a href="https://corefork.telegram.org/constructor/inputPeerUser"/></para></summary>
+        <member name="T:TL.InputUser">
+            <summary>Defines a user for further interaction.		<para>See <a href="https://corefork.telegram.org/constructor/inputUser"/></para></summary>
         </member>
-        <member name="F:TL.InputPeerUser.user_id">
+        <member name="F:TL.InputUser.user_id">
             <summary>User identifier</summary>
         </member>
-        <member name="F:TL.InputPeerUser.access_hash">
-            <summary><strong>access_hash</strong> value from the <see cref="T:TL.User"/> constructor</summary>
+        <member name="F:TL.InputUser.access_hash">
+            <summary>⚠ <b>REQUIRED FIELD</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/FAQ.md#access-hash">how to obtain it</see><br/><strong>access_hash</strong> value from the <see cref="T:TL.User"/> constructor</summary>
         </member>
         <member name="T:TL.InputPeerChannel">
             <summary>Defines a channel for further interaction.		<para>See <a href="https://corefork.telegram.org/constructor/inputPeerChannel"/></para></summary>
@@ -198,16 +214,16 @@
             <summary>Channel identifier</summary>
         </member>
         <member name="F:TL.InputPeerChannel.access_hash">
-            <summary><strong>access_hash</strong> value from the <see cref="T:TL.Channel"/> constructor</summary>
+            <summary>⚠ <b>REQUIRED FIELD</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/FAQ.md#access-hash">how to obtain it</see><br/><strong>access_hash</strong> value from the <see cref="T:TL.Channel"/> constructor</summary>
         </member>
-        <member name="T:TL.InputUser">
-            <summary>Defines a user for further interaction.		<para>See <a href="https://corefork.telegram.org/constructor/inputUser"/></para></summary>
+        <member name="T:TL.InputPeerUser">
+            <summary>Defines a user for further interaction.		<para>See <a href="https://corefork.telegram.org/constructor/inputPeerUser"/></para></summary>
         </member>
-        <member name="F:TL.InputUser.user_id">
+        <member name="F:TL.InputPeerUser.user_id">
             <summary>User identifier</summary>
         </member>
-        <member name="F:TL.InputUser.access_hash">
-            <summary><strong>access_hash</strong> value from the <see cref="T:TL.User"/> constructor</summary>
+        <member name="F:TL.InputPeerUser.access_hash">
+            <summary>⚠ <b>REQUIRED FIELD</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/FAQ.md#access-hash">how to obtain it</see><br/><strong>access_hash</strong> value from the <see cref="T:TL.User"/> constructor</summary>
         </member>
         <member name="T:TL.InputFileBase">
             <summary>Defines a file uploaded by the client.		<para>Derived classes: <see cref="T:TL.InputFile"/>, <see cref="T:TL.InputFileBig"/></para>		<para>See <a href="https://corefork.telegram.org/type/InputFile"/></para></summary>
@@ -1001,7 +1017,7 @@
             <summary>List of users</summary>
         </member>
         <member name="M:TL.Contacts_Blocked.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Messages_DialogsBase">
             <summary>Object contains a list of chats with messages and auxiliary data.		<para>Derived classes: <see cref="T:TL.Messages_Dialogs"/>, <see cref="T:TL.Messages_DialogsSlice"/>, <see cref="T:TL.Messages_DialogsNotModified"/></para>		<para>See <a href="https://corefork.telegram.org/type/messages.Dialogs"/></para></summary>
@@ -1013,7 +1029,7 @@
             <summary>List of last messages from each chat</summary>
         </member>
         <member name="M:TL.Messages_DialogsBase.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Messages_Dialogs">
             <summary>Full list of chats with messages and auxiliary data.		<para>See <a href="https://corefork.telegram.org/constructor/messages.dialogs"/></para></summary>
@@ -1037,7 +1053,7 @@
             <summary>List of last messages from each chat</summary>
         </member>
         <member name="M:TL.Messages_Dialogs.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Messages_DialogsSlice">
             <summary>Incomplete list of dialogs with messages and auxiliary data.		<para>See <a href="https://corefork.telegram.org/constructor/messages.dialogsSlice"/></para></summary>
@@ -1052,7 +1068,7 @@
             <summary>Number of dialogs found server-side by the query</summary>
         </member>
         <member name="M:TL.Messages_DialogsNotModified.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Messages_MessagesBase">
             <summary>Object contains infor on list of messages with auxiliary data.		<para>Derived classes: <see cref="T:TL.Messages_Messages"/>, <see cref="T:TL.Messages_MessagesSlice"/>, <see cref="T:TL.Messages_ChannelMessages"/>, <see cref="T:TL.Messages_MessagesNotModified"/></para>		<para>See <a href="https://corefork.telegram.org/type/messages.Messages"/></para></summary>
@@ -1061,7 +1077,7 @@
             <summary>List of messages</summary>
         </member>
         <member name="M:TL.Messages_MessagesBase.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Messages_Messages">
             <summary>Full list of messages with auxilary data.		<para>See <a href="https://corefork.telegram.org/constructor/messages.messages"/></para></summary>
@@ -1079,7 +1095,7 @@
             <summary>List of messages</summary>
         </member>
         <member name="M:TL.Messages_Messages.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Messages_MessagesSlice">
             <summary>Incomplete list of messages and auxiliary data.		<para>See <a href="https://corefork.telegram.org/constructor/messages.messagesSlice"/></para></summary>
@@ -1139,7 +1155,7 @@
             <summary>Found messages</summary>
         </member>
         <member name="M:TL.Messages_ChannelMessages.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Messages_MessagesNotModified">
             <summary>No new messages matching the query were found		<para>See <a href="https://corefork.telegram.org/constructor/messages.messagesNotModified"/></para></summary>
@@ -1148,7 +1164,7 @@
             <summary>Number of results found server-side by the given query</summary>
         </member>
         <member name="M:TL.Messages_MessagesNotModified.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Updates_DifferenceBase">
             <summary>Occurred changes.		<para>Derived classes: <see cref="T:TL.Updates_DifferenceEmpty"/>, <see cref="T:TL.Updates_Difference"/>, <see cref="T:TL.Updates_DifferenceSlice"/>, <see cref="T:TL.Updates_DifferenceTooLong"/></para>		<para>See <a href="https://corefork.telegram.org/type/updates.Difference"/></para></summary>
@@ -1163,7 +1179,7 @@
             <summary>List of updates</summary>
         </member>
         <member name="M:TL.Updates_DifferenceBase.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Updates_DifferenceEmpty">
             <summary>No events.		<para>See <a href="https://corefork.telegram.org/constructor/updates.differenceEmpty"/></para></summary>
@@ -1175,7 +1191,7 @@
             <summary>Number of sent updates</summary>
         </member>
         <member name="M:TL.Updates_DifferenceEmpty.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Updates_Difference">
             <summary>Full list of occurred events.		<para>See <a href="https://corefork.telegram.org/constructor/updates.difference"/></para></summary>
@@ -1208,7 +1224,7 @@
             <summary>List of updates</summary>
         </member>
         <member name="M:TL.Updates_Difference.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Updates_DifferenceSlice">
             <summary>Incomplete list of occurred events.		<para>See <a href="https://corefork.telegram.org/constructor/updates.differenceSlice"/></para></summary>
@@ -1241,7 +1257,7 @@
             <summary>List of updates</summary>
         </member>
         <member name="M:TL.Updates_DifferenceSlice.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Updates_DifferenceTooLong">
             <summary>The difference is <a href="https://corefork.telegram.org/api/updates#recovering-gaps">too long</a>, and the specified state must be used to refetch updates.		<para>See <a href="https://corefork.telegram.org/constructor/updates.differenceTooLong"/></para></summary>
@@ -1250,7 +1266,7 @@
             <summary>The new state to use.</summary>
         </member>
         <member name="M:TL.Updates_DifferenceTooLong.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.EncryptedFile">
             <summary>Encrypted file.		<para>See <a href="https://corefork.telegram.org/constructor/encryptedFile"/></para></summary>
@@ -1425,7 +1441,7 @@
             <summary>Channel ID</summary>
         </member>
         <member name="F:TL.InputChannel.access_hash">
-            <summary>Access hash taken from the <see cref="T:TL.Channel"/> constructor</summary>
+            <summary>⚠ <b>REQUIRED FIELD</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/FAQ.md#access-hash">how to obtain it</see><br/>Access hash taken from the <see cref="T:TL.Channel"/> constructor</summary>
         </member>
         <member name="P:TL.InputChannel.ChannelId">
             <summary>Channel ID</summary>
@@ -1443,13 +1459,13 @@
             <summary>Users</summary>
         </member>
         <member name="P:TL.Contacts_ResolvedPeer.UserOrChat">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the result</summary>
+            <summary>returns a <see cref="P:TL.Contacts_ResolvedPeer.User"/> or <see cref="T:TL.ChatBase"/> for the result</summary>
         </member>
         <member name="T:TL.Updates_ChannelDifferenceBase">
             <summary>Contains the difference (new messages) between our local channel state and the remote state		<para>Derived classes: <see cref="T:TL.Updates_ChannelDifferenceEmpty"/>, <see cref="T:TL.Updates_ChannelDifferenceTooLong"/>, <see cref="T:TL.Updates_ChannelDifference"/></para>		<para>See <a href="https://corefork.telegram.org/type/updates.ChannelDifference"/></para></summary>
         </member>
         <member name="M:TL.Updates_ChannelDifferenceBase.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Updates_ChannelDifferenceEmpty">
             <summary>There are no new updates		<para>See <a href="https://corefork.telegram.org/constructor/updates.channelDifferenceEmpty"/></para></summary>
@@ -1470,7 +1486,7 @@
             <summary>Field <see cref="F:TL.Updates_ChannelDifferenceEmpty.timeout"/> has a value</summary>
         </member>
         <member name="M:TL.Updates_ChannelDifferenceEmpty.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Updates_ChannelDifference">
             <summary>The new updates		<para>See <a href="https://corefork.telegram.org/constructor/updates.channelDifference"/></para></summary>
@@ -1503,7 +1519,7 @@
             <summary>Field <see cref="F:TL.Updates_ChannelDifference.timeout"/> has a value</summary>
         </member>
         <member name="M:TL.Updates_ChannelDifference.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Updates_ChannelDifferenceTooLong">
             <summary>The provided <c>pts + limit &lt; remote pts</c>. Simply, there are too many updates to be fetched (more than <c>limit</c>), the client has to resolve the update gap in one of the following ways:		<para>See <a href="https://corefork.telegram.org/constructor/updates.channelDifferenceTooLong"/></para></summary>
@@ -1533,7 +1549,7 @@
             <summary>Field <see cref="F:TL.Updates_ChannelDifferenceTooLong.timeout"/> has a value</summary>
         </member>
         <member name="M:TL.Updates_ChannelDifferenceTooLong.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.ChannelParticipantBase">
             <summary>Channel participant		<para>Derived classes: <see cref="T:TL.ChannelParticipant"/>, <see cref="T:TL.ChannelParticipantSelf"/>, <see cref="T:TL.ChannelParticipantCreator"/>, <see cref="T:TL.ChannelParticipantAdmin"/>, <see cref="T:TL.ChannelParticipantBanned"/>, <see cref="T:TL.ChannelParticipantLeft"/></para>		<para>See <a href="https://corefork.telegram.org/type/ChannelParticipant"/></para></summary>
@@ -1668,7 +1684,7 @@
             <summary>Current date</summary>
         </member>
         <member name="M:TL.UpdatesCombined.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Updates">
             <summary>Full constructor of updates		<para>See <a href="https://corefork.telegram.org/constructor/updates"/></para></summary>
@@ -1692,7 +1708,7 @@
             <summary>Current date</summary>
         </member>
         <member name="M:TL.Updates.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.UpdatesTooLong">
             <summary>Too many updates, it is necessary to execute <a href="https://corefork.telegram.org/method/updates.getDifference">updates.getDifference</a>.		<para>See <a href="https://corefork.telegram.org/constructor/updatesTooLong"/></para></summary>
@@ -1911,7 +1927,7 @@
             <summary>Current <a href="https://corefork.telegram.org/api/updates">update state of dialog</a></summary>
         </member>
         <member name="M:TL.Messages_PeerDialogs.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.SecureFile">
             <summary>Secure <a href="https://corefork.telegram.org/passport">passport</a> file, for more info <a href="https://corefork.telegram.org/passport/encryption#inputsecurefile">see the passport docs »</a>		<para>See <a href="https://corefork.telegram.org/constructor/secureFile"/></para></summary>
@@ -2266,6 +2282,15 @@
         </member>
         <member name="F:TL.Methods.Messages_HideAllChatJoinRequests.Flags.has_link">
             <summary>Field <see cref="F:TL.Methods.Messages_HideAllChatJoinRequests.link"/> has a value</summary>
+        </member>
+        <member name="F:TL.Methods.Messages_SendReaction.Flags.has_reaction">
+            <summary>Field <see cref="F:TL.Methods.Messages_SendReaction.reaction"/> has a value</summary>
+        </member>
+        <member name="F:TL.Methods.Messages_GetMessageReactionsList.Flags.has_reaction">
+            <summary>Field <see cref="F:TL.Methods.Messages_GetMessageReactionsList.reaction"/> has a value</summary>
+        </member>
+        <member name="F:TL.Methods.Messages_GetMessageReactionsList.Flags.has_offset">
+            <summary>Field <see cref="F:TL.Methods.Messages_GetMessageReactionsList.offset"/> has a value</summary>
         </member>
         <member name="F:TL.Methods.Updates_GetDifference.Flags.has_pts_total_limit">
             <summary>Field <see cref="F:TL.Methods.Updates_GetDifference.pts_total_limit"/> has a value</summary>
@@ -2772,7 +2797,7 @@
             <summary>Photo identifier</summary>
         </member>
         <member name="F:TL.InputPhoto.access_hash">
-            <summary><strong>access_hash</strong> value from the <see cref="T:TL.Photo"/> constructor</summary>
+            <summary>⚠ <b>REQUIRED FIELD</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/FAQ.md#access-hash">how to obtain it</see><br/><strong>access_hash</strong> value from the <see cref="T:TL.Photo"/> constructor</summary>
         </member>
         <member name="F:TL.InputPhoto.file_reference">
             <summary><a href="https://corefork.telegram.org/api/file_reference">File reference</a></summary>
@@ -2802,7 +2827,7 @@
             <summary>File ID, <strong>id</strong> parameter value from <see cref="T:TL.EncryptedFile"/></summary>
         </member>
         <member name="F:TL.InputEncryptedFileLocation.access_hash">
-            <summary>Checksum, <strong>access_hash</strong> parameter value from <see cref="T:TL.EncryptedFile"/></summary>
+            <summary>⚠ <b>REQUIRED FIELD</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/FAQ.md#access-hash">how to obtain it</see><br/>Checksum, <strong>access_hash</strong> parameter value from <see cref="T:TL.EncryptedFile"/></summary>
         </member>
         <member name="T:TL.InputDocumentFileLocation">
             <summary>Document location (video, voice, audio, basically every type except photo)		<para>See <a href="https://corefork.telegram.org/constructor/inputDocumentFileLocation"/></para></summary>
@@ -2811,7 +2836,7 @@
             <summary>Document ID</summary>
         </member>
         <member name="F:TL.InputDocumentFileLocation.access_hash">
-            <summary><strong>access_hash</strong> parameter from the <see cref="T:TL.Document"/> constructor</summary>
+            <summary>⚠ <b>REQUIRED FIELD</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/FAQ.md#access-hash">how to obtain it</see><br/><strong>access_hash</strong> parameter from the <see cref="T:TL.Document"/> constructor</summary>
         </member>
         <member name="F:TL.InputDocumentFileLocation.file_reference">
             <summary><a href="https://corefork.telegram.org/api/file_reference">File reference</a></summary>
@@ -2826,7 +2851,7 @@
             <summary>File ID, <strong>id</strong> parameter value from <see cref="T:TL.SecureFile"/></summary>
         </member>
         <member name="F:TL.InputSecureFileLocation.access_hash">
-            <summary>Checksum, <strong>access_hash</strong> parameter value from <see cref="T:TL.SecureFile"/></summary>
+            <summary>⚠ <b>REQUIRED FIELD</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/FAQ.md#access-hash">how to obtain it</see><br/>Checksum, <strong>access_hash</strong> parameter value from <see cref="T:TL.SecureFile"/></summary>
         </member>
         <member name="T:TL.InputTakeoutFileLocation">
             <summary>Empty constructor for takeout		<para>See <a href="https://corefork.telegram.org/constructor/inputTakeoutFileLocation"/></para></summary>
@@ -2838,7 +2863,7 @@
             <summary>Photo ID, obtained from the <see cref="T:TL.Photo"/> object</summary>
         </member>
         <member name="F:TL.InputPhotoFileLocation.access_hash">
-            <summary>Photo's access hash, obtained from the <see cref="T:TL.Photo"/> object</summary>
+            <summary>⚠ <b>REQUIRED FIELD</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/FAQ.md#access-hash">how to obtain it</see><br/>Photo's access hash, obtained from the <see cref="T:TL.Photo"/> object</summary>
         </member>
         <member name="F:TL.InputPhotoFileLocation.file_reference">
             <summary><a href="https://corefork.telegram.org/api/file_reference">File reference</a></summary>
@@ -2853,7 +2878,7 @@
             <summary>Photo ID</summary>
         </member>
         <member name="F:TL.InputPhotoLegacyFileLocation.access_hash">
-            <summary>Access hash</summary>
+            <summary>⚠ <b>REQUIRED FIELD</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/FAQ.md#access-hash">how to obtain it</see><br/>Access hash</summary>
         </member>
         <member name="F:TL.InputPhotoLegacyFileLocation.file_reference">
             <summary>File reference</summary>
@@ -2979,11 +3004,35 @@
         <member name="P:TL.ChatFullBase.About">
             <summary>About string for this chat</summary>
         </member>
+        <member name="P:TL.ChatFullBase.ChatPhoto">
+            <summary>Chat photo</summary>
+        </member>
         <member name="P:TL.ChatFullBase.NotifySettings">
             <summary>Notification settings</summary>
         </member>
+        <member name="P:TL.ChatFullBase.ExportedInvite">
+            <summary>Chat invite</summary>
+        </member>
+        <member name="P:TL.ChatFullBase.BotInfo">
+            <summary>Info about bots that are in this chat</summary>
+        </member>
+        <member name="P:TL.ChatFullBase.PinnedMsg">
+            <summary>Message ID of the last <a href="https://corefork.telegram.org/api/pin">pinned message</a></summary>
+        </member>
         <member name="P:TL.ChatFullBase.Folder">
             <summary><a href="https://corefork.telegram.org/api/folders#peer-folders">Peer folder ID, for more info click here</a></summary>
+        </member>
+        <member name="P:TL.ChatFullBase.Call">
+            <summary>Group call information</summary>
+        </member>
+        <member name="P:TL.ChatFullBase.TtlPeriod">
+            <summary>Time-To-Live of messages sent by the current user to this chat</summary>
+        </member>
+        <member name="P:TL.ChatFullBase.GroupcallDefaultJoinAs">
+            <summary>When using <a href="https://corefork.telegram.org/method/phone.getGroupCallJoinAs">phone.getGroupCallJoinAs</a> to get a list of peers that can be used to join a group call, this field indicates the peer that should be selected by default.</summary>
+        </member>
+        <member name="P:TL.ChatFullBase.ThemeEmoticon">
+            <summary>Emoji representing a specific chat theme</summary>
         </member>
         <member name="T:TL.ChatFull">
             <summary>Detailed chat info		<para>See <a href="https://corefork.telegram.org/constructor/chatFull"/></para></summary>
@@ -3066,17 +3115,44 @@
         <member name="F:TL.ChatFull.Flags.has_requests_pending">
             <summary>Field <see cref="F:TL.ChatFull.requests_pending"/> has a value</summary>
         </member>
+        <member name="F:TL.ChatFull.Flags.has_available_reactions">
+            <summary>Field <see cref="F:TL.ChatFull.available_reactions"/> has a value</summary>
+        </member>
         <member name="P:TL.ChatFull.ID">
             <summary>ID of the chat</summary>
         </member>
         <member name="P:TL.ChatFull.About">
             <summary>About string for this chat</summary>
         </member>
+        <member name="P:TL.ChatFull.ChatPhoto">
+            <summary>Chat photo</summary>
+        </member>
         <member name="P:TL.ChatFull.NotifySettings">
             <summary>Notification settings</summary>
         </member>
+        <member name="P:TL.ChatFull.ExportedInvite">
+            <summary>Chat invite</summary>
+        </member>
+        <member name="P:TL.ChatFull.BotInfo">
+            <summary>Info about bots that are in this chat</summary>
+        </member>
+        <member name="P:TL.ChatFull.PinnedMsg">
+            <summary>Message ID of the last <a href="https://corefork.telegram.org/api/pin">pinned message</a></summary>
+        </member>
         <member name="P:TL.ChatFull.Folder">
             <summary><a href="https://corefork.telegram.org/api/folders#peer-folders">Peer folder ID, for more info click here</a></summary>
+        </member>
+        <member name="P:TL.ChatFull.Call">
+            <summary>Group call information</summary>
+        </member>
+        <member name="P:TL.ChatFull.TtlPeriod">
+            <summary>Time-To-Live of messages sent by the current user to this chat</summary>
+        </member>
+        <member name="P:TL.ChatFull.GroupcallDefaultJoinAs">
+            <summary>When using <a href="https://corefork.telegram.org/method/phone.getGroupCallJoinAs">phone.getGroupCallJoinAs</a> to get a list of peers that can be used to join a group call, this field indicates the peer that should be selected by default.</summary>
+        </member>
+        <member name="P:TL.ChatFull.ThemeEmoticon">
+            <summary>Emoji representing a specific chat theme</summary>
         </member>
         <member name="T:TL.ChannelFull">
             <summary>Full info about a <a href="https://corefork.telegram.org/api/channel">channel/supergroup</a>		<para>See <a href="https://corefork.telegram.org/constructor/channelFull"/></para></summary>
@@ -3267,17 +3343,44 @@
         <member name="F:TL.ChannelFull.Flags.has_default_send_as">
             <summary>Field <see cref="F:TL.ChannelFull.default_send_as"/> has a value</summary>
         </member>
+        <member name="F:TL.ChannelFull.Flags.has_available_reactions">
+            <summary>Field <see cref="F:TL.ChannelFull.available_reactions"/> has a value</summary>
+        </member>
         <member name="P:TL.ChannelFull.ID">
             <summary>ID of the channel</summary>
         </member>
         <member name="P:TL.ChannelFull.About">
             <summary>Info about the channel</summary>
         </member>
+        <member name="P:TL.ChannelFull.ChatPhoto">
+            <summary>Channel picture</summary>
+        </member>
         <member name="P:TL.ChannelFull.NotifySettings">
             <summary>Notification settings</summary>
         </member>
+        <member name="P:TL.ChannelFull.ExportedInvite">
+            <summary>Invite link</summary>
+        </member>
+        <member name="P:TL.ChannelFull.BotInfo">
+            <summary>Info about bots in the channel/supergrup</summary>
+        </member>
+        <member name="P:TL.ChannelFull.PinnedMsg">
+            <summary>Message ID of the last <a href="https://corefork.telegram.org/api/pin">pinned message</a></summary>
+        </member>
         <member name="P:TL.ChannelFull.Folder">
             <summary><a href="https://corefork.telegram.org/api/folders#peer-folders">Peer folder ID, for more info click here</a></summary>
+        </member>
+        <member name="P:TL.ChannelFull.Call">
+            <summary>Livestream or group call information</summary>
+        </member>
+        <member name="P:TL.ChannelFull.TtlPeriod">
+            <summary>Time-To-Live of messages in this channel or supergroup</summary>
+        </member>
+        <member name="P:TL.ChannelFull.GroupcallDefaultJoinAs">
+            <summary>When using <a href="https://corefork.telegram.org/method/phone.getGroupCallJoinAs">phone.getGroupCallJoinAs</a> to get a list of peers that can be used to join a group call, this field indicates the peer that should be selected by default.</summary>
+        </member>
+        <member name="P:TL.ChannelFull.ThemeEmoticon">
+            <summary>Emoji representing a specific chat theme</summary>
         </member>
         <member name="T:TL.ChatParticipantsBase">
             <summary>Object contains info on group members.		<para>Derived classes: <see cref="T:TL.ChatParticipantsForbidden"/>, <see cref="T:TL.ChatParticipants"/></para>		<para>See <a href="https://corefork.telegram.org/type/ChatParticipants"/></para></summary>
@@ -3498,6 +3601,9 @@
         </member>
         <member name="F:TL.Message.Flags.legacy">
             <summary>This is a legacy message: it has to be refetched with the new layer</summary>
+        </member>
+        <member name="F:TL.Message.Flags.has_reactions">
+            <summary>Field <see cref="F:TL.Message.reactions"/> has a value</summary>
         </member>
         <member name="F:TL.Message.Flags.edit_hide">
             <summary>Whether the message should be shown as not modified to the user, even if an edit date is present</summary>
@@ -4596,7 +4702,7 @@
             <summary>List of users mentioned above</summary>
         </member>
         <member name="M:TL.Messages_ChatFull.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Messages_AffectedHistory">
             <summary>Affected part of communication history with the user or in a chat.		<para>See <a href="https://corefork.telegram.org/constructor/messages.affectedHistory"/></para></summary>
@@ -5793,6 +5899,9 @@
         <member name="T:TL.UpdateBotChatInviteRequester">
             <summary><para>See <a href="https://corefork.telegram.org/constructor/updateBotChatInviteRequester"/></para></summary>
         </member>
+        <member name="T:TL.UpdateMessageReactions">
+            <summary><para>See <a href="https://corefork.telegram.org/constructor/updateMessageReactions"/></para></summary>
+        </member>
         <member name="T:TL.Updates_State">
             <summary>Updates state.		<para>See <a href="https://corefork.telegram.org/constructor/updates.state"/></para></summary>
         </member>
@@ -6260,7 +6369,7 @@
             <summary>Chat ID</summary>
         </member>
         <member name="F:TL.InputEncryptedChat.access_hash">
-            <summary>Checking sum from constructor <see cref="T:TL.EncryptedChat"/>, <see cref="T:TL.EncryptedChatWaiting"/> or <see cref="T:TL.EncryptedChatRequested"/></summary>
+            <summary>⚠ <b>REQUIRED FIELD</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/FAQ.md#access-hash">how to obtain it</see><br/>Checking sum from constructor <see cref="T:TL.EncryptedChat"/>, <see cref="T:TL.EncryptedChatWaiting"/> or <see cref="T:TL.EncryptedChatRequested"/></summary>
         </member>
         <member name="T:TL.InputEncryptedFileBase">
             <summary>Object sets encrypted file for attachment		<para>Derived classes: <see cref="T:TL.InputEncryptedFileUploaded"/>, <see cref="T:TL.InputEncryptedFile"/>, <see cref="T:TL.InputEncryptedFileBigUploaded"/></para>		<para>See <a href="https://corefork.telegram.org/type/InputEncryptedFile"/></para></summary>
@@ -6294,7 +6403,7 @@
             <summary>File ID, value of <strong>id</strong> parameter from <see cref="T:TL.EncryptedFile"/></summary>
         </member>
         <member name="F:TL.InputEncryptedFile.access_hash">
-            <summary>Checking sum, value of <strong>access_hash</strong> parameter from <see cref="T:TL.EncryptedFile"/></summary>
+            <summary>⚠ <b>REQUIRED FIELD</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/FAQ.md#access-hash">how to obtain it</see><br/>Checking sum, value of <strong>access_hash</strong> parameter from <see cref="T:TL.EncryptedFile"/></summary>
         </member>
         <member name="P:TL.InputEncryptedFile.ID">
             <summary>File ID, value of <strong>id</strong> parameter from <see cref="T:TL.EncryptedFile"/></summary>
@@ -6430,7 +6539,7 @@
             <summary>Document ID</summary>
         </member>
         <member name="F:TL.InputDocument.access_hash">
-            <summary><strong>access_hash</strong> parameter from the <see cref="T:TL.Document"/> constructor</summary>
+            <summary>⚠ <b>REQUIRED FIELD</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/FAQ.md#access-hash">how to obtain it</see><br/><strong>access_hash</strong> parameter from the <see cref="T:TL.Document"/> constructor</summary>
         </member>
         <member name="F:TL.InputDocument.file_reference">
             <summary><a href="https://corefork.telegram.org/api/file_reference">File reference</a></summary>
@@ -6523,7 +6632,7 @@
             <summary>List of users</summary>
         </member>
         <member name="M:TL.Contacts_Found.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.InputPrivacyKey">
             <summary>Privacy key		<para>See <a href="https://corefork.telegram.org/type/InputPrivacyKey"/></para></summary>
@@ -6670,7 +6779,7 @@
             <summary>Users to which the rules apply</summary>
         </member>
         <member name="M:TL.Account_PrivacyRules.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.AccountDaysTTL">
             <summary>Time to live in days of the current account		<para>See <a href="https://corefork.telegram.org/constructor/accountDaysTTL"/></para></summary>
@@ -7240,7 +7349,7 @@
             <summary>ID</summary>
         </member>
         <member name="F:TL.InputStickerSetID.access_hash">
-            <summary>Access hash</summary>
+            <summary>⚠ <b>REQUIRED FIELD</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/FAQ.md#access-hash">how to obtain it</see><br/>Access hash</summary>
         </member>
         <member name="T:TL.InputStickerSetShortName">
             <summary>Stickerset by short name, from <c>tg://addstickers?set=short_name</c>		<para>See <a href="https://corefork.telegram.org/constructor/inputStickerSetShortName"/></para></summary>
@@ -7576,6 +7685,9 @@
         <member name="T:TL.MessageEntityBankCard">
             <summary>Indicates a credit card number		<para>See <a href="https://corefork.telegram.org/constructor/messageEntityBankCard"/></para></summary>
         </member>
+        <member name="T:TL.MessageEntitySpoiler">
+            <summary><para>See <a href="https://corefork.telegram.org/constructor/messageEntitySpoiler"/></para></summary>
+        </member>
         <member name="T:TL.InputChannelBase">
             <summary>Represents a channel		<para>Derived classes: <see cref="T:TL.InputChannel"/>, <see cref="T:TL.InputChannelFromMessage"/></para>		<para>See <a href="https://corefork.telegram.org/type/InputChannel"/></para></summary>
             <remarks>a <c>null</c> value means <a href="https://corefork.telegram.org/constructor/inputChannelEmpty">inputChannelEmpty</a></remarks>
@@ -7691,7 +7803,7 @@
             <summary>Users mentioned in participant info</summary>
         </member>
         <member name="M:TL.Channels_ChannelParticipants.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Channels_ChannelParticipant">
             <summary>Represents a channel participant		<para>See <a href="https://corefork.telegram.org/constructor/channels.channelParticipant"/></para></summary>
@@ -7706,7 +7818,7 @@
             <summary>Users</summary>
         </member>
         <member name="M:TL.Channels_ChannelParticipant.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Help_TermsOfService">
             <summary>Info about the latest telegram Terms Of Service		<para>See <a href="https://corefork.telegram.org/constructor/help.termsOfService"/></para></summary>
@@ -8207,6 +8319,12 @@
         <member name="P:TL.BotInlineResultBase.Type">
             <summary>Result type (see <a href="https://corefork.telegram.org/bots/api#inlinequeryresult">bot API docs</a>)</summary>
         </member>
+        <member name="P:TL.BotInlineResultBase.Title">
+            <summary>Result title</summary>
+        </member>
+        <member name="P:TL.BotInlineResultBase.Description">
+            <summary>Result description</summary>
+        </member>
         <member name="P:TL.BotInlineResultBase.SendMessage">
             <summary>Message to send</summary>
         </member>
@@ -8261,6 +8379,12 @@
         <member name="P:TL.BotInlineResult.Type">
             <summary>Result type (see <a href="https://corefork.telegram.org/bots/api#inlinequeryresult">bot API docs</a>)</summary>
         </member>
+        <member name="P:TL.BotInlineResult.Title">
+            <summary>Result title</summary>
+        </member>
+        <member name="P:TL.BotInlineResult.Description">
+            <summary>Result description</summary>
+        </member>
         <member name="P:TL.BotInlineResult.SendMessage">
             <summary>Message to send</summary>
         </member>
@@ -8308,6 +8432,12 @@
         </member>
         <member name="P:TL.BotInlineMediaResult.Type">
             <summary>Result type (see <a href="https://corefork.telegram.org/bots/api#inlinequeryresult">bot API docs</a>)</summary>
+        </member>
+        <member name="P:TL.BotInlineMediaResult.Title">
+            <summary>Result title</summary>
+        </member>
+        <member name="P:TL.BotInlineMediaResult.Description">
+            <summary>Description</summary>
         </member>
         <member name="P:TL.BotInlineMediaResult.SendMessage">
             <summary>Depending on the <c>type</c> and on the <see cref="T:TL.BotInlineMessage"/>, contains the caption of the media or the content of the message to be sent <strong>instead</strong> of the media</summary>
@@ -8508,7 +8638,7 @@
             <summary>ID of message, contains both the (32-bit, legacy) owner ID and the message ID, used only for Bot API backwards compatibility with 32-bit user ID.</summary>
         </member>
         <member name="F:TL.InputBotInlineMessageID.access_hash">
-            <summary>Access hash of message</summary>
+            <summary>⚠ <b>REQUIRED FIELD</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/FAQ.md#access-hash">how to obtain it</see><br/>Access hash of message</summary>
         </member>
         <member name="P:TL.InputBotInlineMessageID.DcId">
             <summary>DC ID to use when working with this inline message</summary>
@@ -8529,7 +8659,7 @@
             <summary>ID of message</summary>
         </member>
         <member name="F:TL.InputBotInlineMessageID64.access_hash">
-            <summary>Access hash of message</summary>
+            <summary>⚠ <b>REQUIRED FIELD</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/FAQ.md#access-hash">how to obtain it</see><br/>Access hash of message</summary>
         </member>
         <member name="P:TL.InputBotInlineMessageID64.DcId">
             <summary>DC ID to use when working with this inline message</summary>
@@ -8611,7 +8741,7 @@
             <summary>Users</summary>
         </member>
         <member name="M:TL.Contacts_TopPeers.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Contacts_TopPeersDisabled">
             <summary>Top peers disabled		<para>See <a href="https://corefork.telegram.org/constructor/contacts.topPeersDisabled"/></para></summary>
@@ -8819,7 +8949,7 @@
             <summary>game ID from <see cref="T:TL.Game"/> constructor</summary>
         </member>
         <member name="F:TL.InputGameID.access_hash">
-            <summary>access hash from <see cref="T:TL.Game"/> constructor</summary>
+            <summary>⚠ <b>REQUIRED FIELD</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/FAQ.md#access-hash">how to obtain it</see><br/>access hash from <see cref="T:TL.Game"/> constructor</summary>
         </member>
         <member name="T:TL.InputGameShortName">
             <summary>Game by short name		<para>See <a href="https://corefork.telegram.org/constructor/inputGameShortName"/></para></summary>
@@ -9522,7 +9652,7 @@
             <summary>HTTP URL of file</summary>
         </member>
         <member name="F:TL.InputWebFileLocation.access_hash">
-            <summary>Access hash</summary>
+            <summary>⚠ <b>REQUIRED FIELD</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/FAQ.md#access-hash">how to obtain it</see><br/>Access hash</summary>
         </member>
         <member name="P:TL.InputWebFileLocation.AccessHash">
             <summary>Access hash</summary>
@@ -9534,7 +9664,7 @@
             <summary>Geolocation</summary>
         </member>
         <member name="F:TL.InputWebFileGeoPointLocation.access_hash">
-            <summary>Access hash</summary>
+            <summary>⚠ <b>REQUIRED FIELD</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/FAQ.md#access-hash">how to obtain it</see><br/>Access hash</summary>
         </member>
         <member name="F:TL.InputWebFileGeoPointLocation.w">
             <summary>Map width in pixels before applying scale; 16-1024</summary>
@@ -9810,7 +9940,7 @@
             <summary>Call ID</summary>
         </member>
         <member name="F:TL.InputPhoneCall.access_hash">
-            <summary>Access hash</summary>
+            <summary>⚠ <b>REQUIRED FIELD</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/FAQ.md#access-hash">how to obtain it</see><br/>Access hash</summary>
         </member>
         <member name="T:TL.PhoneCallBase">
             <summary>Phone call		<para>Derived classes: <see cref="T:TL.PhoneCallEmpty"/>, <see cref="T:TL.PhoneCallWaiting"/>, <see cref="T:TL.PhoneCallRequested"/>, <see cref="T:TL.PhoneCallAccepted"/>, <see cref="T:TL.PhoneCall"/>, <see cref="T:TL.PhoneCallDiscarded"/></para>		<para>See <a href="https://corefork.telegram.org/type/PhoneCall"/></para></summary>
@@ -10523,6 +10653,9 @@
         <member name="T:TL.ChannelAdminLogEventActionSendMessage">
             <summary><para>See <a href="https://corefork.telegram.org/constructor/channelAdminLogEventActionSendMessage"/></para></summary>
         </member>
+        <member name="T:TL.ChannelAdminLogEventActionChangeAvailableReactions">
+            <summary><para>See <a href="https://corefork.telegram.org/constructor/channelAdminLogEventActionChangeAvailableReactions"/></para></summary>
+        </member>
         <member name="T:TL.ChannelAdminLogEvent">
             <summary>Admin log event		<para>See <a href="https://corefork.telegram.org/constructor/channelAdminLogEvent"/></para></summary>
         </member>
@@ -10551,7 +10684,7 @@
             <summary>Users mentioned in events</summary>
         </member>
         <member name="M:TL.Channels_AdminLogResults.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.ChannelAdminLogEventsFilter">
             <summary>Filter only certain admin log events		<para>See <a href="https://corefork.telegram.org/constructor/channelAdminLogEventsFilter"/></para></summary>
@@ -10675,7 +10808,7 @@
             <summary>Users</summary>
         </member>
         <member name="M:TL.Help_RecentMeUrls.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.InputSingleMedia">
             <summary>A single media in an <a href="https://corefork.telegram.org/api/files#albums-grouped-media">album or grouped media</a> sent with <a href="https://corefork.telegram.org/method/messages.sendMultiMedia">messages.sendMultiMedia</a>.		<para>See <a href="https://corefork.telegram.org/constructor/inputSingleMedia"/></para></summary>
@@ -10877,7 +11010,7 @@
             <summary>Secure file ID</summary>
         </member>
         <member name="F:TL.InputSecureFile.access_hash">
-            <summary>Secure file access hash</summary>
+            <summary>⚠ <b>REQUIRED FIELD</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/FAQ.md#access-hash">how to obtain it</see><br/>Secure file access hash</summary>
         </member>
         <member name="P:TL.InputSecureFile.ID">
             <summary>Secure file ID</summary>
@@ -11798,7 +11931,7 @@
             <summary>Wallpaper ID</summary>
         </member>
         <member name="F:TL.InputWallPaper.access_hash">
-            <summary>Access hash</summary>
+            <summary>⚠ <b>REQUIRED FIELD</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/FAQ.md#access-hash">how to obtain it</see><br/>Access hash</summary>
         </member>
         <member name="T:TL.InputWallPaperSlug">
             <summary>Wallpaper by slug (a unique ID)		<para>See <a href="https://corefork.telegram.org/constructor/inputWallPaperSlug"/></para></summary>
@@ -12115,7 +12248,7 @@
             <summary>ID</summary>
         </member>
         <member name="F:TL.InputTheme.access_hash">
-            <summary>Access hash</summary>
+            <summary>⚠ <b>REQUIRED FIELD</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/FAQ.md#access-hash">how to obtain it</see><br/>Access hash</summary>
         </member>
         <member name="T:TL.InputThemeSlug">
             <summary>Theme by theme ID		<para>See <a href="https://corefork.telegram.org/constructor/inputThemeSlug"/></para></summary>
@@ -12233,7 +12366,7 @@
             <summary>Users mentioned in the chat list</summary>
         </member>
         <member name="M:TL.Messages_InactiveChats.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.BaseTheme">
             <summary>Basic theme settings		<para>See <a href="https://corefork.telegram.org/type/BaseTheme"/></para></summary>
@@ -12662,7 +12795,7 @@
             <summary>Field <see cref="F:TL.Help_PromoData.psa_message"/> has a value</summary>
         </member>
         <member name="P:TL.Help_PromoData.UserOrChat">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the result</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the result</summary>
         </member>
         <member name="T:TL.VideoSize">
             <summary><a href="https://corefork.telegram.org/api/files#animated-profile-pictures">Animated profile picture</a> in MPEG4 format		<para>See <a href="https://corefork.telegram.org/constructor/videoSize"/></para></summary>
@@ -12882,7 +13015,7 @@
             <summary>Users mentioned in constructor</summary>
         </member>
         <member name="M:TL.Messages_MessageViews.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Messages_DiscussionMessage">
             <summary>Information about a <a href="https://corefork.telegram.org/api/threads">message thread</a>		<para>See <a href="https://corefork.telegram.org/constructor/messages.discussionMessage"/></para></summary>
@@ -12921,7 +13054,7 @@
             <summary>Field <see cref="F:TL.Messages_DiscussionMessage.read_outbox_max_id"/> has a value</summary>
         </member>
         <member name="M:TL.Messages_DiscussionMessage.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.MessageReplyHeader">
             <summary>Message replies and <a href="https://corefork.telegram.org/api/threads">thread</a> information		<para>See <a href="https://corefork.telegram.org/constructor/messageReplyHeader"/></para></summary>
@@ -13104,7 +13237,7 @@
             <summary>Group call ID</summary>
         </member>
         <member name="F:TL.InputGroupCall.access_hash">
-            <summary>Group call access hash</summary>
+            <summary>⚠ <b>REQUIRED FIELD</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/FAQ.md#access-hash">how to obtain it</see><br/>Group call access hash</summary>
         </member>
         <member name="T:TL.GroupCallParticipant">
             <summary>Info about a group call participant		<para>See <a href="https://corefork.telegram.org/constructor/groupCallParticipant"/></para></summary>
@@ -13206,7 +13339,7 @@
             <summary>Users mentioned in the participants vector</summary>
         </member>
         <member name="M:TL.Phone_GroupCall.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Phone_GroupParticipants">
             <summary>Info about the participants of a group call or livestream		<para>See <a href="https://corefork.telegram.org/constructor/phone.groupParticipants"/></para></summary>
@@ -13230,7 +13363,7 @@
             <summary>Version info</summary>
         </member>
         <member name="M:TL.Phone_GroupParticipants.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.InlineQueryPeerType">
             <summary>Type of the chat from which the inline query was sent.		<para>See <a href="https://corefork.telegram.org/type/InlineQueryPeerType"/></para></summary>
@@ -13410,7 +13543,7 @@
             <summary>Users mentioned in the peers vector</summary>
         </member>
         <member name="M:TL.Phone_JoinAsPeers.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Phone_ExportedGroupCallInvite">
             <summary>An invite to a group call or livestream		<para>See <a href="https://corefork.telegram.org/constructor/phone.exportedGroupCallInvite"/></para></summary>
@@ -13532,6 +13665,12 @@
         <member name="F:TL.SponsoredMessage.Flags.has_channel_post">
             <summary>Field <see cref="F:TL.SponsoredMessage.channel_post"/> has a value</summary>
         </member>
+        <member name="F:TL.SponsoredMessage.Flags.has_from_id">
+            <summary>Field <see cref="F:TL.SponsoredMessage.from_id"/> has a value</summary>
+        </member>
+        <member name="F:TL.SponsoredMessage.Flags.has_chat_invite">
+            <summary>Field <see cref="F:TL.SponsoredMessage.chat_invite"/> has a value</summary>
+        </member>
         <member name="T:TL.Messages_SponsoredMessages">
             <summary>A set of sponsored messages associated to a channel		<para>See <a href="https://corefork.telegram.org/constructor/messages.sponsoredMessages"/></para></summary>
         </member>
@@ -13545,7 +13684,7 @@
             <summary>Users mentioned in the sponsored messages</summary>
         </member>
         <member name="M:TL.Messages_SponsoredMessages.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.SearchResultsCalendarPeriod">
             <summary><para>See <a href="https://corefork.telegram.org/constructor/searchResultsCalendarPeriod"/></para></summary>
@@ -13557,7 +13696,7 @@
             <summary>Field <see cref="F:TL.Messages_SearchResultsCalendar.offset_id_offset"/> has a value</summary>
         </member>
         <member name="M:TL.Messages_SearchResultsCalendar.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.SearchResultsPosition">
             <summary><para>See <a href="https://corefork.telegram.org/type/SearchResultsPosition"/></para></summary>
@@ -13572,25 +13711,50 @@
             <summary><para>See <a href="https://corefork.telegram.org/constructor/channels.sendAsPeers"/></para></summary>
         </member>
         <member name="M:TL.Channels_SendAsPeers.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Users_UserFull">
             <summary><para>See <a href="https://corefork.telegram.org/constructor/users.userFull"/></para></summary>
         </member>
         <member name="M:TL.Users_UserFull.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Messages_PeerSettings">
             <summary><para>See <a href="https://corefork.telegram.org/constructor/messages.peerSettings"/></para></summary>
         </member>
         <member name="M:TL.Messages_PeerSettings.UserOrChat(TL.Peer)">
-            <summary>returns a <see cref="T:TL.UserBase"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
+            <summary>returns a <see cref="T:TL.User"/> or <see cref="T:TL.ChatBase"/> for the given Peer</summary>
         </member>
         <member name="T:TL.Auth_LoggedOut">
             <summary><para>See <a href="https://corefork.telegram.org/constructor/auth.loggedOut"/></para></summary>
         </member>
         <member name="F:TL.Auth_LoggedOut.Flags.has_future_auth_token">
             <summary>Field <see cref="F:TL.Auth_LoggedOut.future_auth_token"/> has a value</summary>
+        </member>
+        <member name="T:TL.ReactionCount">
+            <summary><para>See <a href="https://corefork.telegram.org/constructor/reactionCount"/></para></summary>
+        </member>
+        <member name="T:TL.MessageReactions">
+            <summary><para>See <a href="https://corefork.telegram.org/constructor/messageReactions"/></para></summary>
+        </member>
+        <member name="F:TL.MessageReactions.Flags.has_recent_reactons">
+            <summary>Field <see cref="F:TL.MessageReactions.recent_reactons"/> has a value</summary>
+        </member>
+        <member name="T:TL.MessageUserReaction">
+            <summary><para>See <a href="https://corefork.telegram.org/constructor/messageUserReaction"/></para></summary>
+        </member>
+        <member name="T:TL.Messages_MessageReactionsList">
+            <summary><para>See <a href="https://corefork.telegram.org/constructor/messages.messageReactionsList"/></para></summary>
+        </member>
+        <member name="F:TL.Messages_MessageReactionsList.Flags.has_next_offset">
+            <summary>Field <see cref="F:TL.Messages_MessageReactionsList.next_offset"/> has a value</summary>
+        </member>
+        <member name="T:TL.AvailableReaction">
+            <summary><para>See <a href="https://corefork.telegram.org/constructor/availableReaction"/></para></summary>
+        </member>
+        <member name="T:TL.Messages_AvailableReactions">
+            <summary><para>See <a href="https://corefork.telegram.org/constructor/messages.availableReactions"/></para></summary>
+            <remarks>a <c>null</c> value means <a href="https://corefork.telegram.org/constructor/messages.availableReactionsNotModified">messages.availableReactionsNotModified</a></remarks>
         </member>
         <member name="M:TL.SchemaExtensions.InvokeAfterMsg``1(WTelegram.Client,System.Int64,TL.IMethod{``0})">
             <summary>Invokes a query after successfull completion of one of the previous queries.		<para>See <a href="https://corefork.telegram.org/method/invokeAfterMsg"/></para></summary>
@@ -14250,7 +14414,7 @@
             <param name="top_msg_id"><a href="https://corefork.telegram.org/api/threads">Thread ID</a></param>
             <param name="action">Type of action<br/>Parameter added in <a href="https://corefork.telegram.org/api/layers#layer-17">Layer 17</a>.</param>
         </member>
-        <member name="M:TL.SchemaExtensions.Messages_SendMessage(WTelegram.Client,TL.InputPeer,System.String,System.Int64,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Nullable{System.Int32},TL.ReplyMarkup,TL.MessageEntity[],System.Nullable{System.DateTime},TL.InputPeer)">
+        <member name="M:TL.SchemaExtensions.Messages_SendMessage(WTelegram.Client,TL.InputPeer,System.String,System.Int64,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Nullable{System.Int32},TL.ReplyMarkup,TL.MessageEntity[],System.Nullable{System.DateTime},TL.InputPeer)">
             <summary>Sends a message to a chat		<para>See <a href="https://corefork.telegram.org/method/messages.sendMessage"/> [bots: ✓]</para>		<para>Possible <see cref="T:TL.RpcException"/> codes: 400,401,403,420 (<a href="https://corefork.telegram.org/method/messages.sendMessage#possible-errors">details</a>)</para></summary>
             <param name="no_webpage">Set this flag to disable generation of the webpage preview</param>
             <param name="silent">Send this message silently (no notifications for the receivers)</param>
@@ -14264,7 +14428,7 @@
             <param name="entities">Message <a href="https://corefork.telegram.org/api/entities">entities</a> for sending styled text</param>
             <param name="schedule_date">Scheduled message date for <a href="https://corefork.telegram.org/api/scheduled-messages">scheduled messages</a></param>
         </member>
-        <member name="M:TL.SchemaExtensions.Messages_SendMedia(WTelegram.Client,TL.InputPeer,TL.InputMedia,System.String,System.Int64,System.Boolean,System.Boolean,System.Boolean,System.Nullable{System.Int32},TL.ReplyMarkup,TL.MessageEntity[],System.Nullable{System.DateTime},TL.InputPeer)">
+        <member name="M:TL.SchemaExtensions.Messages_SendMedia(WTelegram.Client,TL.InputPeer,TL.InputMedia,System.String,System.Int64,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Nullable{System.Int32},TL.ReplyMarkup,TL.MessageEntity[],System.Nullable{System.DateTime},TL.InputPeer)">
             <summary>Send a media		<para>See <a href="https://corefork.telegram.org/method/messages.sendMedia"/> [bots: ✓]</para>		<para>Possible <see cref="T:TL.RpcException"/> codes: 400,403,420 (<a href="https://corefork.telegram.org/method/messages.sendMedia#possible-errors">details</a>)</para></summary>
             <param name="silent">Send message silently (no notification should be triggered)</param>
             <param name="background">Send message in background</param>
@@ -14278,7 +14442,7 @@
             <param name="entities">Message <a href="https://corefork.telegram.org/api/entities">entities</a> for styled text</param>
             <param name="schedule_date">Scheduled message date for <a href="https://corefork.telegram.org/api/scheduled-messages">scheduled messages</a></param>
         </member>
-        <member name="M:TL.SchemaExtensions.Messages_ForwardMessages(WTelegram.Client,TL.InputPeer,System.Int32[],System.Int64[],TL.InputPeer,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Nullable{System.DateTime},TL.InputPeer)">
+        <member name="M:TL.SchemaExtensions.Messages_ForwardMessages(WTelegram.Client,TL.InputPeer,System.Int32[],System.Int64[],TL.InputPeer,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Nullable{System.DateTime},TL.InputPeer)">
             <summary>Forwards messages by their IDs.		<para>See <a href="https://corefork.telegram.org/method/messages.forwardMessages"/> [bots: ✓]</para>		<para>Possible <see cref="T:TL.RpcException"/> codes: 400,403,420 (<a href="https://corefork.telegram.org/method/messages.forwardMessages#possible-errors">details</a>)</para></summary>
             <param name="silent">Whether to send messages silently (no notification will be triggered on the destination clients)</param>
             <param name="background">Whether to send the message in background</param>
@@ -14311,27 +14475,27 @@
             <param name="id">List of chat IDs</param>
         </member>
         <member name="M:TL.SchemaExtensions.Messages_GetFullChat(WTelegram.Client,System.Int64)">
-            <summary>Returns full chat info according to its ID.		<para>See <a href="https://corefork.telegram.org/method/messages.getFullChat"/> [bots: ✓]</para>		<para>Possible <see cref="T:TL.RpcException"/> codes: 400 (<a href="https://corefork.telegram.org/method/messages.getFullChat#possible-errors">details</a>)</para></summary>
+            <summary><para>⚠ <b>This method is only for small private Chat</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/README.md#terminology">Terminology</see> to understand what this means<br/>Search for a similar method name starting with <c>Channels_</c> if you're dealing with a <see cref="T:TL.Channel"/></para>		Returns full chat info according to its ID.		<para>See <a href="https://corefork.telegram.org/method/messages.getFullChat"/> [bots: ✓]</para>		<para>Possible <see cref="T:TL.RpcException"/> codes: 400 (<a href="https://corefork.telegram.org/method/messages.getFullChat#possible-errors">details</a>)</para></summary>
             <param name="chat_id">Chat ID</param>
         </member>
         <member name="M:TL.SchemaExtensions.Messages_EditChatTitle(WTelegram.Client,System.Int64,System.String)">
-            <summary>Chanages chat name and sends a service message on it.		<para>See <a href="https://corefork.telegram.org/method/messages.editChatTitle"/> [bots: ✓]</para>		<para>Possible <see cref="T:TL.RpcException"/> codes: 400 (<a href="https://corefork.telegram.org/method/messages.editChatTitle#possible-errors">details</a>)</para></summary>
+            <summary><para>⚠ <b>This method is only for small private Chat</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/README.md#terminology">Terminology</see> to understand what this means<br/>Search for a similar method name starting with <c>Channels_</c> if you're dealing with a <see cref="T:TL.Channel"/></para>		Chanages chat name and sends a service message on it.		<para>See <a href="https://corefork.telegram.org/method/messages.editChatTitle"/> [bots: ✓]</para>		<para>Possible <see cref="T:TL.RpcException"/> codes: 400 (<a href="https://corefork.telegram.org/method/messages.editChatTitle#possible-errors">details</a>)</para></summary>
             <param name="chat_id">Chat ID</param>
             <param name="title">New chat name, different from the old one</param>
         </member>
         <member name="M:TL.SchemaExtensions.Messages_EditChatPhoto(WTelegram.Client,System.Int64,TL.InputChatPhotoBase)">
-            <summary>Changes chat photo and sends a service message on it		<para>See <a href="https://corefork.telegram.org/method/messages.editChatPhoto"/> [bots: ✓]</para>		<para>Possible <see cref="T:TL.RpcException"/> codes: 400 (<a href="https://corefork.telegram.org/method/messages.editChatPhoto#possible-errors">details</a>)</para></summary>
+            <summary><para>⚠ <b>This method is only for small private Chat</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/README.md#terminology">Terminology</see> to understand what this means<br/>Search for a similar method name starting with <c>Channels_</c> if you're dealing with a <see cref="T:TL.Channel"/></para>		Changes chat photo and sends a service message on it		<para>See <a href="https://corefork.telegram.org/method/messages.editChatPhoto"/> [bots: ✓]</para>		<para>Possible <see cref="T:TL.RpcException"/> codes: 400 (<a href="https://corefork.telegram.org/method/messages.editChatPhoto#possible-errors">details</a>)</para></summary>
             <param name="chat_id">Chat ID</param>
             <param name="photo">Photo to be set</param>
         </member>
         <member name="M:TL.SchemaExtensions.Messages_AddChatUser(WTelegram.Client,System.Int64,TL.InputUserBase,System.Int32)">
-            <summary>Adds a user to a chat and sends a service message on it.		<para>See <a href="https://corefork.telegram.org/method/messages.addChatUser"/></para>		<para>Possible <see cref="T:TL.RpcException"/> codes: 400,403 (<a href="https://corefork.telegram.org/method/messages.addChatUser#possible-errors">details</a>)</para></summary>
+            <summary><para>⚠ <b>This method is only for small private Chat</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/README.md#terminology">Terminology</see> to understand what this means<br/>Search for a similar method name starting with <c>Channels_</c> if you're dealing with a <see cref="T:TL.Channel"/></para>		Adds a user to a chat and sends a service message on it.		<para>See <a href="https://corefork.telegram.org/method/messages.addChatUser"/></para>		<para>Possible <see cref="T:TL.RpcException"/> codes: 400,403 (<a href="https://corefork.telegram.org/method/messages.addChatUser#possible-errors">details</a>)</para></summary>
             <param name="chat_id">Chat ID</param>
             <param name="user_id">User ID to be added</param>
             <param name="fwd_limit">Number of last messages to be forwarded</param>
         </member>
         <member name="M:TL.SchemaExtensions.Messages_DeleteChatUser(WTelegram.Client,System.Int64,TL.InputUserBase,System.Boolean)">
-            <summary>Deletes a user from a chat and sends a service message on it.		<para>See <a href="https://corefork.telegram.org/method/messages.deleteChatUser"/> [bots: ✓]</para>		<para>Possible <see cref="T:TL.RpcException"/> codes: 400 (<a href="https://corefork.telegram.org/method/messages.deleteChatUser#possible-errors">details</a>)</para></summary>
+            <summary><para>⚠ <b>This method is only for small private Chat</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/README.md#terminology">Terminology</see> to understand what this means<br/>Search for a similar method name starting with <c>Channels_</c> if you're dealing with a <see cref="T:TL.Channel"/></para>		Deletes a user from a chat and sends a service message on it.		<para>See <a href="https://corefork.telegram.org/method/messages.deleteChatUser"/> [bots: ✓]</para>		<para>Possible <see cref="T:TL.RpcException"/> codes: 400 (<a href="https://corefork.telegram.org/method/messages.deleteChatUser#possible-errors">details</a>)</para></summary>
             <param name="revoke_history">Remove the entire chat history of the specified user in this chat.</param>
             <param name="chat_id">Chat ID</param>
             <param name="user_id">User ID to be deleted</param>
@@ -14466,13 +14630,13 @@
             <param name="increment">Whether to mark the message as viewed and increment the view counter</param>
         </member>
         <member name="M:TL.SchemaExtensions.Messages_EditChatAdmin(WTelegram.Client,System.Int64,TL.InputUserBase,System.Boolean)">
-            <summary>Make a user admin in a <a href="https://corefork.telegram.org/api/channel">legacy group</a>.		<para>See <a href="https://corefork.telegram.org/method/messages.editChatAdmin"/></para>		<para>Possible <see cref="T:TL.RpcException"/> codes: 400 (<a href="https://corefork.telegram.org/method/messages.editChatAdmin#possible-errors">details</a>)</para></summary>
+            <summary><para>⚠ <b>This method is only for small private Chat</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/README.md#terminology">Terminology</see> to understand what this means<br/>Search for a similar method name starting with <c>Channels_</c> if you're dealing with a <see cref="T:TL.Channel"/></para>		Make a user admin in a <a href="https://corefork.telegram.org/api/channel">legacy group</a>.		<para>See <a href="https://corefork.telegram.org/method/messages.editChatAdmin"/></para>		<para>Possible <see cref="T:TL.RpcException"/> codes: 400 (<a href="https://corefork.telegram.org/method/messages.editChatAdmin#possible-errors">details</a>)</para></summary>
             <param name="chat_id">The ID of the group</param>
             <param name="user_id">The user to make admin</param>
             <param name="is_admin">Whether to make him admin</param>
         </member>
         <member name="M:TL.SchemaExtensions.Messages_MigrateChat(WTelegram.Client,System.Int64)">
-            <summary>Turn a <a href="https://corefork.telegram.org/api/channel">legacy group into a supergroup</a>		<para>See <a href="https://corefork.telegram.org/method/messages.migrateChat"/></para>		<para>Possible <see cref="T:TL.RpcException"/> codes: 400,403 (<a href="https://corefork.telegram.org/method/messages.migrateChat#possible-errors">details</a>)</para></summary>
+            <summary><para>⚠ <b>This method is only for small private Chat</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/README.md#terminology">Terminology</see> to understand what this means<br/>Search for a similar method name starting with <c>Channels_</c> if you're dealing with a <see cref="T:TL.Channel"/></para>		Turn a <a href="https://corefork.telegram.org/api/channel">legacy group into a supergroup</a>		<para>See <a href="https://corefork.telegram.org/method/messages.migrateChat"/></para>		<para>Possible <see cref="T:TL.RpcException"/> codes: 400,403 (<a href="https://corefork.telegram.org/method/messages.migrateChat#possible-errors">details</a>)</para></summary>
             <param name="chat_id">Legacy group to migrate</param>
         </member>
         <member name="M:TL.SchemaExtensions.Messages_SearchGlobal(WTelegram.Client,System.String,TL.MessagesFilter,System.DateTime,System.DateTime,System.Int32,TL.InputPeer,System.Int32,System.Int32,System.Nullable{System.Int32})">
@@ -14745,7 +14909,7 @@
             <param name="limit">Maximum number of results to return, <a href="https://corefork.telegram.org/api/offsets">see pagination</a></param>
             <param name="hash"><a href="https://corefork.telegram.org/api/offsets#hash-generation">Hash for pagination, for more info click here</a></param>
         </member>
-        <member name="M:TL.SchemaExtensions.Messages_SendMultiMedia(WTelegram.Client,TL.InputPeer,TL.InputSingleMedia[],System.Boolean,System.Boolean,System.Boolean,System.Nullable{System.Int32},System.Nullable{System.DateTime},TL.InputPeer)">
+        <member name="M:TL.SchemaExtensions.Messages_SendMultiMedia(WTelegram.Client,TL.InputPeer,TL.InputSingleMedia[],System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Nullable{System.Int32},System.Nullable{System.DateTime},TL.InputPeer)">
             <summary>Send an <a href="https://corefork.telegram.org/api/files#albums-grouped-media">album or grouped media</a>		<para>See <a href="https://corefork.telegram.org/method/messages.sendMultiMedia"/> [bots: ✓]</para>		<para>Possible <see cref="T:TL.RpcException"/> codes: 400,420 (<a href="https://corefork.telegram.org/method/messages.sendMultiMedia#possible-errors">details</a>)</para></summary>
             <param name="silent">Whether to send the album silently (no notification triggered)</param>
             <param name="background">Send in background?</param>
@@ -14940,7 +15104,7 @@
             <param name="peer">Chat where to unpin</param>
         </member>
         <member name="M:TL.SchemaExtensions.Messages_DeleteChat(WTelegram.Client,System.Int64)">
-            <summary>Delete a <a href="https://corefork.telegram.org/api/channel">chat</a>		<para>See <a href="https://corefork.telegram.org/method/messages.deleteChat"/></para>		<para>Possible <see cref="T:TL.RpcException"/> codes: 400 (<a href="https://corefork.telegram.org/method/messages.deleteChat#possible-errors">details</a>)</para></summary>
+            <summary><para>⚠ <b>This method is only for small private Chat</b>. See <see href="https://github.com/wiz0u/WTelegramClient/blob/master/README.md#terminology">Terminology</see> to understand what this means<br/>Search for a similar method name starting with <c>Channels_</c> if you're dealing with a <see cref="T:TL.Channel"/></para>		Delete a <a href="https://corefork.telegram.org/api/channel">chat</a>		<para>See <a href="https://corefork.telegram.org/method/messages.deleteChat"/></para>		<para>Possible <see cref="T:TL.RpcException"/> codes: 400 (<a href="https://corefork.telegram.org/method/messages.deleteChat#possible-errors">details</a>)</para></summary>
             <param name="chat_id">Chat ID</param>
         </member>
         <member name="M:TL.SchemaExtensions.Messages_DeletePhoneCallHistory(WTelegram.Client,System.Boolean)">
@@ -15050,6 +15214,35 @@
         </member>
         <member name="M:TL.SchemaExtensions.Messages_SaveDefaultSendAs(WTelegram.Client,TL.InputPeer,TL.InputPeer)">
             <summary><para>See <a href="https://corefork.telegram.org/method/messages.saveDefaultSendAs"/></para></summary>
+        </member>
+        <member name="M:TL.SchemaExtensions.Messages_SendReaction(WTelegram.Client,TL.InputPeer,System.Int32,System.String)">
+            <summary>Send reaction to message		<para>See <a href="https://corefork.telegram.org/method/messages.sendReaction"/> [bots: ✓]</para>		<para>Possible <see cref="T:TL.RpcException"/> codes: 400 (<a href="https://corefork.telegram.org/method/messages.sendReaction#possible-errors">details</a>)</para></summary>
+            <param name="peer">Peer</param>
+            <param name="msg_id">Message ID to react to</param>
+            <param name="reaction">Reaction (a UTF8 emoji)</param>
+        </member>
+        <member name="M:TL.SchemaExtensions.Messages_GetMessagesReactions(WTelegram.Client,TL.InputPeer,System.Int32[])">
+            <summary>Get message reactions		<para>See <a href="https://corefork.telegram.org/method/messages.getMessagesReactions"/> [bots: ✓]</para></summary>
+            <param name="peer">Peer</param>
+            <param name="id">Message IDs</param>
+        </member>
+        <member name="M:TL.SchemaExtensions.Messages_GetMessageReactionsList(WTelegram.Client,TL.InputPeer,System.Int32,System.Int32,System.String,System.String)">
+            <summary>Get full message reaction list		<para>See <a href="https://corefork.telegram.org/method/messages.getMessageReactionsList"/> [bots: ✓]</para></summary>
+            <param name="peer">Peer</param>
+            <param name="id">Message ID</param>
+            <param name="reaction">Get only reactions of this type (UTF8 emoji)</param>
+            <param name="offset">Offset (typically taken from the <c>next_offset</c> field of the returned <see cref="T:TL.Messages_MessageReactionsList"/>)</param>
+            <param name="limit">Maximum number of results to return, <a href="https://corefork.telegram.org/api/offsets">see pagination</a></param>
+        </member>
+        <member name="M:TL.SchemaExtensions.Messages_SetChatAvailableReactions(WTelegram.Client,TL.InputPeer,System.String[])">
+            <summary><para>See <a href="https://corefork.telegram.org/method/messages.setChatAvailableReactions"/></para></summary>
+        </member>
+        <member name="M:TL.SchemaExtensions.Messages_GetAvailableReactions(WTelegram.Client,System.Int32)">
+            <summary><para>See <a href="https://corefork.telegram.org/method/messages.getAvailableReactions"/></para></summary>
+            <returns>a <c>null</c> value means <a href="https://corefork.telegram.org/constructor/messages.availableReactionsNotModified">messages.availableReactionsNotModified</a></returns>
+        </member>
+        <member name="M:TL.SchemaExtensions.Messages_SetDefaultReaction(WTelegram.Client,System.String)">
+            <summary><para>See <a href="https://corefork.telegram.org/method/messages.setDefaultReaction"/></para></summary>
         </member>
         <member name="M:TL.SchemaExtensions.Updates_GetState(WTelegram.Client)">
             <summary>Returns a current state of updates.		<para>See <a href="https://corefork.telegram.org/method/updates.getState"/> [bots: ✓]</para></summary>

@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using WTelegram;
 
-namespace BinanceApp.GenTelegram
+namespace BinanceApp.Telegram
 {
     public class TeleClient
     {
