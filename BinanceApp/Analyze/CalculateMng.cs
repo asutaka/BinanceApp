@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TicTacTec.TA.Library;
 
 namespace BinanceApp.Analyze
 {
@@ -112,6 +113,113 @@ namespace BinanceApp.Analyze
                 NLogLogger.PublishException(ex, $"CalculateMng|CalculateCryptonRank|{code}: {ex.Message}");
                 return new CryptonRankModel { Coin = code, Count = 1, Rate = 0 };
             }
+        }
+        private static double ADX(double[] arrHigh, double[] arrLow, double[] arrClose, int period, int count)
+        {
+            try
+            {
+                var output = new double[1000];
+                Core.Adx(0, count - 1, arrHigh, arrLow, arrClose, period, out var outBegIdx, out var outNBElement, output);
+                return output[count - period];
+            }
+            catch(Exception ex)
+            {
+                NLogLogger.PublishException(ex, $"CalculateMng:ADX: {ex.Message}");
+            }
+            return 0;
+        }
+        private static List<CandleStickDataModel> CandleSticks(string code, int interval, int num)
+        {
+            var lstResult = new List<CandleStickDataModel>();
+            var url = $"{ConstantValue.COIN_DETAIL}symbol={code}&interval={interval}&limit={num}";
+            var arrData = CommonMethod.DownloadJsonArray(url);
+            if (arrData == null)
+                return lstResult;
+            foreach (var item in arrData)
+            {
+                lstResult.Add(new CandleStickDataModel
+                {
+                    Open = double.Parse(arrData[0][1].ToString()),
+                    High = double.Parse(arrData[0][2].ToString()),
+                    Low = double.Parse(arrData[0][3].ToString()),
+                    Close = double.Parse(arrData[0][4].ToString()),
+                });
+            }
+            return lstResult;
+        }
+        private static double CurrentValue(string code)
+        {
+            return CommonMethod.GetCurrentValue(code);
+        }
+        private static double MA(double [] arrInput, Core.MAType type, int period, int count)
+        {
+            try
+            {
+                var output = new double[1000];
+                Core.MovingAverage(0, count - 1, arrInput, period, Core.MAType.Sma, out var outBegIdx, out var outNBElement, output);
+                return output[count - period];
+            }
+            catch (Exception ex)
+            {
+                NLogLogger.PublishException(ex, $"CalculateMng:MA: {ex.Message}");
+            }
+            return 0;
+        }
+        private static double MACD(double[] arrInput, int high, int low, int signal, int count)
+        {
+            try
+            {
+                var output = new double[1000];
+                Core.Macd(0, count - 1, arrInput, low, high, signal, out var outBegIdx, out var outNbElement, output, new double[1000], new double[1000]);
+                return output[count - 1];
+            }
+            catch (Exception ex)
+            {
+                NLogLogger.PublishException(ex, $"CalculateMng:MACD: {ex.Message}");
+            }
+            return 0;
+        }
+        private static (double, double) MCDX(double[] arrInput, int count)
+        {
+            try
+            {
+                var rsi50 = RSI(arrInput, 50, count);
+                var rsi40 = RSI(arrInput, 40, count); ;
+                //
+                var banker_rsi = 1.5 * (rsi50 - 50);
+                if (banker_rsi > 20)
+                    banker_rsi = 20;
+                if (banker_rsi < 0)
+                    banker_rsi = 0;
+                //
+                var hot_rsi = 0.7 * (rsi40 - 30);
+                if (hot_rsi > 20)
+                    hot_rsi = 20;
+                if (hot_rsi < 0)
+                    hot_rsi = 0;
+
+                return (banker_rsi, hot_rsi);
+            }
+            catch (Exception ex)
+            {
+                NLogLogger.PublishException(ex, $"CalculateMng:MCDX: {ex.Message}");
+            }
+            return (0, 0);
+
+        }
+        private static double RSI(double[] arrInput, int period, int count)
+        {
+            try
+            {
+                var output = new double[1000];
+                Core.Rsi(0, count - 1, arrInput, period, out var outBegIdx, out var outNBElement, output);
+                return output[count - period];
+            }
+            catch (Exception ex)
+            {
+                NLogLogger.PublishException(ex, $"CalculateMng:RSI: {ex.Message}");
+            }
+            return 0;
         }
     }
 }

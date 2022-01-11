@@ -70,6 +70,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="TA-Lib-Core, Version=1.0.4998.21369, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TA-Lib.0.5.0.3\lib\TA-Lib-Core.dll</HintPath>
+    </Reference>
     <Reference Include="UIAutomationClient" />
     <Reference Include="UIAutomationTypes" />
   </ItemGroup>
