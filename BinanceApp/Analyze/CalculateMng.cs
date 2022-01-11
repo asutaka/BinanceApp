@@ -30,7 +30,7 @@ namespace BinanceApp.Analyze
             {
                 int count = 1;
                 double sum = 0;
-                var lSource = StaticValues.dicDatasource.First(x => x.Key == code).Value;
+                var lSource = StaticValues.dicDatasource1H.First(x => x.Key == code).Value;
                 if (lSource == null)
                     return new CryptonRankModel { Coin = code, Count = count, Rate = Math.Round(sum / count, 2) };
 

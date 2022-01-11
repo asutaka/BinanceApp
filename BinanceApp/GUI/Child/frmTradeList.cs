@@ -90,6 +90,7 @@ namespace BinanceApp.GUI.Child
                 }
             }
             _lstCoin.UpdateJson(_fileName);
+            //Tìm ra ước chung lớn nhất của tất cả các coin trade sau đó cập nhật biến scronjob
             MessageBox.Show("Đã lưu dữ liệu!");
         }
     }

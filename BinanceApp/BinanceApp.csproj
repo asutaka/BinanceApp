@@ -184,7 +184,7 @@
     <Compile Include="GUI\WaitFunc.cs" />
     <Compile Include="Job\CheckStatusJob.cs" />
     <Compile Include="Job\Top30CurrentValueScheduleJob.cs" />
-    <Compile Include="Job\HrScheduleJob.cs" />
+    <Compile Include="Job\TradeListJob.cs" />
     <Compile Include="Job\ScheduleUiContainer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

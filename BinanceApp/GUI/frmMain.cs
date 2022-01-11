@@ -37,40 +37,6 @@ namespace BinanceApp.GUI
             return _instance;
         }
 
-//        private void bkgrCheckConnection_DoWork(object sender, DoWorkEventArgs e)
-//        {
-//            Thread.Sleep(1000);
-//            _frmWaitForm.Show("Kiểm tra kết nối");
-//            _checkConnection = CommonMethod.CheckForInternetConnection();
-//            Thread.Sleep(200);
-//            _frmWaitForm.Close();
-//            if (!_checkConnection)
-//            {
-//                MessageBox.Show("Không có kết nối Internet");
-//            }
-//        }
-
-//        private void bkgrCheckConnection_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-//        {
-//            if (!_checkConnection)
-//            {
-//                this.Close();
-//            }
-//            else
-//            {
-//                _bkgr.DoWork -= bkgrCheckConnection_DoWork;
-//                _bkgr.RunWorkerCompleted -= bkgrCheckConnection_RunWorkerCompleted;
-//#if Flag_Test
-//#else
-//                _bkgr.DoWork += bkgrConfig_DoWork;
-//                _bkgr.RunWorkerCompleted += bkgrConfig_RunWorkerCompleted;
-//                _bkgr.RunWorkerAsync();
-//#endif
-
-//                ribbon.Enabled = true;
-//            }
-//        }
-
         private void bkgrConfig_DoWork(object sender, DoWorkEventArgs e)
         {
             //dtStartConfig = DateTime.Now;
@@ -80,7 +46,7 @@ namespace BinanceApp.GUI
             {
                 var task = Task.Run(() =>
                 {
-                    StaticValues.dicDatasource.Add(item.S, SeedData.LoadDatasource(item.S, enumInterval.OneHour.GetDisplayName()));
+                    StaticValues.dicDatasource1H.Add(item.S, SeedData.LoadDatasource(item.S, enumInterval.OneHour.GetDisplayName()));
                 });
                 lstTask.Add(task);
             }
@@ -95,7 +61,6 @@ namespace BinanceApp.GUI
             _bkgr.DoWork += bkgrAnalyze_DoWork;
             _bkgr.RunWorkerCompleted += bkgrAnalyze_RunWorkerCompleted;
             _bkgr.RunWorkerAsync();
-            //dtEndConfig = DateTime.Now;
         }
 
         private void bkgrAnalyze_DoWork(object sender, DoWorkEventArgs e)
@@ -106,11 +71,128 @@ namespace BinanceApp.GUI
             Thread.Sleep(200);
             _frmWaitForm.Close();
         }
-        private void bkgrAnalyze_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        private void bkgrAnalyze_RunWorkerCompleted(object sender1, RunWorkerCompletedEventArgs e1)
         {
             ribbon.Enabled = true;
-            //dtEndCalculate = DateTime.Now;
-            //MessageBox.Show($"Started Config: {dtStartConfig} - Ended: {dtEndConfig}\n Started Analyze: {dtStartCalculate} - Ended: {dtEndCalculate}; Count: {StaticValues.lstCryptonRank.Count}");
+            _bkgr.DoWork -= bkgrAnalyze_DoWork;
+            _bkgr.RunWorkerCompleted -= bkgrAnalyze_RunWorkerCompleted;
+            _bkgr.DoWork += bkgrPrepareRealTime_DoWork;
+            _bkgr.RunWorkerCompleted += bkgrPrepareRealTime_RunWorkerCompleted;
+            _bkgr.RunWorkerAsync();
+        }
+
+        private void bkgrPrepareRealTime_DoWork(object sender1, DoWorkEventArgs e1)
+        {
+            //15M
+            if (StaticValues.advanceModel1.LstInterval.Contains((int)enumTimeZone.ThirteenMinute)
+                || StaticValues.advanceModel2.LstInterval.Contains((int)enumTimeZone.ThirteenMinute)
+                || StaticValues.advanceModel3.LstInterval.Contains((int)enumTimeZone.ThirteenMinute)
+                || StaticValues.advanceModel4.LstInterval.Contains((int)enumTimeZone.ThirteenMinute))
+            {
+                var wrkr = new BackgroundWorker();
+                wrkr.DoWork += (object sender, DoWorkEventArgs e) => {
+                    var lstTask = new List<Task>();
+                    foreach (var item in StaticValues.lstCoinFilter)
+                    {
+                        var task = Task.Run(() =>
+                        {
+                            StaticValues.dicDatasource15M.Add(item.S, SeedData.LoadDatasource(item.S, enumInterval.ThirteenMinute.GetDisplayName()));
+                        });
+                        lstTask.Add(task);
+                    }
+                    Task.WaitAll(lstTask.ToArray());
+                };
+                wrkr.RunWorkerAsync();
+            }
+            //4H
+            if (StaticValues.advanceModel1.LstInterval.Contains((int)enumTimeZone.FourHour)
+              || StaticValues.advanceModel2.LstInterval.Contains((int)enumTimeZone.FourHour)
+              || StaticValues.advanceModel3.LstInterval.Contains((int)enumTimeZone.FourHour)
+              || StaticValues.advanceModel4.LstInterval.Contains((int)enumTimeZone.FourHour))
+            {
+                var wrkr = new BackgroundWorker();
+                wrkr.DoWork += (object sender, DoWorkEventArgs e) => {
+                    var lstTask = new List<Task>();
+                    foreach (var item in StaticValues.lstCoinFilter)
+                    {
+                        var task = Task.Run(() =>
+                        {
+                            StaticValues.dicDatasource4H.Add(item.S, SeedData.LoadDatasource(item.S, enumInterval.FourHour.GetDisplayName()));
+                        });
+                        lstTask.Add(task);
+                    }
+                    Task.WaitAll(lstTask.ToArray());
+                };
+                wrkr.RunWorkerAsync();
+            }
+            //1D
+            if (StaticValues.advanceModel1.LstInterval.Contains((int)enumTimeZone.OneDay)
+              || StaticValues.advanceModel2.LstInterval.Contains((int)enumTimeZone.OneDay)
+              || StaticValues.advanceModel3.LstInterval.Contains((int)enumTimeZone.OneDay)
+              || StaticValues.advanceModel4.LstInterval.Contains((int)enumTimeZone.OneDay))
+            {
+                var wrkr = new BackgroundWorker();
+                wrkr.DoWork += (object sender, DoWorkEventArgs e) => {
+                    var lstTask = new List<Task>();
+                    foreach (var item in StaticValues.lstCoinFilter)
+                    {
+                        var task = Task.Run(() =>
+                        {
+                            StaticValues.dicDatasource1D.Add(item.S, SeedData.LoadDatasource(item.S, enumInterval.OneDay.GetDisplayName()));
+                        });
+                        lstTask.Add(task);
+                    }
+                    Task.WaitAll(lstTask.ToArray());
+                };
+                wrkr.RunWorkerAsync();
+            }
+            //1W
+            if (StaticValues.advanceModel1.LstInterval.Contains((int)enumTimeZone.OneWeek)
+              || StaticValues.advanceModel2.LstInterval.Contains((int)enumTimeZone.OneWeek)
+              || StaticValues.advanceModel3.LstInterval.Contains((int)enumTimeZone.OneWeek)
+              || StaticValues.advanceModel4.LstInterval.Contains((int)enumTimeZone.OneWeek))
+            {
+                var wrkr = new BackgroundWorker();
+                wrkr.DoWork += (object sender, DoWorkEventArgs e) => {
+                    var lstTask = new List<Task>();
+                    foreach (var item in StaticValues.lstCoinFilter)
+                    {
+                        var task = Task.Run(() =>
+                        {
+                            StaticValues.dicDatasource1W.Add(item.S, SeedData.LoadDatasource(item.S, enumInterval.OneWeek.GetDisplayName()));
+                        });
+                        lstTask.Add(task);
+                    }
+                    Task.WaitAll(lstTask.ToArray());
+                };
+                wrkr.RunWorkerAsync();
+            }
+            //1Month
+            if (StaticValues.advanceModel1.LstInterval.Contains((int)enumTimeZone.OneMonth)
+              || StaticValues.advanceModel2.LstInterval.Contains((int)enumTimeZone.OneMonth)
+              || StaticValues.advanceModel3.LstInterval.Contains((int)enumTimeZone.OneMonth)
+              || StaticValues.advanceModel4.LstInterval.Contains((int)enumTimeZone.OneMonth))
+            {
+                var wrkr = new BackgroundWorker();
+                wrkr.DoWork += (object sender, DoWorkEventArgs e) => {
+                    var lstTask = new List<Task>();
+                    foreach (var item in StaticValues.lstCoinFilter)
+                    {
+                        var task = Task.Run(() =>
+                        {
+                            StaticValues.dicDatasource1Month.Add(item.S, SeedData.LoadDatasource(item.S, enumInterval.OneMonth.GetDisplayName()));
+                        });
+                        lstTask.Add(task);
+                    }
+                    Task.WaitAll(lstTask.ToArray());
+                };
+                wrkr.RunWorkerAsync();
+            }
+        }
+
+        private void bkgrPrepareRealTime_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            StaticValues.IsRealTimeReady = true;
         }
 
         private void barBtnInfo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -190,6 +272,27 @@ namespace BinanceApp.GUI
                     return;
                 }
             }
+        }
+
+        private void barBtnRealTime_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if(!StaticValues.IsRealTimeReady)
+            {
+                MessageBox.Show("RealTime chưa sẵn sàng!");
+                return;
+            }    
+        }
+
+        private void barBtnStart_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            barBtnStart.Enabled = false;
+            barBtnStop.Enabled = true;
+        }
+
+        private void barBtnStop_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            barBtnStart.Enabled = true;
+            barBtnStop.Enabled = false;
         }
     }
 }
