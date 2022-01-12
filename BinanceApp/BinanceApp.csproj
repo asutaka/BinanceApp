@@ -97,6 +97,7 @@
     <Compile Include="GUI\Child\frmFollowList.Designer.cs">
       <DependentUpon>frmFollowList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Job\SendNotiJob.cs" />
     <Compile Include="Usr\frmCoinFollowInfo.cs">
       <SubType>Form</SubType>
     </Compile>

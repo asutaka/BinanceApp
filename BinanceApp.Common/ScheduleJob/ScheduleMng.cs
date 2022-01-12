@@ -48,6 +48,29 @@ namespace BinanceApp.Job.ScheduleJob
             var value = _lstSchedule.Any(x => x.IsTaskRunning());
             return value;
         }
+
+        public void StartAllJob()
+        {
+            foreach (var item in _lstSchedule)
+            {
+                if (!item.IsStarted())
+                {
+                    item.Start();
+                }
+                else
+                {
+                    item.Resume();
+                }
+            }
+        }
+
+        public void StopAllJob()
+        {
+            foreach (var item in _lstSchedule)
+            {
+                item.Pause();
+            }
+        }
     }
 
     public class ScheduleMember : Schedule

@@ -220,7 +220,7 @@ namespace BinanceApp.GUI
             this.ribbonPageGroup1.ItemLinks.Add(this.barBtnStart);
             this.ribbonPageGroup1.ItemLinks.Add(this.barBtnStop);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "Action";
             // 
             // ribbonStatusBar
             // 

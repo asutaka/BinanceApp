@@ -2,8 +2,11 @@
 using BinanceApp.Common;
 using BinanceApp.Data;
 using BinanceApp.GUI.Child;
+using BinanceApp.Job;
+using BinanceApp.Job.ScheduleJob;
 using BinanceApp.Model.ENUM;
 using DevExpress.XtraTab;
+using Quartz;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,6 +31,8 @@ namespace BinanceApp.GUI
             _bkgr.DoWork += bkgrConfig_DoWork;
             _bkgr.RunWorkerCompleted += bkgrConfig_RunWorkerCompleted;
             _bkgr.RunWorkerAsync();
+            StaticValues.ScheduleMngObj.AddSchedule(new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<SendNotiJob>(), StaticValues.Scron_SendNoti, nameof(SendNotiJob)));
+            StaticValues.ScheduleMngObj.AddSchedule(new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<TradeListJob>(), StaticValues.tradeList.Cron, nameof(TradeListJob)));
         }
 
         private static frmMain _instance = null;
@@ -287,12 +292,16 @@ namespace BinanceApp.GUI
         {
             barBtnStart.Enabled = false;
             barBtnStop.Enabled = true;
+
+            StaticValues.ScheduleMngObj.StartAllJob();
         }
 
         private void barBtnStop_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             barBtnStart.Enabled = true;
             barBtnStop.Enabled = false;
+
+            StaticValues.ScheduleMngObj.StopAllJob();
         }
     }
 }
