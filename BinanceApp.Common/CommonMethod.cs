@@ -136,6 +136,19 @@ namespace BinanceApp.Common
             var currentVal = double.Parse(arrData[0][4].ToString());
             return currentVal;
         }
+
+        public static int GCD(int a, int b)
+        {
+            while (a != 0 && b != 0)
+            {
+                if (a > b)
+                    a %= b;
+                else
+                    b %= a;
+            }
+
+            return a | b;
+        }
     }
 }
 

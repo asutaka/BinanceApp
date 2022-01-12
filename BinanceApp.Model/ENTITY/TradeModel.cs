@@ -2,6 +2,13 @@
 
 namespace BinanceApp.Model.ENTITY
 {
+    public class TradeListModel
+    {
+        public string Cron { get; set; }
+        public int CronValue { get; set; }
+        public List<TradeModel> lData { get; set; }
+    }
+
     public class TradeModel
     {
         public string Coin { get; set; }

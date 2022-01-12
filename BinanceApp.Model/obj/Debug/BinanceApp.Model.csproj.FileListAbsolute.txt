@@ -4,7 +4,6 @@ D:\SourceCode\BinanceApp\BinanceApp.Model\bin\Debug\BinanceApp.Model.pdb
 D:\SourceCode\BinanceApp\BinanceApp.Model\bin\Debug\Newtonsoft.Json.dll
 D:\SourceCode\BinanceApp\BinanceApp.Model\bin\Debug\System.ComponentModel.Annotations.dll
 D:\SourceCode\BinanceApp\BinanceApp.Model\bin\Debug\Newtonsoft.Json.xml
-D:\SourceCode\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.csproj.AssemblyReference.cache
 D:\SourceCode\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.Properties.Resources.resources
 D:\SourceCode\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.csproj.GenerateResource.cache
 D:\SourceCode\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.csproj.CoreCompileInputs.cache

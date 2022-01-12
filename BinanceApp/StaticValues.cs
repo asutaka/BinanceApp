@@ -21,7 +21,8 @@ namespace BinanceApp
         public static string Scron_CheckStatus = "0 0 0/5 * * ?";
         public static string Scron_Top30CurrentValue = "0/5 * * * * ?";
         public static int Scron_TradeList_Value = 1;
-
+        //Notify
+        public static Queue<string> lNotify = new Queue<string>();
         //Coin
         public static List<CryptonDetailDataModel> lstCoin = new List<CryptonDetailDataModel>();
         public static List<CryptonDetailDataModel> lstCoinFilter = new List<CryptonDetailDataModel>();
@@ -40,7 +41,7 @@ namespace BinanceApp
         public static AdvanceSettingModel advanceModel3;
         public static AdvanceSettingModel advanceModel4;
         public static List<CryptonDetailDataModel> lstBlackList;
-        public static List<TradeModel> lstTradeList;
+        public static TradeListModel tradeList;
         public static FollowModel followList;
     }
 }

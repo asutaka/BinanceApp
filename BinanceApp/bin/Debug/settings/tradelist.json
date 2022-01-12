@@ -1,1 +1,5 @@
-[{"Coin":"ADXUSDT","Config":[{"IsAbove":true,"Value":0.7},{"IsAbove":false,"Value":0.5}],"IsNotify":true,"Interval":3}]
+{
+ "Cron": "",
+ "CronValue": 1,
+ "lData": [{"Coin":"ADXUSDT","Config":[{"IsAbove":true,"Value":0.7},{"IsAbove":false,"Value":0.5}],"IsNotify":true,"Interval":3}]	
+}

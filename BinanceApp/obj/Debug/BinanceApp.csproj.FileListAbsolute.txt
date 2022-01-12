@@ -349,3 +349,4 @@ F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.csproj.CopyComplete
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.exe
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.pdb
 F:\DATA\BinanceApp\BinanceApp\bin\Debug\TA-Lib-Core.dll
+D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\TA-Lib-Core.dll
