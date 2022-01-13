@@ -99,6 +99,7 @@
     </Compile>
     <Compile Include="Job\SendNotiJob.cs" />
     <Compile Include="Job\FollowListJob.cs" />
+    <Compile Include="Job\RealTimeJob.cs" />
     <Compile Include="Usr\frmCoinFollowInfo.cs">
       <SubType>Form</SubType>
     </Compile>

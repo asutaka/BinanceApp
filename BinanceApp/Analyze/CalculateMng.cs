@@ -30,6 +30,11 @@ namespace BinanceApp.Analyze
             return (true, 0);
         }
 
+        public static (bool, double) SPecial(string coin)
+        {
+            return (true, 0);
+        }
+
         public static (bool, double) Config2(string coin)
         {
             return (true, 0);

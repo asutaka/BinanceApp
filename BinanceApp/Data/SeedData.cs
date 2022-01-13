@@ -382,7 +382,6 @@ namespace BinanceApp.Data
             dr13["Id"] = (int)enumIntervalNotify.OneDay;
             dr13["Name"] = enumIntervalNotify.OneDay.GetDisplayName();
 
-            dt.Rows.Add(dr1);
             dt.Rows.Add(dr4);
             dt.Rows.Add(dr5);
             dt.Rows.Add(dr6);
