@@ -42,6 +42,7 @@ namespace BinanceApp.Usr
             _model.IsConfig3 = chkConfig3.IsOn;
             _model.IsConfig4 = chkConfig4.IsOn;
             _model.IsConfig5 = chkConfig5.IsOn;
+            _model.Title = txtTitle.Text.Trim();
             return _model;
         }
 

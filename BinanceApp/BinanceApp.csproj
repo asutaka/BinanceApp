@@ -98,6 +98,7 @@
       <DependentUpon>frmFollowList.cs</DependentUpon>
     </Compile>
     <Compile Include="Job\SendNotiJob.cs" />
+    <Compile Include="Job\FollowListJob.cs" />
     <Compile Include="Usr\frmCoinFollowInfo.cs">
       <SubType>Form</SubType>
     </Compile>

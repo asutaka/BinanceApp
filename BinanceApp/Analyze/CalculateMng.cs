@@ -10,7 +10,7 @@ namespace BinanceApp.Analyze
 {
     public static class CalculateMng
     {
-        public static void CryptonRank()
+        public static void Top30()
         {
             var lstTask = new List<Task>();
             foreach (var item in StaticValues.lstCoin)
@@ -24,6 +24,29 @@ namespace BinanceApp.Analyze
             Task.WaitAll(lstTask.ToArray());
             StaticValues.lstCryptonRank = StaticValues.lstCryptonRank.Where(x => x != null).OrderByDescending(x => x.Count).ThenByDescending(x => x.Rate).Take(30).ToList();
         }
+
+        public static (bool, double) MCDX(string coin)
+        {
+            return (true, 0);
+        }
+
+        public static (bool, double) Config2(string coin)
+        {
+            return (true, 0);
+        }
+        public static (bool, double) Config3(string coin)
+        {
+            return (true, 0);
+        }
+        public static (bool, double) Config4(string coin)
+        {
+            return (true, 0);
+        }
+        public static (bool, double) Config5(string coin)
+        {
+            return (true, 0);
+        }
+
         private static CryptonRankModel CalculateCryptonRank(string code)
         {
             try

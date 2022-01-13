@@ -272,10 +272,6 @@ namespace BinanceApp.Data
             dt.Columns.Add("Id", typeof(int));
             dt.Columns.Add("Name", typeof(string));
 
-            //var dr1 = dt.NewRow();
-            //dr1["Id"] = (int)enumIntervalNotify.Only;
-            //dr1["Name"] = enumIntervalNotify.Only.GetDisplayName();
-
             var dr2 = dt.NewRow();
             dr2["Id"] = (int)enumIntervalNotify.OneMinute;
             dr2["Name"] = enumIntervalNotify.OneMinute.GetDisplayName();
@@ -345,10 +341,6 @@ namespace BinanceApp.Data
             var dt = new DataTable();
             dt.Columns.Add("Id", typeof(int));
             dt.Columns.Add("Name", typeof(string));
-
-            var dr1 = dt.NewRow();
-            dr1["Id"] = (int)enumIntervalNotify.Only;
-            dr1["Name"] = enumIntervalNotify.Only.GetDisplayName();
 
             var dr4 = dt.NewRow();
             dr4["Id"] = (int)enumIntervalNotify.FiveMinute;

@@ -6,12 +6,14 @@ namespace BinanceApp.Model.ENTITY
     {
         public bool IsNotify { get; set; }// bật notify hay không
         public int Interval { get; set; }// 1 lần duy nhất, mỗi ngày một lần, theo chu kỳ
+        public string Cron { get; set; }
         public List<string> Coins { get; set; }
         public List<FollowFxModel> Follows { get; set; }
     }
 
     public class FollowFxModel
     {
+        public string Title { get; set; }
         public bool IsTop30 { get; set; }
         public bool IsMCDX { get; set; }
         public bool IsSpecial { get; set; }

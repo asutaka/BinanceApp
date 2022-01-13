@@ -20,7 +20,6 @@ namespace BinanceApp.Job
                 if (!isPrepare)
                 {
                     Prepare();
-                    isPrepare = true;
                 }
 
                 var lstTask = new List<Task>();
@@ -84,6 +83,7 @@ namespace BinanceApp.Job
             lstTradeList = (from entityTrade in StaticValues.tradeList.lData.Where(x => x.IsNotify)
                             join entityDic in dicInterval.AsEnumerable() on entityTrade.Interval equals entityDic.Key
                             select new TradeListJobModel { Coin = entityTrade.Coin, Config = entityTrade.Config, Cycle = entityDic.Value / StaticValues.Scron_TradeList_Value, Count = 1 }).ToList();
+            isPrepare = true;
         }
 
         private class TradeListJobModel

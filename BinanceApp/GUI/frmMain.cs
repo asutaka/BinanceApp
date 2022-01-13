@@ -33,6 +33,7 @@ namespace BinanceApp.GUI
             _bkgr.RunWorkerAsync();
             StaticValues.ScheduleMngObj.AddSchedule(new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<SendNotiJob>(), StaticValues.Scron_SendNoti, nameof(SendNotiJob)));
             StaticValues.ScheduleMngObj.AddSchedule(new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<TradeListJob>(), StaticValues.tradeList.Cron, nameof(TradeListJob)));
+            StaticValues.ScheduleMngObj.AddSchedule(new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<FollowListJob>(), StaticValues.followList.Cron, nameof(FollowListJob)));
         }
 
         private static frmMain _instance = null;
@@ -72,7 +73,7 @@ namespace BinanceApp.GUI
         {
             //dtStartCalculate = DateTime.Now;
             _frmWaitForm.Show("Phân tích dữ liệu");
-            CalculateMng.CryptonRank();
+            CalculateMng.Top30();
             Thread.Sleep(200);
             _frmWaitForm.Close();
         }

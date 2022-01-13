@@ -126,8 +126,6 @@ namespace BinanceApp.Model.ENUM
 
     public enum enumIntervalNotify
     {
-        [Display(Name = "Một lần")]
-        Only = 0,
         [Display(Name = "Một phút/ lần")]
         OneMinute = 1,
         [Display(Name = "Hai phút/ lần")]
