@@ -54,6 +54,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.nmMCDX = new System.Windows.Forms.NumericUpDown();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmADX)).BeginInit();
@@ -66,6 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nmWeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmMCDX)).BeginInit();
             this.SuspendLayout();
             // 
             // btnOkAndSave
@@ -82,6 +85,8 @@
             this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl1.Controls.Add(this.nmMCDX);
+            this.groupControl1.Controls.Add(this.label13);
             this.groupControl1.Controls.Add(this.nmADX);
             this.groupControl1.Controls.Add(this.label12);
             this.groupControl1.Controls.Add(this.nmRSI);
@@ -238,7 +243,7 @@
             // 
             // nmLowMACD
             // 
-            this.nmLowMACD.Location = new System.Drawing.Point(292, 307);
+            this.nmLowMACD.Location = new System.Drawing.Point(299, 307);
             this.nmLowMACD.Name = "nmLowMACD";
             this.nmLowMACD.Size = new System.Drawing.Size(89, 21);
             this.nmLowMACD.TabIndex = 17;
@@ -351,6 +356,27 @@
             this.groupControl2.TabIndex = 24;
             this.groupControl2.Text = "Tùy chọn ";
             // 
+            // nmMCDX
+            // 
+            this.nmMCDX.Location = new System.Drawing.Point(299, 39);
+            this.nmMCDX.Name = "nmMCDX";
+            this.nmMCDX.Size = new System.Drawing.Size(119, 21);
+            this.nmMCDX.TabIndex = 25;
+            this.nmMCDX.Value = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(258, 42);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(35, 13);
+            this.label13.TabIndex = 24;
+            this.label13.Text = "MCDX";
+            // 
             // frmBasicSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -376,6 +402,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nmWeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nmMCDX)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -407,5 +434,7 @@
         private System.Windows.Forms.Label label4;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
         private DevExpress.XtraEditors.GroupControl groupControl2;
+        private System.Windows.Forms.NumericUpDown nmMCDX;
+        private System.Windows.Forms.Label label13;
     }
 }

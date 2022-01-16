@@ -49,6 +49,7 @@ namespace BinanceApp.GUI.Child
             nmSignal.Value = model.ListModel.First(x => x.Indicator == (int)enumChooseData.MACD).Signal;
             nmRSI.Value = model.ListModel.First(x => x.Indicator == (int)enumChooseData.RSI).Period;
             nmADX.Value = model.ListModel.First(x => x.Indicator == (int)enumChooseData.ADX).Period;
+            nmMCDX.Value = model.ListModel.First(x => x.Indicator == (int)enumChooseData.MCDX).Signal;
         }
         private bool IsValid()
         {
@@ -79,6 +80,7 @@ namespace BinanceApp.GUI.Child
                     new GeneralModel{ Indicator = (int)enumChooseData.RSI, Period = (int)nmRSI.Value },
                     new GeneralModel{ Indicator = (int)enumChooseData.ADX, Period = (int)nmADX.Value },
                     new GeneralModel{ Indicator = (int)enumChooseData.CurrentValue, Period = 0 },
+                    new GeneralModel{ Indicator = (int)enumChooseData.MCDX, Signal = (int)nmMCDX.Value },
                 }
             }.UpdateJson(_fileName);
             MessageBox.Show("Đã lưu dữ liệu!");

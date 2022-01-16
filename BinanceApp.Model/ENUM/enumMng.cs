@@ -62,7 +62,9 @@ namespace BinanceApp.Model.ENUM
         [Display(Name = "ADX")]
         ADX = 7,
         [Display(Name = "Giá hiện tại")]
-        CurrentValue = 8
+        CurrentValue = 8,
+        [Display(Name = "MCDX")]
+        MCDX = 9
     }
     public enum enumUnit
     {

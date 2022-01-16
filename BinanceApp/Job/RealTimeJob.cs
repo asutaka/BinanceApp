@@ -63,7 +63,7 @@ namespace BinanceApp.Job
                         //Thiết lập 2
                         if (StaticValues.advanceModel1.IsActive)
                         {
-                            item.Config2.Value = CalculateMng.Config2(item.Coin).Item2;
+                            item.Config2.Value = CalculateMng.Config(item.Coin, StaticValues.advanceModel1).Item2;
                             item.Config2.Level = 1;
                         }
                         else
@@ -73,7 +73,7 @@ namespace BinanceApp.Job
                         //Thiết lập 3
                         if (StaticValues.advanceModel1.IsActive)
                         {
-                            item.Config3.Value = CalculateMng.Config3(item.Coin).Item2;
+                            item.Config3.Value = CalculateMng.Config(item.Coin, StaticValues.advanceModel2).Item2;
                             item.Config3.Level = 1;
                         }
                         else
@@ -83,7 +83,7 @@ namespace BinanceApp.Job
                         //Thiết lập 4
                         if (StaticValues.advanceModel1.IsActive)
                         {
-                            item.Config4.Value = CalculateMng.Config4(item.Coin).Item2;
+                            item.Config4.Value = CalculateMng.Config(item.Coin, StaticValues.advanceModel3).Item2;
                             item.Config4.Level = 1;
                         }
                         else
@@ -93,7 +93,7 @@ namespace BinanceApp.Job
                         //Thiết lập 5
                         if (StaticValues.advanceModel1.IsActive)
                         {
-                            item.Config5.Value = CalculateMng.Config5(item.Coin).Item2;
+                            item.Config5.Value = CalculateMng.Config(item.Coin, StaticValues.advanceModel4).Item2;
                             item.Config5.Level = 1;
                         }
                         else
@@ -109,7 +109,7 @@ namespace BinanceApp.Job
             {
                 NLogLogger.PublishException(ex, $"FollowListJob:Execute: {ex.Message}");
             }
-        }
+        } 
         private void Prepare()
         {
             if (StaticValues.specialModel.IsActiveTop30)

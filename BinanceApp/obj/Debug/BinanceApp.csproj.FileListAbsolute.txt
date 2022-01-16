@@ -173,6 +173,7 @@ D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.csproj.CoreCompileInput
 D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.csproj.CopyComplete
 D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.exe
 D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.pdb
+D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\TA-Lib-Core.dll
 F:\DATA\BinanceApp\BinanceApp\bin\Debug\NLog.config
 F:\DATA\BinanceApp\BinanceApp\bin\Debug\BinanceApp.exe.config
 F:\DATA\BinanceApp\BinanceApp\bin\Debug\BinanceApp.exe
@@ -195,6 +196,7 @@ F:\DATA\BinanceApp\BinanceApp\bin\Debug\DevExpress.XtraLayout.v20.1.dll
 F:\DATA\BinanceApp\BinanceApp\bin\Debug\DevExpress.XtraPrinting.v20.1.dll
 F:\DATA\BinanceApp\BinanceApp\bin\Debug\Newtonsoft.Json.dll
 F:\DATA\BinanceApp\BinanceApp\bin\Debug\Quartz.dll
+F:\DATA\BinanceApp\BinanceApp\bin\Debug\TA-Lib-Core.dll
 F:\DATA\BinanceApp\BinanceApp\bin\Debug\AutoMapper.dll
 F:\DATA\BinanceApp\BinanceApp\bin\Debug\PhoneNumbers.dll
 F:\DATA\BinanceApp\BinanceApp\bin\Debug\NLog.dll
@@ -348,5 +350,3 @@ F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.csproj.CoreCompileInputs.cach
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.csproj.CopyComplete
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.exe
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.pdb
-F:\DATA\BinanceApp\BinanceApp\bin\Debug\TA-Lib-Core.dll
-D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\TA-Lib-Core.dll

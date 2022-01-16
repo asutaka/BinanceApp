@@ -53,7 +53,7 @@ namespace BinanceApp.Job
                             var isConfig2 = false;
                             if (item.IsConfig2)
                             {
-                                isConfig2 = CalculateMng.Config2(coin).Item1;
+                                isConfig2 = CalculateMng.Config(coin, StaticValues.advanceModel1).Item1;
                             }
                             else
                             {
@@ -63,7 +63,7 @@ namespace BinanceApp.Job
                             var isConfig3 = false;
                             if (item.IsConfig3)
                             {
-                                isConfig3 = CalculateMng.Config3(coin).Item1;
+                                isConfig3 = CalculateMng.Config(coin, StaticValues.advanceModel2).Item1;
                             }
                             else
                             {
@@ -73,7 +73,7 @@ namespace BinanceApp.Job
                             var isConfig4 = false;
                             if (item.IsConfig4)
                             {
-                                isConfig4 = CalculateMng.Config4(coin).Item1;
+                                isConfig4 = CalculateMng.Config(coin, StaticValues.advanceModel3).Item1;
                             }
                             else
                             {
@@ -83,7 +83,7 @@ namespace BinanceApp.Job
                             var isConfig5 = false;
                             if (item.IsConfig5)
                             {
-                                isConfig5 = CalculateMng.Config5(coin).Item1;
+                                isConfig5 = CalculateMng.Config(coin, StaticValues.advanceModel4).Item1;
                             }
                             else
                             {
