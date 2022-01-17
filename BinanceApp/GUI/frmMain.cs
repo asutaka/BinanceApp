@@ -25,6 +25,7 @@ namespace BinanceApp.GUI
         private frmMain()
         {
             InitializeComponent();
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("McSkin");
             ribbon.Enabled = false;
             StaticValues.IsAccessMain = true;
             _bkgr = new BackgroundWorker();
@@ -199,6 +200,10 @@ namespace BinanceApp.GUI
         private void bkgrPrepareRealTime_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             StaticValues.IsRealTimeReady = true;
+            this.Invoke((MethodInvoker)delegate
+            {
+                tabControl.AddTab(frmTop30.Instance());
+            });
         }
 
         private void barBtnInfo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

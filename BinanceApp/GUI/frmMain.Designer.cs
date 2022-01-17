@@ -31,11 +31,12 @@ namespace BinanceApp.GUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barBtnListFollow = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnInfo = new DevExpress.XtraBars.BarButtonItem();
-            this.barBtnDashboard = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnMCDX = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnConfigFx = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnConfigNotify = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnBlackList = new DevExpress.XtraBars.BarButtonItem();
@@ -67,7 +68,7 @@ namespace BinanceApp.GUI
             this.barBtnListFollow,
             this.barButtonItem2,
             this.barBtnInfo,
-            this.barBtnDashboard,
+            this.barBtnMCDX,
             this.barBtnConfigFx,
             this.barBtnConfigNotify,
             this.barBtnBlackList,
@@ -88,6 +89,7 @@ namespace BinanceApp.GUI
             // 
             this.barBtnListFollow.Caption = "Danh sách theo dõi";
             this.barBtnListFollow.Id = 1;
+            this.barBtnListFollow.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnListFollow.ImageOptions.SvgImage")));
             this.barBtnListFollow.Name = "barBtnListFollow";
             this.barBtnListFollow.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnListFollow_ItemClick);
             // 
@@ -102,19 +104,22 @@ namespace BinanceApp.GUI
             // 
             this.barBtnInfo.Caption = "Tài khoản";
             this.barBtnInfo.Id = 3;
+            this.barBtnInfo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnInfo.ImageOptions.SvgImage")));
             this.barBtnInfo.Name = "barBtnInfo";
             this.barBtnInfo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnInfo_ItemClick);
             // 
-            // barBtnDashboard
+            // barBtnMCDX
             // 
-            this.barBtnDashboard.Caption = "Dashboard";
-            this.barBtnDashboard.Id = 4;
-            this.barBtnDashboard.Name = "barBtnDashboard";
+            this.barBtnMCDX.Caption = "MCDX";
+            this.barBtnMCDX.Id = 4;
+            this.barBtnMCDX.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnDashboard.ImageOptions.SvgImage")));
+            this.barBtnMCDX.Name = "barBtnMCDX";
             // 
             // barBtnConfigFx
             // 
             this.barBtnConfigFx.Caption = "Cấu hình chỉ báo";
             this.barBtnConfigFx.Id = 5;
+            this.barBtnConfigFx.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnConfigFx.ImageOptions.SvgImage")));
             this.barBtnConfigFx.Name = "barBtnConfigFx";
             this.barBtnConfigFx.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnConfigFx_ItemClick);
             // 
@@ -122,12 +127,14 @@ namespace BinanceApp.GUI
             // 
             this.barBtnConfigNotify.Caption = "Cấu hình thông báo";
             this.barBtnConfigNotify.Id = 6;
+            this.barBtnConfigNotify.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnConfigNotify.ImageOptions.SvgImage")));
             this.barBtnConfigNotify.Name = "barBtnConfigNotify";
             // 
             // barBtnBlackList
             // 
             this.barBtnBlackList.Caption = "Danh sách đen";
             this.barBtnBlackList.Id = 7;
+            this.barBtnBlackList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnBlackList.ImageOptions.SvgImage")));
             this.barBtnBlackList.Name = "barBtnBlackList";
             this.barBtnBlackList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnBlackList_ItemClick);
             // 
@@ -135,6 +142,7 @@ namespace BinanceApp.GUI
             // 
             this.barBtnTop30.Caption = "Top30";
             this.barBtnTop30.Id = 8;
+            this.barBtnTop30.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnTop30.ImageOptions.SvgImage")));
             this.barBtnTop30.Name = "barBtnTop30";
             this.barBtnTop30.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnTop30_ItemClick);
             // 
@@ -142,6 +150,7 @@ namespace BinanceApp.GUI
             // 
             this.barBtnListTrade.Caption = "Danh sách Trade";
             this.barBtnListTrade.Id = 9;
+            this.barBtnListTrade.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnListTrade.ImageOptions.SvgImage")));
             this.barBtnListTrade.Name = "barBtnListTrade";
             this.barBtnListTrade.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnListTrade_ItemClick);
             // 
@@ -149,6 +158,7 @@ namespace BinanceApp.GUI
             // 
             this.barBtnRealTime.Caption = "Thời gian thực";
             this.barBtnRealTime.Id = 10;
+            this.barBtnRealTime.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnRealTime.ImageOptions.SvgImage")));
             this.barBtnRealTime.Name = "barBtnRealTime";
             this.barBtnRealTime.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnRealTime_ItemClick);
             // 
@@ -156,6 +166,7 @@ namespace BinanceApp.GUI
             // 
             this.barBtnStart.Caption = "Start";
             this.barBtnStart.Id = 11;
+            this.barBtnStart.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnStart.ImageOptions.SvgImage")));
             this.barBtnStart.Name = "barBtnStart";
             this.barBtnStart.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnStart_ItemClick);
             // 
@@ -164,6 +175,7 @@ namespace BinanceApp.GUI
             this.barBtnStop.Caption = "Stop";
             this.barBtnStop.Enabled = false;
             this.barBtnStop.Id = 12;
+            this.barBtnStop.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnStop.ImageOptions.SvgImage")));
             this.barBtnStop.Name = "barBtnStop";
             this.barBtnStop.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnStop_ItemClick);
             // 
@@ -187,8 +199,8 @@ namespace BinanceApp.GUI
             // 
             // ribbonGroup2
             // 
-            this.ribbonGroup2.ItemLinks.Add(this.barBtnDashboard);
             this.ribbonGroup2.ItemLinks.Add(this.barBtnTop30);
+            this.ribbonGroup2.ItemLinks.Add(this.barBtnMCDX);
             this.ribbonGroup2.ItemLinks.Add(this.barBtnRealTime);
             this.ribbonGroup2.Name = "ribbonGroup2";
             this.ribbonGroup2.Text = "Thống kê";
@@ -280,7 +292,7 @@ namespace BinanceApp.GUI
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem barBtnInfo;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
-        private DevExpress.XtraBars.BarButtonItem barBtnDashboard;
+        private DevExpress.XtraBars.BarButtonItem barBtnMCDX;
         private DevExpress.XtraBars.BarButtonItem barBtnConfigFx;
         private DevExpress.XtraBars.BarButtonItem barBtnConfigNotify;
         private DevExpress.XtraBars.BarButtonItem barBtnBlackList;

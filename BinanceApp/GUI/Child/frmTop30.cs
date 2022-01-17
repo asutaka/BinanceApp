@@ -42,7 +42,7 @@ namespace BinanceApp.GUI.Child
                 var datasource = from entityRank in StaticValues.lstCryptonRank
                                  join entityCoin in StaticValues.lstCoin
                                  on entityRank.Coin equals entityCoin.S
-                                 select new { STT = count++, Coin = entityRank.Coin, CoinName = entityCoin.AN, Count = entityRank.Count, Rate = entityRank.Rate, Value = entityRank.CurrentValue, RateValue = Math.Round((-1 + (entityRank.CurrentValue/entityRank.OriginValue)) * 100, 2) };
+                                 select new { STT = count++, Coin = entityRank.Coin, CoinName = entityCoin.AN, Count = entityRank.Count, Rate = entityRank.Rate, RefValue = entityRank.OriginValue, Value = entityRank.CurrentValue, RateValue = Math.Round((-1 + (entityRank.CurrentValue/entityRank.OriginValue)) * 100, 2) };
                 grid.BeginUpdate();
                 grid.DataSource = datasource;
                 grid.EndUpdate();
