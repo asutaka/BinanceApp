@@ -54,6 +54,7 @@ namespace BinanceApp.Analyze
 
         public static (bool, double) Config(string coin, AdvanceSettingModel model)
         {
+            double result = 0;
             var lstTask = new List<Task>();
             foreach (var item in model.LstInterval)
             {
@@ -62,7 +63,7 @@ namespace BinanceApp.Analyze
                     var interval = (int)enumInterval.ThirteenMinute;
                     var task = Task.Run(() =>
                     {
-                        lstOutput.Add(CalculateFromInterval(model.LstElement15M, model.LstIndicator15M, interval));
+                        result += (double)CalculateFromInterval(coin, model.LstElement15M, model.LstIndicator15M, interval);
                     });
                     lstTask.Add(task);
                 }
@@ -71,7 +72,7 @@ namespace BinanceApp.Analyze
                     var interval = (int)enumInterval.OneHour;
                     var task = Task.Run(() =>
                     {
-                        lstOutput.Add(CalculateFromInterval(model.LstElement1H, model.LstIndicator1H, interval));
+                        result += (double)CalculateFromInterval(coin, model.LstElement1H, model.LstIndicator1H, interval);
                     });
                     lstTask.Add(task);
                 }
@@ -80,7 +81,7 @@ namespace BinanceApp.Analyze
                     var interval = (int)enumInterval.FourHour;
                     var task = Task.Run(() =>
                     {
-                        lstOutput.Add(CalculateFromInterval(model.LstElement4H, model.LstIndicator4H, interval));
+                        result += (double)CalculateFromInterval(coin, model.LstElement4H, model.LstIndicator4H, interval);
                     });
                     lstTask.Add(task);
                 }
@@ -89,7 +90,7 @@ namespace BinanceApp.Analyze
                     var interval = (int)enumInterval.OneDay;
                     var task = Task.Run(() =>
                     {
-                        lstOutput.Add(CalculateFromInterval(model.LstElement1D, model.LstIndicator1D, interval));
+                        result += (double)CalculateFromInterval(coin, model.LstElement1D, model.LstIndicator1D, interval);
                     });
                     lstTask.Add(task);
                 }
@@ -98,7 +99,7 @@ namespace BinanceApp.Analyze
                     var interval = (int)enumInterval.OneWeek;
                     var task = Task.Run(() =>
                     {
-                        lstOutput.Add(CalculateFromInterval(model.LstElement1W, model.LstIndicator1W, interval));
+                        result += (double)CalculateFromInterval(coin, model.LstElement1W, model.LstIndicator1W, interval);
                     });
                     lstTask.Add(task);
                 }
@@ -107,45 +108,121 @@ namespace BinanceApp.Analyze
                     var interval = (int)enumInterval.OneMonth;
                     var task = Task.Run(() =>
                     {
-                        lstOutput.Add(CalculateFromInterval(model.LstElement1M, model.LstIndicator1M, interval));
+                        result += (double)CalculateFromInterval(coin, model.LstElement1M, model.LstIndicator1M, interval);
                     });
                     lstTask.Add(task);
                 }
             }
             Task.WaitAll(lstTask.ToArray());
-
-
-            return (true, 0);
+            return (result >= (double)model.Point, result);
         }
 
-        private decimal CalculateFromInterval(List<ElementModel> elementModels, List<IndicatorModel> indicatorModels, int interval)
+        private static decimal CalculateFromInterval(string coin, List<ElementModel> elementModels, List<IndicatorModel> indicatorModels, int interval)
         {
             var lstOutputIndicator = new List<OutputIndicatorModel>();
-            var lstModel = LoadDatasource(((enumInterval)interval).GetDisplayName());
-            if (!lstModel.Any())
-                return 0;
-            var arrOpen = lstModel.Select(x => x.Open).ToArray();
-            var arrClose = lstModel.Select(x => x.Close).ToArray();
-            var arrHigh = lstModel.Select(x => x.High).ToArray();
-            var arrLow = lstModel.Select(x => x.Low).ToArray();
-            var arrVolumne = lstModel.Select(x => x.Volumne).ToArray();
-            var count = lstModel.Count;
-            if (count < 20)
-                return 0;
+            var data = GetData(coin, (int)enumInterval.OneHour);
+            var arrOpen = data.Select(x => x.Open).ToArray();
+            var arrClose = data.Select(x => x.Close).ToArray();
+            var arrHigh = data.Select(x => x.High).ToArray();
+            var arrLow = data.Select(x => x.Low).ToArray();
+            var arrVolumne = data.Select(x => x.Volumne).ToArray();
+            var count = arrClose.Count();
 
             var lstTask = new List<Task>();
             foreach (var item in elementModels.To<List<GeneralModel>>())
             {
                 var task = Task.Run(() =>
                 {
-                    lstOutputIndicator.Add(CalculateIndicator(item, arrOpen, arrClose, arrHigh, arrLow, arrVolumne, count));
+                    lstOutputIndicator.Add(CalculateIndicator(coin, item, arrOpen, arrClose, arrHigh, arrLow, arrVolumne, count));
                 });
                 lstTask.Add(task);
             }
             Task.WaitAll(lstTask.ToArray());
-            return MethodMark(lstOutputIndicator, indicatorModels);
+            return MethodMark(coin, lstOutputIndicator, indicatorModels);
         }
-        private decimal MethodMark(List<OutputIndicatorModel> lstModel, List<IndicatorModel> indicatorModels)
+        private static OutputIndicatorModel CalculateIndicator(string coin, GeneralModel model, double[] arrOpen, double[] arrClose, double[] arrHigh, double[] arrLow, double[] arrVolumne, int count)
+        {
+            var outputModel = new OutputIndicatorModel { Indicator = model.Indicator, Period = model.Period, Value = 0 };
+            double[] output1 = new double[1000];
+            double[] output2 = new double[1000];
+            double[] output3 = new double[1000];
+            if (model.Indicator == (int)enumChooseData.MA)
+            {
+                Core.MovingAverage(0, count - 1, arrClose, model.Period, Core.MAType.Sma, out int outBegIdx, out int outNBElement, output1);
+                outputModel.Value = output1[count - model.Period];
+            }
+            else if (model.Indicator == (int)enumChooseData.EMA)
+            {
+                Core.MovingAverage(0, count - 1, arrClose, model.Period, Core.MAType.Ema, out int outBegIdx, out int outNBElement, output1);
+                outputModel.Value = output1[count - model.Period];
+            }
+            else if (model.Indicator == (int)enumChooseData.Volumne)
+            {
+                Core.MovingAverage(0, count - 1, arrVolumne, model.Period, Core.MAType.Sma, out int outBegIdx, out int outNBElement, output1);
+                outputModel.Value = output1[count - model.Period];
+            }
+            else if (model.Indicator == (int)enumChooseData.CandleStick_1)
+            {
+                var takeNum = 1;
+                if (model.Period == (int)enumCandleStick.O)
+                {
+                    outputModel.Value = arrOpen.ElementAt(count - takeNum);
+                }
+                if (model.Period == (int)enumCandleStick.H)
+                {
+                    outputModel.Value = arrHigh.ElementAt(count - takeNum);
+                }
+                if (model.Period == (int)enumCandleStick.L)
+                {
+                    outputModel.Value = arrLow.ElementAt(count - takeNum);
+                }
+                if (model.Period == (int)enumCandleStick.C)
+                {
+                    outputModel.Value = arrClose.ElementAt(count - takeNum);
+                }
+            }
+            else if (model.Indicator == (int)enumChooseData.CandleStick_2)
+            {
+                var takeNum = 2;
+                if (model.Period == (int)enumCandleStick.O)
+                {
+                    outputModel.Value = arrOpen.ElementAt(count - takeNum);
+                }
+                if (model.Period == (int)enumCandleStick.H)
+                {
+                    outputModel.Value = arrHigh.ElementAt(count - takeNum);
+                }
+                if (model.Period == (int)enumCandleStick.L)
+                {
+                    outputModel.Value = arrLow.ElementAt(count - takeNum);
+                }
+                if (model.Period == (int)enumCandleStick.C)
+                {
+                    outputModel.Value = arrClose.ElementAt(count - takeNum);
+                }
+            }
+            else if (model.Indicator == (int)enumChooseData.MACD)
+            {
+                Core.Macd(0, count - 1, arrClose, model.Low, model.High, model.Signal, out int outBegIdx, out int outNbElement, output1, output2, output3);
+                outputModel.Value = output1[count - 1];
+            }
+            else if (model.Indicator == (int)enumChooseData.RSI)
+            {
+                Core.Rsi(0, count - 1, arrClose, model.Period, out int outBegIdx, out int outNBElement, output1);
+                outputModel.Value = output1[count - model.Period];
+            }
+            else if (model.Indicator == (int)enumChooseData.ADX)
+            {
+                Core.Adx(0, count - 1, arrHigh, arrLow, arrClose, model.Period, out int outBegIdx, out int outNBElement, output1);
+                outputModel.Value = output1[count - model.Period];
+            }
+            else if (model.Indicator == (int)enumChooseData.CurrentValue)
+            {
+                outputModel.Value = CommonMethod.GetCurrentValue(coin);
+            }
+            return outputModel;
+        }
+        private static decimal MethodMark(string coin, List<OutputIndicatorModel> lstModel, List<IndicatorModel> indicatorModels)
         {
             decimal point = 0;
             var lstTask = new List<Task>();
@@ -153,14 +230,14 @@ namespace BinanceApp.Analyze
             {
                 var task = Task.Run(() =>
                 {
-                    point += MethodMarkUnit(lstModel, item);
+                    point += MethodMarkUnit(coin, lstModel, item);
                 });
                 lstTask.Add(task);
             }
             Task.WaitAll(lstTask.ToArray());
             return point;
         }
-        private decimal MethodMarkUnit(List<OutputIndicatorModel> lstModel, IndicatorModel indicator)
+        private static decimal MethodMarkUnit(string coin, List<OutputIndicatorModel> lstModel, IndicatorModel indicator)
         {
             decimal point = 0;
             var indicator1 = indicator.Element1.To<GeneralModel>();
@@ -169,7 +246,7 @@ namespace BinanceApp.Analyze
 
             if (indicator.Unit == (int)enumUnit.Ratio)
             {
-                var currentValue = CommonMethod.GetCurrentValue();
+                var currentValue = CommonMethod.GetCurrentValue(coin);
                 result = (double)indicator.Result * currentValue / 100;
             }
             double firstValue = lstModel.FirstOrDefault(x => x.Indicator == indicator1.Indicator && x.Period == indicator1.Period).Value;
@@ -206,8 +283,6 @@ namespace BinanceApp.Analyze
             }
             return point;
         }
-
-
         private static CryptonRankModel CalculateCryptonRank(string code)
         {
             try
@@ -405,7 +480,6 @@ namespace BinanceApp.Analyze
             }
             return 0;
         }
-
         private static List<CandleStickDataModel> GetLocalData(string coin, int interval)
         {
             switch (interval)
@@ -419,7 +493,6 @@ namespace BinanceApp.Analyze
                 default: return new List<CandleStickDataModel>();
             }
         }
-
         private static List<CandleStickDataModel> GetData(string coin, int interval)
         {
             var data = GetLocalData(coin, interval);
@@ -448,6 +521,12 @@ namespace BinanceApp.Analyze
                 data.ElementAt(0).Volumne = modelUpdate.Volumne;
             }
             return data;
+        }
+        private class OutputIndicatorModel
+        {
+            public int Indicator { get; set; }
+            public int Period { get; set; }
+            public double Value { get; set; }
         }
     }
 }
