@@ -37,14 +37,16 @@ namespace BinanceApp.GUI.Child
             DevExpress.XtraEditors.FormatConditionIconSetIcon formatConditionIconSetIcon3 = new DevExpress.XtraEditors.FormatConditionIconSetIcon();
             DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
             DevExpress.XtraEditors.FormatConditionRule2ColorScale formatConditionRule2ColorScale1 = new DevExpress.XtraEditors.FormatConditionRule2ColorScale();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule3 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRule3ColorScale formatConditionRule3ColorScale1 = new DevExpress.XtraEditors.FormatConditionRule3ColorScale();
             this.RateValue = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.RefValue = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CoinName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Rate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grid = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Coin = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.RefValue = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Value = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Count = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
@@ -68,6 +70,25 @@ namespace BinanceApp.GUI.Child
             this.RateValue.Visible = true;
             this.RateValue.VisibleIndex = 5;
             this.RateValue.Width = 85;
+            // 
+            // RefValue
+            // 
+            this.RefValue.AppearanceCell.Options.UseTextOptions = true;
+            this.RefValue.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.RefValue.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.RefValue.AppearanceHeader.Options.UseTextOptions = true;
+            this.RefValue.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.RefValue.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.RefValue.Caption = "Giá tham chiếu";
+            this.RefValue.DisplayFormat.FormatString = "\"#,##0.0\"";
+            this.RefValue.FieldName = "RefValue";
+            this.RefValue.MaxWidth = 80;
+            this.RefValue.MinWidth = 80;
+            this.RefValue.Name = "RefValue";
+            this.RefValue.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            this.RefValue.Visible = true;
+            this.RefValue.VisibleIndex = 3;
+            this.RefValue.Width = 80;
             // 
             // CoinName
             // 
@@ -165,8 +186,31 @@ namespace BinanceApp.GUI.Child
             formatConditionRule2ColorScale1.AllowAnimation = DevExpress.Utils.DefaultBoolean.True;
             formatConditionRule2ColorScale1.PredefinedName = "White, Red";
             gridFormatRule2.Rule = formatConditionRule2ColorScale1;
+            gridFormatRule3.Column = this.RateValue;
+            gridFormatRule3.ColumnApplyTo = this.CoinName;
+            gridFormatRule3.Name = "Format1";
+            formatConditionRule3ColorScale1.AllowAnimation = DevExpress.Utils.DefaultBoolean.True;
+            formatConditionRule3ColorScale1.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            formatConditionRule3ColorScale1.MaximumColor = System.Drawing.Color.Green;
+            formatConditionRule3ColorScale1.MaximumType = DevExpress.XtraEditors.FormatConditionValueType.Number;
+            formatConditionRule3ColorScale1.MiddleColor = System.Drawing.Color.White;
+            formatConditionRule3ColorScale1.MiddleType = DevExpress.XtraEditors.FormatConditionValueType.Number;
+            formatConditionRule3ColorScale1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            formatConditionRule3ColorScale1.MinimumColor = System.Drawing.Color.Red;
+            formatConditionRule3ColorScale1.MinimumType = DevExpress.XtraEditors.FormatConditionValueType.Number;
+            formatConditionRule3ColorScale1.PredefinedName = "Green, White, Red";
+            gridFormatRule3.Rule = formatConditionRule3ColorScale1;
             this.gridView1.FormatRules.Add(gridFormatRule1);
             this.gridView1.FormatRules.Add(gridFormatRule2);
+            this.gridView1.FormatRules.Add(gridFormatRule3);
             this.gridView1.GridControl = this.grid;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -211,25 +255,6 @@ namespace BinanceApp.GUI.Child
             this.Coin.Visible = true;
             this.Coin.VisibleIndex = 1;
             this.Coin.Width = 90;
-            // 
-            // RefValue
-            // 
-            this.RefValue.AppearanceCell.Options.UseTextOptions = true;
-            this.RefValue.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.RefValue.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.RefValue.AppearanceHeader.Options.UseTextOptions = true;
-            this.RefValue.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.RefValue.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.RefValue.Caption = "Giá tham chiếu";
-            this.RefValue.DisplayFormat.FormatString = "\"#,##0.0\"";
-            this.RefValue.FieldName = "RefValue";
-            this.RefValue.MaxWidth = 80;
-            this.RefValue.MinWidth = 80;
-            this.RefValue.Name = "RefValue";
-            this.RefValue.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
-            this.RefValue.Visible = true;
-            this.RefValue.VisibleIndex = 3;
-            this.RefValue.Width = 80;
             // 
             // Value
             // 
