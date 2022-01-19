@@ -118,3 +118,19 @@
  Stack Trace: 
  Additional Info: Date: 1/11/2022 11:13:48 PM | Copy Code: s+4uaWSqbmkV+HlQ0Iu9lI8ktuA5MNSLwO4iyIeN5a0UUhOCHY2tnRZUSk+chTx2e5tfS1n5cN9CXltPUP9wA/WTL9mMw52uuvWP3sTo4DA=
 
+ -------------- Info (2022-01-19 22:26:02.6267) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.Info
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Date: 1/19/2022 10:26:02 PM | Model Info: {"Email":"tiasangbac04","OptionTime":2,"Level":1,"Expired":1645287962} | Code: RQOWsHm43Esmfp3846LXtI1JH/RjH2Q7hMXa+9EIqo0ZFUrsI1CbqPRsKJkUPRwdCSK6yPv/N8gyAIvCUaPN10zsqdIDwyJdssL6/a3sjJw=
+
+ -------------- Info (2022-01-19 22:26:03.9759) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.Info
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: Date: 1/19/2022 10:26:03 PM | Copy Code: RQOWsHm43Esmfp3846LXtI1JH/RjH2Q7hMXa+9EIqo0ZFUrsI1CbqPRsKJkUPRwdCSK6yPv/N8gyAIvCUaPN10zsqdIDwyJdssL6/a3sjJw=
+

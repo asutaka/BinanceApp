@@ -129,12 +129,48 @@ namespace BinanceApp.Common
 
         public static double GetCurrentValue(string code)
         {
-            var url = $"{ConstantValue.COIN_DETAIL}symbol={code}&interval=15m&limit=1";
-            var arrData = DownloadJsonArray(url);
-            if (arrData == null)
+            try
+            {
+                var url = $"{ConstantValue.COIN_DETAIL}symbol={code}&interval=15m&limit=1";
+                var arrData = DownloadJsonArray(url);
+                if (arrData == null)
+                    return 0;
+                var currentVal = double.Parse(arrData[0][4].ToString());
+                return currentVal;
+            }
+            catch(Exception ex)
+            {
+                NLogLogger.PublishException(ex, $"CommonMethod:GetCurrentValue: {ex.Message}");
                 return 0;
-            var currentVal = double.Parse(arrData[0][4].ToString());
-            return currentVal;
+            }
+        }
+
+        public static double GetBottomValue(string code)
+        {
+            var url = $"{ConstantValue.COIN_DETAIL}symbol={code}&interval=1h&limit=15";
+            var arrData = DownloadJsonArray(url);
+            var count = arrData.Count;
+            if (arrData == null || count < 15)
+                return 0;
+            double min = double.Parse(arrData[0][3].ToString());
+            var countConfirm = 0;
+            for (int i = 1; i < count; i++)
+            {
+                var val = double.Parse(arrData[i][3].ToString());
+                if(min <= val)
+                {
+                    if(++countConfirm == 3)
+                    {
+                        return min;
+                    }
+                }
+                else
+                {
+                    countConfirm = 0;
+                    min = val;
+                }
+            }
+            return min;
         }
 
         public static int GCD(int a, int b)

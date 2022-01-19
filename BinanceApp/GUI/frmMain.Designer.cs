@@ -112,7 +112,7 @@ namespace BinanceApp.GUI
             // 
             this.barBtnMCDX.Caption = "MCDX";
             this.barBtnMCDX.Id = 4;
-            this.barBtnMCDX.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnDashboard.ImageOptions.SvgImage")));
+            this.barBtnMCDX.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnMCDX.ImageOptions.SvgImage")));
             this.barBtnMCDX.Name = "barBtnMCDX";
             // 
             // barBtnConfigFx
@@ -270,7 +270,6 @@ namespace BinanceApp.GUI
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
-            this.Text = "frmMain";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl)).EndInit();

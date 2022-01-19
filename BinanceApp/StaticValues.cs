@@ -20,6 +20,7 @@ namespace BinanceApp
         //Scron <second> <minute> <hour> <day-of-month> <month> <day-of-week> <year>
         public static string Scron_CheckStatus = "0 0 0/5 * * ?";
         public static string Scron_Top30CurrentValue = "0/1 * * * * ?";
+        public static string Scron_Top30BottomValue = "0 * * * * ?";
         public static string Scron_SendNoti = "0/1 * * * * ?";
         public static int Scron_TradeList_Value = 1;
         //Notify
