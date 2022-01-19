@@ -114,6 +114,7 @@ namespace BinanceApp.GUI
             this.barBtnMCDX.Id = 4;
             this.barBtnMCDX.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnMCDX.ImageOptions.SvgImage")));
             this.barBtnMCDX.Name = "barBtnMCDX";
+            this.barBtnMCDX.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnMCDX_ItemClick);
             // 
             // barBtnConfigFx
             // 

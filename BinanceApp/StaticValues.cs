@@ -12,6 +12,7 @@ namespace BinanceApp
         public static bool IsCodeActive = false;
         public static bool IsAccessMain = false;
         public static bool IsRealTimeReady = false;
+        public static bool IsExecMCDX = false;
         public static bool IsExecCheckCodeActive = false;
         public static int Level { get; set; }
         public static ScheduleMng ScheduleMngObj = ScheduleMng.Instance();
@@ -21,6 +22,9 @@ namespace BinanceApp
         public static string Scron_CheckStatus = "0 0 0/5 * * ?";
         public static string Scron_Top30CurrentValue = "0/1 * * * * ?";
         public static string Scron_Top30BottomValue = "0 * * * * ?";
+        public static string Scron_MCDX = "0 0/5 * * * ?";
+        public static string Scron_MCDXCurrentValue = "0/1 * * * * ?";
+        public static string Scron_MCDXBottomValue = "0 * * * * ?";
         public static string Scron_SendNoti = "0/1 * * * * ?";
         public static int Scron_TradeList_Value = 1;
         //Notify
@@ -29,6 +33,7 @@ namespace BinanceApp
         public static List<CryptonDetailDataModel> lstCoin = new List<CryptonDetailDataModel>();
         public static List<CryptonDetailDataModel> lstCoinFilter = new List<CryptonDetailDataModel>();
         public static List<CryptonRankModel> lstCryptonRank = new List<CryptonRankModel>();
+        public static List<MCDXModel> lstMCDX = new List<MCDXModel>();
         public static Dictionary<string, List<CandleStickDataModel>> dicDatasource15M = new Dictionary<string, List<CandleStickDataModel>>();
         public static Dictionary<string, List<CandleStickDataModel>> dicDatasource1H = new Dictionary<string, List<CandleStickDataModel>>();
         public static Dictionary<string, List<CandleStickDataModel>> dicDatasource4H = new Dictionary<string, List<CandleStickDataModel>>();

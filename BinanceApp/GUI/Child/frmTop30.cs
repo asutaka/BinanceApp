@@ -1,14 +1,11 @@
 ﻿using BinanceApp.Common;
 using BinanceApp.Job;
 using BinanceApp.Job.ScheduleJob;
-using DevExpress.LookAndFeel;
 using DevExpress.Utils;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using Quartz;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;

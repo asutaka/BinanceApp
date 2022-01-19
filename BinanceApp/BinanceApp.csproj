@@ -97,10 +97,19 @@
     <Compile Include="GUI\Child\frmFollowList.Designer.cs">
       <DependentUpon>frmFollowList.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Child\frmMCDX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Child\frmMCDX.Designer.cs">
+      <DependentUpon>frmMCDX.cs</DependentUpon>
+    </Compile>
     <Compile Include="Job\SendNotiJob.cs" />
     <Compile Include="Job\FollowListJob.cs" />
     <Compile Include="Job\RealTimeJob.cs" />
+    <Compile Include="Job\MCDXBottomValueScheduleJob.cs" />
     <Compile Include="Job\Top30BottomValueScheduleJob.cs" />
+    <Compile Include="Job\MCDXJob.cs" />
+    <Compile Include="Job\MCDXCurrentValueScheduleJob.cs" />
     <Compile Include="Usr\frmCoinFollowInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Child\frmFollowList.resx">
       <DependentUpon>frmFollowList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Child\frmMCDX.resx">
+      <DependentUpon>frmMCDX.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usr\frmCoinFollowInfo.resx">
       <DependentUpon>frmCoinFollowInfo.cs</DependentUpon>

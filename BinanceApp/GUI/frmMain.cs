@@ -273,6 +273,8 @@ namespace BinanceApp.GUI
 
         private void tabControl_CloseButtonClick(object sender, EventArgs e)
         {
+            if (tabControl.TabPages.Count == 1)
+                return;
             var EArg = (DevExpress.XtraTab.ViewInfo.ClosePageButtonEventArgs)e;
             string name = EArg.Page.Text;//Get the text of the closed tab
             foreach (XtraTabPage page in tabControl.TabPages)//Traverse to get the same text as the closed tab
@@ -308,6 +310,14 @@ namespace BinanceApp.GUI
             barBtnStop.Enabled = false;
 
             StaticValues.ScheduleMngObj.StopAllJob();
+        }
+
+        private void barBtnMCDX_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Invoke((MethodInvoker)delegate
+            {
+                tabControl.AddTab(frmMCDX.Instance());
+            });
         }
     }
 }

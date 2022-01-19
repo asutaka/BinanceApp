@@ -160,8 +160,12 @@ namespace BinanceApp.Common
 
         public static void AddTab(this XtraTabControl tabControl, XtraForm form)
         {
-            if (tabControl.TabPages.Any(x => x.Name == form.Name))
+            var tp = tabControl.TabPages.FirstOrDefault(x => x.Name == form.Name);
+            if (tp != null)
+            {
+                tabControl.SelectedTabPage = tp;
                 return;
+            }
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
             form.Visible = true;
@@ -173,6 +177,7 @@ namespace BinanceApp.Common
             form.Dock = DockStyle.Fill;
 
             tabControl.TabPages.Add(TAbAdd);
+            tabControl.SelectedTabPage = TAbAdd;
         }
 
         public static void AddControl(this Panel pnl, XtraForm form)

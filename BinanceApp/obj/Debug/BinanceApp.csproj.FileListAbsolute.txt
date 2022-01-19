@@ -324,6 +324,7 @@ F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.csproj.AssemblyReference.cach
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.Child.frmAdvanceSetting.resources
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.Child.frmBasicSetting.resources
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.Child.frmFollowList.resources
+F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.Child.frmMCDX.resources
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.Usr.frmCoinFollowInfo.resources
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.Usr.frmCoinInfo.resources
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.Child.frmTradeList.resources

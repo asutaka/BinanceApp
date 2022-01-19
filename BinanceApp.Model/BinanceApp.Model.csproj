@@ -60,6 +60,7 @@
     <Compile Include="ENTITY\BasicSettingModel.cs" />
     <Compile Include="ENTITY\CandleStickDataModel.cs" />
     <Compile Include="ENTITY\CryptonDataModel.cs" />
+    <Compile Include="ENTITY\MCDXModel.cs" />
     <Compile Include="ENTITY\CryptonRankModel.cs" />
     <Compile Include="ENTITY\ElementModel.cs" />
     <Compile Include="ENTITY\FollowModel.cs" />
