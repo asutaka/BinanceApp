@@ -11,7 +11,6 @@ namespace BinanceApp
         public static ProfileModel profile;
         public static bool IsCodeActive = false;
         public static bool IsAccessMain = false;
-        public static bool IsRealTimeReady = false;
         public static bool IsExecMCDX = false;
         public static bool IsExecCheckCodeActive = false;
         public static int Level { get; set; }
@@ -48,6 +47,7 @@ namespace BinanceApp
         public static AdvanceSettingModel advanceModel3;
         public static AdvanceSettingModel advanceModel4;
         public static List<CryptonDetailDataModel> lstBlackList;
+        public static List<CryptonDetailDataModel> lstRealTime;
         public static TradeListModel tradeList;
         public static FollowModel followList;
     }

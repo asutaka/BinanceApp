@@ -71,6 +71,7 @@
     <Compile Include="ENTITY\ScronModel.cs" />
     <Compile Include="ENTITY\SpecialSettingModel.cs" />
     <Compile Include="ENTITY\TimeModel.cs" />
+    <Compile Include="ENTITY\Top30Model.cs" />
     <Compile Include="ENTITY\TradeModel.cs" />
     <Compile Include="ENTITY\UserModel.cs" />
     <Compile Include="ENUM\enumMng.cs" />

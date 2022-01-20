@@ -10,6 +10,7 @@ D:\SourceCode\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.csproj.Core
 D:\SourceCode\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.csproj.CopyComplete
 D:\SourceCode\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.dll
 D:\SourceCode\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.pdb
+D:\SourceCode\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.csproj.AssemblyReference.cache
 F:\DATA\BinanceApp\BinanceApp.Model\bin\Debug\BinanceApp.Model.dll.config
 F:\DATA\BinanceApp\BinanceApp.Model\bin\Debug\BinanceApp.Model.dll
 F:\DATA\BinanceApp\BinanceApp.Model\bin\Debug\BinanceApp.Model.pdb
@@ -22,4 +23,4 @@ F:\DATA\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.csproj.CoreCompil
 F:\DATA\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.csproj.CopyComplete
 F:\DATA\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.dll
 F:\DATA\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.pdb
-D:\SourceCode\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.csproj.AssemblyReference.cache
+F:\DATA\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.csproj.AssemblyReference.cache

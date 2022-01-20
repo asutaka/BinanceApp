@@ -36,10 +36,8 @@ namespace BinanceApp.GUI.Child
             DevExpress.XtraEditors.FormatConditionIconSetIcon formatConditionIconSetIcon2 = new DevExpress.XtraEditors.FormatConditionIconSetIcon();
             DevExpress.XtraEditors.FormatConditionIconSetIcon formatConditionIconSetIcon3 = new DevExpress.XtraEditors.FormatConditionIconSetIcon();
             DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRule2ColorScale formatConditionRule2ColorScale1 = new DevExpress.XtraEditors.FormatConditionRule2ColorScale();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule3 = new DevExpress.XtraGrid.GridFormatRule();
             DevExpress.XtraEditors.FormatConditionRule3ColorScale formatConditionRule3ColorScale1 = new DevExpress.XtraEditors.FormatConditionRule3ColorScale();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule4 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule3 = new DevExpress.XtraGrid.GridFormatRule();
             DevExpress.XtraEditors.FormatConditionRuleIconSet formatConditionRuleIconSet2 = new DevExpress.XtraEditors.FormatConditionRuleIconSet();
             DevExpress.XtraEditors.FormatConditionIconSet formatConditionIconSet2 = new DevExpress.XtraEditors.FormatConditionIconSet();
             DevExpress.XtraEditors.FormatConditionIconSetIcon formatConditionIconSetIcon4 = new DevExpress.XtraEditors.FormatConditionIconSetIcon();
@@ -48,6 +46,7 @@ namespace BinanceApp.GUI.Child
             this.RateValue = new DevExpress.XtraGrid.Columns.GridColumn();
             this.RefValue = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CoinName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.WaveRecent = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Rate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grid = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -55,7 +54,6 @@ namespace BinanceApp.GUI.Child
             this.Coin = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Value = new DevExpress.XtraGrid.Columns.GridColumn();
             this.BottomRecent = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.WaveRecent = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Count = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -113,6 +111,23 @@ namespace BinanceApp.GUI.Child
             this.CoinName.UnboundType = DevExpress.Data.UnboundColumnType.String;
             this.CoinName.Visible = true;
             this.CoinName.VisibleIndex = 2;
+            // 
+            // WaveRecent
+            // 
+            this.WaveRecent.AppearanceCell.Options.UseTextOptions = true;
+            this.WaveRecent.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.WaveRecent.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.WaveRecent.AppearanceHeader.Options.UseTextOptions = true;
+            this.WaveRecent.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.WaveRecent.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.WaveRecent.Caption = "Sóng gần nhất(%)";
+            this.WaveRecent.FieldName = "WaveRecent";
+            this.WaveRecent.MaxWidth = 100;
+            this.WaveRecent.MinWidth = 100;
+            this.WaveRecent.Name = "WaveRecent";
+            this.WaveRecent.Visible = true;
+            this.WaveRecent.VisibleIndex = 7;
+            this.WaveRecent.Width = 100;
             // 
             // Rate
             // 
@@ -190,15 +205,9 @@ namespace BinanceApp.GUI.Child
             formatConditionIconSet1.ValueType = DevExpress.XtraEditors.FormatConditionValueType.Number;
             formatConditionRuleIconSet1.IconSet = formatConditionIconSet1;
             gridFormatRule1.Rule = formatConditionRuleIconSet1;
-            gridFormatRule2.Column = this.RefValue;
-            gridFormatRule2.ColumnApplyTo = this.RefValue;
-            gridFormatRule2.Name = "Format0";
-            formatConditionRule2ColorScale1.AllowAnimation = DevExpress.Utils.DefaultBoolean.True;
-            formatConditionRule2ColorScale1.PredefinedName = "White, Red";
-            gridFormatRule2.Rule = formatConditionRule2ColorScale1;
-            gridFormatRule3.Column = this.RateValue;
-            gridFormatRule3.ColumnApplyTo = this.CoinName;
-            gridFormatRule3.Name = "Format1";
+            gridFormatRule2.Column = this.RateValue;
+            gridFormatRule2.ColumnApplyTo = this.CoinName;
+            gridFormatRule2.Name = "Format1";
             formatConditionRule3ColorScale1.AllowAnimation = DevExpress.Utils.DefaultBoolean.True;
             formatConditionRule3ColorScale1.Maximum = new decimal(new int[] {
             10,
@@ -217,10 +226,10 @@ namespace BinanceApp.GUI.Child
             formatConditionRule3ColorScale1.MinimumColor = System.Drawing.Color.Red;
             formatConditionRule3ColorScale1.MinimumType = DevExpress.XtraEditors.FormatConditionValueType.Number;
             formatConditionRule3ColorScale1.PredefinedName = "Green, White, Red";
-            gridFormatRule3.Rule = formatConditionRule3ColorScale1;
-            gridFormatRule4.Column = this.WaveRecent;
-            gridFormatRule4.ColumnApplyTo = this.WaveRecent;
-            gridFormatRule4.Name = "Format2";
+            gridFormatRule2.Rule = formatConditionRule3ColorScale1;
+            gridFormatRule3.Column = this.WaveRecent;
+            gridFormatRule3.ColumnApplyTo = this.WaveRecent;
+            gridFormatRule3.Name = "Format2";
             formatConditionIconSet2.CategoryName = "Symbols";
             formatConditionIconSetIcon4.PredefinedName = "Flags3_1.png";
             formatConditionIconSetIcon5.PredefinedName = "Flags3_2.png";
@@ -243,11 +252,10 @@ namespace BinanceApp.GUI.Child
             formatConditionIconSet2.Name = "Flags3";
             formatConditionIconSet2.ValueType = DevExpress.XtraEditors.FormatConditionValueType.Number;
             formatConditionRuleIconSet2.IconSet = formatConditionIconSet2;
-            gridFormatRule4.Rule = formatConditionRuleIconSet2;
+            gridFormatRule3.Rule = formatConditionRuleIconSet2;
             this.gridView1.FormatRules.Add(gridFormatRule1);
             this.gridView1.FormatRules.Add(gridFormatRule2);
             this.gridView1.FormatRules.Add(gridFormatRule3);
-            this.gridView1.FormatRules.Add(gridFormatRule4);
             this.gridView1.GridControl = this.grid;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -329,23 +337,6 @@ namespace BinanceApp.GUI.Child
             this.BottomRecent.Visible = true;
             this.BottomRecent.VisibleIndex = 5;
             this.BottomRecent.Width = 80;
-            // 
-            // WaveRecent
-            // 
-            this.WaveRecent.AppearanceCell.Options.UseTextOptions = true;
-            this.WaveRecent.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.WaveRecent.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.WaveRecent.AppearanceHeader.Options.UseTextOptions = true;
-            this.WaveRecent.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.WaveRecent.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.WaveRecent.Caption = "Sóng gần nhất(%)";
-            this.WaveRecent.FieldName = "WaveRecent";
-            this.WaveRecent.MaxWidth = 100;
-            this.WaveRecent.MinWidth = 100;
-            this.WaveRecent.Name = "WaveRecent";
-            this.WaveRecent.Visible = true;
-            this.WaveRecent.VisibleIndex = 7;
-            this.WaveRecent.Width = 100;
             // 
             // Count
             // 

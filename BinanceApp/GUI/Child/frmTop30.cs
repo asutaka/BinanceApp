@@ -1,6 +1,7 @@
 ﻿using BinanceApp.Common;
 using BinanceApp.Job;
 using BinanceApp.Job.ScheduleJob;
+using BinanceApp.Model.ENTITY;
 using DevExpress.Utils;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
@@ -44,7 +45,7 @@ namespace BinanceApp.GUI.Child
                 var datasource = from entityRank in StaticValues.lstCryptonRank
                                  join entityCoin in StaticValues.lstCoin
                                  on entityRank.Coin equals entityCoin.S
-                                 select new {   STT = count++, 
+                                 select new Top30Model {   STT = count++, 
                                                 Coin = entityRank.Coin, 
                                                 CoinName = entityCoin.AN, 
                                                 Count = entityRank.Count, 

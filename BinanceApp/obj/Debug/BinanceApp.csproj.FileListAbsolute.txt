@@ -174,6 +174,7 @@ D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.csproj.CopyComplete
 D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.exe
 D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.pdb
 D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\TA-Lib-Core.dll
+D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.Child.frmMCDX.resources
 F:\DATA\BinanceApp\BinanceApp\bin\Debug\NLog.config
 F:\DATA\BinanceApp\BinanceApp\bin\Debug\BinanceApp.exe.config
 F:\DATA\BinanceApp\BinanceApp\bin\Debug\BinanceApp.exe
@@ -325,6 +326,7 @@ F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.Child.frmAdvanceSetting.r
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.Child.frmBasicSetting.resources
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.Child.frmFollowList.resources
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.Child.frmMCDX.resources
+F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.Child.frmRealTime.resources
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.Usr.frmCoinFollowInfo.resources
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.Usr.frmCoinInfo.resources
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.Child.frmTradeList.resources
@@ -351,4 +353,3 @@ F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.csproj.CoreCompileInputs.cach
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.csproj.CopyComplete
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.exe
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.pdb
-D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.Child.frmMCDX.resources

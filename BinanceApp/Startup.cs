@@ -30,6 +30,7 @@ namespace BinanceApp
             StaticValues.advanceModel3 = obj.LoadJsonFile("advance_setting3.json");
             StaticValues.advanceModel4 = obj.LoadJsonFile("advance_setting4.json");
             StaticValues.specialModel = new SpecialSettingModel().LoadJsonFile("special_setting.json");
+            StaticValues.lstRealTime = new List<CryptonDetailDataModel>().LoadJsonFile("realtimelist.json");
             StaticValues.lstBlackList = new List<CryptonDetailDataModel>().LoadJsonFile("blacklist.json");
             StaticValues.tradeList = new TradeListModel().LoadJsonFile("tradelist.json");
             StaticValues.followList = new FollowModel().LoadJsonFile("followlist.json");

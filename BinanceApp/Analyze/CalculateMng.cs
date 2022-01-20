@@ -287,7 +287,7 @@ namespace BinanceApp.Analyze
             }
             return point;
         }
-        private static CryptonRankModel CalculateCryptonRank(string code)
+        public static CryptonRankModel CalculateCryptonRank(string code)
         {
             try
             {

@@ -199,7 +199,6 @@ namespace BinanceApp.GUI
 
         private void bkgrPrepareRealTime_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            StaticValues.IsRealTimeReady = true;
             this.Invoke((MethodInvoker)delegate
             {
                 tabControl.AddTab(frmTop30.Instance());
@@ -273,8 +272,8 @@ namespace BinanceApp.GUI
 
         private void tabControl_CloseButtonClick(object sender, EventArgs e)
         {
-            if (tabControl.TabPages.Count == 1)
-                return;
+            //if (tabControl.TabPages.Count == 1)
+            //    return;
             var EArg = (DevExpress.XtraTab.ViewInfo.ClosePageButtonEventArgs)e;
             string name = EArg.Page.Text;//Get the text of the closed tab
             foreach (XtraTabPage page in tabControl.TabPages)//Traverse to get the same text as the closed tab
@@ -289,11 +288,10 @@ namespace BinanceApp.GUI
 
         private void barBtnRealTime_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if(!StaticValues.IsRealTimeReady)
+            this.Invoke((MethodInvoker)delegate
             {
-                MessageBox.Show("RealTime chưa sẵn sàng!");
-                return;
-            }    
+                tabControl.AddTab(frmRealTime.Instance());
+            });
         }
 
         private void barBtnStart_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

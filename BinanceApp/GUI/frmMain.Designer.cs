@@ -34,7 +34,7 @@ namespace BinanceApp.GUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barBtnListFollow = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnSupport = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnInfo = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnMCDX = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnConfigFx = new DevExpress.XtraBars.BarButtonItem();
@@ -55,6 +55,7 @@ namespace BinanceApp.GUI
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.tabControl = new DevExpress.XtraTab.XtraTabControl();
+            this.barBtnVersion = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +67,7 @@ namespace BinanceApp.GUI
             this.ribbon.ExpandCollapseItem,
             this.ribbon.SearchEditItem,
             this.barBtnListFollow,
-            this.barButtonItem2,
+            this.barBtnSupport,
             this.barBtnInfo,
             this.barBtnMCDX,
             this.barBtnConfigFx,
@@ -76,9 +77,10 @@ namespace BinanceApp.GUI
             this.barBtnListTrade,
             this.barBtnRealTime,
             this.barBtnStart,
-            this.barBtnStop});
+            this.barBtnStop,
+            this.barBtnVersion});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 13;
+            this.ribbon.MaxItemId = 14;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -93,12 +95,12 @@ namespace BinanceApp.GUI
             this.barBtnListFollow.Name = "barBtnListFollow";
             this.barBtnListFollow.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnListFollow_ItemClick);
             // 
-            // barButtonItem2
+            // barBtnSupport
             // 
-            this.barButtonItem2.Caption = "Hỗ trợ";
-            this.barButtonItem2.Id = 2;
-            this.barButtonItem2.ImageOptions.Image = global::BinanceApp.Properties.Resources.telegram_64x64;
-            this.barButtonItem2.Name = "barButtonItem2";
+            this.barBtnSupport.Caption = "Hỗ trợ";
+            this.barBtnSupport.Id = 2;
+            this.barBtnSupport.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
+            this.barBtnSupport.Name = "barBtnSupport";
             // 
             // barBtnInfo
             // 
@@ -200,9 +202,9 @@ namespace BinanceApp.GUI
             // 
             // ribbonGroup2
             // 
+            this.ribbonGroup2.ItemLinks.Add(this.barBtnRealTime);
             this.ribbonGroup2.ItemLinks.Add(this.barBtnTop30);
             this.ribbonGroup2.ItemLinks.Add(this.barBtnMCDX);
-            this.ribbonGroup2.ItemLinks.Add(this.barBtnRealTime);
             this.ribbonGroup2.Name = "ribbonGroup2";
             this.ribbonGroup2.Text = "Thống kê";
             // 
@@ -210,7 +212,8 @@ namespace BinanceApp.GUI
             // 
             this.ribbonGroupSupport.Alignment = DevExpress.XtraBars.Ribbon.RibbonPageGroupAlignment.Far;
             this.ribbonGroupSupport.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.True;
-            this.ribbonGroupSupport.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonGroupSupport.ItemLinks.Add(this.barBtnVersion);
+            this.ribbonGroupSupport.ItemLinks.Add(this.barBtnSupport);
             this.ribbonGroupSupport.Name = "ribbonGroupSupport";
             // 
             // ribbonGroup3
@@ -259,6 +262,13 @@ namespace BinanceApp.GUI
             this.tabControl.TabIndex = 2;
             this.tabControl.CloseButtonClick += new System.EventHandler(this.tabControl_CloseButtonClick);
             // 
+            // barBtnVersion
+            // 
+            this.barBtnVersion.Caption = "Phiên bản";
+            this.barBtnVersion.Id = 13;
+            this.barBtnVersion.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
+            this.barBtnVersion.Name = "barBtnVersion";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,7 +299,7 @@ namespace BinanceApp.GUI
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonGroupSupport;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonGroup3;
         private DevExpress.XtraBars.BarButtonItem barBtnListFollow;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem barBtnSupport;
         private DevExpress.XtraBars.BarButtonItem barBtnInfo;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
         private DevExpress.XtraBars.BarButtonItem barBtnMCDX;
@@ -304,5 +314,6 @@ namespace BinanceApp.GUI
         private DevExpress.XtraBars.BarButtonItem barBtnStart;
         private DevExpress.XtraBars.BarButtonItem barBtnStop;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.BarButtonItem barBtnVersion;
     }
 }

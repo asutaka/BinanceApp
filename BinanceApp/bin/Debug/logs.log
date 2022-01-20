@@ -1728,3 +1728,42 @@
    at System.Net.HttpWebRequest.GetResponse()
    at BinanceApp.Common.AuthResponse.Exchange(String authCode, String clientid, String secret, String redirectURI) in D:\SourceCode\BinanceApp\BinanceApp.Common\AuthResponse.cs:line 88 Line: 0
 
+ -------------- Error (2022-01-20 20:37:59.7173) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	frmMCDX:Init: One or more errors occurred. One or more errors occurred.
+   at System.Threading.Tasks.Task.WaitAll(Task[] tasks, Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.WaitAll(Task[] tasks, Int32 millisecondsTimeout)
+   at System.Threading.Tasks.Task.WaitAll(Task[] tasks)
+   at BinanceApp.GUI.Child.frmMCDX.Init() in F:\DATA\BinanceApp\BinanceApp\GUI\Child\frmMCDX.cs:line 71 Line: 0
+
+ -------------- Error (2022-01-20 20:43:18.3492) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	frmMCDX:Init: One or more errors occurred. One or more errors occurred.
+   at System.Threading.Tasks.Task.WaitAll(Task[] tasks, Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.WaitAll(Task[] tasks, Int32 millisecondsTimeout)
+   at System.Threading.Tasks.Task.WaitAll(Task[] tasks)
+   at BinanceApp.GUI.Child.frmMCDX.Init() in F:\DATA\BinanceApp\BinanceApp\GUI\Child\frmMCDX.cs:line 71 Line: 0
+
+ -------------- Error (2022-01-20 20:46:21.5137) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	frmMCDX:Init: One or more errors occurred. One or more errors occurred.
+   at System.Threading.Tasks.Task.WaitAll(Task[] tasks, Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.WaitAll(Task[] tasks, Int32 millisecondsTimeout)
+   at System.Threading.Tasks.Task.WaitAll(Task[] tasks)
+   at BinanceApp.GUI.Child.frmMCDX.Init() in F:\DATA\BinanceApp\BinanceApp\GUI\Child\frmMCDX.cs:line 71 Line: 0
+
