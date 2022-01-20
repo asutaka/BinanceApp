@@ -1706,3 +1706,25 @@
    at System.Threading.Tasks.Task.WaitAll(Task[] tasks)
    at BinanceApp.GUI.Child.frmMCDX.Init() in F:\DATA\BinanceApp\BinanceApp\GUI\Child\frmMCDX.cs:line 67 Line: 0
 
+ -------------- Error (2022-01-20 17:22:58.6189) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	AuthResponse:Exchange: The remote server returned an error: (400) Bad Request. The remote server returned an error: (400) Bad Request.
+   at System.Net.HttpWebRequest.GetResponse()
+   at BinanceApp.Common.AuthResponse.Exchange(String authCode, String clientid, String secret, String redirectURI) in D:\SourceCode\BinanceApp\BinanceApp.Common\AuthResponse.cs:line 88 Line: 0
+
+ -------------- Error (2022-01-20 17:23:18.2966) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	AuthResponse:Exchange: The remote server returned an error: (400) Bad Request. The remote server returned an error: (400) Bad Request.
+   at System.Net.HttpWebRequest.GetResponse()
+   at BinanceApp.Common.AuthResponse.Exchange(String authCode, String clientid, String secret, String redirectURI) in D:\SourceCode\BinanceApp\BinanceApp.Common\AuthResponse.cs:line 88 Line: 0
+

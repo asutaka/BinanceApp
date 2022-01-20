@@ -147,11 +147,11 @@ namespace BinanceApp.Common
 
         public static double GetBottomValue(string code)
         {
-            var url = $"{ConstantValue.COIN_DETAIL}symbol={code}&interval=1h&limit=15";
+            var url = $"{ConstantValue.COIN_DETAIL}symbol={code}&interval={enumInterval.OneHour.GetDisplayName()}&limit=15";
             var arrData = DownloadJsonArray(url);
-            var count = arrData.Count;
-            if (arrData == null || count < 15)
+            if (arrData == null || arrData.Count < 15)
                 return 0;
+            var count = arrData.Count;
             double min = double.Parse(arrData[0][3].ToString());
             var countConfirm = 0;
             for (int i = 1; i < count; i++)

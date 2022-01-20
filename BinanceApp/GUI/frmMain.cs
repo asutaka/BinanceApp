@@ -53,7 +53,7 @@ namespace BinanceApp.GUI
             {
                 var task = Task.Run(() =>
                 {
-                    StaticValues.dicDatasource1H.Add(item.S, SeedData.LoadDatasource(item.S, enumInterval.OneHour.GetDisplayName()));
+                    StaticValues.dicDatasource1H.Add(item.S, SeedData.LoadDatasource(item.S, (int)enumInterval.OneHour));
                 });
                 lstTask.Add(task);
             }
@@ -103,7 +103,7 @@ namespace BinanceApp.GUI
                     {
                         var task = Task.Run(() =>
                         {
-                            StaticValues.dicDatasource15M.Add(item.S, SeedData.LoadDatasource(item.S, enumInterval.ThirteenMinute.GetDisplayName()));
+                            StaticValues.dicDatasource15M.Add(item.S, SeedData.LoadDatasource(item.S, (int)enumInterval.ThirteenMinute));
                         });
                         lstTask.Add(task);
                     }
@@ -124,7 +124,7 @@ namespace BinanceApp.GUI
                     {
                         var task = Task.Run(() =>
                         {
-                            StaticValues.dicDatasource4H.Add(item.S, SeedData.LoadDatasource(item.S, enumInterval.FourHour.GetDisplayName()));
+                            StaticValues.dicDatasource4H.Add(item.S, SeedData.LoadDatasource(item.S, (int)enumInterval.FourHour));
                         });
                         lstTask.Add(task);
                     }
@@ -145,7 +145,7 @@ namespace BinanceApp.GUI
                     {
                         var task = Task.Run(() =>
                         {
-                            StaticValues.dicDatasource1D.Add(item.S, SeedData.LoadDatasource(item.S, enumInterval.OneDay.GetDisplayName()));
+                            StaticValues.dicDatasource1D.Add(item.S, SeedData.LoadDatasource(item.S, (int)enumInterval.OneDay));
                         });
                         lstTask.Add(task);
                     }
@@ -166,7 +166,7 @@ namespace BinanceApp.GUI
                     {
                         var task = Task.Run(() =>
                         {
-                            StaticValues.dicDatasource1W.Add(item.S, SeedData.LoadDatasource(item.S, enumInterval.OneWeek.GetDisplayName()));
+                            StaticValues.dicDatasource1W.Add(item.S, SeedData.LoadDatasource(item.S, (int)enumInterval.OneWeek));
                         });
                         lstTask.Add(task);
                     }
@@ -187,7 +187,7 @@ namespace BinanceApp.GUI
                     {
                         var task = Task.Run(() =>
                         {
-                            StaticValues.dicDatasource1Month.Add(item.S, SeedData.LoadDatasource(item.S, enumInterval.OneMonth.GetDisplayName()));
+                            StaticValues.dicDatasource1Month.Add(item.S, SeedData.LoadDatasource(item.S, (int)enumInterval.OneMonth));
                         });
                         lstTask.Add(task);
                     }

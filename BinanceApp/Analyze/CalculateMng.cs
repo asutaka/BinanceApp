@@ -29,6 +29,8 @@ namespace BinanceApp.Analyze
         public static (bool, double) MCDX(string coin)
         {
             var data = GetData(coin, (int)enumInterval.OneHour);
+            if (data == null || !data.Any())
+                return (false, 0);
             var arrClose = data.Select(x => x.Close).ToArray();
             var count = arrClose.Count();
 
@@ -121,6 +123,8 @@ namespace BinanceApp.Analyze
         {
             var lstOutputIndicator = new List<OutputIndicatorModel>();
             var data = GetData(coin, (int)enumInterval.OneHour);
+            if (data == null || !data.Any())
+                return 0;
             var arrOpen = data.Select(x => x.Open).ToArray();
             var arrClose = data.Select(x => x.Close).ToArray();
             var arrHigh = data.Select(x => x.High).ToArray();
@@ -390,7 +394,7 @@ namespace BinanceApp.Analyze
         private static List<CandleStickDataModel> CandleSticks(string code, int interval, int num)
         {
             var lstResult = new List<CandleStickDataModel>();
-            var url = $"{ConstantValue.COIN_DETAIL}symbol={code}&interval={interval}&limit={num}";
+            var url = $"{ConstantValue.COIN_DETAIL}symbol={code}&interval={((enumInterval)interval).GetDisplayName()}&limit={num}";
             var arrData = CommonMethod.DownloadJsonArray(url);
             if (arrData == null)
                 return lstResult;
@@ -497,6 +501,8 @@ namespace BinanceApp.Analyze
         {
             var data = GetLocalData(coin, interval);
             var lstLatest = CandleSticks(coin, interval, 2);
+            if (lstLatest == null || !lstLatest.Any())
+                return null;
             if (data.ElementAt(0).Time == lstLatest.ElementAt(1).Time)
             {
                 var modelUpdate = lstLatest.ElementAt(1);

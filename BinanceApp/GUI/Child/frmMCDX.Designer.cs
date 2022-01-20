@@ -29,22 +29,22 @@ namespace BinanceApp.GUI.Child
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule5 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleIconSet formatConditionRuleIconSet3 = new DevExpress.XtraEditors.FormatConditionRuleIconSet();
-            DevExpress.XtraEditors.FormatConditionIconSet formatConditionIconSet3 = new DevExpress.XtraEditors.FormatConditionIconSet();
-            DevExpress.XtraEditors.FormatConditionIconSetIcon formatConditionIconSetIcon7 = new DevExpress.XtraEditors.FormatConditionIconSetIcon();
-            DevExpress.XtraEditors.FormatConditionIconSetIcon formatConditionIconSetIcon8 = new DevExpress.XtraEditors.FormatConditionIconSetIcon();
-            DevExpress.XtraEditors.FormatConditionIconSetIcon formatConditionIconSetIcon9 = new DevExpress.XtraEditors.FormatConditionIconSetIcon();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule6 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRule2ColorScale formatConditionRule2ColorScale2 = new DevExpress.XtraEditors.FormatConditionRule2ColorScale();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule7 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRule3ColorScale formatConditionRule3ColorScale2 = new DevExpress.XtraEditors.FormatConditionRule3ColorScale();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule8 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleIconSet formatConditionRuleIconSet4 = new DevExpress.XtraEditors.FormatConditionRuleIconSet();
-            DevExpress.XtraEditors.FormatConditionIconSet formatConditionIconSet4 = new DevExpress.XtraEditors.FormatConditionIconSet();
-            DevExpress.XtraEditors.FormatConditionIconSetIcon formatConditionIconSetIcon10 = new DevExpress.XtraEditors.FormatConditionIconSetIcon();
-            DevExpress.XtraEditors.FormatConditionIconSetIcon formatConditionIconSetIcon11 = new DevExpress.XtraEditors.FormatConditionIconSetIcon();
-            DevExpress.XtraEditors.FormatConditionIconSetIcon formatConditionIconSetIcon12 = new DevExpress.XtraEditors.FormatConditionIconSetIcon();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleIconSet formatConditionRuleIconSet1 = new DevExpress.XtraEditors.FormatConditionRuleIconSet();
+            DevExpress.XtraEditors.FormatConditionIconSet formatConditionIconSet1 = new DevExpress.XtraEditors.FormatConditionIconSet();
+            DevExpress.XtraEditors.FormatConditionIconSetIcon formatConditionIconSetIcon1 = new DevExpress.XtraEditors.FormatConditionIconSetIcon();
+            DevExpress.XtraEditors.FormatConditionIconSetIcon formatConditionIconSetIcon2 = new DevExpress.XtraEditors.FormatConditionIconSetIcon();
+            DevExpress.XtraEditors.FormatConditionIconSetIcon formatConditionIconSetIcon3 = new DevExpress.XtraEditors.FormatConditionIconSetIcon();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRule2ColorScale formatConditionRule2ColorScale1 = new DevExpress.XtraEditors.FormatConditionRule2ColorScale();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule3 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRule3ColorScale formatConditionRule3ColorScale1 = new DevExpress.XtraEditors.FormatConditionRule3ColorScale();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule4 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleIconSet formatConditionRuleIconSet2 = new DevExpress.XtraEditors.FormatConditionRuleIconSet();
+            DevExpress.XtraEditors.FormatConditionIconSet formatConditionIconSet2 = new DevExpress.XtraEditors.FormatConditionIconSet();
+            DevExpress.XtraEditors.FormatConditionIconSetIcon formatConditionIconSetIcon4 = new DevExpress.XtraEditors.FormatConditionIconSetIcon();
+            DevExpress.XtraEditors.FormatConditionIconSetIcon formatConditionIconSetIcon5 = new DevExpress.XtraEditors.FormatConditionIconSetIcon();
+            DevExpress.XtraEditors.FormatConditionIconSetIcon formatConditionIconSetIcon6 = new DevExpress.XtraEditors.FormatConditionIconSetIcon();
             this.RateValue = new DevExpress.XtraGrid.Columns.GridColumn();
             this.RefValue = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CoinName = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -153,97 +153,97 @@ namespace BinanceApp.GUI.Child
             this.RateValue,
             this.WaveRecent,
             this.MCDXValue});
-            gridFormatRule5.Column = this.RateValue;
-            gridFormatRule5.ColumnApplyTo = this.RateValue;
-            gridFormatRule5.Name = "FormatRate";
-            formatConditionRuleIconSet3.AllowAnimation = DevExpress.Utils.DefaultBoolean.True;
-            formatConditionIconSet3.CategoryName = "Directional";
-            formatConditionIconSetIcon7.PredefinedName = "Arrows3_1.png";
-            formatConditionIconSetIcon7.Value = new decimal(new int[] {
+            gridFormatRule1.Column = this.RateValue;
+            gridFormatRule1.ColumnApplyTo = this.RateValue;
+            gridFormatRule1.Name = "FormatRate";
+            formatConditionRuleIconSet1.AllowAnimation = DevExpress.Utils.DefaultBoolean.True;
+            formatConditionIconSet1.CategoryName = "Directional";
+            formatConditionIconSetIcon1.PredefinedName = "Arrows3_1.png";
+            formatConditionIconSetIcon1.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            formatConditionIconSetIcon7.ValueComparison = DevExpress.XtraEditors.FormatConditionComparisonType.GreaterOrEqual;
-            formatConditionIconSetIcon8.PredefinedName = "Arrows3_2.png";
-            formatConditionIconSetIcon8.Value = new decimal(new int[] {
+            formatConditionIconSetIcon1.ValueComparison = DevExpress.XtraEditors.FormatConditionComparisonType.GreaterOrEqual;
+            formatConditionIconSetIcon2.PredefinedName = "Arrows3_2.png";
+            formatConditionIconSetIcon2.Value = new decimal(new int[] {
             5,
             0,
             0,
             -2147418112});
-            formatConditionIconSetIcon8.ValueComparison = DevExpress.XtraEditors.FormatConditionComparisonType.GreaterOrEqual;
-            formatConditionIconSetIcon9.PredefinedName = "Arrows3_3.png";
-            formatConditionIconSetIcon9.Value = new decimal(new int[] {
+            formatConditionIconSetIcon2.ValueComparison = DevExpress.XtraEditors.FormatConditionComparisonType.GreaterOrEqual;
+            formatConditionIconSetIcon3.PredefinedName = "Arrows3_3.png";
+            formatConditionIconSetIcon3.Value = new decimal(new int[] {
             100,
             0,
             0,
             -2147483648});
-            formatConditionIconSetIcon9.ValueComparison = DevExpress.XtraEditors.FormatConditionComparisonType.GreaterOrEqual;
-            formatConditionIconSet3.Icons.Add(formatConditionIconSetIcon7);
-            formatConditionIconSet3.Icons.Add(formatConditionIconSetIcon8);
-            formatConditionIconSet3.Icons.Add(formatConditionIconSetIcon9);
-            formatConditionIconSet3.Name = "Arrows3Colored";
-            formatConditionIconSet3.ValueType = DevExpress.XtraEditors.FormatConditionValueType.Number;
-            formatConditionRuleIconSet3.IconSet = formatConditionIconSet3;
-            gridFormatRule5.Rule = formatConditionRuleIconSet3;
-            gridFormatRule6.Column = this.RefValue;
-            gridFormatRule6.ColumnApplyTo = this.RefValue;
-            gridFormatRule6.Name = "Format0";
-            formatConditionRule2ColorScale2.AllowAnimation = DevExpress.Utils.DefaultBoolean.True;
-            formatConditionRule2ColorScale2.PredefinedName = "White, Red";
-            gridFormatRule6.Rule = formatConditionRule2ColorScale2;
-            gridFormatRule7.Column = this.RateValue;
-            gridFormatRule7.ColumnApplyTo = this.CoinName;
-            gridFormatRule7.Name = "Format1";
-            formatConditionRule3ColorScale2.AllowAnimation = DevExpress.Utils.DefaultBoolean.True;
-            formatConditionRule3ColorScale2.Maximum = new decimal(new int[] {
+            formatConditionIconSetIcon3.ValueComparison = DevExpress.XtraEditors.FormatConditionComparisonType.GreaterOrEqual;
+            formatConditionIconSet1.Icons.Add(formatConditionIconSetIcon1);
+            formatConditionIconSet1.Icons.Add(formatConditionIconSetIcon2);
+            formatConditionIconSet1.Icons.Add(formatConditionIconSetIcon3);
+            formatConditionIconSet1.Name = "Arrows3Colored";
+            formatConditionIconSet1.ValueType = DevExpress.XtraEditors.FormatConditionValueType.Number;
+            formatConditionRuleIconSet1.IconSet = formatConditionIconSet1;
+            gridFormatRule1.Rule = formatConditionRuleIconSet1;
+            gridFormatRule2.Column = this.MCDXValue;
+            gridFormatRule2.ColumnApplyTo = this.MCDXValue;
+            gridFormatRule2.Name = "Format0";
+            formatConditionRule2ColorScale1.AllowAnimation = DevExpress.Utils.DefaultBoolean.True;
+            formatConditionRule2ColorScale1.PredefinedName = "White, Red";
+            gridFormatRule2.Rule = formatConditionRule2ColorScale1;
+            gridFormatRule3.Column = this.RateValue;
+            gridFormatRule3.ColumnApplyTo = this.CoinName;
+            gridFormatRule3.Name = "Format1";
+            formatConditionRule3ColorScale1.AllowAnimation = DevExpress.Utils.DefaultBoolean.True;
+            formatConditionRule3ColorScale1.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            formatConditionRule3ColorScale2.MaximumColor = System.Drawing.Color.Green;
-            formatConditionRule3ColorScale2.MaximumType = DevExpress.XtraEditors.FormatConditionValueType.Number;
-            formatConditionRule3ColorScale2.MiddleColor = System.Drawing.Color.White;
-            formatConditionRule3ColorScale2.MiddleType = DevExpress.XtraEditors.FormatConditionValueType.Number;
-            formatConditionRule3ColorScale2.Minimum = new decimal(new int[] {
+            formatConditionRule3ColorScale1.MaximumColor = System.Drawing.Color.Green;
+            formatConditionRule3ColorScale1.MaximumType = DevExpress.XtraEditors.FormatConditionValueType.Number;
+            formatConditionRule3ColorScale1.MiddleColor = System.Drawing.Color.White;
+            formatConditionRule3ColorScale1.MiddleType = DevExpress.XtraEditors.FormatConditionValueType.Number;
+            formatConditionRule3ColorScale1.Minimum = new decimal(new int[] {
             10,
             0,
             0,
             -2147483648});
-            formatConditionRule3ColorScale2.MinimumColor = System.Drawing.Color.Red;
-            formatConditionRule3ColorScale2.MinimumType = DevExpress.XtraEditors.FormatConditionValueType.Number;
-            formatConditionRule3ColorScale2.PredefinedName = "Green, White, Red";
-            gridFormatRule7.Rule = formatConditionRule3ColorScale2;
-            gridFormatRule8.Column = this.WaveRecent;
-            gridFormatRule8.ColumnApplyTo = this.WaveRecent;
-            gridFormatRule8.Name = "Format2";
-            formatConditionIconSet4.CategoryName = "Symbols";
-            formatConditionIconSetIcon10.PredefinedName = "Flags3_1.png";
-            formatConditionIconSetIcon11.PredefinedName = "Flags3_2.png";
-            formatConditionIconSetIcon11.Value = new decimal(new int[] {
+            formatConditionRule3ColorScale1.MinimumColor = System.Drawing.Color.Red;
+            formatConditionRule3ColorScale1.MinimumType = DevExpress.XtraEditors.FormatConditionValueType.Number;
+            formatConditionRule3ColorScale1.PredefinedName = "Green, White, Red";
+            gridFormatRule3.Rule = formatConditionRule3ColorScale1;
+            gridFormatRule4.Column = this.WaveRecent;
+            gridFormatRule4.ColumnApplyTo = this.WaveRecent;
+            gridFormatRule4.Name = "Format2";
+            formatConditionIconSet2.CategoryName = "Symbols";
+            formatConditionIconSetIcon4.PredefinedName = "Flags3_1.png";
+            formatConditionIconSetIcon5.PredefinedName = "Flags3_2.png";
+            formatConditionIconSetIcon5.Value = new decimal(new int[] {
             15,
             0,
             0,
             0});
-            formatConditionIconSetIcon11.ValueComparison = DevExpress.XtraEditors.FormatConditionComparisonType.GreaterOrEqual;
-            formatConditionIconSetIcon12.PredefinedName = "Flags3_3.png";
-            formatConditionIconSetIcon12.Value = new decimal(new int[] {
+            formatConditionIconSetIcon5.ValueComparison = DevExpress.XtraEditors.FormatConditionComparisonType.GreaterOrEqual;
+            formatConditionIconSetIcon6.PredefinedName = "Flags3_3.png";
+            formatConditionIconSetIcon6.Value = new decimal(new int[] {
             100000,
             0,
             0,
             -2147483648});
-            formatConditionIconSetIcon12.ValueComparison = DevExpress.XtraEditors.FormatConditionComparisonType.GreaterOrEqual;
-            formatConditionIconSet4.Icons.Add(formatConditionIconSetIcon10);
-            formatConditionIconSet4.Icons.Add(formatConditionIconSetIcon11);
-            formatConditionIconSet4.Icons.Add(formatConditionIconSetIcon12);
-            formatConditionIconSet4.Name = "Flags3";
-            formatConditionIconSet4.ValueType = DevExpress.XtraEditors.FormatConditionValueType.Number;
-            formatConditionRuleIconSet4.IconSet = formatConditionIconSet4;
-            gridFormatRule8.Rule = formatConditionRuleIconSet4;
-            this.gridView1.FormatRules.Add(gridFormatRule5);
-            this.gridView1.FormatRules.Add(gridFormatRule6);
-            this.gridView1.FormatRules.Add(gridFormatRule7);
-            this.gridView1.FormatRules.Add(gridFormatRule8);
+            formatConditionIconSetIcon6.ValueComparison = DevExpress.XtraEditors.FormatConditionComparisonType.GreaterOrEqual;
+            formatConditionIconSet2.Icons.Add(formatConditionIconSetIcon4);
+            formatConditionIconSet2.Icons.Add(formatConditionIconSetIcon5);
+            formatConditionIconSet2.Icons.Add(formatConditionIconSetIcon6);
+            formatConditionIconSet2.Name = "Flags3";
+            formatConditionIconSet2.ValueType = DevExpress.XtraEditors.FormatConditionValueType.Number;
+            formatConditionRuleIconSet2.IconSet = formatConditionIconSet2;
+            gridFormatRule4.Rule = formatConditionRuleIconSet2;
+            this.gridView1.FormatRules.Add(gridFormatRule1);
+            this.gridView1.FormatRules.Add(gridFormatRule2);
+            this.gridView1.FormatRules.Add(gridFormatRule3);
+            this.gridView1.FormatRules.Add(gridFormatRule4);
             this.gridView1.GridControl = this.grid;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;

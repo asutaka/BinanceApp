@@ -351,3 +351,4 @@ F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.csproj.CoreCompileInputs.cach
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.csproj.CopyComplete
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.exe
 F:\DATA\BinanceApp\BinanceApp\obj\Debug\BinanceApp.pdb
+D:\SourceCode\BinanceApp\BinanceApp\obj\Debug\BinanceApp.GUI.Child.frmMCDX.resources

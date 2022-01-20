@@ -32,12 +32,12 @@ namespace BinanceApp.Data
                                     .OrderBy(x => x.S).ToList();
             return output;
         }
-        public static List<CandleStickDataModel> LoadDatasource(string code, string interval)
+        public static List<CandleStickDataModel> LoadDatasource(string code, int interval)
         {
             var lstModel = new List<CandleStickDataModel>();
             try
             {
-                var url = $"{ConstantValue.COIN_DETAIL}symbol={code}&interval={interval}";
+                var url = $"{ConstantValue.COIN_DETAIL}symbol={code}&interval={((enumInterval)interval).GetDisplayName()}";
                 var arrData = CommonMethod.DownloadJsonArray(url);
 
                 lstModel = arrData.Select(x => new CandleStickDataModel
