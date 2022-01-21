@@ -5,10 +5,11 @@ using System.Linq;
 using System.Windows.Forms;
 using BinanceApp.Model.ENTITY;
 using BinanceApp.Common;
-using BinanceApp.Analyze;
-using System.Data;
 using System.ComponentModel;
 using System.Threading;
+using Quartz;
+using BinanceApp.Job.ScheduleJob;
+using BinanceApp.Job;
 
 namespace BinanceApp.GUI.Child
 {
@@ -20,7 +21,11 @@ namespace BinanceApp.GUI.Child
         private const string _fileName = "realtimelist.json";
         private int count = 1;
         private List<CryptonDetailDataModel> _lstRealTime = StaticValues.lstRealTime;
-        private DataTable _dt = new DataTable();
+
+        #region Job
+        private ScheduleMember job = new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<RealtimeScheduleJob>(), StaticValues.Scron_RealTime, nameof(RealtimeScheduleJob));
+        #endregion
+        #region Contructor
         private frmRealTime()
         {
             InitializeComponent();
@@ -30,14 +35,35 @@ namespace BinanceApp.GUI.Child
             _bkgr.RunWorkerCompleted += bkgrInitData_RunWorkerCompleted;
             _bkgr.RunWorkerAsync();
         }
-
         private static frmRealTime _instance = null;
         public static frmRealTime Instance()
         {
             _instance = _instance ?? new frmRealTime();
             return _instance;
         }
+        #endregion
+        #region Function
+        private void InitData()
+        {
+            if (_lstRealTime.Count() > MAXIMUM)
+                _lstRealTime = _lstRealTime.Take(30).ToList();
 
+            foreach (var item in _lstRealTime)
+            {
+                AddNewRow(item.S, item.AN);
+            }
+        }
+        private void AddNewRow(string coin, string coinName)
+        {
+            var row = StaticValues.dtRealTime.NewRow();
+            row["STT"] = count++;
+            row["Coin"] = coin;
+            row["CoinName"] = coinName;
+            row["CountTime"] = 0;
+            StaticValues.dtRealTime.Rows.Add(row);
+        }
+        #endregion
+        #region Event
         private void bkgrInitData_DoWork(object sender, DoWorkEventArgs e)
         {
             //dtStartConfig = DateTime.Now;
@@ -53,55 +79,33 @@ namespace BinanceApp.GUI.Child
             cmbCoin.Properties.DataSource = StaticValues.lstCoinFilter;
             this.Enabled = true;
             grid.BeginUpdate();
-            grid.DataSource = _dt;
+            grid.DataSource = StaticValues.dtRealTime;
             grid.EndUpdate();
-        }
 
-        private void InitData()
-        {
-            if (_lstRealTime.Count() > MAXIMUM)
-                _lstRealTime = _lstRealTime.Take(30).ToList();
-            _dt.Columns.Add("STT", typeof(int));
-            _dt.Columns.Add("Coin", typeof(string));
-            _dt.Columns.Add("CoinName", typeof(string));
-            _dt.Columns.Add("Count", typeof(int));
-            _dt.Columns.Add("Rate", typeof(double));
-            _dt.Columns.Add("RefValue", typeof(double));
-            _dt.Columns.Add("Value", typeof(double));
-            _dt.Columns.Add("BottomRecent", typeof(double));
-            _dt.Columns.Add("RateValue", typeof(double));
-            _dt.Columns.Add("WaveRecent", typeof(double));
-            foreach (var item in _lstRealTime)
+            if (!this.Visible)
             {
-                CreateNewRow(item.S, item.AN);
+                job.Pause();
             }
         }
-
         private void cmbCoin_EditValueChanged(object sender, EventArgs e1)
         {
-            if (cmbCoin.EditValue == null 
+            if (cmbCoin.EditValue == null
                 || string.IsNullOrWhiteSpace(cmbCoin.EditValue.ToString()))
                 return;
 
-            if(_lstRealTime.Any(x => x.S == cmbCoin.EditValue.ToString()))
+            if (_lstRealTime.Any(x => x.S == cmbCoin.EditValue.ToString()))
             {
                 MessageBox.Show($"Coin {cmbCoin.EditValue} đã tồn tại trên danh sách", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cmbCoin.EditValue = null;
                 return;
             }
 
-            if(_lstRealTime.Count() >= MAXIMUM)
+            if (_lstRealTime.Count() >= MAXIMUM)
             {
                 MessageBox.Show($"Số lượng phần tử đã vượt quá chỉ định!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cmbCoin.EditValue = null;
                 return;
             }
-            CreatNewRow();
-            cmbCoin.EditValue = null;
-        }
-
-        private void CreatNewRow()
-        {
             _frmWaitForm.Show("Đang xử lý dữ liệu");
             var coin = cmbCoin.EditValue.ToString();
             var coinName = cmbCoin.Text;
@@ -111,26 +115,28 @@ namespace BinanceApp.GUI.Child
                 AN = coinName
             });
             _lstRealTime.UpdateJson(_fileName);
-            CreateNewRow(coin, coinName);
+            AddNewRow(coin, coinName);
             _frmWaitForm.Close();
+            cmbCoin.EditValue = null;
         }
-        private void CreateNewRow(string coin, string coinName)
+        private void frmRealTime_VisibleChanged(object sender, EventArgs e)
         {
-            var cryptonRank = CalculateMng.CalculateCryptonRank(coin);
-            var currentValue = CommonMethod.GetCurrentValue(coin);
-            var bottom = CommonMethod.GetBottomValue(coin);
-            var row = _dt.NewRow();
-            row["STT"] = count++;
-            row["Coin"] = coin;
-            row["CoinName"] = coinName;
-            row["Count"] = cryptonRank.Count;
-            row["Rate"] = cryptonRank.Rate;
-            row["RefValue"] = currentValue;
-            row["Value"] = currentValue;
-            row["BottomRecent"] = bottom;
-            row["RateValue"] = 0;
-            row["WaveRecent"] = bottom <= 0 ? 0 : Math.Round((-1 + (currentValue / bottom)) * 100, 2);
-            _dt.Rows.Add(row);
+            if (!this.Visible)
+            {
+                job.Pause();
+            }
+            else
+            {
+                if (!job.IsStarted())
+                {
+                    job.Start();
+                }
+                else
+                {
+                    job.Resume();
+                }
+            }
         }
+        #endregion
     }
 }

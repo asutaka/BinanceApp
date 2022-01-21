@@ -3,6 +3,7 @@ using BinanceApp.Job.ScheduleJob;
 using BinanceApp.Model.ENTITY;
 using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace BinanceApp
 {
@@ -19,6 +20,7 @@ namespace BinanceApp
         public static frmMain frmMainObj = null;
         //Scron <second> <minute> <hour> <day-of-month> <month> <day-of-week> <year>
         public static string Scron_CheckStatus = "0 0 0/5 * * ?";
+        public static string Scron_RealTime = "0/1 * * * * ?";
         public static string Scron_Top30CurrentValue = "0/1 * * * * ?";
         public static string Scron_Top30BottomValue = "0 * * * * ?";
         public static string Scron_MCDX = "0 0/5 * * * ?";
@@ -48,6 +50,7 @@ namespace BinanceApp
         public static AdvanceSettingModel advanceModel4;
         public static List<CryptonDetailDataModel> lstBlackList;
         public static List<CryptonDetailDataModel> lstRealTime;
+        public static DataTable dtRealTime = new DataTable();
         public static TradeListModel tradeList;
         public static FollowModel followList;
     }

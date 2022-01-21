@@ -47,10 +47,6 @@ namespace BinanceApp.GUI.Child
                 {
                     var task = Task.Run(() =>
                     {
-                        if (item.S == "TFUELUSDT")
-                        {
-                            var tmp = 1;
-                        }
                         var val = CalculateMng.MCDX(item.S);
                         if (val.Item1)
                         {

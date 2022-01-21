@@ -131,6 +131,7 @@
     <Compile Include="Job\FollowListJob.cs" />
     <Compile Include="Job\RealTimeJob.cs" />
     <Compile Include="Job\MCDXBottomValueScheduleJob.cs" />
+    <Compile Include="Job\RealtimeScheduleJob.cs" />
     <Compile Include="Job\Top30BottomValueScheduleJob.cs" />
     <Compile Include="Job\MCDXJob.cs" />
     <Compile Include="Job\MCDXCurrentValueScheduleJob.cs" />
