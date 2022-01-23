@@ -1,7 +1,6 @@
 ﻿using BinanceApp.GUI;
 using BinanceApp.Job.ScheduleJob;
 using BinanceApp.Model.ENTITY;
-using BinanceApp.Model.ENUM;
 using System.Collections.Generic;
 
 namespace BinanceApp
@@ -12,6 +11,7 @@ namespace BinanceApp
         public static bool IsCodeActive = false;
         public static bool IsAccessMain = false;
         public static bool IsExecMCDX = false;
+        public static bool IsExecTop30 = false;
         public static bool IsExecCheckCodeActive = false;
         //
         public static bool IsRealTimeDeleted = false;
@@ -21,12 +21,11 @@ namespace BinanceApp
         public static frmMain frmMainObj = null;
         //Scron <second> <minute> <hour> <day-of-month> <month> <day-of-week> <year>
         public static string Scron_CheckStatus = "0 0 0/5 * * ?";
-        public static string Scron_RealTime = "0/1 * * * * ?";
-        public static string Scron_Top30CurrentValue = "0/1 * * * * ?";
-        public static string Scron_Top30BottomValue = "0 * * * * ?";
-        public static string Scron_MCDX = "0 0/5 * * * ?";
-        public static string Scron_MCDXCurrentValue = "0/1 * * * * ?";
-        public static string Scron_MCDXBottomValue = "0 * * * * ?";
+        public static string Scron_RealTimeValue = "0/1 * * * * ?";
+        public static string Scron_Top30_Calculate = "0 0 0/6 * * ?";
+        public static string Scron_Top30_Value = "0/1 * * * * ?";
+        public static string Scron_MCDX_Calculate = "0 0/5 * * * ?";
+        public static string Scron_MCDX_Value = "0/1 * * * * ?";
         public static string Scron_SendNoti = "0/1 * * * * ?";
         public static int Scron_TradeList_Value = 1;
         //Notify
@@ -34,7 +33,7 @@ namespace BinanceApp
         //Coin
         public static List<CryptonDetailDataModel> lstCoin = new List<CryptonDetailDataModel>();
         public static List<CryptonDetailDataModel> lstCoinFilter = new List<CryptonDetailDataModel>();
-        public static List<CryptonRankModel> lstCryptonRank = new List<CryptonRankModel>();
+        public static List<Top30Model> lstCryptonRank = new List<Top30Model>();
         public static List<MCDXModel> lstMCDX = new List<MCDXModel>();
         public static Dictionary<string, List<CandleStickDataModel>> dicDatasource15M = new Dictionary<string, List<CandleStickDataModel>>();
         public static Dictionary<string, List<CandleStickDataModel>> dicDatasource1H = new Dictionary<string, List<CandleStickDataModel>>();

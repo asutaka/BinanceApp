@@ -185,6 +185,33 @@ namespace BinanceApp.Common
 
             return a | b;
         }
+
+        public static int GetFlag(BasicSettingModel model)
+        {
+            var div = 1;
+            if (model.TimeZone == (int)enumTimeZone.OneHour)
+            {
+                div = div * 4;
+            }
+            else if (model.TimeZone == (int)enumTimeZone.FourHour)
+            {
+                div = div * 4 * 4;
+            }
+            else if (model.TimeZone == (int)enumTimeZone.OneDay)
+            {
+                div = div * 4 * 4 * 6;
+            }
+            else if (model.TimeZone == (int)enumTimeZone.OneWeek)
+            {
+                div = div * 4 * 4 * 6 * 7;
+            }
+            else if (model.TimeZone == (int)enumTimeZone.OneMonth)
+            {
+                div = div * 4 * 4 * 6 * 7 * 4;
+            }
+            var result = 1800 * model.Interval * div;
+            return result;
+        }
     }
 }
 

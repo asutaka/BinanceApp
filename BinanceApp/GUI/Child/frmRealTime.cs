@@ -19,12 +19,12 @@ namespace BinanceApp.GUI.Child
     {
         private WaitFunc _frmWaitForm = new WaitFunc();
         private BackgroundWorker _bkgr;
-        private const int MAXIMUM = 40;
+        private const int MAXIMUM = 30;
         private const string _fileName = "realtimelist.json";
         private int count = 1;
 
         #region Job
-        private ScheduleMember job = new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<RealtimeScheduleJob>(), StaticValues.Scron_RealTime, nameof(RealtimeScheduleJob));
+        private ScheduleMember job = new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<RealtimeValueScheduleJob>(), StaticValues.Scron_Top30_Calculate, nameof(RealtimeValueScheduleJob));
         #endregion
         #region Contructor
         private frmRealTime()

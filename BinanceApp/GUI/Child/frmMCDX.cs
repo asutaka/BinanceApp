@@ -2,17 +2,13 @@
 using BinanceApp.Common;
 using BinanceApp.Job;
 using BinanceApp.Job.ScheduleJob;
-using BinanceApp.Model.ENTITY;
 using DevExpress.Utils;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using Quartz;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BinanceApp.GUI.Child
@@ -20,9 +16,8 @@ namespace BinanceApp.GUI.Child
     public partial class frmMCDX : XtraForm
     {
         private WaitFunc _frmWaitForm = new WaitFunc();
-        private ScheduleMember jobMCDX = new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<MCDXJob>(), StaticValues.Scron_MCDX, nameof(MCDXJob));
-        private ScheduleMember jobCurrentValue = new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<MCDXCurrentValueScheduleJob>(), StaticValues.Scron_MCDXCurrentValue, nameof(MCDXCurrentValueScheduleJob));
-        private ScheduleMember jobBottomValue = new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<MCDXBottomValueScheduleJob>(), StaticValues.Scron_MCDXBottomValue, nameof(MCDXBottomValueScheduleJob));
+        private ScheduleMember jobCalculate = new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<MCDXCalculateJob>(), StaticValues.Scron_MCDX_Calculate, nameof(MCDXCalculateJob));
+        private ScheduleMember jobValue = new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<MCDXValueScheduleJob>(), StaticValues.Scron_MCDX_Value, nameof(MCDXValueScheduleJob));
         private frmMCDX()
         {
             InitializeComponent();
@@ -41,31 +36,7 @@ namespace BinanceApp.GUI.Child
                 if (StaticValues.IsExecMCDX)
                     return;
                 StaticValues.IsExecMCDX = true;
-                StaticValues.lstMCDX.Clear();
-                var lstTask = new List<Task>();
-                foreach (var item in StaticValues.lstCoinFilter)
-                {
-                    var task = Task.Run(() =>
-                    {
-                        var val = CalculateMng.MCDX(item.S);
-                        if (val.Item1)
-                        {
-                            var current = CommonMethod.GetCurrentValue(item.S);
-                            var bottom = CommonMethod.GetBottomValue(item.S);
-                            StaticValues.lstMCDX.Add(new MCDXModel
-                            {
-                                Coin = item.S,
-                                Value = val.Item2,
-                                OriginValue = current,
-                                CurrentValue = current,
-                                BottomRecent = bottom
-                            });
-                        }
-                    });
-                    lstTask.Add(task);
-                }
-                Task.WaitAll(lstTask.ToArray());
-                StaticValues.lstMCDX = StaticValues.lstMCDX.OrderByDescending(x => x.Value).ToList();
+                StaticValues.lstMCDX = CalculateMng.MCDX();
                 InitData();
                 StaticValues.IsExecMCDX = false;
             }
@@ -78,29 +49,15 @@ namespace BinanceApp.GUI.Child
         {
             if (!this.Visible)
             {
-                jobMCDX.Pause();
-                jobCurrentValue.Pause();
-                jobBottomValue.Pause();
+                jobCalculate.Pause();
+                jobValue.Pause();
             }
             if (!this.IsHandleCreated)
                 return;
             this.Invoke((MethodInvoker)delegate
             {
-                int count = 1;
-                var datasource = from entityMCDX in StaticValues.lstMCDX
-                                 join entityCoin in StaticValues.lstCoin
-                                 on entityMCDX.Coin equals entityCoin.S
-                                 select new {   STT = count++, 
-                                                Coin = entityMCDX.Coin, 
-                                                CoinName = entityCoin.AN, 
-                                                MCDXValue = entityMCDX.Value,
-                                                RefValue = entityMCDX.OriginValue, 
-                                                Value = entityMCDX.CurrentValue, 
-                                                BottomRecent = entityMCDX.BottomRecent, 
-                                                RateValue = Math.Round((-1 + (entityMCDX.CurrentValue/ entityMCDX.OriginValue)) * 100, 2), 
-                                                WaveRecent = entityMCDX.BottomRecent <= 0 ? 0 : Math.Round((-1 + (entityMCDX.CurrentValue / entityMCDX.BottomRecent)) * 100, 2) };
                 grid.BeginUpdate();
-                grid.DataSource = datasource;
+                grid.DataSource = StaticValues.lstMCDX;
                 grid.EndUpdate();
             });
         }
@@ -109,35 +66,26 @@ namespace BinanceApp.GUI.Child
         {
             if (!this.Visible)
             {
-                jobMCDX.Pause();
-                jobCurrentValue.Pause();
-                jobBottomValue.Pause();
+                jobCalculate.Pause();
+                jobValue.Pause();
             }
             else
             {
-                if (!jobMCDX.IsStarted())
+                if (!jobCalculate.IsStarted())
                 {
-                    jobMCDX.Start();
+                    jobCalculate.Start();
                 }
                 else
                 {
-                    jobMCDX.Resume();
+                    jobCalculate.Resume();
                 }
-                if (!jobCurrentValue.IsStarted())
+                if (!jobValue.IsStarted())
                 {
-                    jobCurrentValue.Start();
-                }
-                else
-                {
-                    jobCurrentValue.Resume();
-                }
-                if (!jobBottomValue.IsStarted())
-                {
-                    jobBottomValue.Start();
+                    jobValue.Start();
                 }
                 else
                 {
-                    jobBottomValue.Resume();
+                    jobValue.Resume();
                 }
             }
         }

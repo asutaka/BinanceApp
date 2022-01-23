@@ -11,19 +11,50 @@ namespace BinanceApp.Analyze
 {
     public static class CalculateMng
     {
-        public static void Top30()
+        public static List<Top30Model> Top30()
         {
+            var count = 1;
+            var lstResult = new List<Top30Model>();
             var lstTask = new List<Task>();
-            foreach (var item in StaticValues.lstCoin)
+            foreach (var item in StaticValues.lstCoinFilter)
             {
                 var task = Task.Run(() =>
                 {
-                    StaticValues.lstCryptonRank.Add(CalculateCryptonRank(item.S));
+                    lstResult.Add(CalculateCryptonRank(item.S, item.AN));
                 });
                 lstTask.Add(task);
             }
             Task.WaitAll(lstTask.ToArray());
-            StaticValues.lstCryptonRank = StaticValues.lstCryptonRank.Where(x => x != null).OrderByDescending(x => x.Count).ThenByDescending(x => x.Rate).Take(30).ToList();
+            lstResult = lstResult.Where(x => x != null).OrderByDescending(x => x.Count).ThenByDescending(x => x.Rate).Take(30)
+                                            .Select(x => new Top30Model { STT = count++, Coin = x.Coin, CoinName = x.CoinName, Count = x.Count, Rate = x.Rate, RefValue = x.RefValue, CountTime = 0 }).ToList();
+            return lstResult;
+        }
+
+        public static List<MCDXModel> MCDX()
+        {
+            var count = 1;
+            var lstResult = new List<MCDXModel>();
+            var lstTask = new List<Task>();
+            foreach (var item in StaticValues.lstCoinFilter)
+            {
+                var task = Task.Run(() =>
+                {
+                    var val = MCDX(item.S);
+                    if (val.Item1)
+                    {
+                        lstResult.Add(new MCDXModel
+                        {
+                            Coin = item.S,
+                            CoinName = item.AN,
+                            MCDXValue = val.Item2,
+                        });
+                    }
+                });
+                lstTask.Add(task);
+            }
+            Task.WaitAll(lstTask.ToArray());
+            lstResult = lstResult.OrderByDescending(x => x.MCDXValue).Take(30).Select(x => new MCDXModel { STT = count++, Coin = x.Coin, CoinName = x.CoinName, MCDXValue = x.MCDXValue }).ToList();
+            return lstResult;
         }
 
         public static (bool, double) MCDX(string coin)
@@ -287,7 +318,7 @@ namespace BinanceApp.Analyze
             }
             return point;
         }
-        public static CryptonRankModel CalculateCryptonRank(string code)
+        public static Top30Model CalculateCryptonRank(string code, string coinName)
         {
             try
             {
@@ -295,7 +326,7 @@ namespace BinanceApp.Analyze
                 double sum = 0;
                 var lSource = StaticValues.dicDatasource1H.First(x => x.Key == code).Value;
                 if (lSource == null)
-                    return new CryptonRankModel { Coin = code, Count = count, Rate = Math.Round(sum / count, 2) };
+                    return new Top30Model { Coin = code, Count = count, Rate = Math.Round(sum / count, 2) };
 
                 DateTime dtMin = DateTime.MinValue, dtMax = DateTime.MinValue, dtMin_Temp = DateTime.MinValue;
                 int leftMax = 0, rightMin = 0, rightMax = 0;
@@ -369,12 +400,12 @@ namespace BinanceApp.Analyze
                     }
                 }
 
-                return new CryptonRankModel { Coin = code, Count = count, Rate = Math.Round(sum / count, 2), OriginValue = CommonMethod.GetCurrentValue(code) };
+                return new Top30Model { Coin = code, CoinName = coinName, Count = count, Rate = Math.Round(sum / count, 2), RefValue = CommonMethod.GetCurrentValue(code) };
             }
             catch(Exception ex)
             {
                 NLogLogger.PublishException(ex, $"CalculateMng|CalculateCryptonRank|{code}: {ex.Message}");
-                return new CryptonRankModel { Coin = code, Count = 1, Rate = 0 };
+                return new Top30Model { Coin = code, CoinName = coinName, Count = 1, Rate = 0 };
             }
         }
         private static double ADX(double[] arrHigh, double[] arrLow, double[] arrClose, int period, int count)
@@ -501,7 +532,7 @@ namespace BinanceApp.Analyze
         {
             var data = GetLocalData(coin, interval);
             var lstLatest = CandleSticks(coin, interval, 2);
-            if (lstLatest == null || !lstLatest.Any())
+            if (lstLatest == null || lstLatest.Count() < 2)
                 return null;
             if (data.ElementAt(0).Time == lstLatest.ElementAt(1).Time)
             {

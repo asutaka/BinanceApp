@@ -22,4 +22,3 @@ F:\DATA\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.csproj.CoreCompil
 F:\DATA\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.csproj.CopyComplete
 F:\DATA\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.dll
 F:\DATA\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.pdb
-F:\DATA\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.csproj.AssemblyReference.cache

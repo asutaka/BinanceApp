@@ -127,14 +127,13 @@
     <Compile Include="GUI\Child\frmRealTime.Designer.cs">
       <DependentUpon>frmRealTime.cs</DependentUpon>
     </Compile>
+    <Compile Include="Job\Top30CalculateJob.cs" />
     <Compile Include="Job\SendNotiJob.cs" />
     <Compile Include="Job\FollowListJob.cs" />
     <Compile Include="Job\RealTimeJob.cs" />
-    <Compile Include="Job\MCDXBottomValueScheduleJob.cs" />
-    <Compile Include="Job\RealtimeScheduleJob.cs" />
-    <Compile Include="Job\Top30BottomValueScheduleJob.cs" />
-    <Compile Include="Job\MCDXJob.cs" />
-    <Compile Include="Job\MCDXCurrentValueScheduleJob.cs" />
+    <Compile Include="Job\RealtimeValueScheduleJob.cs" />
+    <Compile Include="Job\MCDXCalculateJob.cs" />
+    <Compile Include="Job\MCDXValueScheduleJob.cs" />
     <Compile Include="Usr\frmCoinFollowInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,7 +220,7 @@
     </Compile>
     <Compile Include="GUI\WaitFunc.cs" />
     <Compile Include="Job\CheckStatusJob.cs" />
-    <Compile Include="Job\Top30CurrentValueScheduleJob.cs" />
+    <Compile Include="Job\Top30ValueScheduleJob.cs" />
     <Compile Include="Job\TradeListJob.cs" />
     <Compile Include="Job\ScheduleUiContainer.cs" />
     <Compile Include="Program.cs" />

@@ -1,7 +1,6 @@
 ﻿using BinanceApp.Analyze;
 using BinanceApp.Common;
 using BinanceApp.GUI.Child;
-using BinanceApp.Model.ENUM;
 using Quartz;
 using System;
 using System.Collections.Generic;
@@ -10,46 +9,18 @@ using System.Threading.Tasks;
 namespace BinanceApp.Job
 {
     [DisallowConcurrentExecution] /*impt: no multiple instances executed concurrently*/
-    public class RealtimeScheduleJob : IJob
+    public class RealtimeValueScheduleJob : IJob
     {
-        private int FLAG = GetFlag();
-        private static int GetFlag()
-        {
-            var model = StaticValues.basicModel;
-            var div = 1;
-            if(model.TimeZone == (int)enumTimeZone.OneHour)
-            {
-                div = div * 4;
-            }
-            else if(model.TimeZone == (int)enumTimeZone.FourHour)
-            {
-                div = div * 4 * 4;
-            }
-            else if (model.TimeZone == (int)enumTimeZone.OneDay)
-            {
-                div = div * 4 * 4 * 6;
-            }
-            else if (model.TimeZone == (int)enumTimeZone.OneWeek)
-            {
-                div = div * 4 * 4 * 6 * 7;
-            }
-            else if (model.TimeZone == (int)enumTimeZone.OneMonth)
-            {
-                div = div * 4 * 4 * 6 * 7 * 4;
-            }
-            var result = 1800 * model.Interval * div;
-            return result; 
-        }
+        private int FLAG = CommonMethod.GetFlag(StaticValues.basicModel);
         public void Execute(IJobExecutionContext context)
         {
             try
             {
                 if (StaticValues.IsRealTimeDeleted)
-                {
                     return;
-                }
                 var lstTask = new List<Task>();
-                foreach (var item in StaticValues.lstRealTimeShow)
+                var lstResult = StaticValues.lstRealTimeShow;
+                foreach (var item in lstResult)
                 {
                     var task = Task.Run(() =>
                     {
@@ -70,7 +41,7 @@ namespace BinanceApp.Job
 
                         if(item.CountTime <= 0 || item.Rate <= 0)
                         {
-                            var rank = CalculateMng.CalculateCryptonRank(coin);
+                            var rank = CalculateMng.CalculateCryptonRank(coin, item.CoinName);
                             item.Count = rank.Count;
                             item.Rate = rank.Rate;
                         }
@@ -89,11 +60,14 @@ namespace BinanceApp.Job
                     lstTask.Add(task);
                 }
                 Task.WaitAll(lstTask.ToArray());
+                if (StaticValues.IsRealTimeDeleted)
+                    return;
+                StaticValues.lstRealTimeShow = lstResult;
                 frmRealTime.Instance().InitData();
             }
             catch(Exception ex)
             {
-                NLogLogger.PublishException(ex, $"RealtimeScheduleJob:Execute: {ex.Message}");
+                NLogLogger.PublishException(ex, $"RealtimeValueScheduleJob:Execute: {ex.Message}");
             }
         }
     }

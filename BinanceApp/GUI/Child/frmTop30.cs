@@ -1,22 +1,20 @@
 ﻿using BinanceApp.Common;
 using BinanceApp.Job;
 using BinanceApp.Job.ScheduleJob;
-using BinanceApp.Model.ENTITY;
 using DevExpress.Utils;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using Quartz;
 using System;
 using System.Diagnostics;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace BinanceApp.GUI.Child
 {
     public partial class frmTop30 : XtraForm
     {
-        ScheduleMember jobCurrentValue = new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<Top30CurrentValueScheduleJob>(), StaticValues.Scron_Top30CurrentValue, nameof(Top30CurrentValueScheduleJob));
-        ScheduleMember jobBottomValue = new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<Top30BottomValueScheduleJob>(), StaticValues.Scron_Top30BottomValue, nameof(Top30BottomValueScheduleJob));
+        private ScheduleMember jobCalculate = new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<Top30CalculateJob>(), StaticValues.Scron_Top30_Calculate, nameof(Top30CalculateJob));
+        private ScheduleMember jobValue = new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<Top30ValueScheduleJob>(), StaticValues.Scron_Top30_Value, nameof(Top30ValueScheduleJob));
         private frmTop30()
         {
             InitializeComponent();
@@ -34,29 +32,15 @@ namespace BinanceApp.GUI.Child
         {
             if (!this.Visible)
             {
-                jobCurrentValue.Pause();
-                jobBottomValue.Pause();
+                jobCalculate.Pause();
+                jobValue.Pause();
             }
             if (!this.IsHandleCreated)
                 return;
             this.Invoke((MethodInvoker)delegate
             {
-                int count = 1;
-                var datasource = from entityRank in StaticValues.lstCryptonRank
-                                 join entityCoin in StaticValues.lstCoin
-                                 on entityRank.Coin equals entityCoin.S
-                                 select new Top30Model {   STT = count++, 
-                                                Coin = entityRank.Coin, 
-                                                CoinName = entityCoin.AN, 
-                                                Count = entityRank.Count, 
-                                                Rate = entityRank.Rate, 
-                                                RefValue = entityRank.OriginValue, 
-                                                Value = entityRank.CurrentValue, 
-                                                BottomRecent = entityRank.BottomRecent, 
-                                                RateValue = Math.Round((-1 + (entityRank.CurrentValue/entityRank.OriginValue)) * 100, 2), 
-                                                WaveRecent = entityRank.BottomRecent <= 0 ? 0 : Math.Round((-1 + (entityRank.CurrentValue / entityRank.BottomRecent)) * 100, 2) };
                 grid.BeginUpdate();
-                grid.DataSource = datasource;
+                grid.DataSource = StaticValues.lstCryptonRank;
                 grid.EndUpdate();
             });
         }
@@ -65,26 +49,27 @@ namespace BinanceApp.GUI.Child
         {
             if (!this.Visible)
             {
-                jobCurrentValue.Pause();
-                jobBottomValue.Pause();
+                jobCalculate.Pause();
+                jobValue.Pause();
             }
             else
             {
-                if (!jobCurrentValue.IsStarted())
+                if (!jobCalculate.IsStarted())
                 {
-                    jobCurrentValue.Start();
+                    jobCalculate.Start();
                 }
                 else
                 {
-                    jobCurrentValue.Resume();
+                    jobCalculate.Resume();
                 }
-                if (!jobBottomValue.IsStarted())
+                
+                if (!jobValue.IsStarted())
                 {
-                    jobBottomValue.Start();
+                    jobValue.Start();
                 }
                 else
                 {
-                    jobBottomValue.Resume();
+                    jobValue.Resume();
                 }
             }
         }

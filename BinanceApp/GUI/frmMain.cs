@@ -74,7 +74,7 @@ namespace BinanceApp.GUI
         {
             //dtStartCalculate = DateTime.Now;
             _frmWaitForm.Show("Phân tích dữ liệu");
-            CalculateMng.Top30();
+            StaticValues.lstCryptonRank = CalculateMng.Top30();
             Thread.Sleep(200);
             _frmWaitForm.Close();
         }
