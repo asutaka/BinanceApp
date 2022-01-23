@@ -45,6 +45,7 @@ namespace BinanceApp.GUI
             this.barBtnRealTime = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnStart = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnStop = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnVersion = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -55,7 +56,6 @@ namespace BinanceApp.GUI
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.tabControl = new DevExpress.XtraTab.XtraTabControl();
-            this.barBtnVersion = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl)).BeginInit();
             this.SuspendLayout();
@@ -84,8 +84,10 @@ namespace BinanceApp.GUI
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbon.Size = new System.Drawing.Size(1022, 158);
+            this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
+            this.ribbon.Size = new System.Drawing.Size(1022, 141);
             this.ribbon.StatusBar = this.ribbonStatusBar;
+            this.ribbon.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // barBtnListFollow
             // 
@@ -99,7 +101,7 @@ namespace BinanceApp.GUI
             // 
             this.barBtnSupport.Caption = "Hỗ trợ";
             this.barBtnSupport.Id = 2;
-            this.barBtnSupport.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
+            this.barBtnSupport.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnSupport.ImageOptions.SvgImage")));
             this.barBtnSupport.Name = "barBtnSupport";
             // 
             // barBtnInfo
@@ -182,6 +184,13 @@ namespace BinanceApp.GUI
             this.barBtnStop.Name = "barBtnStop";
             this.barBtnStop.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnStop_ItemClick);
             // 
+            // barBtnVersion
+            // 
+            this.barBtnVersion.Caption = "Phiên bản";
+            this.barBtnVersion.Id = 13;
+            this.barBtnVersion.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnVersion.ImageOptions.SvgImage")));
+            this.barBtnVersion.Name = "barBtnVersion";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -254,20 +263,13 @@ namespace BinanceApp.GUI
             // 
             this.tabControl.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InTabControlHeader;
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl.Location = new System.Drawing.Point(0, 158);
+            this.tabControl.Location = new System.Drawing.Point(0, 141);
             this.tabControl.LookAndFeel.SkinName = "McSkin";
             this.tabControl.LookAndFeel.UseDefaultLookAndFeel = false;
             this.tabControl.Name = "tabControl";
-            this.tabControl.Size = new System.Drawing.Size(1022, 585);
+            this.tabControl.Size = new System.Drawing.Size(1022, 602);
             this.tabControl.TabIndex = 2;
             this.tabControl.CloseButtonClick += new System.EventHandler(this.tabControl_CloseButtonClick);
-            // 
-            // barBtnVersion
-            // 
-            this.barBtnVersion.Caption = "Phiên bản";
-            this.barBtnVersion.Id = 13;
-            this.barBtnVersion.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
-            this.barBtnVersion.Name = "barBtnVersion";
             // 
             // frmMain
             // 
@@ -277,6 +279,7 @@ namespace BinanceApp.GUI
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
+            this.IconOptions.Image = global::BinanceApp.Properties.Resources.logo;
             this.Name = "frmMain";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
