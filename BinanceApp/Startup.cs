@@ -12,7 +12,6 @@ namespace BinanceApp
     {
         private Startup()
         {
-            InitDataTable();
             InitData();
         }
         private static Startup _instance = null;
@@ -55,21 +54,6 @@ namespace BinanceApp
             //    }
             //}
             //StaticValues.ScheduleMngObj.AddSchedule(new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<HrScheduleJob>(), "0/5 0-59 0-23 * * ?", nameof(HrScheduleJob)));
-        }
-        private void InitDataTable()
-        {
-            //dtRealTime
-            StaticValues.dtRealTime.Columns.Add("STT", typeof(int));
-            StaticValues.dtRealTime.Columns.Add("Coin", typeof(string));
-            StaticValues.dtRealTime.Columns.Add("CoinName", typeof(string));
-            StaticValues.dtRealTime.Columns.Add("Count", typeof(int));
-            StaticValues.dtRealTime.Columns.Add("Rate", typeof(double));
-            StaticValues.dtRealTime.Columns.Add("RefValue", typeof(double));
-            StaticValues.dtRealTime.Columns.Add("Value", typeof(double));
-            StaticValues.dtRealTime.Columns.Add("BottomRecent", typeof(double));
-            StaticValues.dtRealTime.Columns.Add("RateValue", typeof(double));
-            StaticValues.dtRealTime.Columns.Add("WaveRecent", typeof(double));
-            StaticValues.dtRealTime.Columns.Add("CountTime", typeof(int));
         }
     }
 }

@@ -1,9 +1,8 @@
 ﻿using BinanceApp.GUI;
 using BinanceApp.Job.ScheduleJob;
 using BinanceApp.Model.ENTITY;
-using System;
+using BinanceApp.Model.ENUM;
 using System.Collections.Generic;
-using System.Data;
 
 namespace BinanceApp
 {
@@ -14,6 +13,8 @@ namespace BinanceApp
         public static bool IsAccessMain = false;
         public static bool IsExecMCDX = false;
         public static bool IsExecCheckCodeActive = false;
+        //
+        public static bool IsRealTimeDeleted = false;
         public static int Level { get; set; }
         public static ScheduleMng ScheduleMngObj = ScheduleMng.Instance();
         public static frmMonitor frmMonitorObj = null;
@@ -50,7 +51,7 @@ namespace BinanceApp
         public static AdvanceSettingModel advanceModel4;
         public static List<CryptonDetailDataModel> lstBlackList;
         public static List<CryptonDetailDataModel> lstRealTime;
-        public static DataTable dtRealTime = new DataTable();
+        public static List<Top30Model> lstRealTimeShow = new List<Top30Model>();
         public static TradeListModel tradeList;
         public static FollowModel followList;
     }

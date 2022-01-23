@@ -12,5 +12,6 @@
         public double BottomRecent { get; set; }
         public double RateValue { get; set; }
         public double WaveRecent { get; set; }
+        public int CountTime { get; set; }
     }
 }

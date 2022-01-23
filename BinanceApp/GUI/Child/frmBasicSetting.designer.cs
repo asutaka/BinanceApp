@@ -30,6 +30,8 @@
         {
             this.btnOkAndSave = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.nmMCDX = new System.Windows.Forms.NumericUpDown();
+            this.label13 = new System.Windows.Forms.Label();
             this.nmADX = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
             this.nmRSI = new System.Windows.Forms.NumericUpDown();
@@ -54,10 +56,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.nmMCDX = new System.Windows.Forms.NumericUpDown();
-            this.label13 = new System.Windows.Forms.Label();
+            this.nmDefaultInterval = new System.Windows.Forms.NumericUpDown();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmMCDX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmADX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmRSI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmSignal)).BeginInit();
@@ -68,7 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nmWeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmMCDX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmDefaultInterval)).BeginInit();
             this.SuspendLayout();
             // 
             // btnOkAndSave
@@ -85,6 +88,8 @@
             this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl1.Controls.Add(this.nmDefaultInterval);
+            this.groupControl1.Controls.Add(this.label15);
             this.groupControl1.Controls.Add(this.nmMCDX);
             this.groupControl1.Controls.Add(this.label13);
             this.groupControl1.Controls.Add(this.nmADX);
@@ -115,12 +120,35 @@
             this.groupControl1.TabIndex = 14;
             this.groupControl1.Text = "Thiết lập";
             // 
+            // nmMCDX
+            // 
+            this.nmMCDX.Location = new System.Drawing.Point(299, 39);
+            this.nmMCDX.Name = "nmMCDX";
+            this.nmMCDX.Size = new System.Drawing.Size(119, 21);
+            this.nmMCDX.TabIndex = 25;
+            this.nmMCDX.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nmMCDX.Value = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(258, 42);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(35, 13);
+            this.label13.TabIndex = 24;
+            this.label13.Text = "MCDX";
+            // 
             // nmADX
             // 
             this.nmADX.Location = new System.Drawing.Point(120, 263);
             this.nmADX.Name = "nmADX";
             this.nmADX.Size = new System.Drawing.Size(119, 21);
             this.nmADX.TabIndex = 23;
+            this.nmADX.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nmADX.Value = new decimal(new int[] {
             14,
             0,
@@ -142,6 +170,7 @@
             this.nmRSI.Name = "nmRSI";
             this.nmRSI.Size = new System.Drawing.Size(119, 21);
             this.nmRSI.TabIndex = 21;
+            this.nmRSI.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nmRSI.Value = new decimal(new int[] {
             14,
             0,
@@ -172,6 +201,7 @@
             this.nmSignal.Name = "nmSignal";
             this.nmSignal.Size = new System.Drawing.Size(89, 21);
             this.nmSignal.TabIndex = 19;
+            this.nmSignal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nmSignal.Value = new decimal(new int[] {
             9,
             0,
@@ -184,6 +214,7 @@
             this.nmEMA.Name = "nmEMA";
             this.nmEMA.Size = new System.Drawing.Size(120, 21);
             this.nmEMA.TabIndex = 12;
+            this.nmEMA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nmEMA.Value = new decimal(new int[] {
             7,
             0,
@@ -223,6 +254,7 @@
             this.nmMA.Name = "nmMA";
             this.nmMA.Size = new System.Drawing.Size(120, 21);
             this.nmMA.TabIndex = 10;
+            this.nmMA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nmMA.Value = new decimal(new int[] {
             7,
             0,
@@ -235,6 +267,7 @@
             this.nmHighMACD.Name = "nmHighMACD";
             this.nmHighMACD.Size = new System.Drawing.Size(89, 21);
             this.nmHighMACD.TabIndex = 15;
+            this.nmHighMACD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nmHighMACD.Value = new decimal(new int[] {
             12,
             0,
@@ -247,6 +280,7 @@
             this.nmLowMACD.Name = "nmLowMACD";
             this.nmLowMACD.Size = new System.Drawing.Size(89, 21);
             this.nmLowMACD.TabIndex = 17;
+            this.nmLowMACD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nmLowMACD.Value = new decimal(new int[] {
             26,
             0,
@@ -277,6 +311,7 @@
             this.nmWeight.Name = "nmWeight";
             this.nmWeight.Size = new System.Drawing.Size(120, 21);
             this.nmWeight.TabIndex = 8;
+            this.nmWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nmWeight.Value = new decimal(new int[] {
             20,
             0,
@@ -356,26 +391,27 @@
             this.groupControl2.TabIndex = 24;
             this.groupControl2.Text = "Tùy chọn ";
             // 
-            // nmMCDX
+            // nmDefaultInterval
             // 
-            this.nmMCDX.Location = new System.Drawing.Point(299, 39);
-            this.nmMCDX.Name = "nmMCDX";
-            this.nmMCDX.Size = new System.Drawing.Size(119, 21);
-            this.nmMCDX.TabIndex = 25;
-            this.nmMCDX.Value = new decimal(new int[] {
-            15,
+            this.nmDefaultInterval.Location = new System.Drawing.Point(452, 263);
+            this.nmDefaultInterval.Name = "nmDefaultInterval";
+            this.nmDefaultInterval.Size = new System.Drawing.Size(89, 21);
+            this.nmDefaultInterval.TabIndex = 29;
+            this.nmDefaultInterval.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nmDefaultInterval.Value = new decimal(new int[] {
+            1,
             0,
             0,
             0});
             // 
-            // label13
+            // label15
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(258, 42);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(35, 13);
-            this.label13.TabIndex = 24;
-            this.label13.Text = "MCDX";
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(258, 263);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(83, 13);
+            this.label15.TabIndex = 28;
+            this.label15.Text = "Default Interval";
             // 
             // frmBasicSetting
             // 
@@ -392,6 +428,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmMCDX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmADX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmRSI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmSignal)).EndInit();
@@ -402,7 +439,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nmWeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nmMCDX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmDefaultInterval)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -436,5 +473,7 @@
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private System.Windows.Forms.NumericUpDown nmMCDX;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.NumericUpDown nmDefaultInterval;
+        private System.Windows.Forms.Label label15;
     }
 }

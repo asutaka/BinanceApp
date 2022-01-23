@@ -40,6 +40,7 @@ namespace BinanceApp.GUI.Child
         {
             var model = new BasicSettingModel().LoadJsonFile(_fileName);
             cmbTimeZone.SelectedIndex = model.TimeZone;
+            nmDefaultInterval.Value = model.Interval;
             cmbCandleStick.SelectedIndex = model.ListModel.First(x => x.Indicator == (int)enumChooseData.CandleStick_1).Period;
             nmWeight.Value = model.ListModel.First(x => x.Indicator == (int)enumChooseData.Volumne).Period;
             nmMA.Value = model.ListModel.First(x => x.Indicator == (int)enumChooseData.MA).Period;
@@ -69,6 +70,7 @@ namespace BinanceApp.GUI.Child
             new BasicSettingModel
             {
                 TimeZone = cmbTimeZone.SelectedIndex,
+                Interval = (int)nmDefaultInterval.Value,
                 ListModel = new List<GeneralModel>
                 {
                     new GeneralModel{ Indicator = (int)enumChooseData.MA, Period = (int)nmMA.Value },
