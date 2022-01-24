@@ -1,0 +1,114 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\SourceCode\\BinanceApp\\BinanceApp.TelegramService\\BinanceApp.TelegramService.csproj": {}
+  },
+  "projects": {
+    "D:\\SourceCode\\BinanceApp\\BinanceApp.Common\\BinanceApp.Common.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\SourceCode\\BinanceApp\\BinanceApp.Common\\BinanceApp.Common.csproj",
+        "projectName": "BinanceApp.Common",
+        "projectPath": "D:\\SourceCode\\BinanceApp\\BinanceApp.Common\\BinanceApp.Common.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "D:\\SourceCode\\BinanceApp\\BinanceApp.Model\\BinanceApp.Model.csproj": {
+                "projectPath": "D:\\SourceCode\\BinanceApp\\BinanceApp.Model\\BinanceApp.Model.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "D:\\SourceCode\\BinanceApp\\BinanceApp.Model\\BinanceApp.Model.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\SourceCode\\BinanceApp\\BinanceApp.Model\\BinanceApp.Model.csproj",
+        "projectName": "BinanceApp.Model",
+        "projectPath": "D:\\SourceCode\\BinanceApp\\BinanceApp.Model\\BinanceApp.Model.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "D:\\SourceCode\\BinanceApp\\BinanceApp.TelegramService\\BinanceApp.TelegramService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\SourceCode\\BinanceApp\\BinanceApp.TelegramService\\BinanceApp.TelegramService.csproj",
+        "projectName": "BinanceApp.TelegramService",
+        "projectPath": "D:\\SourceCode\\BinanceApp\\BinanceApp.TelegramService\\BinanceApp.TelegramService.csproj",
+        "packagesPath": "C:\\Users\\asuta\\.nuget\\packages\\",
+        "outputPath": "D:\\SourceCode\\BinanceApp\\BinanceApp.TelegramService\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\asuta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\SourceCode\\BinanceApp\\BinanceApp.Common\\BinanceApp.Common.csproj": {
+                "projectPath": "D:\\SourceCode\\BinanceApp\\BinanceApp.Common\\BinanceApp.Common.csproj"
+              },
+              "D:\\SourceCode\\BinanceApp\\BinanceApp.Model\\BinanceApp.Model.csproj": {
+                "projectPath": "D:\\SourceCode\\BinanceApp\\BinanceApp.Model\\BinanceApp.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[3.1.15, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "WTelegramClient": {
+              "target": "Package",
+              "version": "[1.9.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

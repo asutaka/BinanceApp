@@ -1,0 +1,83 @@
+ -------------- Error (2022-01-24 17:19:36.1920) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	ExtensionMethod:LoadJsonFile: Could not find a part of the path 'D:\SourceCode\BinanceApp\BinanceApp.TelegramService\settings\user.json'. Could not find a part of the path 'D:\SourceCode\BinanceApp\BinanceApp.TelegramService\settings\user.json'.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path)
+   at BinanceApp.Common.ExtensionMethod.LoadJsonFile[T](T val, String fileName) in D:\SourceCode\BinanceApp\BinanceApp.Common\ExtensionMethod.cs:line 35 Line: 0
+
+ -------------- Error (2022-01-24 17:20:35.9085) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	ExtensionMethod:LoadJsonFile: Could not find a part of the path 'D:\SourceCode\BinanceApp\BinanceApp.TelegramService\settings\user.json'. Could not find a part of the path 'D:\SourceCode\BinanceApp\BinanceApp.TelegramService\settings\user.json'.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path)
+   at BinanceApp.Common.ExtensionMethod.LoadJsonFile[T](T val, String fileName) in D:\SourceCode\BinanceApp\BinanceApp.Common\ExtensionMethod.cs:line 35 Line: 0
+
+ -------------- Error (2022-01-24 17:22:41.0651) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	ExtensionMethod:LoadJsonFileService: Could not load file or assembly 'System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'. The system cannot find the file specified. Could not load file or assembly 'System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'. The system cannot find the file specified.
+   at Newtonsoft.Json.Serialization.JsonTypeReflector.get_DynamicCodeGeneration()
+   at Newtonsoft.Json.Serialization.JsonTypeReflector.get_ReflectionDelegateFactory()
+   at Newtonsoft.Json.Serialization.DefaultContractResolver.GetDefaultCreator(Type createdType)
+   at Newtonsoft.Json.Serialization.DefaultContractResolver.InitializeContract(JsonContract contract)
+   at Newtonsoft.Json.Serialization.DefaultContractResolver.CreateObjectContract(Type objectType)
+   at Newtonsoft.Json.Serialization.DefaultContractResolver.CreateContract(Type objectType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Newtonsoft.Json.Utilities.ThreadSafeStore`2.Get(TKey key)
+   at Newtonsoft.Json.Serialization.DefaultContractResolver.ResolveContract(Type type)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.GetContract(Type type)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.GetContractSafe(Type type)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at BinanceApp.Common.ExtensionMethod.LoadJsonFileService[T](T val, String fileName) in D:\SourceCode\BinanceApp\BinanceApp.Common\ExtensionMethod.cs:line 58 Line: 0
+
+ -------------- Error (2022-01-24 17:29:30.3172) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	ExtensionMethod:LoadJsonFile: Could not find a part of the path 'D:\SourceCode\BinanceApp\BinanceApp.TelegramService\settings\user.json'. Could not find a part of the path 'D:\SourceCode\BinanceApp\BinanceApp.TelegramService\settings\user.json'.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path)
+   at BinanceApp.Common.ExtensionMethod.LoadJsonFile[T](T val, String fileName) in D:\SourceCode\BinanceApp\BinanceApp.Common\ExtensionMethod.cs:line 36 Line: 0
+
+ -------------- Error (2022-01-24 17:35:01.0385) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 83 Line: 0
+

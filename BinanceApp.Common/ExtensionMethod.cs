@@ -9,6 +9,7 @@ using PhoneNumbers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -42,6 +43,25 @@ namespace BinanceApp.Common
             catch(Exception ex)
             {
                 NLogLogger.PublishException(ex, $"ExtensionMethod:LoadJsonFile: {ex.Message}");
+                return default(T);
+            }
+        }
+
+        public static T LoadJsonFileService<T>(this T val, string fileName)
+        {
+            try
+            {
+                string path = $"{Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName)}\\settings\\{fileName}";
+                using (StreamReader r = new StreamReader(path))
+                {
+                    string json = r.ReadToEnd();
+                    var result = JsonConvert.DeserializeObject<T>(json);
+                    return result;
+                }
+            }
+            catch (Exception ex)
+            {
+                NLogLogger.PublishException(ex, $"ExtensionMethod:LoadJsonFileService: {ex.Message}");
                 return default(T);
             }
         }

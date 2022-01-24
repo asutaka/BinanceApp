@@ -19995,3 +19995,91 @@
    at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
    at BinanceApp.Common.Telegram.TeleClient.<InitTelegram>d__8.MoveNext() in D:\SourceCode\BinanceApp\BinanceApp.Common\Telegram\TeleClient.cs:line 50 Line: 0
 
+ -------------- Error (2022-01-24 13:47:26.4433) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes, Boolean checkHost)
+   at System.IO.File.WriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.<DoConnectAsync>d__71.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WTelegram.Client.<ConnectAsync>d__69.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at BinanceApp.Telegram.TeleClient.<InitTelegram>d__8.MoveNext() in D:\SourceCode\BinanceApp\BinanceApp\Telegram\TeleClient.cs:line 51 Line: 0
+
+ -------------- Error (2022-01-24 13:47:36.0012) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes, Boolean checkHost)
+   at System.IO.File.WriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.<DoConnectAsync>d__71.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WTelegram.Client.<ConnectAsync>d__69.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at BinanceApp.Telegram.TeleClient.<InitTelegram>d__8.MoveNext() in D:\SourceCode\BinanceApp\BinanceApp\Telegram\TeleClient.cs:line 51 Line: 0
+
+ -------------- Error (2022-01-24 13:47:46.8553) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: Could not find file '84978894272.session.tmp'. Could not find file '84978894272.session.tmp'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.NewMsgId(Boolean isContent)
+   at WTelegram.Client.<SendAsync>d__80.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WTelegram.Client.<InvokeBare>d__84`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at WTelegram.Encryption.<CreateAuthorizationKey>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at WTelegram.Client.<DoConnectAsync>d__71.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at WTelegram.Client.<ConnectAsync>d__69.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at BinanceApp.Telegram.TeleClient.<InitTelegram>d__8.MoveNext() in D:\SourceCode\BinanceApp\BinanceApp\Telegram\TeleClient.cs:line 51 Line: 0
+

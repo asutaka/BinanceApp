@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinanceApp.GenCode", "Binan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinanceApp.Telegram", "BinanceApp.Telegram\BinanceApp.Telegram.csproj", "{1D36B1DB-1C5A-4CA6-A94A-5D59B94C4E24}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinanceApp.TelegramService", "BinanceApp.TelegramService\BinanceApp.TelegramService.csproj", "{E10689E2-B6C5-48E5-A45E-593B0D4C6EBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{1D36B1DB-1C5A-4CA6-A94A-5D59B94C4E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D36B1DB-1C5A-4CA6-A94A-5D59B94C4E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D36B1DB-1C5A-4CA6-A94A-5D59B94C4E24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E10689E2-B6C5-48E5-A45E-593B0D4C6EBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E10689E2-B6C5-48E5-A45E-593B0D4C6EBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E10689E2-B6C5-48E5-A45E-593B0D4C6EBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E10689E2-B6C5-48E5-A45E-593B0D4C6EBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

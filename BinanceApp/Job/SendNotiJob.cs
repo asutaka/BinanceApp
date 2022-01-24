@@ -1,5 +1,5 @@
 ﻿using BinanceApp.Common;
-using BinanceApp.Common.Telegram;
+using BinanceApp.Telegram;
 using Quartz;
 using System;
 
