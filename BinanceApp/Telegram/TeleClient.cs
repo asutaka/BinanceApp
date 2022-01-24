@@ -1,11 +1,13 @@
-﻿using BinanceApp.Model.ENUM;
+﻿using BinanceApp.Common;
+using BinanceApp.Model.ENUM;
 using System;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using TL;
 using WTelegram;
 
-namespace BinanceApp.Common.Telegram
+namespace BinanceApp.Telegram
 {
     public class TeleClient
     {
@@ -84,6 +86,7 @@ namespace BinanceApp.Common.Telegram
                         await _clientSupport.SendMessageAsync(result.users.First().Value, content);
                     }
                 }
+                Thread.Sleep(1000);
                 return (int)enumTelegramSendMessage.Success;
             }
             catch(Exception ex)

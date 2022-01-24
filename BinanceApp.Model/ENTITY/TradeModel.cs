@@ -4,8 +4,7 @@ namespace BinanceApp.Model.ENTITY
 {
     public class TradeListModel
     {
-        public string Cron { get; set; }
-        public int CronValue { get; set; }
+        public bool IsNotify { get; set; }// bật notify hay không
         public List<TradeModel> lData { get; set; }
     }
 
@@ -13,8 +12,6 @@ namespace BinanceApp.Model.ENTITY
     {
         public string Coin { get; set; }
         public List<TradeDetailModel> Config { get; set; }
-        public bool IsNotify { get; set; }// bật notify hay không
-        public int Interval { get; set; }// 1 lần duy nhất, mỗi ngày một lần, theo chu kỳ
     }
 
     public class TradeDetailModel

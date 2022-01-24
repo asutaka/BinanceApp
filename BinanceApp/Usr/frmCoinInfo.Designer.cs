@@ -36,25 +36,20 @@ namespace BinanceApp.Usr
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.txtValue = new DevExpress.XtraEditors.TextEdit();
             this.txtDescription = new DevExpress.XtraEditors.TextEdit();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmbFrequency = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.label3 = new System.Windows.Forms.Label();
-            this.chkState = new DevExpress.XtraEditors.ToggleSwitch();
-            this.btnAddSignal = new DevExpress.XtraEditors.SimpleButton();
             this.pnlMain = new System.Windows.Forms.FlowLayoutPanel();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnOkAndSave = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAddSignal = new DevExpress.XtraEditors.SimpleButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtCoin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtValue.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbFrequency.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkState.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -126,65 +121,13 @@ namespace BinanceApp.Usr
             this.txtDescription.Size = new System.Drawing.Size(495, 20);
             this.txtDescription.TabIndex = 4;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.cmbFrequency);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.chkState);
-            this.groupBox1.Controls.Add(this.btnAddSignal);
-            this.groupBox1.Location = new System.Drawing.Point(2, 132);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(640, 54);
-            this.groupBox1.TabIndex = 12;
-            this.groupBox1.TabStop = false;
-            // 
-            // cmbFrequency
-            // 
-            this.cmbFrequency.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbFrequency.Location = new System.Drawing.Point(334, 21);
-            this.cmbFrequency.Name = "cmbFrequency";
-            this.cmbFrequency.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbFrequency.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cmbFrequency.Size = new System.Drawing.Size(119, 20);
-            this.cmbFrequency.TabIndex = 8;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(274, 24);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Tần suất";
-            // 
-            // chkState
-            // 
-            this.chkState.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkState.Location = new System.Drawing.Point(473, 19);
-            this.chkState.Name = "chkState";
-            this.chkState.Properties.OffText = "Tắt";
-            this.chkState.Properties.OnText = "Bật thông báo";
-            this.chkState.Size = new System.Drawing.Size(139, 24);
-            this.chkState.TabIndex = 5;
-            // 
-            // btnAddSignal
-            // 
-            this.btnAddSignal.Location = new System.Drawing.Point(0, 20);
-            this.btnAddSignal.Name = "btnAddSignal";
-            this.btnAddSignal.Size = new System.Drawing.Size(75, 23);
-            this.btnAddSignal.TabIndex = 3;
-            this.btnAddSignal.Text = "Thêm tín hiệu";
-            this.btnAddSignal.Click += new System.EventHandler(this.btnAddSignal_Click);
-            // 
             // pnlMain
             // 
             this.pnlMain.AutoScroll = true;
             this.pnlMain.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlMain.Location = new System.Drawing.Point(2, 187);
+            this.pnlMain.Location = new System.Drawing.Point(2, 175);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(640, 246);
+            this.pnlMain.Size = new System.Drawing.Size(640, 257);
             this.pnlMain.TabIndex = 13;
             // 
             // groupControl2
@@ -219,6 +162,24 @@ namespace BinanceApp.Usr
             this.btnOkAndSave.Text = "Lưu cấu hình";
             this.btnOkAndSave.Click += new System.EventHandler(this.btnOkAndSave_Click);
             // 
+            // btnAddSignal
+            // 
+            this.btnAddSignal.Location = new System.Drawing.Point(0, 13);
+            this.btnAddSignal.Name = "btnAddSignal";
+            this.btnAddSignal.Size = new System.Drawing.Size(75, 23);
+            this.btnAddSignal.TabIndex = 3;
+            this.btnAddSignal.Text = "Thêm tín hiệu";
+            this.btnAddSignal.Click += new System.EventHandler(this.btnAddSignal_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnAddSignal);
+            this.groupBox1.Location = new System.Drawing.Point(2, 132);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(640, 43);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
+            // 
             // frmCoinInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,12 +202,9 @@ namespace BinanceApp.Usr
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtValue.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbFrequency.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkState.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -260,14 +218,11 @@ namespace BinanceApp.Usr
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.TextEdit txtValue;
         private DevExpress.XtraEditors.TextEdit txtDescription;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbFrequency;
-        private System.Windows.Forms.Label label3;
-        public DevExpress.XtraEditors.ToggleSwitch chkState;
-        private DevExpress.XtraEditors.SimpleButton btnAddSignal;
         private System.Windows.Forms.FlowLayoutPanel pnlMain;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
         private DevExpress.XtraEditors.SimpleButton btnOkAndSave;
+        private DevExpress.XtraEditors.SimpleButton btnAddSignal;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

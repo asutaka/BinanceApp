@@ -1,5 +1,1 @@
-{
- "Cron": "",
- "CronValue": 1,
- "lData": [{"Coin":"ADXUSDT","Config":[{"IsAbove":true,"Value":0.7},{"IsAbove":false,"Value":0.5}],"IsNotify":true,"Interval":3}]	
-}
+{"IsNotify":true,"lData":[{"Coin":"ADXUSDT","Config":[{"IsAbove":true,"Value":0.7},{"IsAbove":false,"Value":0.5}]},{"Coin":"ANYUSDT","Config":[{"IsAbove":true,"Value":21.00000000},{"IsAbove":true,"Value":22.00000000},{"IsAbove":false,"Value":20.50000000},{"IsAbove":false,"Value":20.00000000},{"IsAbove":true,"Value":45.20000000},{"IsAbove":true,"Value":20.93000000}]}]}

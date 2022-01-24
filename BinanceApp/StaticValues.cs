@@ -13,6 +13,7 @@ namespace BinanceApp
         public static bool IsExecMCDX = false;
         public static bool IsExecTop30 = false;
         public static bool IsExecCheckCodeActive = false;
+        public static bool IsTradeListChange = false;
         //
         public static bool IsRealTimeDeleted = false;
         public static int Level { get; set; }
@@ -27,7 +28,7 @@ namespace BinanceApp
         public static string Scron_MCDX_Calculate = "0 0/5 * * * ?";
         public static string Scron_MCDX_Value = "0/1 * * * * ?";
         public static string Scron_SendNoti = "0/1 * * * * ?";
-        public static int Scron_TradeList_Value = 1;
+        public static string Scron_TradeList_Noti = "0/1 * * * * ?";
         //Notify
         public static Queue<string> lNotify = new Queue<string>();
         //Coin
@@ -53,5 +54,7 @@ namespace BinanceApp
         public static List<Top30Model> lstRealTimeShow = new List<Top30Model>();
         public static TradeListModel tradeList;
         public static FollowModel followList;
+        //Local 
+        public static List<SendNotifyModel> lstNotiTrade = new List<SendNotifyModel>();
     }
 }

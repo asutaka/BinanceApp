@@ -143,7 +143,6 @@
     <Compile Include="ScheduleJob\ScheduleJobLib\ScheduleJobListener.cs" />
     <Compile Include="ScheduleJob\ScheduleMng.cs" />
     <Compile Include="Security.cs" />
-    <Compile Include="Telegram\TeleClient.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

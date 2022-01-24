@@ -36,12 +36,14 @@
             this.pnl = new System.Windows.Forms.FlowLayoutPanel();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.chkState = new DevExpress.XtraEditors.ToggleSwitch();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCoin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkState.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbCoin
@@ -52,7 +54,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbCoin.Properties.NullText = "";
             this.cmbCoin.Properties.PopupView = this.searchLookUpEdit1View;
-            this.cmbCoin.Size = new System.Drawing.Size(450, 20);
+            this.cmbCoin.Size = new System.Drawing.Size(428, 20);
             this.cmbCoin.TabIndex = 0;
             this.cmbCoin.EditValueChanged += new System.EventHandler(this.cmbCoin_EditValueChanged);
             // 
@@ -119,12 +121,23 @@
             // 
             this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl1.Controls.Add(this.chkState);
             this.groupControl1.Controls.Add(this.cmbCoin);
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Location = new System.Drawing.Point(2, 2);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(676, 87);
             this.groupControl1.TabIndex = 26;
+            // 
+            // chkState
+            // 
+            this.chkState.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkState.Location = new System.Drawing.Point(529, 35);
+            this.chkState.Name = "chkState";
+            this.chkState.Properties.OffText = "Tắt";
+            this.chkState.Properties.OnText = "Bật thông báo";
+            this.chkState.Size = new System.Drawing.Size(139, 24);
+            this.chkState.TabIndex = 6;
             // 
             // frmTradeList
             // 
@@ -146,6 +159,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkState.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -160,5 +174,6 @@
         private System.Windows.Forms.FlowLayoutPanel pnl;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.GroupControl groupControl1;
+        public DevExpress.XtraEditors.ToggleSwitch chkState;
     }
 }

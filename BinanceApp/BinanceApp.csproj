@@ -6,7 +6,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{3B79ABB7-7DE9-4261-A43B-2FEFE1430EC5}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BinanceApp</RootNamespace>
     <AssemblyName>BinanceApp</AssemblyName>
@@ -50,6 +50,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Common.Logging, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
@@ -134,6 +137,7 @@
     <Compile Include="Job\RealtimeValueScheduleJob.cs" />
     <Compile Include="Job\MCDXCalculateJob.cs" />
     <Compile Include="Job\MCDXValueScheduleJob.cs" />
+    <Compile Include="Telegram\TeleClient.cs" />
     <Compile Include="Usr\frmCoinFollowInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,7 +225,7 @@
     <Compile Include="GUI\WaitFunc.cs" />
     <Compile Include="Job\CheckStatusJob.cs" />
     <Compile Include="Job\Top30ValueScheduleJob.cs" />
-    <Compile Include="Job\TradeListJob.cs" />
+    <Compile Include="Job\TradeListNotifyJob.cs" />
     <Compile Include="Job\ScheduleUiContainer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,10 +1,8 @@
 ﻿using BinanceApp.Common;
-using BinanceApp.Data;
 using BinanceApp.Model.ENTITY;
 using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 
 namespace BinanceApp.Usr
@@ -29,19 +27,7 @@ namespace BinanceApp.Usr
 
         private void InitData()
         {
-            LoadInternalNotify();
             SetupData();
-        }
-
-        private void LoadInternalNotify()
-        {
-            cmbFrequency.Properties.BeginUpdate();
-            foreach (DataRow row in SeedData.GetDataInternalNotify().Rows)
-            {
-                cmbFrequency.Properties.Items.Add(row["Name"]);
-            }
-            cmbFrequency.SelectedIndex = 0;
-            cmbFrequency.Properties.EndUpdate();
         }
 
         private void SetupData()
@@ -54,8 +40,6 @@ namespace BinanceApp.Usr
                 txtCoin.Text = entity.S;
                 txtDescription.Text = entity.AN;
                 txtValue.Text = _currentValue.ToString("#,##0.#########");
-                cmbFrequency.SelectedIndex = _frm.tradeModel.Interval;
-                chkState.IsOn = _frm.tradeModel.IsNotify;
                 foreach (var item in _frm.tradeModel.Config)
                 {
                     pnlMain.Controls.Add(new userCoinValue(item));
@@ -70,8 +54,6 @@ namespace BinanceApp.Usr
 
         private void btnOkAndSave_Click(object sender, EventArgs e)
         {
-            _frm.tradeModel.Interval = cmbFrequency.SelectedIndex;
-            _frm.tradeModel.IsNotify = chkState.IsOn;
             _frm.tradeModel.Config.Clear();
             if (pnlMain.Controls.Count > 0)
             {
