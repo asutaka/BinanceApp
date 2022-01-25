@@ -39,5 +39,7 @@
         public const string strVersion = "https://drive.google.com/file/d/1o-ahy7uHCK_sVkdJ_G7iaVWyDGUU7Nli/view?usp=sharing";
         public const string strBotBuyCode = "https://drive.google.com/file/d/1hakAvnesXwXbr4WsHx4ilZhfJPa4PjFi/view?usp=sharing";
         public const string strBotSupport = "https://drive.google.com/file/d/1hakAvnesXwXbr4WsHx4ilZhfJPa4PjFi/view?usp=sharing";
+        //
+        public const string serviceName = "BinanceApp.TelegramService";
     }
 }

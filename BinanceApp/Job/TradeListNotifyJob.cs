@@ -20,6 +20,7 @@ namespace BinanceApp.Job
                     return;
 
                 var lstTask = new List<Task>();
+                var lstNotify = new List<string>();
                 foreach (var item in model.lData)
                 {
                     var task = Task.Run(() =>
@@ -38,7 +39,7 @@ namespace BinanceApp.Job
                             foreach (var itemAbove in lAbove)
                             {
                                 var strNoti = $"{item.Coin} vượt lên trên { itemAbove.Value }";
-                                StaticValues.lNotify.Enqueue(strNoti);
+                                lstNotify.Add(strNoti);
                                 entity.Value = itemAbove.Value;
                             }
                         }
@@ -49,7 +50,7 @@ namespace BinanceApp.Job
                             foreach (var itemBelow in lBelow)
                             {
                                 var strNoti = $"{item.Coin} giảm xuống dưới { itemBelow.Value }";
-                                StaticValues.lNotify.Enqueue(strNoti);
+                                lstNotify.Add(strNoti);
                                 entity.Value = itemBelow.Value;
                             }
                         }
@@ -57,6 +58,13 @@ namespace BinanceApp.Job
                     lstTask.Add(task);
                 }
                 Task.WaitAll(lstTask.ToArray());
+                if (lstNotify.Any())
+                {
+                    var strNotify = string.Join("\n", lstNotify.ToArray());
+                    if (strNotify.Length > 500)
+                        strNotify = strNotify.Substring(0, 500);
+                    strNotify.CreateFile(nameof(TradeListNotifyJob));
+                }
             }
             catch(Exception ex)
             {

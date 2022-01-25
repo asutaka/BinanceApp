@@ -47,6 +47,19 @@ namespace BinanceApp.Common
             }
         }
 
+        public static void CreateFile(this string input, string code)
+        {
+            try
+            {
+                string path = $"{Directory.GetCurrentDirectory()}\\service\\SendNoti\\{DateTimeOffset.Now.ToUnixTimeSeconds()}_{code}.txt";
+                File.WriteAllText(path, input);
+            }
+            catch (Exception ex)
+            {
+                NLogLogger.PublishException(ex, $"ExtensionMethod:SaveFile: {ex.Message}");
+            }
+        }
+
         public static T LoadJsonFileService<T>(this T val, string fileName)
         {
             try

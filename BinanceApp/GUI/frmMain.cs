@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -32,7 +33,6 @@ namespace BinanceApp.GUI
             _bkgr.DoWork += bkgrConfig_DoWork;
             _bkgr.RunWorkerCompleted += bkgrConfig_RunWorkerCompleted;
             _bkgr.RunWorkerAsync();
-            StaticValues.ScheduleMngObj.AddSchedule(new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<SendNotiJob>(), StaticValues.Scron_SendNoti, nameof(SendNotiJob)));
             StaticValues.ScheduleMngObj.AddSchedule(new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<TradeListNotifyJob>(), StaticValues.Scron_TradeList_Noti, nameof(TradeListNotifyJob)));
             //StaticValues.ScheduleMngObj.AddSchedule(new ScheduleMember(StaticValues.ScheduleMngObj.GetScheduler(), JobBuilder.Create<FollowListJob>(), StaticValues.followList.Cron, nameof(FollowListJob)));
         }
@@ -203,6 +203,18 @@ namespace BinanceApp.GUI
             {
                 tabControl.AddTab(frmTop30.Instance());
             });
+            try
+            {
+                foreach (var process in Process.GetProcessesByName(ConstantValue.serviceName))
+                {
+                    process.Kill();
+                }
+                Process.Start($"{Directory.GetCurrentDirectory()}\\service\\{ConstantValue.serviceName}.exe");
+            }
+            catch(Exception ex)
+            {
+                NLogLogger.PublishException(ex, $"frmMain: {ex.Message}");
+            }
         }
 
         private void barBtnInfo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -265,6 +277,17 @@ namespace BinanceApp.GUI
             /*kill all running process
             * https://stackoverflow.com/questions/8507978/exiting-a-c-sharp-winforms-application
             */
+            try
+            {
+                foreach (var process in Process.GetProcessesByName(ConstantValue.serviceName))
+                {
+                    process.Kill();
+                }
+            }
+            catch (Exception ex)
+            {
+                NLogLogger.PublishException(ex, $"frmMain: {ex.Message}");
+            }
             Process.GetCurrentProcess().Kill();
             Application.Exit();
             Environment.Exit(0);

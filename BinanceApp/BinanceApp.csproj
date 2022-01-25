@@ -6,7 +6,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{3B79ABB7-7DE9-4261-A43B-2FEFE1430EC5}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BinanceApp</RootNamespace>
     <AssemblyName>BinanceApp</AssemblyName>
@@ -171,7 +171,6 @@
       <DependentUpon>frmRealTime.cs</DependentUpon>
     </Compile>
     <Compile Include="Job\Top30CalculateJob.cs" />
-    <Compile Include="Job\SendNotiJob.cs" />
     <Compile Include="Job\FollowListJob.cs" />
     <Compile Include="Job\RealTimeJob.cs" />
     <Compile Include="Job\RealtimeValueScheduleJob.cs" />

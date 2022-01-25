@@ -90,7 +90,9 @@ namespace BinanceApp.Job
                                 isConfig5 = true;
                             }
                             if (isTop30 && isMCDX && isConfig2 && isConfig3 && isConfig4 && isConfig5)
-                                StaticValues.lNotify.Enqueue($"{coin}: Follow cho tín hiệu: {item.Title}");
+                            {
+                                //StaticValues.lNotify.Enqueue($"{coin}: Follow cho tín hiệu: {item.Title}");
+                            }
                         }
                     });
                     lstTask.Add(task);

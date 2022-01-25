@@ -29,8 +29,6 @@ namespace BinanceApp
         public static string Scron_MCDX_Value = "0/1 * * * * ?";
         public static string Scron_SendNoti = "0/1 * * * * ?";
         public static string Scron_TradeList_Noti = "0/1 * * * * ?";
-        //Notify
-        public static Queue<string> lNotify = new Queue<string>();
         //Coin
         public static List<CryptonDetailDataModel> lstCoin = new List<CryptonDetailDataModel>();
         public static List<CryptonDetailDataModel> lstCoinFilter = new List<CryptonDetailDataModel>();
