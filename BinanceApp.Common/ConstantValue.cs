@@ -41,5 +41,6 @@
         public const string strBotSupport = "https://drive.google.com/file/d/1hakAvnesXwXbr4WsHx4ilZhfJPa4PjFi/view?usp=sharing";
         //
         public const string serviceName = "BinanceApp.TelegramService";
+        public const string mainName = "BinanceApp";
     }
 }

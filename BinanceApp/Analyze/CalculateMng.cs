@@ -284,11 +284,11 @@ namespace BinanceApp.Analyze
                 var currentValue = CommonMethod.GetCurrentValue(coin);
                 result = (double)indicator.Result * currentValue / 100;
             }
-            double firstValue = lstModel.FirstOrDefault(x => x.Indicator == indicator1.Indicator && x.Period == indicator1.Period).Value;
-            double secondValue = 0;
+            double? firstValue = lstModel.FirstOrDefault(x => x.Indicator == indicator1.Indicator && x.Period == indicator1.Period)?.Value;
+            double? secondValue = 0;
             if (indicator2 != null)
-                secondValue = lstModel.FirstOrDefault(x => x.Indicator == indicator2.Indicator && x.Period == indicator2.Period).Value;
-            double div = firstValue - secondValue;
+                secondValue = lstModel.FirstOrDefault(x => x.Indicator == indicator2.Indicator && x.Period == indicator2.Period)?.Value;
+            double div = firstValue.Value - secondValue.Value;
             if (div < 0)
                 return point;
             if (indicator.Operator == (int)enumOperator.Equal

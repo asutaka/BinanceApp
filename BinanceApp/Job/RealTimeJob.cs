@@ -1,6 +1,5 @@
 ﻿using BinanceApp.Analyze;
 using BinanceApp.Common;
-using BinanceApp.Model.ENTITY;
 using Quartz;
 using System;
 using System.Collections.Generic;

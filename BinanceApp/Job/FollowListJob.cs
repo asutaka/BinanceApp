@@ -23,6 +23,7 @@ namespace BinanceApp.Job
                     return;
 
                 var lstTask = new List<Task>();
+                var lstNotify = new List<string>();
                 foreach (var coin in followList.Coins)
                 {
                     var task = Task.Run(() =>
@@ -91,13 +92,21 @@ namespace BinanceApp.Job
                             }
                             if (isTop30 && isMCDX && isConfig2 && isConfig3 && isConfig4 && isConfig5)
                             {
-                                //StaticValues.lNotify.Enqueue($"{coin}: Follow cho tín hiệu: {item.Title}");
+                                lstNotify.Add($"{coin}: Follow cho tín hiệu: {item.Title}");
                             }
                         }
                     });
                     lstTask.Add(task);
                 }
                 Task.WaitAll(lstTask.ToArray());
+                if (lstNotify.Any())
+                {
+                    var strNotify = string.Join("\n", lstNotify.ToArray());
+                    if (strNotify.Length > 500)
+                        strNotify = strNotify.Substring(0, 500);
+                    strNotify += "#*#";
+                    strNotify.CreateFile(nameof(FollowListJob));
+                }
             }
             catch(Exception ex)
             {

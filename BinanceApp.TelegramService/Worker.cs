@@ -27,6 +27,21 @@ namespace BinanceApp.TelegramService
             while (!stoppingToken.IsCancellationRequested)
             {
                 _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
+
+                try
+                {
+                    var lmain = Process.GetProcessesByName(ConstantValue.mainName);
+                    if(lmain == null || !lmain.Any())
+                    {
+                        Process.GetCurrentProcess().Kill();
+                        Environment.Exit(0);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    NLogLogger.PublishException(ex, $"Worker: {ex.Message}");
+                }
+
                 var objUser = new UserModel().LoadJsonFileService(_fileName);
                 if (objUser == null)
                 {
