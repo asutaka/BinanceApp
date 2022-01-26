@@ -1354,19 +1354,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\asutaka\\.nuget\\packages\\": {}
+    "C:\\Users\\asuta\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Data\\BinanceApp\\BinanceApp.TelegramService\\BinanceApp.TelegramService.csproj",
+      "projectUniqueName": "D:\\SourceCode\\BinanceApp\\BinanceApp.TelegramService\\BinanceApp.TelegramService.csproj",
       "projectName": "BinanceApp.TelegramService",
-      "projectPath": "D:\\Data\\BinanceApp\\BinanceApp.TelegramService\\BinanceApp.TelegramService.csproj",
-      "packagesPath": "C:\\Users\\asutaka\\.nuget\\packages\\",
-      "outputPath": "D:\\Data\\BinanceApp\\BinanceApp.TelegramService\\obj\\",
+      "projectPath": "D:\\SourceCode\\BinanceApp\\BinanceApp.TelegramService\\BinanceApp.TelegramService.csproj",
+      "packagesPath": "C:\\Users\\asuta\\.nuget\\packages\\",
+      "outputPath": "D:\\SourceCode\\BinanceApp\\BinanceApp.TelegramService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\asutaka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\asuta\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1382,11 +1382,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Data\\BinanceApp\\BinanceApp.Common\\BinanceApp.Common.csproj": {
-              "projectPath": "D:\\Data\\BinanceApp\\BinanceApp.Common\\BinanceApp.Common.csproj"
+            "D:\\SourceCode\\BinanceApp\\BinanceApp.Common\\BinanceApp.Common.csproj": {
+              "projectPath": "D:\\SourceCode\\BinanceApp\\BinanceApp.Common\\BinanceApp.Common.csproj"
             },
-            "D:\\Data\\BinanceApp\\BinanceApp.Model\\BinanceApp.Model.csproj": {
-              "projectPath": "D:\\Data\\BinanceApp\\BinanceApp.Model\\BinanceApp.Model.csproj"
+            "D:\\SourceCode\\BinanceApp\\BinanceApp.Model\\BinanceApp.Model.csproj": {
+              "projectPath": "D:\\SourceCode\\BinanceApp\\BinanceApp.Model\\BinanceApp.Model.csproj"
             }
           }
         }
@@ -1424,30 +1424,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.1.10, 3.1.10]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.22, 3.1.22]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

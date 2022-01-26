@@ -44,7 +44,7 @@ namespace BinanceApp.Job
                             }
                         }
 
-                        var lBelow = item.Config.Where(x => !x.IsAbove && currentVal < (double)x.Value && (x.Value <= entity.Value || entity.Value == 0)).OrderByDescending(x => x.Value);
+                        var lBelow = item.Config.Where(x => !x.IsAbove && currentVal < (double)x.Value && (x.Value < entity.Value || entity.Value == 0)).OrderByDescending(x => x.Value);
                         if (lBelow != null)
                         {
                             foreach (var itemBelow in lBelow)
@@ -63,6 +63,7 @@ namespace BinanceApp.Job
                     var strNotify = string.Join("\n", lstNotify.ToArray());
                     if (strNotify.Length > 500)
                         strNotify = strNotify.Substring(0, 500);
+                    strNotify += "#*#";
                     strNotify.CreateFile(nameof(TradeListNotifyJob));
                 }
             }

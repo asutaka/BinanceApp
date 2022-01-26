@@ -1,0 +1,3158 @@
+ -------------- Error (2022-01-26 10:21:34.1219) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:21:37.9628) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:21:42.8482) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:21:46.7664) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:21:51.3786) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:21:55.1511) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:21:59.8313) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:22:03.4647) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:22:07.2333) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:22:11.1768) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:22:15.0261) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:22:18.8056) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:22:22.5044) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:22:26.1790) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:22:29.9512) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:22:33.8435) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:22:37.5189) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:22:40.4844) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 68 Line: 0
+
+ -------------- Error (2022-01-26 10:22:45.3141) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:22:49.0937) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:22:53.9620) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:22:57.4023) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 68 Line: 0
+
+ -------------- Error (2022-01-26 10:23:02.3461) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:23:06.2777) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:23:10.0815) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:23:13.9674) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:23:17.6784) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:23:21.4407) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:23:25.2266) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:23:28.9471) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:23:32.8947) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:23:36.5528) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:23:41.4938) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:23:45.3012) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:23:50.1590) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:23:52.3818) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.InitTelegram(Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 50 Line: 0
+
+ -------------- Error (2022-01-26 10:23:56.3242) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:23:58.5605) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.InitTelegram(Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 50 Line: 0
+
+ -------------- Error (2022-01-26 10:26:05.7687) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:26:09.6940) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:26:13.5641) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:26:16.6440) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 68 Line: 0
+
+ -------------- Error (2022-01-26 10:26:20.6046) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:26:25.9688) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:26:31.6330) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:26:35.4914) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:26:39.9524) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:26:43.8636) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:26:47.6130) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:26:51.3683) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:26:56.0177) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:26:59.8870) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:27:04.7893) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:27:08.7015) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:27:11.7859) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 68 Line: 0
+
+ -------------- Error (2022-01-26 10:27:15.6435) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:27:19.4138) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:27:30.1722) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:27:33.9434) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:27:38.8123) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:27:42.6203) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:27:46.4212) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:27:50.1510) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:30:00.0610) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:30:03.8790) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:30:07.7100) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:30:12.5918) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:30:17.2437) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:30:21.0358) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:30:25.9196) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:30:29.7259) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:30:33.6426) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:30:37.4807) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:30:41.2409) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:30:45.1862) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:30:48.9726) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:30:52.7596) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:30:56.5246) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:30:59.2194) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:31:02.9772) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:31:07.3849) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:31:11.9953) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:31:15.9239) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:31:18.7446) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  Exception while reading session file: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session' because it is being used by another process.
+Delete the file to start a new session Exception while reading session file: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session' because it is being used by another process.
+Delete the file to start a new session
+   at WTelegram.Session.LoadOrCreate(String pathname, Byte[] apiHash)
+   at WTelegram.Client..ctor(Func`2 configProvider)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 67 Line: 0
+
+ -------------- Error (2022-01-26 10:31:21.6160) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:31:24.6102) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 68 Line: 0
+
+ -------------- Error (2022-01-26 10:31:28.4245) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:31:32.3103) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:31:36.0222) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:31:39.9502) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:31:42.8156) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:31:47.1452) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:31:51.1610) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:31:53.8383) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:31:56.6009) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:32:19.7302) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.InitTelegram(Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 50 Line: 0
+
+ -------------- Error (2022-01-26 10:32:22.1190) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 68 Line: 0
+
+ -------------- Error (2022-01-26 10:32:26.0307) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:33:01.2393) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: Could not read payload length : Connection shut down Could not read payload length : Connection shut down
+   at WTelegram.Client.Reactor(NetworkStream stream, CancellationTokenSource cts)
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.InitTelegram(Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 50 Line: 0
+
+ -------------- Error (2022-01-26 10:33:04.0801) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:33:06.8519) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:33:09.6238) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:33:12.3817) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:33:15.0712) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:33:18.8048) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:33:21.9128) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:33:25.7812) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:33:28.6976) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:33:32.4216) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:33:35.4112) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:33:38.9974) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:33:42.7892) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:33:45.6052) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:33:48.3475) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.InitTelegram(Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 50 Line: 0
+
+ -------------- Error (2022-01-26 10:33:51.1933) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:33:53.2183) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: Exception while reading session file: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session' because it is being used by another process.
+Delete the file to start a new session Exception while reading session file: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session' because it is being used by another process.
+Delete the file to start a new session
+   at WTelegram.Session.LoadOrCreate(String pathname, Byte[] apiHash)
+   at WTelegram.Client..ctor(Func`2 configProvider)
+   at BinanceApp.TelegramService.TeleClient.InitTelegram(Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 49 Line: 0
+
+ -------------- Error (2022-01-26 10:33:55.7096) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.NewMsgId(Boolean isContent)
+   at WTelegram.Client.SendAsync(IObject msg, Boolean isContent)
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:33:58.4701) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:34:02.1551) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:34:05.8668) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:34:09.6951) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:34:13.3224) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:34:16.0623) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:34:18.6314) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 68 Line: 0
+
+ -------------- Error (2022-01-26 10:34:22.4660) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:34:25.3538) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:34:28.3968) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:34:32.3330) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:34:36.1793) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:34:38.9598) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:34:40.9122) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 68 Line: 0
+
+ -------------- Error (2022-01-26 10:34:43.6371) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:34:46.4145) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:34:50.0153) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:34:53.8237) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:34:56.8253) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:34:58.0570) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.InitTelegram(Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 50 Line: 0
+
+ -------------- Error (2022-01-26 10:35:00.4905) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 68 Line: 0
+
+ -------------- Error (2022-01-26 10:35:05.1435) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:35:08.0250) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:35:23.5221) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 68 Line: 0
+
+ -------------- Error (2022-01-26 10:35:26.2757) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:35:45.8137) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.InitTelegram(Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 50 Line: 0
+
+ -------------- Error (2022-01-26 10:36:28.7920) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:36:31.5547) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:36:34.2053) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:36:37.0515) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:36:39.8494) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:36:42.6435) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:36:45.5593) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:36:48.4067) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:36:51.2588) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:36:55.2571) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:36:57.9498) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:37:00.6007) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:37:03.4449) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:37:06.2567) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:37:08.8526) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 68 Line: 0
+
+ -------------- Error (2022-01-26 10:37:11.5837) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:37:14.3942) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:37:17.0837) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:37:20.9790) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:37:23.7752) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:37:26.5165) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:37:30.0396) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 68 Line: 0
+
+ -------------- Error (2022-01-26 10:37:31.2733) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.NewMsgId(Boolean isContent)
+   at WTelegram.Client.SendAsync(IObject msg, Boolean isContent)
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.InitTelegram(Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 50 Line: 0
+
+ -------------- Error (2022-01-26 10:37:33.9052) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 68 Line: 0
+
+ -------------- Error (2022-01-26 10:37:36.6145) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:37:40.3645) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 68 Line: 0
+
+ -------------- Error (2022-01-26 10:37:43.1646) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:37:44.3942) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.InitTelegram(Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 50 Line: 0
+
+ -------------- Error (2022-01-26 10:37:47.1414) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:37:49.9069) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:37:51.1366) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.InitTelegram(Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 50 Line: 0
+
+ -------------- Error (2022-01-26 10:37:54.0255) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:37:57.0618) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:37:59.1074) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 68 Line: 0
+
+ -------------- Error (2022-01-26 10:38:01.9413) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:38:04.7215) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:38:07.4405) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:38:10.2745) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:38:14.1408) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:38:15.3576) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.InitTelegram(Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 50 Line: 0
+
+ -------------- Error (2022-01-26 10:38:18.2086) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:38:22.9429) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:38:38.9493) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 68 Line: 0
+
+ -------------- Error (2022-01-26 10:38:41.7361) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:38:42.9912) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.InitTelegram(Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 50 Line: 0
+
+ -------------- Error (2022-01-26 10:38:45.4926) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 68 Line: 0
+
+ -------------- Error (2022-01-26 10:38:48.4109) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:38:52.1448) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:38:54.9197) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:38:56.1413) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.InitTelegram(Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 50 Line: 0
+
+ -------------- Error (2022-01-26 10:38:58.9327) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:39:01.6854) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:39:05.4802) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:39:09.1945) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:39:11.8910) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:39:15.7091) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:39:16.9657) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.InitTelegram(Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 50 Line: 0
+
+ -------------- Error (2022-01-26 10:39:20.8989) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:39:24.8266) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:39:28.5161) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:39:31.6420) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:39:35.4221) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:39:39.3384) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:39:42.2049) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.InitTelegram(Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 50 Line: 0
+
+ -------------- Error (2022-01-26 10:39:44.4344) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.InitTelegram(Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 50 Line: 0
+
+ -------------- Error (2022-01-26 10:39:47.2907) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:39:50.1860) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  AUTH_KEY_UNREGISTERED AUTH_KEY_UNREGISTERED
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:53:08.1376) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.InitTelegram(Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 50 Line: 0
+
+ -------------- Error (2022-01-26 10:54:13.2286) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_171 FLOOD_WAIT_171
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:54:14.3975) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.InitTelegram(Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 50 Line: 0
+
+ -------------- Error (2022-01-26 10:54:15.8041) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_168 FLOOD_WAIT_168
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:54:36.5344) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_147 FLOOD_WAIT_147
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:54:38.1345) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_146 FLOOD_WAIT_146
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:54:39.5315) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_144 FLOOD_WAIT_144
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:54:40.9401) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_143 FLOOD_WAIT_143
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:54:42.4232) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_141 FLOOD_WAIT_141
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:54:43.8510) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_140 FLOOD_WAIT_140
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:54:45.3651) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_138 FLOOD_WAIT_138
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:54:46.8148) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.InitTelegram(Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 50 Line: 0
+
+ -------------- Error (2022-01-26 10:54:48.4583) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_135 FLOOD_WAIT_135
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:54:49.8634) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_134 FLOOD_WAIT_134
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:54:51.2593) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_133 FLOOD_WAIT_133
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:54:52.7199) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_131 FLOOD_WAIT_131
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:54:54.1148) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_130 FLOOD_WAIT_130
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:54:55.5050) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_128 FLOOD_WAIT_128
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:54:56.5569) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.InitTelegram(Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 50 Line: 0
+
+ -------------- Error (2022-01-26 10:54:58.9998) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_125 FLOOD_WAIT_125
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:00.3779) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_123 FLOOD_WAIT_123
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:12.7530) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_111 FLOOD_WAIT_111
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:13.9621) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 68 Line: 0
+
+ -------------- Error (2022-01-26 10:55:15.4248) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_108 FLOOD_WAIT_108
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:16.8413) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_107 FLOOD_WAIT_107
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:18.2500) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_106 FLOOD_WAIT_106
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:19.6452) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_104 FLOOD_WAIT_104
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:21.2722) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_103 FLOOD_WAIT_103
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:22.6953) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_101 FLOOD_WAIT_101
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:24.3277) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_100 FLOOD_WAIT_100
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:25.6953) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.NewMsgId(Boolean isContent)
+   at WTelegram.Client.SendAsync(IObject msg, Boolean isContent)
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:27.1194) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_97 FLOOD_WAIT_97
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:28.7427) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_95 FLOOD_WAIT_95
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:35.8155) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_88 FLOOD_WAIT_88
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:37.2283) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_87 FLOOD_WAIT_87
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:38.6408) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_85 FLOOD_WAIT_85
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:40.0481) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_84 FLOOD_WAIT_84
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:41.5211) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_82 FLOOD_WAIT_82
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:42.9768) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_81 FLOOD_WAIT_81
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:44.3737) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_79 FLOOD_WAIT_79
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:45.7721) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_78 FLOOD_WAIT_78
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:47.1594) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_77 FLOOD_WAIT_77
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:48.5522) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_75 FLOOD_WAIT_75
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:49.9255) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_74 FLOOD_WAIT_74
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:51.3329) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_72 FLOOD_WAIT_72
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:52.7481) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_71 FLOOD_WAIT_71
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:54.1703) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_70 FLOOD_WAIT_70
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:55.5633) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_68 FLOOD_WAIT_68
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:57.0133) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_67 FLOOD_WAIT_67
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:58.4215) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_65 FLOOD_WAIT_65
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:55:59.8329) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_64 FLOOD_WAIT_64
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:56:01.2437) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_63 FLOOD_WAIT_63
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:56:02.6345) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  FLOOD_WAIT_61 FLOOD_WAIT_61
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 82 Line: 0
+
+ -------------- Error (2022-01-26 10:57:06.2666) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:GenerateSession: The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84978894272.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.DoConnectAsync()
+   at WTelegram.Client.ConnectAsync()
+   at BinanceApp.TelegramService.TeleClient.InitTelegram(Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 50 Line: 0
+

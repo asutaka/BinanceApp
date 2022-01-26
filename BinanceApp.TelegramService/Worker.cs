@@ -71,7 +71,7 @@ namespace BinanceApp.TelegramService
                 }
                 foreach (var item in lstRemoveFile)
                 {
-                    //File.Delete(item);
+                    File.Delete(item);
                 }
                 lstRemoveFile.Clear();
                 await Task.Delay(1000, stoppingToken);
