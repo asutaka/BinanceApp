@@ -85,7 +85,7 @@ namespace BinanceApp.GUI
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
-            this.ribbon.Size = new System.Drawing.Size(1022, 141);
+            this.ribbon.Size = new System.Drawing.Size(1022, 133);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
@@ -103,6 +103,7 @@ namespace BinanceApp.GUI
             this.barBtnSupport.Id = 2;
             this.barBtnSupport.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnSupport.ImageOptions.SvgImage")));
             this.barBtnSupport.Name = "barBtnSupport";
+            this.barBtnSupport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnSupport_ItemClick);
             // 
             // barBtnInfo
             // 
@@ -249,10 +250,10 @@ namespace BinanceApp.GUI
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 743);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 740);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1022, 24);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1022, 27);
             // 
             // ribbonPage4
             // 
@@ -263,11 +264,11 @@ namespace BinanceApp.GUI
             // 
             this.tabControl.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InTabControlHeader;
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl.Location = new System.Drawing.Point(0, 141);
+            this.tabControl.Location = new System.Drawing.Point(0, 133);
             this.tabControl.LookAndFeel.SkinName = "McSkin";
             this.tabControl.LookAndFeel.UseDefaultLookAndFeel = false;
             this.tabControl.Name = "tabControl";
-            this.tabControl.Size = new System.Drawing.Size(1022, 602);
+            this.tabControl.Size = new System.Drawing.Size(1022, 607);
             this.tabControl.TabIndex = 2;
             this.tabControl.CloseButtonClick += new System.EventHandler(this.tabControl_CloseButtonClick);
             // 

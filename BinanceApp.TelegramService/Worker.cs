@@ -31,7 +31,7 @@ namespace BinanceApp.TelegramService
                 try
                 {
                     var lmain = Process.GetProcessesByName(ConstantValue.mainName);
-                    if(lmain == null || !lmain.Any())
+                    if (lmain == null || !lmain.Any())
                     {
                         Process.GetCurrentProcess().Kill();
                         Environment.Exit(0);
@@ -54,6 +54,7 @@ namespace BinanceApp.TelegramService
                 var files = Directory.EnumerateFiles($"{currentPath}\\SendNoti", "*.*", SearchOption.AllDirectories).Where(s => s.EndsWith(".txt"));
                 foreach (var fileName in files)
                 {
+                    var isService = fileName.Contains("@service");
                     using (var streamReader = File.OpenText(fileName))
                     {
                         var lines = streamReader.ReadToEnd().Split("\r\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
@@ -79,7 +80,7 @@ namespace BinanceApp.TelegramService
                     foreach (var item in lstSend)
                     {
                         //send
-                        var result = await TeleClient.SendMessage(objUser.Phone, item);
+                        var result = await TeleClient.SendMessage(objUser.Phone, item, isService);
                         Thread.Sleep(1000);
                     }
                     lstSend.Clear();

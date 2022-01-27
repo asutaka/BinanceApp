@@ -288,7 +288,7 @@ namespace BinanceApp.Analyze
             double? secondValue = 0;
             if (indicator2 != null)
                 secondValue = lstModel.FirstOrDefault(x => x.Indicator == indicator2.Indicator && x.Period == indicator2.Period)?.Value;
-            double div = firstValue.Value - secondValue.Value;
+            double div = firstValue.GetValueOrDefault() - secondValue.GetValueOrDefault();
             if (div < 0)
                 return point;
             if (indicator.Operator == (int)enumOperator.Equal

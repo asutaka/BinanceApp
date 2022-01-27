@@ -340,5 +340,13 @@ namespace BinanceApp.GUI
                 tabControl.AddTab(frmMCDX.Instance());
             });
         }
+
+        private void barBtnSupport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            barBtnSupport.Enabled = false;
+            ConstantValue.strSupport.CreateFile("Support", true);
+            Thread.Sleep(1000);
+            barBtnSupport.Enabled = true;
+        }
     }
 }

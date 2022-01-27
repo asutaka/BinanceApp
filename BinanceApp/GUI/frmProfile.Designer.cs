@@ -93,6 +93,7 @@ namespace BinanceApp.GUI
             this.picSupport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSupport.TabIndex = 17;
             this.picSupport.TabStop = false;
+            this.picSupport.Click += new System.EventHandler(this.picSupport_Click);
             this.picSupport.MouseHover += new System.EventHandler(this.picSupport_MouseHover);
             // 
             // picStatus

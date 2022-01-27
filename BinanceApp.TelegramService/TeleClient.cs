@@ -64,8 +64,8 @@ namespace BinanceApp.TelegramService
             {
                 if (!await InitTelegram(isService))
                     return (int)enumTelegramSendMessage.UnknownError; 
-                _clientSupport = new Client(Config);
-                await _clientSupport.ConnectAsync();
+                //_clientSupport = new Client(Config);
+                //await _clientSupport.ConnectAsync();
                 var phoneUser = phone.PhoneFormat();
                 if (string.IsNullOrWhiteSpace(phoneUser))
                     return (int)enumTelegramSendMessage.PhoneInValid;

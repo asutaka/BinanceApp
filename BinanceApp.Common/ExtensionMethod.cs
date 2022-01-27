@@ -47,11 +47,12 @@ namespace BinanceApp.Common
             }
         }
 
-        public static void CreateFile(this string input, string code)
+        public static void CreateFile(this string input, string code, bool isService = false)
         {
             try
             {
-                string path = $"{Directory.GetCurrentDirectory()}\\service\\SendNoti\\{DateTimeOffset.Now.ToUnixTimeSeconds()}_{code}.txt";
+                var strTemp = isService ? "@service" : "@support";
+                string path = $"{Directory.GetCurrentDirectory()}\\service\\SendNoti\\{DateTimeOffset.Now.ToUnixTimeSeconds()}_{code}_{strTemp}.txt";
                 File.WriteAllText(path, input);
             }
             catch (Exception ex)

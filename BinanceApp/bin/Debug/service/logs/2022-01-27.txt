@@ -1,0 +1,52 @@
+ -------------- Error (2022-01-27 13:43:02.6803) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  BadMsgNotification 32 BadMsgNotification 32
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 74 Line: 0
+
+ -------------- Error (2022-01-27 13:43:09.3587) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  BadMsgNotification 32 BadMsgNotification 32
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 74 Line: 0
+
+ -------------- Error (2022-01-27 13:43:25.1998) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  BadMsgNotification 32 BadMsgNotification 32
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 74 Line: 0
+
+ -------------- Error (2022-01-27 14:15:46.6888) --------------
+ 
+ Call Site: BinanceApp.Common.NLogLogger.ErrorMessage
+ Exception Type: 
+ Exception Message: 
+ Stack Trace: 
+ Additional Info: :	
+	TeleClient:SendMessage:  The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84582208920.session.tmp' because it is being used by another process. The process cannot access the file 'D:\SourceCode\BinanceApp\BinanceApp\bin\Debug\84582208920.session.tmp' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes)
+   at WTelegram.Session.Save()
+   at WTelegram.Client.NewMsgId(Boolean isContent)
+   at WTelegram.Client.SendAsync(IObject msg, Boolean isContent)
+   at WTelegram.Client.Invoke[X](IMethod`1 query)
+   at WTelegram.Client.SendMessageAsync(InputPeer peer, String text, InputMedia media, Int32 reply_to_msg_id, MessageEntity[] entities, DateTime schedule_date, Boolean disable_preview)
+   at BinanceApp.TelegramService.TeleClient.SendMessage(String phone, String content, Boolean isService) in D:\SourceCode\BinanceApp\BinanceApp.TelegramService\TeleClient.cs:line 77 Line: 0
+

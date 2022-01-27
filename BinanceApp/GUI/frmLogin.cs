@@ -59,49 +59,18 @@ namespace BinanceApp.GUI
                 wrkr.DoWork += (object sender, DoWorkEventArgs e) => {
 
                     bool result;
-                    while (result = GetAppoveCodeGoogle())
+                    while (result = GetAppoveCodeGoogle("chrome"))
                     {
                         wrkr.ReportProgress(0, result);
                         Thread.Sleep(100);
                     }
 
                     wrkr.Dispose();
-                    Process[] procsChrome = Process.GetProcessesByName("chrome");
-                    foreach (Process chrome in procsChrome)
+                    foreach (Process chrome in Process.GetProcessesByName("chrome"))
                     {
                         if (chrome.MainWindowHandle == IntPtr.Zero)
                             continue;
-
-                        AutomationElement element = AutomationElement.FromHandle(chrome.MainWindowHandle);
-                        if (element != null)
-                        {
-                            Condition conditions = new AndCondition(
-                           new PropertyCondition(AutomationElement.ProcessIdProperty, chrome.Id),
-                           new PropertyCondition(AutomationElement.IsControlElementProperty, true),
-                           new PropertyCondition(AutomationElement.IsContentElementProperty, true),
-                           new PropertyCondition(AutomationElement.ControlTypeProperty, ControlType.Edit));
-
-                            AutomationElement elementx = element.FindFirst(TreeScope.Descendants, conditions);
-                            if(elementx != null)
-                            {
-                                var url = ((ValuePattern)elementx.GetCurrentPattern(ValuePattern.Pattern)).Current.Value as string;
-                                if (url.Contains("accounts.google.com/o/oauth2/approval/v2/approvalnativeap"))
-                                {
-                                    var arr = url.Split('&');
-                                    var approvalCode = WebUtility.HtmlDecode(arr[arr.Length - 1].Replace("approvalCode=", ""));
-                                    this.BeginInvoke(new Action(() =>
-                                    {
-                                        var profile = GetProfile(approvalCode);
-                                        if (profile != null)
-                                        {
-                                            this.Hide();
-                                            StaticValues.profile = profile;
-                                            frmProfile.Instance().Show();
-                                        }
-                                    }));
-                                }
-                            }
-                        }
+                        HandleApproCode(chrome);
                     }
                     wrkr.Dispose();
                 };
@@ -113,11 +82,45 @@ namespace BinanceApp.GUI
             }
         }
 
-        public bool GetAppoveCodeGoogle()
+        private void HandleApproCode(Process process)
+        {
+            AutomationElement element = AutomationElement.FromHandle(process.MainWindowHandle);
+            if (element != null)
+            {
+                Condition conditions = new AndCondition(
+               new PropertyCondition(AutomationElement.ProcessIdProperty, process.Id),
+               new PropertyCondition(AutomationElement.IsControlElementProperty, true),
+               new PropertyCondition(AutomationElement.IsContentElementProperty, true),
+               new PropertyCondition(AutomationElement.ControlTypeProperty, ControlType.Edit));
+
+                AutomationElement elementx = element.FindFirst(TreeScope.Descendants, conditions);
+                if (elementx != null)
+                {
+                    var url = ((ValuePattern)elementx.GetCurrentPattern(ValuePattern.Pattern)).Current.Value as string;
+                    if (url.Contains("accounts.google.com/o/oauth2/approval/v2/approvalnativeap"))
+                    {
+                        var arr = url.Split('&');
+                        var approvalCode = WebUtility.HtmlDecode(arr[arr.Length - 1].Replace("approvalCode=", ""));
+                        this.BeginInvoke(new Action(() =>
+                        {
+                            var profile = GetProfile(approvalCode);
+                            if (profile != null)
+                            {
+                                this.Hide();
+                                StaticValues.profile = profile;
+                                frmProfile.Instance().Show();
+                            }
+                        }));
+                    }
+                }
+            }
+        }
+
+        private bool GetAppoveCodeGoogle(string processName)
         {
             try
             {
-                Process[] procsChrome = Process.GetProcessesByName("chrome");
+                Process[] procsChrome = Process.GetProcessesByName(processName);
                 foreach (Process chrome in procsChrome)
                 {
                     if (chrome.MainWindowHandle == IntPtr.Zero)

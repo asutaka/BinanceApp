@@ -35,4 +35,3 @@ D:\SourceCode\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.csproj.Core
 D:\SourceCode\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.csproj.CopyComplete
 D:\SourceCode\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.dll
 D:\SourceCode\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.pdb
-D:\SourceCode\BinanceApp\BinanceApp.Model\obj\Debug\BinanceApp.Model.csproj.AssemblyReference.cache

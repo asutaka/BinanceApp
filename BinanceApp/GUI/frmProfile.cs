@@ -102,12 +102,12 @@ namespace BinanceApp.GUI
             }
         }
 
-        private void btnOk_Click(object sender, System.EventArgs e)
+        private void btnOk_Click(object sender, EventArgs e)
         {
             CloseAppCheck();
         }
 
-        private void btnPaste_Click(object sender, System.EventArgs e)
+        private void btnPaste_Click(object sender, EventArgs e)
         {
             btnOk.Focus();
             btnPaste.Enabled = false;
@@ -122,17 +122,17 @@ namespace BinanceApp.GUI
             }
         }
 
-        private void btnEdit_Click(object sender, System.EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
             StateEdit(true);
         }
 
-        private void btnCancel_Click(object sender, System.EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
             StateEdit(false);
         }
 
-        private void btnSave_Click(object sender, System.EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
             StateEdit(false);
             if (!UpdateUserModel())
@@ -142,7 +142,7 @@ namespace BinanceApp.GUI
             txtPhone.Text = StaticValues.profile.Phone;
         }
 
-        private void txtCode_EditValueChanged(object sender, System.EventArgs e)
+        private void txtCode_EditValueChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtCode.Text))
             {
@@ -158,7 +158,17 @@ namespace BinanceApp.GUI
         private void bkgrCheckStatus_DoWork(object sender, DoWorkEventArgs e)
         {
             _frmWaitForm.Show("Kiểm tra trạng thái");
-            btnPaste.Enabled = false;
+            if (IsHandleCreated)
+            {
+                this.Invoke((MethodInvoker)delegate
+                {
+                    btnPaste.Enabled = false;
+                });
+            }
+            else
+            {
+                btnPaste.Enabled = false;
+            }
 
             var time = CommonMethod.GetTimeAsync().GetAwaiter().GetResult();
             var jsonModel = Security.Decrypt(txtCode.Text.Trim());
@@ -185,9 +195,19 @@ namespace BinanceApp.GUI
 
         private void bkgrCheckStatus_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            picStatus.Image = StaticValues.IsCodeActive ? Properties.Resources.green : Properties.Resources.red;
-            btnPaste.Enabled = true;
-
+            if (IsHandleCreated)
+            {
+                this.Invoke((MethodInvoker)delegate
+                {
+                    picStatus.Image = StaticValues.IsCodeActive ? Properties.Resources.green : Properties.Resources.red;
+                    btnPaste.Enabled = true;
+                });
+            }
+            else
+            {
+                picStatus.Image = StaticValues.IsCodeActive ? Properties.Resources.green : Properties.Resources.red;
+                btnPaste.Enabled = true;
+            }
             if (!StaticValues.IsCodeActive)
             {
                 txtCode.Text = string.Empty;
@@ -214,6 +234,14 @@ namespace BinanceApp.GUI
         {
             ToolTip tt = new ToolTip();
             tt.SetToolTip(this.picSupport, "Liên hệ lấy code");
+        }
+
+        private void picSupport_Click(object sender, EventArgs e)
+        {
+            this.Enabled = false;
+            ConstantValue.strService.CreateFile("Profile", true);
+            Thread.Sleep(1000);
+            this.Enabled = true;
         }
     }
 }
