@@ -47,6 +47,24 @@ namespace BinanceApp.Common
             }
         }
 
+        public static T LoadJsonData<T>(this T val, string path)
+        {
+            try
+            {
+                using (StreamReader r = new StreamReader(path))
+                {
+                    string json = r.ReadToEnd();
+                    var result = JsonConvert.DeserializeObject<T>(json);
+                    return result;
+                }
+            }
+            catch (Exception ex)
+            {
+                NLogLogger.PublishException(ex, $"ExtensionMethod:LoadJsonData: {ex.Message}");
+                return default(T);
+            }
+        }
+
         public static void CreateFile(this string input, string code, bool isService = false)
         {
             try

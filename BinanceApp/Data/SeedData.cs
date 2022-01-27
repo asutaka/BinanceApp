@@ -1,9 +1,13 @@
 ﻿using BinanceApp.Common;
 using BinanceApp.Model.ENTITY;
 using BinanceApp.Model.ENUM;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
+using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace BinanceApp.Data
 {
@@ -393,6 +397,194 @@ namespace BinanceApp.Data
             dt.Rows.Add(dr12);
             dt.Rows.Add(dr13);
             return dt;
+        }
+
+        public static void InitData()
+        {
+            var wrkr = new BackgroundWorker();
+            wrkr.DoWork += (object sender, DoWorkEventArgs e) => {
+                var lstTask = new List<Task>();
+                foreach (var item in StaticValues.lstCoinFilter)
+                {
+                    var task = Task.Run(() =>
+                    {
+                        StaticValues.dicDatasource15M.Add(item.S, LoadDatasource(item.S, (int)enumInterval.ThirteenMinute));
+                    });
+                    lstTask.Add(task);
+                }
+                Task.WaitAll(lstTask.ToArray());
+            };
+            wrkr.RunWorkerAsync();
+        }
+
+        private void tmp(int interval)
+        {
+            var files = Directory.EnumerateFiles($"{Directory.GetCurrentDirectory()}\\data\\{((enumInterval)interval).GetDisplayName()}", "*.*", SearchOption.AllDirectories);
+            var lstEmptyLoad = StaticValues.lstCoinFilter.Where(x => !files.Any(y => y.Contains(x.S)));
+            if (lstEmptyLoad.Any())
+            {
+                if(((enumInterval)interval) == enumInterval.ThirteenMinute)
+                {
+                    var wrkr = new BackgroundWorker();
+                    wrkr.DoWork += (object sender, DoWorkEventArgs e) => {
+                        var lstTask = new List<Task>();
+                        foreach (var item in lstEmptyLoad)
+                        {
+                            var task = Task.Run(() =>
+                            {
+                                StaticValues.dicDatasource15M.Add(item.S, LoadDatasource(item.S, (int)enumInterval.ThirteenMinute));
+                            });
+                            lstTask.Add(task);
+                        }
+                        Task.WaitAll(lstTask.ToArray());
+                    };
+                    wrkr.RunWorkerAsync();
+                }
+                else if (((enumInterval)interval) == enumInterval.OneHour)
+                {
+                    var wrkr = new BackgroundWorker();
+                    wrkr.DoWork += (object sender, DoWorkEventArgs e) => {
+                        var lstTask = new List<Task>();
+                        foreach (var item in lstEmptyLoad)
+                        {
+                            var task = Task.Run(() =>
+                            {
+                                StaticValues.dicDatasource1H.Add(item.S, LoadDatasource(item.S, (int)enumInterval.ThirteenMinute));
+                            });
+                            lstTask.Add(task);
+                        }
+                        Task.WaitAll(lstTask.ToArray());
+                    };
+                    wrkr.RunWorkerAsync();
+                }
+                else if (((enumInterval)interval) == enumInterval.FourHour)
+                {
+                    var wrkr = new BackgroundWorker();
+                    wrkr.DoWork += (object sender, DoWorkEventArgs e) => {
+                        var lstTask = new List<Task>();
+                        foreach (var item in lstEmptyLoad)
+                        {
+                            var task = Task.Run(() =>
+                            {
+                                StaticValues.dicDatasource4H.Add(item.S, LoadDatasource(item.S, (int)enumInterval.ThirteenMinute));
+                            });
+                            lstTask.Add(task);
+                        }
+                        Task.WaitAll(lstTask.ToArray());
+                    };
+                    wrkr.RunWorkerAsync();
+                }
+                else if (((enumInterval)interval) == enumInterval.OneDay)
+                {
+                    var wrkr = new BackgroundWorker();
+                    wrkr.DoWork += (object sender, DoWorkEventArgs e) => {
+                        var lstTask = new List<Task>();
+                        foreach (var item in lstEmptyLoad)
+                        {
+                            var task = Task.Run(() =>
+                            {
+                                StaticValues.dicDatasource1D.Add(item.S, LoadDatasource(item.S, (int)enumInterval.ThirteenMinute));
+                            });
+                            lstTask.Add(task);
+                        }
+                        Task.WaitAll(lstTask.ToArray());
+                    };
+                    wrkr.RunWorkerAsync();
+                }
+                else if (((enumInterval)interval) == enumInterval.OneWeek)
+                {
+                    var wrkr = new BackgroundWorker();
+                    wrkr.DoWork += (object sender, DoWorkEventArgs e) => {
+                        var lstTask = new List<Task>();
+                        foreach (var item in lstEmptyLoad)
+                        {
+                            var task = Task.Run(() =>
+                            {
+                                StaticValues.dicDatasource1W.Add(item.S, LoadDatasource(item.S, (int)enumInterval.ThirteenMinute));
+                            });
+                            lstTask.Add(task);
+                        }
+                        Task.WaitAll(lstTask.ToArray());
+                    };
+                    wrkr.RunWorkerAsync();
+                }
+                else if (((enumInterval)interval) == enumInterval.OneMonth)
+                {
+                    var wrkr = new BackgroundWorker();
+                    wrkr.DoWork += (object sender, DoWorkEventArgs e) => {
+                        var lstTask = new List<Task>();
+                        foreach (var item in lstEmptyLoad)
+                        {
+                            var task = Task.Run(() =>
+                            {
+                                StaticValues.dicDatasource1Month.Add(item.S, LoadDatasource(item.S, (int)enumInterval.ThirteenMinute));
+                            });
+                            lstTask.Add(task);
+                        }
+                        Task.WaitAll(lstTask.ToArray());
+                    };
+                    wrkr.RunWorkerAsync();
+                }
+            }
+            //
+
+
+            //foreach (var fileName in files)
+            //{
+            //    var isService = fileName.Contains("@service");
+            //    using (var streamReader = File.OpenText(fileName))
+            //    {
+            //        var lines = streamReader.ReadToEnd().Split("\r\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+            //        if (lines.Length > 0)
+            //        {
+            //            lstRemoveFile.Add(fileName);
+            //        }
+            //        var strTemp = string.Empty;
+            //        foreach (var line in lines)
+            //        {
+            //            if (line.Contains("#*#"))
+            //            {
+            //                strTemp += line.Replace("#*#", "");
+            //                lstSend.Add(strTemp);
+            //                strTemp = string.Empty;
+            //            }
+            //            else
+            //            {
+            //                strTemp += $"{line}\r\n";
+            //            }
+            //        }
+            //    }
+            //    foreach (var item in lstSend)
+            //    {
+            //        //send
+            //        var result = await TeleClient.SendMessage(objUser.Phone, item, isService);
+            //        Thread.Sleep(1000);
+            //    }
+            //    lstSend.Clear();
+            //}
+        }
+
+        private void tmp1(string code, int interval)
+        {
+            //var path = $"{Directory.GetCurrentDirectory()}\\settings\\{fileName}";
+            //var tmp = new List<CandleStickDataModel>().LoadJsonData("");
+
+
+            try
+            {
+                string path = $"{Directory.GetCurrentDirectory()}\\data\\{((enumInterval)interval).GetDisplayName()}\\{fileName}";
+                using (StreamReader r = new StreamReader(path))
+                {
+                    string json = r.ReadToEnd();
+                    var result = JsonConvert.DeserializeObject<T>(json);
+                    return result;
+                }
+            }
+            catch (Exception ex)
+            {
+                NLogLogger.PublishException(ex, $"ExtensionMethod:LoadJsonFile: {ex.Message}");
+                return default(T);
+            }
         }
     }
 }
